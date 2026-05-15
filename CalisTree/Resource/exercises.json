@@ -6,7 +6,9 @@
         "videoURL": "https://www.youtube.com/watch?v=noTa65x96v0",
         "equipment": ["overheadBar"],
         "mastery": {"reps": {"_0": 10}},
-        "prerequisites": []
+        "prerequisites": [
+            "Pull Up"
+        ]
     },
     {
         "name": "Hanging L-Sit",

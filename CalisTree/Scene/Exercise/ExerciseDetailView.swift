@@ -1,11 +1,13 @@
 // Created by Alex Skorulis on 15/5/2026.
 
+import ASKCoordinator
 import ASKCore
 import Knit
 import SwiftUI
 
 struct ExerciseDetailView: View {
     @State var viewModel: ExerciseDetailViewModel
+    @Environment(\.coordinator) private var coordinator
 
     var body: some View {
         ScrollView {
@@ -17,10 +19,15 @@ struct ExerciseDetailView: View {
                             .font(.headline)
                         HStack(spacing: 12) {
                             ForEach(viewModel.prerequisiteItems) { item in
-                                ExerciseAvatar(
-                                    exercise: item.exercise,
-                                    masteryProgress: item.masteryProgress
-                                )
+                                Button {
+                                    coordinator?.push(MainPath.exerciseDetail(item.exercise))
+                                } label: {
+                                    ExerciseAvatar(
+                                        exercise: item.exercise,
+                                        masteryProgress: item.masteryProgress
+                                    )
+                                }
+                                .buttonStyle(.plain)
                             }
                         }
                     }
@@ -68,4 +75,5 @@ struct ExerciseDetailView: View {
             viewModel: assembler.resolver.exerciseDetailViewModel(exercise: exercise)
         )
     }
+    .environment(\.coordinator, Coordinator(root: MainPath.exerciseList))
 }
