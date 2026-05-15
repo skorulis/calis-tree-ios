@@ -38,7 +38,7 @@ final class CalisTreeAssembly: AutoInitModuleAssembly {
 
     @MainActor
     private func registerViewModels(container: Container<TargetResolver>) {
-        
+        container.register(MainPathRenderer.self) { MainPathRenderer(resolver: $0) }
     }
 }
 
