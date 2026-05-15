@@ -18,24 +18,12 @@ struct ExerciseCell: View {
                     .foregroundStyle(.secondary)
             }
             Spacer(minLength: 0)
-            masteryIndicator
+            MasteryIndicatorView(
+                mastery: exercise.mastery,
+                masteryProgress: masteryProgress
+            )
         }
         .contentShape(Rectangle())
-    }
-
-    @ViewBuilder
-    private var masteryIndicator: some View {
-        switch masteryDisplay {
-        case .hidden:
-            EmptyView()
-        case let .ring(progress):
-            MasteryIndicatorView(progress: progress)
-        case .star:
-            Image(systemName: "star.fill")
-                .font(.title3)
-                .foregroundStyle(Color(red: 1, green: 0.78, blue: 0))
-                .accessibilityLabel("Mastered")
-        }
     }
 
     @ViewBuilder
@@ -53,21 +41,6 @@ struct ExerciseCell: View {
                 .frame(width: 32, height: 32)
                 .padding(12)
         }
-    }
-
-    private var masteryDisplay: MasteryDisplay {
-        guard let target = exercise.mastery else { return .hidden }
-        guard masteryProgress > 0 else { return .hidden }
-        if masteryProgress >= target.intValue {
-            return .star
-        }
-        return .ring(progress: Double(masteryProgress) / Double(target.intValue))
-    }
-
-    private enum MasteryDisplay {
-        case hidden
-        case ring(progress: Double)
-        case star
     }
 }
 

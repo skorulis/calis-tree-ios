@@ -23,6 +23,7 @@
         "imageFile": "hanging-high-knee-raise",
         "videoURL": "https://www.youtube.com/watch?v=oDiqwy0Y964",
         "equipment": ["overheadBar"],
+        "mastery": {"reps": {"_0": 20}},
         "prerequisites": []
     },
     {
