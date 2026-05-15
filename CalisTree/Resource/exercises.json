@@ -5,7 +5,8 @@
         "imageFile": "l-sit",
         "videoURL": "https://www.youtube.com/watch?v=noTa65x96v0",
         "equipment": ["overheadBar"],
-        "requirements": []
+        "mastery": {"reps": {"_0": 10}},
+        "prerequisites": []
     },
     {
         "name": "Hanging L-Sit",
@@ -14,7 +15,7 @@
         "videoURL": "https://www.youtube.com/watch?v=TB4gWro3XaY",
         "equipment": ["overheadBar"],
         "mastery": {"time": {"_0": 30}},
-        "requirements": []
+        "prerequisites": []
     },
     {
         "name": "Hanging High Knee Raise",
@@ -22,14 +23,14 @@
         "imageFile": "hanging-high-knee-raise",
         "videoURL": "https://www.youtube.com/watch?v=oDiqwy0Y964",
         "equipment": ["overheadBar"],
-        "requirements": []
+        "prerequisites": []
     },
     {
         "name": "Upside Down Deadlift",
         "level": "beginner",
         "videoURL": "https://www.youtube.com/watch?v=z0o585M90sU",
         "equipment": ["overheadBar"],
-        "requirements": []
+        "prerequisites": []
     },
     {
         "name": "Pull Up",
@@ -37,7 +38,7 @@
         "videoURL": "https://www.youtube.com/watch?v=XeErfmGSwfE",
         "equipment": ["overheadBar"],
         "mastery": {"reps": {"_0": 20}},
-        "requirements": []
+        "prerequisites": []
     },
     {
         "name": "Tuck front lever hold",
@@ -45,11 +46,8 @@
         "videoURL": "https://www.youtube.com/watch?v=f0MTQWbFsq4",
         "equipment": ["overheadBar"],
         "mastery": {"time": {"_0": 20}},
-        "requirements": [
-            {
-                "exercise": "Upside Down Deadlift",
-                "amount": {"reps": {"_0": 10}}
-            }
+        "prerequisites": [
+            "Upside Down Deadlift"
         ]
     }
 ]
