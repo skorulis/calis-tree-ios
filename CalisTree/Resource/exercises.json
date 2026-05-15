@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Hanging L-Sit",
+        "level": "beginner",
+        "imageFile": "l-sit.png",
+        "videoURL": "https://www.youtube.com/watch?v=TB4gWro3XaY",
+        "equipment": ["overheadBar"]
+    },
+    {
+        "name": "Hanging High Knee Raise",
+        "level": "beginner",
+        "imageFile": "high-knee-raise.png",
+        "videoURL": "https://www.youtube.com/watch?v=oDiqwy0Y964",
+        "equipment": ["overheadBar"]
+    }
+]

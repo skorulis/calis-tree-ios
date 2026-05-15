@@ -1,0 +1,28 @@
+---
+description: SwiftUI DesignSystem views — previews, no view models
+globs: "**/DesignSystem/**/*.swift"
+alwaysApply: false
+---
+
+# SwiftUI DesignSystem views (iOS 2026 template)
+
+- **Always** add a `#Preview` for every DesignSystem view so components are visible in Xcode’s canvas and stay visually regressable.
+- **Do not** introduce a view model (`ObservableObject`, `@Observable` UI state types, or `*ViewModel`) for DesignSystem views. Keep them **presentational**: parameters, bindings, and simple private helpers only.
+
+```swift
+// ✅ GOOD — preview + stateless/presentational API
+struct DSPrimaryButton: View {
+    let title: String
+    let action: () -> Void
+
+    var body: some View { /* ... */ }
+}
+
+#Preview {
+    DSPrimaryButton(title: "Continue") { }
+}
+
+// ❌ BAD — DesignSystem coupled to a ViewModel
+@Observable
+final class DSPrimaryButtonViewModel { /* ... */ }
+```

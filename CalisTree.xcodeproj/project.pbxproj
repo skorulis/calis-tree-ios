@@ -6,8 +6,17 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		FA9B80EF2FB6D0A80002AA74 /* ASKCore in Frameworks */ = {isa = PBXBuildFile; productRef = FA9B80EE2FB6D0A80002AA74 /* ASKCore */; };
+		FA9B80F22FB6D0B50002AA74 /* Knit in Frameworks */ = {isa = PBXBuildFile; productRef = FA9B80F12FB6D0B50002AA74 /* Knit */; };
+		FA9B80F42FB6D0B50002AA74 /* KnitMacros in Frameworks */ = {isa = PBXBuildFile; productRef = FA9B80F32FB6D0B50002AA74 /* KnitMacros */; };
+		FA9B80F72FB6D0C50002AA74 /* ASKCoordinator in Frameworks */ = {isa = PBXBuildFile; productRef = FA9B80F62FB6D0C50002AA74 /* ASKCoordinator */; };
+		FAE6B08A2FB6DA1100F2B0F7 /* knitconfig.json in Resources */ = {isa = PBXBuildFile; fileRef = FAE6B0892FB6DA1100F2B0F7 /* knitconfig.json */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		FA9B80DE2FB6D0880002AA74 /* CalisTree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalisTree.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAE6B0892FB6DA1100F2B0F7 /* knitconfig.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = knitconfig.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -23,6 +32,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA9B80F22FB6D0B50002AA74 /* Knit in Frameworks */,
+				FA9B80F72FB6D0C50002AA74 /* ASKCoordinator in Frameworks */,
+				FA9B80F42FB6D0B50002AA74 /* KnitMacros in Frameworks */,
+				FA9B80EF2FB6D0A80002AA74 /* ASKCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32,6 +45,7 @@
 		FA9B80D52FB6D0880002AA74 = {
 			isa = PBXGroup;
 			children = (
+				FAE6B0892FB6DA1100F2B0F7 /* knitconfig.json */,
 				FA9B80E02FB6D0880002AA74 /* CalisTree */,
 				FA9B80DF2FB6D0880002AA74 /* Products */,
 			);
@@ -59,12 +73,17 @@
 			buildRules = (
 			);
 			dependencies = (
+				FAE6B08C2FB6DA1D00F2B0F7 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				FA9B80E02FB6D0880002AA74 /* CalisTree */,
 			);
 			name = CalisTree;
 			packageProductDependencies = (
+				FA9B80EE2FB6D0A80002AA74 /* ASKCore */,
+				FA9B80F12FB6D0B50002AA74 /* Knit */,
+				FA9B80F32FB6D0B50002AA74 /* KnitMacros */,
+				FA9B80F62FB6D0C50002AA74 /* ASKCoordinator */,
 			);
 			productName = CalisTree;
 			productReference = FA9B80DE2FB6D0880002AA74 /* CalisTree.app */;
@@ -94,6 +113,11 @@
 			);
 			mainGroup = FA9B80D52FB6D0880002AA74;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				FA9B80ED2FB6D0A80002AA74 /* XCRemoteSwiftPackageReference "ASKCore" */,
+				FA9B80F02FB6D0B50002AA74 /* XCRemoteSwiftPackageReference "knit" */,
+				FA9B80F52FB6D0C50002AA74 /* XCRemoteSwiftPackageReference "ASKCoordinator" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = FA9B80DF2FB6D0880002AA74 /* Products */;
 			projectDirPath = "";
@@ -109,6 +133,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAE6B08A2FB6DA1100F2B0F7 /* knitconfig.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +148,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FAE6B08C2FB6DA1D00F2B0F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = FAE6B08B2FB6DA1D00F2B0F7 /* KnitBuildPlugin */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		FA9B80E72FB6D0890002AA74 /* Debug */ = {
@@ -332,6 +364,61 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FA9B80ED2FB6D0A80002AA74 /* XCRemoteSwiftPackageReference "ASKCore" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/skorulis/ASKCore";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		FA9B80F02FB6D0B50002AA74 /* XCRemoteSwiftPackageReference "knit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/cashapp/knit";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		FA9B80F52FB6D0C50002AA74 /* XCRemoteSwiftPackageReference "ASKCoordinator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/skorulis/ASKCoordinator";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FA9B80EE2FB6D0A80002AA74 /* ASKCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA9B80ED2FB6D0A80002AA74 /* XCRemoteSwiftPackageReference "ASKCore" */;
+			productName = ASKCore;
+		};
+		FA9B80F12FB6D0B50002AA74 /* Knit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA9B80F02FB6D0B50002AA74 /* XCRemoteSwiftPackageReference "knit" */;
+			productName = Knit;
+		};
+		FA9B80F32FB6D0B50002AA74 /* KnitMacros */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA9B80F02FB6D0B50002AA74 /* XCRemoteSwiftPackageReference "knit" */;
+			productName = KnitMacros;
+		};
+		FA9B80F62FB6D0C50002AA74 /* ASKCoordinator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA9B80F52FB6D0C50002AA74 /* XCRemoteSwiftPackageReference "ASKCoordinator" */;
+			productName = ASKCoordinator;
+		};
+		FAE6B08B2FB6DA1D00F2B0F7 /* KnitBuildPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA9B80F02FB6D0B50002AA74 /* XCRemoteSwiftPackageReference "knit" */;
+			productName = "plugin:KnitBuildPlugin";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FA9B80D62FB6D0880002AA74 /* Project object */;
 }

@@ -1,0 +1,35 @@
+---
+description: View model conventions (@Resolvable, Knit assembly, @Observable, ASKCoordinator, view-facing state as vars)
+globs: "**/*ViewModel.swift"
+alwaysApply: false
+---
+
+# View models (iOS 2026 template)
+
+## Dependency injection
+
+- Mark the initializer with **`@Resolvable`** so Knit can generate factory wiring.
+- Register each view model type in the app assembly’s **`registerViewModels(container:)`** (in `Service/App/*Assembly.swift`), alongside other registrations.
+
+## Observation
+
+- Declare view models with **`@Observable`** (import `Observation` if needed). SwiftUI views should take the model with **`@Bindable`** when bindings are required.
+
+## Navigation
+
+- Perform navigation through the **ASKCoordinator** stack (e.g. coordinator / path APIs exposed via injection), not ad hoc `NavigationLink` targets or one-off routers. Keep coordinator usage consistent with existing `CoordinatorPath` / renderer patterns in `Scene/Coordinator/`.
+- Create a new CoordinatorPath entry for each View/ViewModel pair and always use this when displaying the view.
+- Do not use `NavigationStack` directly in Views, always use `CoordinatorView` with a path
+
+## State exposed to views
+
+- **Do not** expose data to SwiftUI through methods the view calls only to read state (e.g. `func title() -> String`). Anything the view displays or binds must live on **`var`** properties (including computed vars when derived state is still property-based).
+- Methods are fine for **actions** (user intents, navigation, async work), not as the primary way to **read** model state.
+
+```swift
+// ❌ BAD — view must call functions to read UI state
+func displayName() -> String { user.name }
+
+// ✅ GOOD — view reads properties
+var userName: String
+```
