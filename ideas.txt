@@ -1,10 +1,10 @@
 This is a nice opportunity to fix up issues I ran into last time with development
 1. The way my colors were managed was pretty bad, I should build a helper into ASKCore since I think all my apps could benefit from it
 
+
 Things I will need:
 1. Videos of all the exercises (should be ok to just use Youtube)
 2. Images for each exercise.
-3. Images for each kind of equipment
 
 
 

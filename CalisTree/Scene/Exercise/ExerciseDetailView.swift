@@ -18,11 +18,8 @@ struct ExerciseDetailView: View {
                 Text(exercise.level.displayTitle)
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
-                if let url = URL(string: exercise.videoURL) {
-                    Link(destination: url) {
-                        Label("Watch video", systemImage: "play.rectangle")
-                    }
-                }
+                YouTubeEmbedView(videoURL: exercise.videoURL)
+                    .clipShape(RoundedRectangle(cornerRadius: 12))
                 VStack(alignment: .leading, spacing: 8) {
                     Text("Equipment")
                         .font(.headline)
