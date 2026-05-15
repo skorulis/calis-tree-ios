@@ -12,9 +12,10 @@ struct MainPathRenderer: CoordinatorPathRenderer {
     @ViewBuilder @MainActor
     func render(path: MainPath, in coordinator: Coordinator) -> some View {
         switch path {
-        case .exercises:
-            EmptyView() // TODO: Implement
+        case .exerciseList:
+            ExerciseListView(repository: resolver.exerciseRepository())
+        case .exerciseDetail(let exercise):
+            ExerciseDetailView(exercise: exercise)
         }
     }
 }
-

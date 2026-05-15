@@ -18,7 +18,7 @@ struct CalisTreeApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(resolver: assembler.resolver)
         }
     }
 }

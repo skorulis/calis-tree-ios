@@ -28,7 +28,10 @@ final class CalisTreeAssembly: AutoInitModuleAssembly {
 
     @MainActor
     private func registerServices(container: Container<TargetResolver>) {
-        
+        container.register(ExerciseRepository.self) { _ in
+            ExerciseRepository()
+        }
+        .inObjectScope(.container)
     }
 
     @MainActor

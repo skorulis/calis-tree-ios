@@ -1,15 +1,22 @@
 [
     {
+        "name": "L-Sit Pull-Up",
+        "level": "beginner",
+        "imageFile": "l-sit",
+        "videoURL": "https://www.youtube.com/watch?v=noTa65x96v0",
+        "equipment": ["overheadBar"]
+    },
+    {
         "name": "Hanging L-Sit",
         "level": "beginner",
-        "imageFile": "l-sit.png",
+        "imageFile": "l-sit",
         "videoURL": "https://www.youtube.com/watch?v=TB4gWro3XaY",
         "equipment": ["overheadBar"]
     },
     {
         "name": "Hanging High Knee Raise",
         "level": "beginner",
-        "imageFile": "high-knee-raise.png",
+        "imageFile": "hanging-high-knee-raise",
         "videoURL": "https://www.youtube.com/watch?v=oDiqwy0Y964",
         "equipment": ["overheadBar"]
     }

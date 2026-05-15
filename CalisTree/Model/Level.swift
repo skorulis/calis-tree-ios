@@ -8,4 +8,8 @@ enum Level: String, Codable {
     case intermediate
     case advanced
     case extreme
+
+    var displayTitle: String {
+        rawValue.capitalized
+    }
 }

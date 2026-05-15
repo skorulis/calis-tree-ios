@@ -3,10 +3,13 @@ This is a nice opportunity to fix up issues I ran into last time with developmen
 
 Things I will need:
 1. Videos of all the exercises (should be ok to just use Youtube)
-2. 
+2. Images for each exercise.
+3. Images for each kind of equipment
+
 
 
 
 Data sources:
+https://progresspedia.org/courses/calisthenics/
 https://wedocalisthenics.com/
 https://docs.google.com/spreadsheets/d/1-wS6RlyjlKVvYfA5DJcb89mg7uLBc8LpIhf4oee5B6o/edit?gid=0#gid=0

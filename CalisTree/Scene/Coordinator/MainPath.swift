@@ -4,11 +4,15 @@ import ASKCoordinator
 import Foundation
 
 enum MainPath: CoordinatorPath {
-    case exercises
-    
+    case exerciseList
+    case exerciseDetail(Exercise)
+
     var id: String {
         switch self {
-        case .exercises: "exercises"
+        case .exerciseList:
+            "exerciseList"
+        case .exerciseDetail(let exercise):
+            "exerciseDetail:\(exercise.name)"
         }
     }
 }
