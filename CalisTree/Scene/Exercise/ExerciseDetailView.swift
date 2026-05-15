@@ -1,6 +1,7 @@
 // Created by Alex Skorulis on 15/5/2026.
 
 import ASKCore
+import Knit
 import SwiftUI
 
 struct ExerciseDetailView: View {
@@ -12,6 +13,20 @@ struct ExerciseDetailView: View {
                 Text(viewModel.exercise.level.displayTitle)
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
+                if !viewModel.prerequisiteItems.isEmpty {
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("Prerequisites")
+                            .font(.headline)
+                        HStack(spacing: 12) {
+                            ForEach(viewModel.prerequisiteItems) { item in
+                                ExerciseAvatar(
+                                    exercise: item.exercise,
+                                    masteryProgress: item.masteryProgress
+                                )
+                            }
+                        }
+                    }
+                }
                 YouTubeEmbedView(videoURL: viewModel.exercise.videoURL)
                     .clipShape(RoundedRectangle(cornerRadius: 12))
                 if viewModel.showsMastery, let target = viewModel.masteryTarget {
@@ -48,25 +63,11 @@ struct ExerciseDetailView: View {
 }
 
 #Preview {
-    let mainStore = MainStore(keyValueStore: InMemoryDefaults())
-    let exercise = Exercise(
-        name: "Hanging L-Sit",
-        description: "Hang from the bar in an l sit position",
-        level: .beginner,
-        imageFile: "l-sit",
-        videoURL: "https://www.youtube.com/watch?v=TB4gWro3XaY",
-        equipment: [.overheadBar],
-        mastery: .time(20),
-        prerequisites: [
-            "Pull Up",
-        ]
-    )
-    return NavigationStack {
+    let assembler = CalisTreeAssembly.testing()
+    let exercise = assembler.resolver.exerciseRepository().exerciseByName["Tuck front lever hold"]!
+    NavigationStack {
         ExerciseDetailView(
-            viewModel: ExerciseDetailViewModel(
-                mainStore: mainStore,
-                exercise: exercise
-            )
+            viewModel: assembler.resolver.exerciseDetailViewModel(exercise: exercise)
         )
     }
 }

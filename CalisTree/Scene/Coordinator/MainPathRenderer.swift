@@ -19,10 +19,7 @@ struct MainPathRenderer: CoordinatorPathRenderer {
             )
         case .exerciseDetail(let exercise):
             ExerciseDetailView(
-                viewModel: ExerciseDetailViewModel(
-                    mainStore: resolver.mainStore(),
-                    exercise: exercise
-                )
+                viewModel: resolver.exerciseDetailViewModel(exercise: exercise)
             )
         }
     }
