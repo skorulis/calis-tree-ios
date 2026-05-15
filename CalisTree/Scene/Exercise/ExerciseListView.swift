@@ -14,23 +14,7 @@ struct ExerciseListView: View {
                 Button {
                     coordinator?.push(MainPath.exerciseDetail(exercise))
                 } label: {
-                    HStack(spacing: 12) {
-                        Image(exercise.imageFile)
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: 56, height: 56)
-                            .clipShape(RoundedRectangle(cornerRadius: 8))
-                        VStack(alignment: .leading, spacing: 4) {
-                            Text(exercise.name)
-                                .font(.headline)
-                                .foregroundStyle(.primary)
-                            Text(exercise.level.displayTitle)
-                                .font(.subheadline)
-                                .foregroundStyle(.secondary)
-                        }
-                        Spacer(minLength: 0)
-                    }
-                    .contentShape(Rectangle())
+                    ExerciseCell(exercise: exercise)
                 }
                 .buttonStyle(.plain)
             }

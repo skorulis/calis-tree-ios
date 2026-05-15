@@ -7,14 +7,7 @@ struct ExerciseDetailView: View {
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 16) {
-                Image(exercise.imageFile)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(maxHeight: 220)
-                    .clipShape(RoundedRectangle(cornerRadius: 12))
-                Text(exercise.name)
-                    .font(.title2.weight(.semibold))
+            VStack(alignment: .leading, spacing: 16) {                
                 Text(exercise.level.displayTitle)
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
@@ -44,7 +37,8 @@ struct ExerciseDetailView: View {
                 level: .beginner,
                 imageFile: "l-sit",
                 videoURL: "https://www.youtube.com/watch?v=TB4gWro3XaY",
-                equipment: [.overheadBar]
+                equipment: [.overheadBar],
+                mastery: .time(20),
             )
         )
     }

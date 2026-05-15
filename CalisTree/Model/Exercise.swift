@@ -5,7 +5,8 @@ import Foundation
 struct Exercise: Codable {
     let name: String
     let level: Level
-    let imageFile: String
+    let imageFile: String?
     let videoURL: String
     let equipment: [Equipment]
+    let mastery: SetType?
 }

@@ -11,7 +11,8 @@
         "level": "beginner",
         "imageFile": "l-sit",
         "videoURL": "https://www.youtube.com/watch?v=TB4gWro3XaY",
-        "equipment": ["overheadBar"]
+        "equipment": ["overheadBar"],
+        "mastery": {"time": {"_0": 30}}
     },
     {
         "name": "Hanging High Knee Raise",
@@ -19,5 +20,18 @@
         "imageFile": "hanging-high-knee-raise",
         "videoURL": "https://www.youtube.com/watch?v=oDiqwy0Y964",
         "equipment": ["overheadBar"]
+    },
+    {
+        "name": "Upside Down Deadlift",
+        "level": "beginner",
+        "videoURL": "https://www.youtube.com/watch?v=z0o585M90sU",
+        "equipment": ["overheadBar"]
+    },
+    {
+        "name": "Pull up",
+        "level": "beginner",
+        "videoURL": "https://www.youtube.com/watch?v=XeErfmGSwfE",
+        "equipment": ["overheadBar"],
+        "mastery": {"reps": {"_0": 20}}
     }
 ]
