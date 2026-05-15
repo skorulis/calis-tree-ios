@@ -10,9 +10,7 @@ struct ExerciseDetailView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 16) {
-                Text(viewModel.exercise.level.displayTitle)
-                    .font(.subheadline)
-                    .foregroundStyle(.secondary)
+                Chip(level: viewModel.exercise.level)
                 if !viewModel.prerequisiteItems.isEmpty {
                     VStack(alignment: .leading, spacing: 8) {
                         Text("Prerequisites")

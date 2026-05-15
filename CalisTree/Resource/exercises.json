@@ -36,6 +36,7 @@
     {
         "name": "Pull Up",
         "level": "beginner",
+        "imageFile": "pull-up",
         "videoURL": "https://www.youtube.com/watch?v=XeErfmGSwfE",
         "equipment": ["overheadBar"],
         "mastery": {"reps": {"_0": 20}},
@@ -49,6 +50,16 @@
         "mastery": {"time": {"_0": 20}},
         "prerequisites": [
             "Upside Down Deadlift"
+        ]
+    },
+    {
+        "name": "Front Lever Drops",
+        "level": "intermediate",
+        "videoURL": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "equipment": ["overheadBar"],
+        "mastery": {"reps": {"_0": 10}},
+        "prerequisites": [
+            "Tuck front lever hold"
         ]
     }
 ]

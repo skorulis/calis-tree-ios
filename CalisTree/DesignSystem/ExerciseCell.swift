@@ -13,9 +13,7 @@ struct ExerciseCell: View {
                 Text(exercise.name)
                     .font(.headline)
                     .foregroundStyle(.primary)
-                Text(exercise.level.displayTitle)
-                    .font(.subheadline)
-                    .foregroundStyle(.secondary)
+                Chip(level: exercise.level)
             }
             Spacer(minLength: 0)
             MasteryIndicatorView(
