@@ -3,7 +3,7 @@
 import Foundation
 
 enum Level: String, Codable {
-    case foundations
+    case foundation
     case beginner
     case intermediate
     case advanced

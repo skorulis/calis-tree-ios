@@ -34,11 +34,15 @@ struct ExerciseDetailView: View {
         ExerciseDetailView(
             exercise: Exercise(
                 name: "Hanging L-Sit",
+                description: "Hang from the bar in an l sit position",
                 level: .beginner,
                 imageFile: "l-sit",
                 videoURL: "https://www.youtube.com/watch?v=TB4gWro3XaY",
                 equipment: [.overheadBar],
                 mastery: .time(20),
+                requirements: [
+                    .init(exerciseName: "Pull Up", amount: .reps(1))
+                ]
             )
         )
     }

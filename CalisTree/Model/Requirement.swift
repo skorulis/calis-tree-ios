@@ -2,7 +2,7 @@
 
 import Foundation
 
-struct ProgressionRequirement: Codable {
-    let exerciseID: String
+struct Requirement: Codable {
+    let exerciseName: String
     let amount: SetType
 }

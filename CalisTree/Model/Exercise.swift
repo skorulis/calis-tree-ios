@@ -4,9 +4,11 @@ import Foundation
 
 struct Exercise: Codable {
     let name: String
+    let description: String?
     let level: Level
     let imageFile: String?
     let videoURL: String
     let equipment: [Equipment]
     let mastery: SetType?
+    let requirements: [Requirement]
 }
