@@ -38,5 +38,18 @@
         "equipment": ["overheadBar"],
         "mastery": {"reps": {"_0": 20}},
         "requirements": []
+    },
+    {
+        "name": "Tuck front lever hold",
+        "level": "intermediate",
+        "videoURL": "https://www.youtube.com/watch?v=f0MTQWbFsq4",
+        "equipment": ["overheadBar"],
+        "mastery": {"time": {"_0": 20}},
+        "requirements": [
+            {
+                "exercise": "Upside Down Deadlift",
+                "amount": {"reps": {"_0": 10}}
+            }
+        ]
     }
 ]

@@ -8,4 +8,20 @@ nonisolated enum SetType: Codable {
     
     // Time in seconds
     case time(Int)
+
+    var intValue: Int {
+        switch self {
+        case let .reps(value), let .time(value):
+            value
+        }
+    }
+
+    var unitLabel: String {
+        switch self {
+        case .reps:
+            "reps"
+        case .time:
+            "sec"
+        }
+    }
 }

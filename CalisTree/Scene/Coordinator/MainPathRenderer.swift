@@ -15,7 +15,12 @@ struct MainPathRenderer: CoordinatorPathRenderer {
         case .exerciseList:
             ExerciseListView(repository: resolver.exerciseRepository())
         case .exerciseDetail(let exercise):
-            ExerciseDetailView(exercise: exercise)
+            ExerciseDetailView(
+                viewModel: ExerciseDetailViewModel(
+                    mainStore: resolver.mainStore(),
+                    exercise: exercise
+                )
+            )
         }
     }
 }

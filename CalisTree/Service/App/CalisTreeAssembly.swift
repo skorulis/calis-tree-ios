@@ -36,7 +36,8 @@ final class CalisTreeAssembly: AutoInitModuleAssembly {
 
     @MainActor
     private func registerStores(container: Container<TargetResolver>) {
-        
+        container.register(MainStore.self) { MainStore.make(resolver: $0) }
+            .inObjectScope(.container)
     }
 
     @MainActor
