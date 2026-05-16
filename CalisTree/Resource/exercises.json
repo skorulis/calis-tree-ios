@@ -72,7 +72,8 @@
         "mastery": {"time": {"_0": 10}},
         "prerequisites": [
             "Reverse Leg Raises",
-            "Floor L-Sit"
+            "Floor L-Sit",
+            "Planche Lean"
         ]
     },
     {
@@ -131,5 +132,25 @@
             "Push Up",
             "Reverse Leg Raises"
         ]
+    },
+    {
+        "name": "Tuck Planche",
+        "level": "intermediate",
+        "videoURL": "https://www.youtube.com/shorts/-cxjiLArpls",
+        "equipment": ["floor"],
+        "mastery": {"time": {"_0": 10}},
+        "prerequisites": [
+            "Planche Lean",
+            "Tuck L-Sit"
+        ]
+    },
+    {
+        "name": "Wall Sit",
+        "description": "Sit in an imaginary chair pressing your backing into the wall. Your things should be parallel to the ground.",
+        "level": "beginner",
+        "videoURL": "https://www.youtube.com/shorts/mDdLC-yKudY",
+        "equipment": ["wall"],
+        "mastery": {"time": {"_0": 60}},
+        "prerequisites": []
     }
 ]

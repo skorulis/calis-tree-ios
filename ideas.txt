@@ -1,4 +1,8 @@
+It might be better to make exercises more complicated.
+Planche lean for instance could have a step for chest level holds and one for waist level hold
+It could also have one for doing reps where you move back and forwards.
 
+I need to be writing better tips for each exercise both for me and others.
 
 I want a timer in the app that is voice controlled. 
 I want to be able to say "start timer" which will start the timer and then "stop timer" which will stop it.
@@ -10,6 +14,9 @@ This is a nice opportunity to fix up issues I ran into last time with developmen
 Things I will need:
 1. Videos of all the exercises (should be ok to just use Youtube)
 2. Images for each exercise.
+3. Copy for each exercise.
+
+
 
 
 

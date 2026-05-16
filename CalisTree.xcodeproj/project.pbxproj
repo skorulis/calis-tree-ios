@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FA9B82092FB918000002AA74 /* Speech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9B82082FB918000002AA74 /* Speech.framework */; };
-		FA9B820B2FB918000002AA74 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9B820A2FB918000002AA74 /* AVFoundation.framework */; };
 		FA9B80EF2FB6D0A80002AA74 /* ASKCore in Frameworks */ = {isa = PBXBuildFile; productRef = FA9B80EE2FB6D0A80002AA74 /* ASKCore */; };
 		FA9B80F22FB6D0B50002AA74 /* Knit in Frameworks */ = {isa = PBXBuildFile; productRef = FA9B80F12FB6D0B50002AA74 /* Knit */; };
 		FA9B80F42FB6D0B50002AA74 /* KnitMacros in Frameworks */ = {isa = PBXBuildFile; productRef = FA9B80F32FB6D0B50002AA74 /* KnitMacros */; };
 		FA9B80F72FB6D0C50002AA74 /* ASKCoordinator in Frameworks */ = {isa = PBXBuildFile; productRef = FA9B80F62FB6D0C50002AA74 /* ASKCoordinator */; };
+		FA9B82092FB918000002AA74 /* Speech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9B82082FB918000002AA74 /* Speech.framework */; };
+		FA9B820B2FB918000002AA74 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9B820A2FB918000002AA74 /* AVFoundation.framework */; };
 		FAE6B08A2FB6DA1100F2B0F7 /* knitconfig.json in Resources */ = {isa = PBXBuildFile; fileRef = FAE6B0892FB6DA1100F2B0F7 /* knitconfig.json */; };
 /* End PBXBuildFile section */
 
@@ -27,9 +27,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FA9B820A2FB918000002AA74 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		FA9B82082FB918000002AA74 /* Speech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Speech.framework; path = System/Library/Frameworks/Speech.framework; sourceTree = SDKROOT; };
 		FA9B80DE2FB6D0880002AA74 /* CalisTree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalisTree.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA9B82082FB918000002AA74 /* Speech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Speech.framework; path = System/Library/Frameworks/Speech.framework; sourceTree = SDKROOT; };
+		FA9B820A2FB918000002AA74 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		FAE6B0892FB6DA1100F2B0F7 /* knitconfig.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = knitconfig.json; sourceTree = "<group>"; };
 		FAE6B0E52FB6F50B00F2B0F7 /* CalisTreeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalisTreeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -71,6 +71,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA8F6FF12FB81D8E0041808B /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				FA9B820A2FB918000002AA74 /* AVFoundation.framework */,
+				FA9B82082FB918000002AA74 /* Speech.framework */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		FA9B80D52FB6D0880002AA74 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +87,7 @@
 				FA9B80E02FB6D0880002AA74 /* CalisTree */,
 				FAE6B0E62FB6F50B00F2B0F7 /* CalisTreeTests */,
 				FA9B80DF2FB6D0880002AA74 /* Products */,
+				FA8F6FF12FB81D8E0041808B /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};

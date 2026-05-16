@@ -12,6 +12,7 @@ import SwiftUI
 private enum RootTab: Hashable {
     case exercises
     case timer
+    case terminology
 }
 
 struct ContentView: View {
@@ -24,6 +25,8 @@ struct ContentView: View {
                 .tag(RootTab.exercises)
             timer
                 .tag(RootTab.timer)
+            terminology
+                .tag(RootTab.terminology)
         }
     }
 
@@ -46,6 +49,18 @@ struct ContentView: View {
         .withRenderers(resolver: resolver)
         .tabItem {
             Label("Exercises", systemImage: "figure.strengthtraining.traditional")
+        }
+    }
+
+    private var terminology: some View {
+        CoordinatorView(
+            coordinator: Coordinator(root: MainPath.terminologyList),
+            renderers: [],
+            useNavigationStack: true,
+        )
+        .withRenderers(resolver: resolver)
+        .tabItem {
+            Label("Terminology", systemImage: "book.closed")
         }
     }
 }

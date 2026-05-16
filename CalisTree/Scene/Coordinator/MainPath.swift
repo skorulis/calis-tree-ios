@@ -6,6 +6,8 @@ import Foundation
 enum MainPath: CoordinatorPath {
     case exerciseList
     case exerciseDetail(Exercise)
+    case terminologyList
+    case terminologyDetail(Terminology)
 
     var id: String {
         switch self {
@@ -13,6 +15,10 @@ enum MainPath: CoordinatorPath {
             "exerciseList"
         case .exerciseDetail(let exercise):
             "exerciseDetail:\(exercise.name)"
+        case .terminologyList:
+            "terminologyList"
+        case .terminologyDetail(let term):
+            "terminologyDetail:\(term.name)"
         }
     }
 }

@@ -18,7 +18,7 @@ struct ExerciseDetailView: View {
                         Text("Prerequisites")
                             .font(.headline)
                         HStack(spacing: 12) {
-                            ForEach(viewModel.prerequisiteItems) { item in
+                            ForEach(sortedPrerequisiteItems) { item in
                                 Button {
                                     coordinator?.push(MainPath.exerciseDetail(item.exercise))
                                 } label: {
@@ -76,6 +76,23 @@ struct ExerciseDetailView: View {
                     viewModel.isFavorite ? "Remove from favorites" : "Add to favorites"
                 )
             }
+        }
+    }
+
+    /// Fraction toward mastery (`0…1`). Exercises without a mastery goal count as complete (`1`).
+    private func prerequisiteCompletenessFraction(_ item: PrerequisiteItem) -> Double {
+        guard let mastery = item.exercise.mastery else { return 1 }
+        let target = Double(mastery.intValue)
+        guard target > 0 else { return 1 }
+        return min(1, Double(item.masteryProgress) / target)
+    }
+
+    private var sortedPrerequisiteItems: [PrerequisiteItem] {
+        viewModel.prerequisiteItems.sorted { lhs, rhs in
+            let l = prerequisiteCompletenessFraction(lhs)
+            let r = prerequisiteCompletenessFraction(rhs)
+            if l != r { return l < r }
+            return lhs.exercise.name < rhs.exercise.name
         }
     }
 }

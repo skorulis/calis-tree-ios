@@ -32,6 +32,11 @@ final class CalisTreeAssembly: AutoInitModuleAssembly {
             ExerciseRepository()
         }
         .inObjectScope(.container)
+
+        container.register(TerminologyRepository.self) { _ in
+            TerminologyRepository()
+        }
+        .inObjectScope(.container)
     }
 
     @MainActor
@@ -50,6 +55,14 @@ final class CalisTreeAssembly: AutoInitModuleAssembly {
 
         container.register(ExerciseListViewModel.self) { (resolver: Resolver) in
             ExerciseListViewModel.make(resolver: resolver)
+        }
+
+        container.register(TerminologyDetailViewModel.self) { (resolver: Resolver, terminology: Terminology) in
+            TerminologyDetailViewModel.make(resolver: resolver, terminology: terminology)
+        }
+
+        container.register(TerminologyListViewModel.self) { (resolver: Resolver) in
+            TerminologyListViewModel.make(resolver: resolver)
         }
     }
 }
