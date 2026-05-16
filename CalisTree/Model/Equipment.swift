@@ -2,7 +2,7 @@
 
 import Foundation
 
-enum Equipment: String, Codable {
+enum Equipment: String, Codable, CaseIterable {
     case overheadBar
     case parallelBars
     case floor

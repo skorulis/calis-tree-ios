@@ -12,14 +12,35 @@ struct ExerciseListItem: Identifiable {
     let masteryProgress: Int
 }
 
+enum ExerciseProgressFilter: String, CaseIterable, Hashable {
+    case mastered
+    case inProgress
+    case notStarted
+
+    var menuTitle: String {
+        switch self {
+        case .mastered:
+            "Mastered"
+        case .inProgress:
+            "In progress"
+        case .notStarted:
+            "Not started"
+        }
+    }
+}
+
 @MainActor
 @Observable
 final class ExerciseListViewModel: CoordinatorViewModel {
     private let mainStore: MainStore
     private let repository: ExerciseRepository
-    
+
     weak var coordinator: Coordinator?
-    
+
+    var searchText: String = ""
+    var filterLevel: Level?
+    var filterEquipment: Equipment?
+    var filterProgress: ExerciseProgressFilter?
 
     @Resolvable<Resolver>
     init(mainStore: MainStore, repository: ExerciseRepository) {
@@ -27,12 +48,56 @@ final class ExerciseListViewModel: CoordinatorViewModel {
         self.repository = repository
     }
 
+    var hasActiveFilters: Bool {
+        filterLevel != nil || filterEquipment != nil || filterProgress != nil
+    }
+
     var items: [ExerciseListItem] {
-        repository.exercises.map { exercise in
-            ExerciseListItem(
+        let tokens = Self.searchTokens(from: searchText)
+        return repository.exercises.compactMap { exercise in
+            let progress = mainStore.masteryProgress(for: exercise.name)
+            guard matchesProgress(exercise: exercise, progress: progress, filter: filterProgress)
+            else { return nil }
+            if let filterLevel, exercise.level != filterLevel { return nil }
+            if let filterEquipment, !exercise.equipment.contains(filterEquipment) { return nil }
+            guard Self.matchesSearch(name: exercise.name, tokens: tokens) else { return nil }
+            return ExerciseListItem(
                 exercise: exercise,
-                masteryProgress: mainStore.masteryProgress(for: exercise.name)
+                masteryProgress: progress
             )
+        }
+    }
+
+    func resetFilters() {
+        filterLevel = nil
+        filterEquipment = nil
+        filterProgress = nil
+    }
+
+    private static func searchTokens(from searchText: String) -> [String] {
+        searchText.split(whereSeparator: \.isWhitespace).map(String.init)
+    }
+
+    private static func matchesSearch(name: String, tokens: [String]) -> Bool {
+        tokens.allSatisfy { name.localizedStandardContains($0) }
+    }
+
+    private func matchesProgress(
+        exercise: Exercise,
+        progress: Int,
+        filter: ExerciseProgressFilter?
+    ) -> Bool {
+        guard let filter else { return true }
+        switch filter {
+        case .mastered:
+            guard let target = exercise.mastery?.intValue else { return false }
+            return progress >= target
+        case .inProgress:
+            guard let target = exercise.mastery?.intValue else { return false }
+            return progress > 0 && progress < target
+        case .notStarted:
+            guard let target = exercise.mastery?.intValue else { return true }
+            return progress == 0
         }
     }
 }

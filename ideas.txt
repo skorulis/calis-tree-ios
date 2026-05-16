@@ -1,3 +1,8 @@
+
+
+I want a timer in the app that is voice controlled. 
+I want to be able to say "start timer" which will start the timer and then "stop timer" which will stop it.
+
 This is a nice opportunity to fix up issues I ran into last time with development
 1. The way my colors were managed was pretty bad, I should build a helper into ASKCore since I think all my apps could benefit from it
 

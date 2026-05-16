@@ -13,7 +13,7 @@ alwaysApply: false
 
 ## Observation
 
-- Declare view models with **`@Observable`** (import `Observation` if needed). SwiftUI views should take the model with **`@Bindable`** when bindings are required.
+- Declare view models with **`@Observable`** (import `Observation` if needed). SwiftUI views should take the model with **`@State`** to take ownership.
 
 ## Navigation
 

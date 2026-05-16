@@ -3,7 +3,7 @@
 import Foundation
 import SwiftUI
 
-enum Level: String, Codable {
+enum Level: String, Codable, CaseIterable {
     case foundation
     case beginner
     case intermediate
