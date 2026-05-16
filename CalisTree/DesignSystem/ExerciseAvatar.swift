@@ -96,6 +96,7 @@ struct ExerciseAvatar: View {
         exercise: Exercise(
             name: "Pull Up",
             description: nil,
+            steps: nil,
             level: .beginner,
             imageFile: nil,
             videoURL: "https://www.youtube.com/watch?v=XeErfmGSwfE",
@@ -112,6 +113,7 @@ struct ExerciseAvatar: View {
         exercise: Exercise(
             name: "Pull Up",
             description: nil,
+            steps: nil,
             level: .beginner,
             imageFile: nil,
             videoURL: "https://www.youtube.com/watch?v=XeErfmGSwfE",
@@ -128,6 +130,7 @@ struct ExerciseAvatar: View {
         exercise: Exercise(
             name: "Pull Up",
             description: nil,
+            steps: nil,
             level: .beginner,
             imageFile: nil,
             videoURL: "https://www.youtube.com/watch?v=XeErfmGSwfE",

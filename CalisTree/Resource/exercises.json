@@ -124,6 +124,14 @@
     {
         "name": "Planche Lean",
         "description": "Make sure your hands up at your waist position",
+        "steps": [
+            "Start in a high push-up position with your hands shoulder-width apart and arms fully straight",
+            "Engage your core and glutes to keep your body in a straight line from head to heels",
+            "Push through the floor and protract your shoulders by rounding the upper back slightly",
+            "Slowly shift your shoulders forward past your wrists while keeping your elbows locked",
+            "Lean as far forward as you can while maintaining control and proper form",
+            "Keep your head neutral and look slightly ahead of your hands"
+        ],
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/shorts/ca0yGW8071Y",
         "equipment": ["floor"],
@@ -146,10 +154,35 @@
     },
     {
         "name": "Wall Sit",
+        "steps": [
+            "Start by getting onto the floor on your hands and knees",
+            "Step your feet forward roughly 1–2 feet away from the wall",
+            "Slowly slide your back down the wall by bending your knees",
+            "Lower yourself until your thighs are parallel to the floor and your knees form roughly 90-degree angles",
+            "Keep your knees directly above your ankles and avoid letting them move inward",
+            "Press your back and shoulders firmly against the wall",
+            "Tighten your core and keep your chest upright"
+        ],
         "description": "Sit in an imaginary chair pressing your backing into the wall. Your things should be parallel to the ground.",
         "level": "beginner",
         "videoURL": "https://www.youtube.com/shorts/mDdLC-yKudY",
         "equipment": ["wall"],
+        "mastery": {"time": {"_0": 60}},
+        "prerequisites": []
+    },
+    {
+        "name": "Plank",
+        "steps": [
+            "Start by getting onto the floor on your hands and knees",
+            "Place your forearms on the ground with your elbows directly under your shoulders",
+            "Extend your legs straight behind you and balance on your toes",
+            "Keep your body in a straight line from your head to your heels",
+            "Tighten your core, glutes, and legs to prevent your hips from sagging or lifting too high",
+            "Keep your neck neutral by looking down at the floor slightly ahead of your hands"
+        ],
+        "level": "beginner",
+        "videoURL": "https://www.youtube.com/shorts/xe2MXatLTUw",
+        "equipment": ["floor"],
         "mastery": {"time": {"_0": 60}},
         "prerequisites": []
     }

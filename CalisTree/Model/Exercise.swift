@@ -5,6 +5,8 @@ import Foundation
 struct Exercise: Codable {
     let name: String
     let description: String?
+    // Steps to perform this exercise 
+    let steps: [String]?
     let level: Level
     let imageFile: String?
     let videoURL: String

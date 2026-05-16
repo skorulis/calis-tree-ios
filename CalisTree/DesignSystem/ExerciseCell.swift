@@ -47,6 +47,7 @@ struct ExerciseCell: View {
         exercise: Exercise(
             name: "Hanging L-Sit",
             description: nil,
+            steps: nil,
             level: .beginner,
             imageFile: "l-sit",
             videoURL: "https://www.youtube.com/watch?v=TB4gWro3XaY",
@@ -64,6 +65,7 @@ struct ExerciseCell: View {
         exercise: Exercise(
             name: "Pull up",
             description: nil,
+            steps: nil,
             level: .beginner,
             imageFile: nil,
             videoURL: "https://www.youtube.com/watch?v=XeErfmGSwfE",
@@ -81,6 +83,7 @@ struct ExerciseCell: View {
         exercise: Exercise(
             name: "Hanging High Knee Raise",
             description: nil,
+            steps: nil,
             level: .beginner,
             imageFile: nil,
             videoURL: "https://www.youtube.com/watch?v=oDiqwy0Y964",

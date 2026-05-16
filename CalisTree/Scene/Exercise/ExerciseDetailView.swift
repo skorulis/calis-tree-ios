@@ -7,6 +7,7 @@ import SwiftUI
 
 struct ExerciseDetailView: View {
     @State var viewModel: ExerciseDetailViewModel
+    @State private var isStepsExpanded = false
     @Environment(\.coordinator) private var coordinator
 
     var body: some View {
@@ -30,6 +31,25 @@ struct ExerciseDetailView: View {
                                 .buttonStyle(.plain)
                             }
                         }
+                    }
+                }
+                if let steps = viewModel.exercise.steps, !steps.isEmpty {
+                    DisclosureGroup(isExpanded: $isStepsExpanded) {
+                        VStack(alignment: .leading, spacing: 8) {
+                            ForEach(Array(steps.enumerated()), id: \.offset) { index, step in
+                                HStack(alignment: .top, spacing: 8) {
+                                    Text("\(index + 1).")
+                                        .font(.subheadline)
+                                        .foregroundStyle(.secondary)
+                                        .frame(minWidth: 20, alignment: .trailing)
+                                    Text(step)
+                                }
+                            }
+                        }
+                        .padding(.top, 4)
+                    } label: {
+                        Text("Steps")
+                            .font(.headline)
                     }
                 }
                 YouTubeEmbedView(videoURL: viewModel.exercise.videoURL)

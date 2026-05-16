@@ -1,0 +1,15 @@
+---
+description: Xcode synchronized folder—new sources/resources do not require project.pbxproj edits
+alwaysApply: true
+---
+
+# Xcode project and new files
+
+The app uses a **`PBXFileSystemSynchronizedRootGroup`** (folder sync) for the [`CalisTree/`](CalisTree/) directory. Files you add under that tree are included in the target automatically.
+
+- **Do not** edit [`CalisTree.xcodeproj/project.pbxproj`](CalisTree.xcodeproj/project.pbxproj) just to add, move, or remove Swift files, assets, or JSON under `CalisTree/` unless you are changing something that **cannot** be expressed via the synced folder (e.g. build phases, target membership exceptions, package links, explicit non-synced file refs).
+- Prefer **adding and removing files only on disk** under `CalisTree/` and letting Xcode pick them up.
+
+**Exception:** The project may still list a few **top-level** or legacy items outside the synced group (e.g. [`knitconfig.json`](knitconfig.json)). Treat those as special cases only when the task explicitly concerns them.
+
+When the user (or task) only needs new code or resources in the app, **assume no `pbxproj` change is required.**
