@@ -7,19 +7,31 @@ import SwiftUI
 
 struct ExerciseListView: View {
     @State var viewModel: ExerciseListViewModel
+    @Bindable private var mainStore: MainStore
+
+    init(viewModel: ExerciseListViewModel, mainStore: MainStore) {
+        self._viewModel = State(initialValue: viewModel)
+        self._mainStore = Bindable(mainStore)
+    }
 
     var body: some View {
+        let allItems = viewModel.items
+        let favoriteItems = allItems.filter { mainStore.isFavorite(exerciseName: $0.exercise.name) }
+        let alphabeticalItems = allItems.filter { !mainStore.isFavorite(exerciseName: $0.exercise.name) }
         List {
-            ForEach(viewModel.items) { item in
-                Button {
-                    viewModel.showDetails(exercise: item.exercise)
-                } label: {
-                    ExerciseCell(
-                        exercise: item.exercise,
-                        masteryProgress: item.masteryProgress
-                    )
+            if !favoriteItems.isEmpty {
+                Section {
+                    ForEach(favoriteItems) { item in
+                        exerciseRow(item: item)
+                    }
+                } header: {
+                    Text("Favorites")
                 }
-                .buttonStyle(.plain)
+            }
+            Section {
+                ForEach(alphabeticalItems) { item in
+                    exerciseRow(item: item)
+                }
             }
         }
         .navigationTitle("Exercises")
@@ -59,13 +71,29 @@ struct ExerciseListView: View {
             }
         }
     }
+
+    @ViewBuilder
+    private func exerciseRow(item: ExerciseListItem) -> some View {
+        Button {
+            viewModel.showDetails(exercise: item.exercise)
+        } label: {
+            ExerciseCell(
+                exercise: item.exercise,
+                masteryProgress: item.masteryProgress
+            )
+        }
+        .buttonStyle(.plain)
+    }
 }
 
 #Preview {
     let assembler = CalisTreeAssembly.testing()
     assembler.resolver.mainStore().setMasteryProgress(15, for: "Hanging L-Sit")
     return NavigationStack {
-        ExerciseListView(viewModel: assembler.resolver.exerciseListViewModel())
+        ExerciseListView(
+            viewModel: assembler.resolver.exerciseListViewModel(),
+            mainStore: assembler.resolver.mainStore()
+        )
     }
     .environment(\.coordinator, Coordinator(root: MainPath.exerciseList))
 }

@@ -17,4 +17,16 @@ struct MainStoreTests {
         #expect(second.masteryProgress(for: "Hanging L-Sit") == 12)
     }
 
+    @Test func favoritesPersistAcrossInstances() {
+        let keyValueStore = InMemoryDefaults()
+        let first = MainStore(keyValueStore: keyValueStore)
+        first.setFavorite(true, for: "Pull up")
+        first.setFavorite(true, for: "Hanging L-Sit")
+        first.setFavorite(false, for: "Pull up")
+
+        let second = MainStore(keyValueStore: keyValueStore)
+        #expect(second.isFavorite(exerciseName: "Hanging L-Sit"))
+        #expect(!second.isFavorite(exerciseName: "Pull up"))
+    }
+
 }

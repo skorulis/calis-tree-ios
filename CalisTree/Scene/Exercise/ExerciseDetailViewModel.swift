@@ -17,6 +17,7 @@ final class ExerciseDetailViewModel {
     let exercise: Exercise
     private let mainStore: MainStore
     private let repository: ExerciseRepository
+    private var favoriteChangeToken = 0
     
     @Resolvable<Resolver>
     init(@Argument exercise: Exercise, mainStore: MainStore, repository: ExerciseRepository) {
@@ -61,5 +62,14 @@ final class ExerciseDetailViewModel {
         }
     }
 
-    
+    var isFavorite: Bool {
+        get {
+            _ = favoriteChangeToken
+            return mainStore.isFavorite(exerciseName: exercise.name)
+        }
+        set {
+            mainStore.setFavorite(newValue, for: exercise.name)
+            favoriteChangeToken += 1
+        }
+    }
 }

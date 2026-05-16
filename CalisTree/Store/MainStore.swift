@@ -11,14 +11,18 @@ import Observation
 final class MainStore {
     private let keyValueStore: PKeyValueStore
     private static let masteryKey = "calisTree.exerciseMastery.v1"
+    private static let favoritesKey = "calisTree.exerciseFavorites.v1"
 
     private(set) var masteryByExerciseName: [String: Int] = [:]
+    private(set) var favoriteExerciseNames: Set<String> = []
 
     @Resolvable<Resolver>
     init(keyValueStore: PKeyValueStore) {
         self.keyValueStore = keyValueStore
         masteryByExerciseName =
             (try? keyValueStore.codable(forKey: Self.masteryKey)) ?? [:]
+        favoriteExerciseNames =
+            (try? keyValueStore.codable(forKey: Self.favoritesKey)) ?? []
     }
 
     func masteryProgress(for exerciseName: String) -> Int {
@@ -30,5 +34,20 @@ final class MainStore {
         updated[exerciseName] = max(0, value)
         masteryByExerciseName = updated
         try? keyValueStore.set(codable: masteryByExerciseName, forKey: Self.masteryKey)
+    }
+
+    func isFavorite(exerciseName: String) -> Bool {
+        favoriteExerciseNames.contains(exerciseName)
+    }
+
+    func setFavorite(_ isFavorite: Bool, for exerciseName: String) {
+        var updated = favoriteExerciseNames
+        if isFavorite {
+            updated.insert(exerciseName)
+        } else {
+            updated.remove(exerciseName)
+        }
+        favoriteExerciseNames = updated
+        try? keyValueStore.set(codable: favoriteExerciseNames, forKey: Self.favoritesKey)
     }
 }

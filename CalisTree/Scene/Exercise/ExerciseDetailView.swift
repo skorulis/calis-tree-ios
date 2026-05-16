@@ -64,6 +64,19 @@ struct ExerciseDetailView: View {
         }
         .navigationTitle(viewModel.exercise.name)
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    viewModel.isFavorite.toggle()
+                } label: {
+                    Image(systemName: viewModel.isFavorite ? "heart.fill" : "heart")
+                        .foregroundStyle(viewModel.isFavorite ? Color.red : Color.primary)
+                }
+                .accessibilityLabel(
+                    viewModel.isFavorite ? "Remove from favorites" : "Add to favorites"
+                )
+            }
+        }
     }
 }
 
