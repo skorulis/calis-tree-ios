@@ -26,16 +26,9 @@ struct Chip: View {
     }
 }
 
-#Preview("Beginner") {
-    Chip(level: .beginner)
-}
-
 #Preview("All levels") {
     VStack(alignment: .leading, spacing: 8) {
-        ForEach(
-            [Level.foundation, .beginner, .intermediate, .advanced, .extreme],
-            id: \.self
-        ) { level in
+        ForEach(Level.allCases, id: \.self) { level in
             Chip(level: level)
         }
     }

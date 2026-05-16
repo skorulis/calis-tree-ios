@@ -7,17 +7,15 @@ enum Equipment: String, Codable, CaseIterable {
     case parallelBars
     case floor
     case wall
+    case raisedSurface
     
     var description: String {
         switch self {
-        case .overheadBar:
-            return "Overhead Bar"
-        case .parallelBars:
-            return "Parallel Bars"
-        case .floor:
-            return "Floor"
-        case .wall:
-            return "Wall"
+        case .overheadBar: "Overhead Bar"
+        case .parallelBars: "Parallel Bars"
+        case .floor: "Floor"
+        case .wall: "Wall"
+        case .raisedSurface: "Raised Surface"
         }
     }
 }

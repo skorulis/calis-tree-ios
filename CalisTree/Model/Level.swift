@@ -8,7 +8,7 @@ enum Level: String, Codable, CaseIterable {
     case beginner
     case intermediate
     case advanced
-    case extreme
+    case expert
 
     var displayTitle: String {
         rawValue.capitalized
@@ -24,7 +24,7 @@ enum Level: String, Codable, CaseIterable {
             Color(red: 0.25, green: 0.45, blue: 0.85)
         case .advanced:
             Color(red: 0.9, green: 0.5, blue: 0.15)
-        case .extreme:
+        case .expert:
             Color(red: 0.85, green: 0.25, blue: 0.3)
         }
     }

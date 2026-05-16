@@ -66,11 +66,14 @@
     },
     {
         "name": "Planche",
-        "level": "intermediate",
+        "level": "advanced",
         "videoURL": "https://www.youtube.com/watch?v=OmKfROtB45Q&t=372s",
         "equipment": ["floor"],
         "mastery": {"time": {"_0": 10}},
-        "prerequisites": []
+        "prerequisites": [
+            "Reverse Leg Raises",
+            "Floor L-Sit"
+        ]
     },
     {
         "name": "Tuck L-Sit",
@@ -81,11 +84,40 @@
         "prerequisites": []
     },
     {
+        "name": "L-Sit Kicks",
+        "level": "beginner",
+        "videoURL": "https://www.youtube.com/shorts/z-gbvxX8fHg",
+        "equipment": ["floor"],
+        "mastery": {"reps": {"_0": 10}},
+        "prerequisites": [
+            "Tuck L-Sit"
+        ]
+    },
+    {
+        "name": "Floor L-Sit",
+        "level": "beginner",
+        "videoURL": "https://www.youtube.com/shorts/z-gbvxX8fHg",
+        "equipment": ["floor"],
+        "mastery": {"time": {"_0": 10}},
+        "prerequisites": [
+            "L-Sit Kicks"
+        ]
+    },
+    {
         "name": "Push Up",
         "level": "beginner",
         "videoURL": "https://www.youtube.com/shorts/04FqT6lC0i4",
         "equipment": ["floor"],
         "mastery": {"reps": {"_0": 25}},
+        "prerequisites": []
+    },
+    {
+        "name": "Reverse Leg Raises",
+        "description": "Lay your stomach on a raised surface",
+        "level": "beginner",
+        "videoURL": "https://www.youtube.com/watch?v=p7NWclT2uEM",
+        "equipment": ["raisedSurface"],
+        "mastery": {"reps": {"_0": 10}},
         "prerequisites": []
     }
 ]
