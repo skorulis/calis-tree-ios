@@ -17,15 +17,15 @@ enum Level: String, Codable, CaseIterable {
     var chipColor: Color {
         switch self {
         case .foundation:
-            Color(red: 0.45, green: 0.48, blue: 0.52)
+            Palette.Level.foundation
         case .beginner:
-            Color(red: 0.2, green: 0.65, blue: 0.45)
+            Palette.Level.beginner
         case .intermediate:
-            Color(red: 0.25, green: 0.45, blue: 0.85)
+            Palette.Level.intermediate
         case .advanced:
-            Color(red: 0.9, green: 0.5, blue: 0.15)
+            Palette.Level.advanced
         case .expert:
-            Color(red: 0.85, green: 0.25, blue: 0.3)
+            Palette.Level.expert
         }
     }
 }
