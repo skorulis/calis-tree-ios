@@ -3,8 +3,12 @@
 import SwiftUI
 
 struct TimerView: View {
+    /// When false (e.g. another tab selected), microphone listening is paused so SwiftUI TabView quirks do not leave audio running.
+    var voiceListeningShouldBeActive: Bool = true
+
     @State private var accumulatedElapsed: TimeInterval = 0
     @State private var runningSince: Date?
+    @State private var voice = TimerVoiceCommandController()
 
     private var isRunning: Bool { runningSince != nil }
 
@@ -15,12 +19,52 @@ struct TimerView: View {
     var body: some View {
         VStack(spacing: 32) {
             Spacer()
+            voiceStatus
             buttons
             timeLabel
                 .padding(.bottom, 64)
             Spacer()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .task(id: voiceListeningShouldBeActive) {
+            voice.setActions(start: startIfPaused, stop: pauseIfRunning)
+            if voiceListeningShouldBeActive {
+                await voice.beginListeningSession()
+            } else {
+                voice.endListeningSession()
+            }
+        }
+        .onDisappear {
+            voice.endListeningSession()
+        }
+    }
+
+    private var voiceStatus: some View {
+        Group {
+            if voice.isListening {
+                Label("Listening for “start timer” or “stop timer”", systemImage: "mic.fill")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                    .accessibilityHint("Speak clearly to control the timer")
+            } else if voice.voiceUnavailable {
+                Text("Voice commands need microphone and speech recognition access in Settings.")
+                    .font(.caption2)
+                    .foregroundStyle(.tertiary)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, 8)
+            }
+        }
+    }
+
+    private func startIfPaused() {
+        guard runningSince == nil else { return }
+        runningSince = Date()
+    }
+
+    private func pauseIfRunning() {
+        guard let start = runningSince else { return }
+        accumulatedElapsed += Date().timeIntervalSince(start)
+        runningSince = nil
     }
     
     private var buttons: some View {
@@ -67,11 +111,10 @@ struct TimerView: View {
     }
 
     private func toggleRunning() {
-        if let start = runningSince {
-            accumulatedElapsed += Date().timeIntervalSince(start)
-            runningSince = nil
+        if runningSince != nil {
+            pauseIfRunning()
         } else {
-            runningSince = Date()
+            startIfPaused()
         }
     }
 

@@ -9,19 +9,27 @@ import ASKCoordinator
 import Knit
 import SwiftUI
 
+private enum RootTab: Hashable {
+    case exercises
+    case timer
+}
+
 struct ContentView: View {
     let resolver: Resolver
+    @State private var selectedTab: RootTab = .exercises
 
     var body: some View {
-        TabView {
+        TabView(selection: $selectedTab) {
             exercises
+                .tag(RootTab.exercises)
             timer
+                .tag(RootTab.timer)
         }
     }
 
     private var timer: some View {
         NavigationStack {
-            TimerView()
+            TimerView(voiceListeningShouldBeActive: selectedTab == .timer)
                 .navigationTitle("Timer")
         }
         .tabItem {

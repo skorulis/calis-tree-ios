@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA9B82092FB918000002AA74 /* Speech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9B82082FB918000002AA74 /* Speech.framework */; };
+		FA9B820B2FB918000002AA74 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9B820A2FB918000002AA74 /* AVFoundation.framework */; };
 		FA9B80EF2FB6D0A80002AA74 /* ASKCore in Frameworks */ = {isa = PBXBuildFile; productRef = FA9B80EE2FB6D0A80002AA74 /* ASKCore */; };
 		FA9B80F22FB6D0B50002AA74 /* Knit in Frameworks */ = {isa = PBXBuildFile; productRef = FA9B80F12FB6D0B50002AA74 /* Knit */; };
 		FA9B80F42FB6D0B50002AA74 /* KnitMacros in Frameworks */ = {isa = PBXBuildFile; productRef = FA9B80F32FB6D0B50002AA74 /* KnitMacros */; };
@@ -25,6 +27,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA9B820A2FB918000002AA74 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		FA9B82082FB918000002AA74 /* Speech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Speech.framework; path = System/Library/Frameworks/Speech.framework; sourceTree = SDKROOT; };
 		FA9B80DE2FB6D0880002AA74 /* CalisTree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalisTree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE6B0892FB6DA1100F2B0F7 /* knitconfig.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = knitconfig.json; sourceTree = "<group>"; };
 		FAE6B0E52FB6F50B00F2B0F7 /* CalisTreeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalisTreeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +52,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA9B820B2FB918000002AA74 /* AVFoundation.framework in Frameworks */,
+				FA9B82092FB918000002AA74 /* Speech.framework in Frameworks */,
 				FA9B80F22FB6D0B50002AA74 /* Knit in Frameworks */,
 				FA9B80F72FB6D0C50002AA74 /* ASKCoordinator in Frameworks */,
 				FA9B80F42FB6D0B50002AA74 /* KnitMacros in Frameworks */,
@@ -360,6 +366,8 @@
 				DEVELOPMENT_TEAM = X4S6MUZL2D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "CalisTree listens for phrases like Start timer and Stop timer while you use the Timer screen.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "CalisTree converts your speech into timer commands on your device.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -392,6 +400,8 @@
 				DEVELOPMENT_TEAM = X4S6MUZL2D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "CalisTree listens for phrases like Start timer and Stop timer while you use the Timer screen.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "CalisTree converts your speech into timer commands on your device.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
