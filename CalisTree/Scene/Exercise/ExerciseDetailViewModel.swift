@@ -35,7 +35,8 @@ final class ExerciseDetailViewModel {
 
     var masteryProgress: Int {
         get {
-            mainStore.masteryProgress(for: exercise.name)
+            guard let target = exercise.mastery else { return 0 }
+            return min(target.intValue, mainStore.masteryProgress(for: exercise.name))
         }
         set {
             guard let target = exercise.mastery else { return }

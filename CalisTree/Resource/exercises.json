@@ -63,5 +63,29 @@
         "prerequisites": [
             "Tuck front lever hold"
         ]
+    },
+    {
+        "name": "Planche",
+        "level": "intermediate",
+        "videoURL": "https://www.youtube.com/watch?v=OmKfROtB45Q&t=372s",
+        "equipment": ["floor"],
+        "mastery": {"time": {"_0": 10}},
+        "prerequisites": []
+    },
+    {
+        "name": "Tuck L-Sit",
+        "level": "beginner",
+        "videoURL": "https://www.youtube.com/shorts/PLffPwepgiY",
+        "equipment": ["floor"],
+        "mastery": {"time": {"_0": 10}},
+        "prerequisites": []
+    },
+    {
+        "name": "Push Up",
+        "level": "beginner",
+        "videoURL": "https://www.youtube.com/shorts/04FqT6lC0i4",
+        "equipment": ["floor"],
+        "mastery": {"reps": {"_0": 25}},
+        "prerequisites": []
     }
 ]
