@@ -1,24 +1,21 @@
 // Created by Alex Skorulis on 15/5/2026.
 
 import ASKCoordinator
-import ASKCore
+import Knit
 import SwiftUI
 
 struct ExerciseListView: View {
-    let repository: ExerciseRepository
-    @Bindable var mainStore: MainStore
-
-    @Environment(\.coordinator) private var coordinator
+    @State var viewModel: ExerciseListViewModel
 
     var body: some View {
         List {
-            ForEach(repository.exercises, id: \.name) { exercise in
+            ForEach(viewModel.items) { item in
                 Button {
-                    coordinator?.push(MainPath.exerciseDetail(exercise))
+                    viewModel.showDetails(exercise: item.exercise)
                 } label: {
                     ExerciseCell(
-                        exercise: exercise,
-                        masteryProgress: mainStore.masteryProgress(for: exercise.name)
+                        exercise: item.exercise,
+                        masteryProgress: item.masteryProgress
                     )
                 }
                 .buttonStyle(.plain)
@@ -29,13 +26,10 @@ struct ExerciseListView: View {
 }
 
 #Preview {
-    let mainStore = MainStore(keyValueStore: InMemoryDefaults())
-    mainStore.setMasteryProgress(15, for: "Hanging L-Sit")
+    let assembler = CalisTreeAssembly.testing()
+    assembler.resolver.mainStore().setMasteryProgress(15, for: "Hanging L-Sit")
     return NavigationStack {
-        ExerciseListView(
-            repository: ExerciseRepository(),
-            mainStore: mainStore
-        )
+        ExerciseListView(viewModel: assembler.resolver.exerciseListViewModel())
     }
     .environment(\.coordinator, Coordinator(root: MainPath.exerciseList))
 }

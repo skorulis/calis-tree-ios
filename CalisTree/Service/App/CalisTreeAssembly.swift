@@ -47,6 +47,10 @@ final class CalisTreeAssembly: AutoInitModuleAssembly {
         container.register(ExerciseDetailViewModel.self) { (resolver: Resolver, exercise: Exercise) in
             ExerciseDetailViewModel.make(resolver: resolver, exercise: exercise)
         }
+
+        container.register(ExerciseListViewModel.self) { (resolver: Resolver) in
+            ExerciseListViewModel.make(resolver: resolver)
+        }
     }
 }
 

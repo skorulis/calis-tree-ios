@@ -13,10 +13,7 @@ struct MainPathRenderer: CoordinatorPathRenderer {
     func render(path: MainPath, in coordinator: Coordinator) -> some View {
         switch path {
         case .exerciseList:
-            ExerciseListView(
-                repository: resolver.exerciseRepository(),
-                mainStore: resolver.mainStore()
-            )
+            ExerciseListView(viewModel: coordinator.apply(resolver.exerciseListViewModel()))
         case .exerciseDetail(let exercise):
             ExerciseDetailView(
                 viewModel: resolver.exerciseDetailViewModel(exercise: exercise)
