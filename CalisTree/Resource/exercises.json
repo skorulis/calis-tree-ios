@@ -113,11 +113,23 @@
     },
     {
         "name": "Reverse Leg Raises",
-        "description": "Lay your stomach on a raised surface",
+        "description": "Lay your stomach on a raised surface and raise your legs into a horizontal position",
         "level": "beginner",
         "videoURL": "https://www.youtube.com/watch?v=p7NWclT2uEM",
         "equipment": ["raisedSurface"],
         "mastery": {"reps": {"_0": 10}},
         "prerequisites": []
+    },
+    {
+        "name": "Planche Lean",
+        "description": "Make sure your hands up at your waist position",
+        "level": "intermediate",
+        "videoURL": "https://www.youtube.com/shorts/ca0yGW8071Y",
+        "equipment": ["floor"],
+        "mastery": {"time": {"_0": 10}},
+        "prerequisites": [
+            "Push Up",
+            "Reverse Leg Raises"
+        ]
     }
 ]

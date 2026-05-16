@@ -66,6 +66,9 @@ final class ExerciseListViewModel: CoordinatorViewModel {
                 masteryProgress: progress
             )
         }
+        .sorted {
+            $0.exercise.name.localizedStandardCompare($1.exercise.name) == .orderedAscending
+        }
     }
 
     func resetFilters() {
