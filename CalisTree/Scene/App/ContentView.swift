@@ -15,6 +15,17 @@ struct ContentView: View {
     var body: some View {
         TabView {
             exercises
+            timer
+        }
+    }
+
+    private var timer: some View {
+        NavigationStack {
+            TimerView()
+                .navigationTitle("Timer")
+        }
+        .tabItem {
+            Label("Timer", systemImage: "stopwatch")
         }
     }
     
