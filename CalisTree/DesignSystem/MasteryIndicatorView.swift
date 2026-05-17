@@ -14,7 +14,7 @@ struct MasteryIndicatorView: View {
         case .star:
             Image(systemName: "checkmark.circle.fill")
                 .font(.title3)
-                .foregroundStyle(Color(red: 1, green: 0.78, blue: 0))
+                .foregroundStyle(Palette.Mastery.gold)
                 .accessibilityLabel("Mastered")
         }
     }

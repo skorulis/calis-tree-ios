@@ -39,9 +39,19 @@ struct ExerciseRepositoryTests {
             chain.map(\.id) == [
                 "reverse_leg_raises",
                 "l_sit_kicks",
+                "knee_plank",
+                "plank",
+                "boat_hold",
+                "seated_leg_raise",
                 "l_sit",
                 "push_up",
+                "decline_push_up",
                 "planche_lean",
+                "pseudo_planche_push_up",
+                "tuck_planche",
+                "bench_dip",
+                "chest_dip",
+                "bent_arm_tuck_planche",
                 "planche",
             ]
         )

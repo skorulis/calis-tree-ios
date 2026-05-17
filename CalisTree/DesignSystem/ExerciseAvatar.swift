@@ -9,7 +9,6 @@ struct ExerciseAvatar: View {
 
     private static let size: CGFloat = 60
     private static let lineWidth: CGFloat = 3
-    private static let gold = Color(red: 1, green: 0.78, blue: 0)
 
     var body: some View {
         VStack(spacing: 4) {
@@ -58,7 +57,7 @@ struct ExerciseAvatar: View {
             }
         case .mastered:
             Circle()
-                .stroke(Self.gold, lineWidth: Self.lineWidth)
+                .stroke(Palette.Mastery.gold, lineWidth: Self.lineWidth)
         }
     }
 

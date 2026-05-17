@@ -117,7 +117,8 @@
             }
         },
         "prerequisites": [
-            "dead_hang"
+            "dead_hang",
+            "scapular_shrugs"
         ]
     },
     {
@@ -191,7 +192,8 @@
             "l_sit",
             "planche_lean",
             "tuck_planche",
-            "pseudo_planche_push_ups"
+            "pseudo_planche_push_up",
+            "bent_arm_tuck_planche"
         ]
     },
     {
@@ -399,7 +401,9 @@
                 "_0": 60
             }
         },
-        "prerequisites": []
+        "prerequisites": [
+            "knee_plank"
+        ]
     },
     {
         "id": "diamond_push_up",
@@ -603,8 +607,8 @@
         ]
     },
     {
-        "id": "hand_stand",
-        "name": "Hand Stand",
+        "id": "handstand",
+        "name": "Handstand",
         "level": "beginner",
         "videoURL": "https://www.youtube.com/watch?v=KNC5lkoE2Fs",
         "equipment": [
@@ -639,12 +643,12 @@
         ],
         "prerequisites": [
             "push_up",
-            "pike"
+            "pike_hold"
         ]
     },
     {
-        "id": "pike",
-        "name": "Pike",
+        "id": "pike_hold",
+        "name": "Pike Hold",
         "level": "beginner",
         "videoURL": "https://www.youtube.com/shorts/4-YsxfnZrT8",
         "equipment": [
@@ -657,7 +661,7 @@
                 "description": "Get into the position and hold",
                 "mastery": {
                     "time": {
-                        "_0": 10
+                        "_0": 15
                     }
                 }
             },
@@ -667,17 +671,7 @@
                 "description": "Place your feet on a raised surface which will put more body weight onto the shoulders",
                 "mastery": {
                     "time": {
-                        "_0": 10
-                    }
-                }
-            },
-            {
-                "id": "push_up",
-                "name": "Push Up",
-                "description": "From the hold position bend your elbows until your head is just above the ground",
-                "mastery": {
-                    "reps": {
-                        "_0": 10
+                        "_0": 15
                     }
                 }
             }
@@ -690,6 +684,43 @@
         ],
         "prerequisites": [
             "push_up"
+        ]
+    },
+    {
+        "id": "pike_push_up",
+        "name": "Pike Push Up",
+        "level": "intermediate",
+        "videoURL": "https://www.youtube.com/shorts/_wYRaVHVr6g",
+        "equipment": ["floor"],
+        "progression": [
+            {
+                "id": "pike_floor_push_up",
+                "name": "Push Up",
+                "description": "From the pike position bend your elbows until your head is just above the ground",
+                "mastery": {
+                    "reps": {
+                        "_0": 15
+                    }
+                }
+            },
+            {
+                "id": "elevated_push_up",
+                "name": "Elevated Push Up",
+                "description": "From the elevated pike position bend your elbows until your head is just above the ground",
+                "mastery": {
+                    "reps": {
+                        "_0": 15
+                    }
+                }
+            }
+        ],
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        },
+        "prerequisites": [
+            "pike_hold"
         ]
     },
     {
@@ -760,10 +791,10 @@
         "prerequisites": []
     },
     {
-        "id": "straddle_l_sit",
-        "name": "Straddle L-Sit Training",
+        "id": "straddle_leg raises",
+        "name": "Straddle Leg Raises",
         "level": "intermediate",
-        "videoURL": "https://www.youtube.com/shorts/MQ_qgV__NR8",
+        "videoURL": "https://www.youtube.com/shorts/M0ast_A2v8Q",
         "equipment": ["floor"],
         "mastery": {
             "time": {
@@ -880,6 +911,342 @@
             "hanging_knee_raise",
             "hanging_high_knee_raise"
         ]
+    },
+    {
+        "id": "planche_push_up",
+        "name": "Planche Push Up",
+        "level": "expert",
+        "videoURL": "https://www.youtube.com/watch?v=TZ63httkob4",
+        "equipment": ["floor"],
+        "mastery": {
+            "reps": {
+                "_0": 5
+            }
+        },
+        "prerequisites": [
+            "planche",
+            "bent_arm_planche",
+            "pseudo_planche_push_up"
+        ]
+    },
+    {
+        "id": "handstand_press",
+        "name": "Handstand Press",
+        "level": "expert",
+        "videoURL": "https://www.youtube.com/shorts/XxFuPQzQb2w",
+        "equipment": ["floor"],
+        "mastery": {
+            "reps": {
+                "_0": 5
+            }
+        },
+        "prerequisites": [
+            "handstand",
+            "pike_push_up"
+        ]
+    },
+    {
+        "id": "handstand_push_up",
+        "name": "Handstand Push Up",
+        "level": "expert",
+        "videoURL": "https://www.youtube.com/watch?v=fMTlYYHSy2A",
+        "equipment": ["floor"],
+        "progression": [
+            {
+                "id": "wall_handstand_push_up",
+                "name": "Wall ",
+                "description": "With your stomach against the wall, perform the push up. Using the wall will remove the balance aspect while building the required strength",
+                "mastery": {
+                    "time": {
+                        "_0": 15
+                    }
+                }
+            }
+        ],
+        "mastery": {
+            "reps": {
+                "_0": 5
+            }
+        },
+        "prerequisites": [
+            "handstand",
+            "pike_push_up",
+            "handstand_press"
+        ]
+    },
+    {
+        "id": "one_arm_pull_up",
+        "name": "One Arm Pull Up",
+        "level": "expert",
+        "videoURL": "https://www.youtube.com/watch?v=mTJHClMQPM8",
+        "equipment": ["overheadBar"],
+        "mastery": {
+            "reps": {
+                "_0": 5
+            }
+        },
+        "prerequisites": [
+            "pull_up"
+        ]
+    },
+    {
+        "id": "human_flag",
+        "name": "Human Flag",
+        "level": "expert",
+        "videoURL": "https://www.youtube.com/watch?v=TF9XhvYh_m8",
+        "equipment": ["verticalBar"],
+        "progression": [
+            {
+                "id": "human_flag_straddle_leg_raises",
+                "name": "Straddle Leg raises",
+                "description": "Place your hands on the bar in the flag position and hop your legs off the ground into a straddle flag position then return back to the ground. Allow your lower foot to not raise as high",
+                "mastery": {
+                    "reps": {
+                        "_0": 10
+                    }
+                }
+            },
+            {
+                "id": "human_flag_leg_raises",
+                "name": "Leg raises",
+                "description": "Perform like the straddle flag leg raise but bring your feet together at the top to briefly be in the flag position",
+                "mastery": {
+                    "reps": {
+                        "_0": 10
+                    }
+                }
+            },
+            {
+                "id": "straddle_human_flag",
+                "name": "Straddle Flag",
+                "description": "Perform a human flag with your legs apart rather than together",
+                "mastery": {
+                    "time": {
+                        "_0": 10
+                    }
+                }
+            }
+        ],
+        "mastery": {
+            "time": {
+                "_0": 10
+            }
+        },
+        "prerequisites": [
+            "planche_lean",
+            "scapular_shrugs",
+            "archer_push_up",
+            "hanging_windshield_wiper",
+            "high_side_plank_raise",
+            "side_plank_flag"
+        ]
+    },
+    {
+        "id": "l_sit_to_handstand",
+        "name": "L-Sit to Handstand",
+        "level": "expert",
+        "videoURL": "https://www.youtube.com/watch?v=J1b9HdHxy5Y",
+        "equipment": ["parallelBars"],
+        "mastery": {
+            "reps": {
+                "_0": 5
+            }
+        },
+        "prerequisites": [
+            "l_sit",
+            "handstand",
+            "handstand_press",
+            "pike_push_up",
+            "chest_dip",
+            "bent_arm_tuck_planche"
+        ]
+    },
+    {
+        "id": "bent_arm_tuck_planche",
+        "name": "Bent Arm Tuck Planche",
+        "level": "intermediate",
+        "videoURL": "https://www.youtube.com/shorts/MwM56OvqLYo",
+        "equipment": ["paralletteBars"],
+        "mastery": {
+            "time": {
+                "_0": 5
+            }
+        },
+        "prerequisites": [
+            "chest_dip",
+            "planche_lean"
+        ]
+    },
+    {
+        "id": "iron_cross",
+        "name": "Iron Cross",
+        "level": "expert",
+        "videoURL": "https://www.youtube.com/shorts/74VlSK0pefA",
+        "equipment": ["rings"],
+        "mastery": {
+            "time": {
+                "_0": 10
+            }
+        },
+        "prerequisites": [
+            "chest_dip"
+        ]
+    },
+    {
+        "id": "scapular_shrugs",
+        "name": "Scapular Pull Ups",
+        "level": "beginner",
+        "videoURL": "https://www.youtube.com/shorts/9M8ylnbriB0",
+        "equipment": ["overheadBar"],
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        },
+        "prerequisites": [
+            "dead_hang"
+        ]
+    },
+    {
+        "id": "high_side_plank",
+        "name": "High Side Plank",
+        "level": "beginner",
+        "videoURL": "https://www.youtube.com/shorts/vChJ24IH9mA",
+        "equipment": ["floor"],
+        "mastery": {
+            "time": {
+                "_0": 60
+            }
+        },
+        "prerequisites": [
+            "plank"
+        ]
+    },
+    {
+        "id": "archer_pull_up",
+        "name": "Archer Pull Up",
+        "level": "intermediate",
+        "videoURL": "https://www.youtube.com/shorts/AeBvpCCYpGI",
+        "equipment": ["overheadBar"],
+        "progression": [
+            {
+                "id": "half_archer_pull_up",
+                "name": "Half Archer Pull Up",
+                "description": "Do the archer pull up with your hands at should width and pull to one side.",
+                "mastery": {
+                    "reps": {
+                        "_0": 10
+                    }
+                }
+            }
+        ],
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        },
+        "prerequisites": [
+            "pull_up",
+            "wide_pull_up"
+        ]
+    },
+    {
+        "id": "wide_pull_up",
+        "name": "Wide Pull Up",
+        "level": "intermediate",
+        "videoURL": "https://www.youtube.com/shorts/P8s_LRBp9lo",
+        "equipment": ["overheadBar"],
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        },
+        "prerequisites": [
+            "pull_up"
+        ]
+    },
+    {
+        "id": "hanging_windshield_wiper",
+        "name": "Hanging Windshield Wiper",
+        "level": "intermediate",
+        "videoURL": "https://www.youtube.com/shorts/dlRpAOnZhRY",
+        "equipment": ["overheadBar"],
+        "progression": [
+            {
+                "id": "tuck_hanging_windshield_wiper",
+                "name": "Tuck",
+                "description": "Perform the windshield wiper with your legs tucked in",
+                "mastery": {
+                    "reps": {
+                        "_0": 10
+                    }
+                }
+            }
+        ],
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        },
+        "prerequisites": [
+            "pull_up",
+            "hanging_leg_raises"
+        ]
+    },
+    {
+        "id": "high_side_plank_raise",
+        "name": "High Side Plank Raise",
+        "level": "beginner",
+        "videoURL": "https://www.youtube.com/watch?v=uKPo9UoB_MI",
+        "equipment": ["floor"],
+        "mastery": {
+            "reps": {
+                "_0": 15
+            }
+        },
+        "prerequisites": [
+            "high_side_plank"
+        ]
+    },
+    {
+        "id": "side_plank_flag",
+        "name": "Side Plank Flag",
+        "level": "intermediate",
+        "videoURL": "https://www.youtube.com/watch?v=anae6MkAhnY",
+        "equipment": ["floor"],
+        "progression": [
+            {
+                "id": "side_plank_flag_leg_raises",
+                "name": "Leg raises",
+                "description": "From the hold position, raise your upper leg",
+                "mastery": {
+                    "reps": {
+                        "_0": 10
+                    }
+                }
+            }
+        ],
+        "mastery": {
+            "time": {
+                "_0": 20
+            }
+        },
+        "prerequisites": [
+            "high_side_plank_raise"
+        ]
+    },
+    {
+        "id": "knee_plank",
+        "name": "Knee Plank",
+        "level": "foundation",
+        "videoURL": "https://www.youtube.com/shorts/cSWXE-RB5wQ",
+        "equipment": ["floor"],
+        "mastery": {
+            "time": {
+                "_0": 60
+            }
+        },
+        "prerequisites": []
     }
 
 ]

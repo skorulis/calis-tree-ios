@@ -1,4 +1,7 @@
+My progression view is more useful, but what would look cooler is a progression tree
+Show exercises from each level and then draw lines between them
 
+I definitely need better low level progression, right now the app focuses on my level but that's ok for now
 
 
 I need to be writing better tips for each exercise both for me and others.

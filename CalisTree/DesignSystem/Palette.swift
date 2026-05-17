@@ -3,6 +3,10 @@
 import SwiftUI
 
 enum Palette {
+    enum Mastery {
+        static let gold = Color(hex: 0xFFC700)
+    }
+
     enum Level {
         static let foundation = Color(hex: 0x737A85)
         static let beginner = Color(hex: 0x33A673)
