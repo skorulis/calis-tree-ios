@@ -125,7 +125,7 @@
         "id": "tuck_front_lever_hold",
         "name": "Tuck Front Lever Hold",
         "level": "intermediate",
-        "videoURL": "https://www.youtube.com/watch?v=f0MTQWbFsq4",
+        "videoURL": "https://www.youtube.com/shorts/EkdHh8DYlQ0",
         "equipment": [
             "overheadBar"
         ],
@@ -1244,6 +1244,53 @@
         "mastery": {
             "time": {
                 "_0": 60
+            }
+        },
+        "prerequisites": []
+    },
+    {
+        "id": "pull_over",
+        "name": "Pull Over",
+        "level": "intermediate",
+        "videoURL": "https://www.youtube.com/shorts/4UZkFwg2JQM",
+        "equipment": ["overheadBar"],
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        },
+        "prerequisites": [
+            "pull_up",
+            "upside_down_deadlift",
+            "toes_to_bar",
+            "tuck_front_lever_hold"
+        ]
+    },
+    {
+        "id": "pistol_squat",
+        "name": "Pistol Squat",
+        "level": "intermediate",
+        "videoURL": "https://www.youtube.com/shorts/2qSwsTYEWuM",
+        "equipment": ["floor"],
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        },
+        "prerequisites": [
+            "squat",
+            "seated_leg_raise"
+        ]
+    },
+    {
+        "id": "squat",
+        "name": "Squat",
+        "level": "beginner",
+        "videoURL": "https://www.youtube.com/shorts/n_xLyzPEX7A",
+        "equipment": ["floor"],
+        "mastery": {
+            "reps": {
+                "_0": 20
             }
         },
         "prerequisites": []
