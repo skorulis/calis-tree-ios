@@ -1279,7 +1279,8 @@
         },
         "prerequisites": [
             "squat",
-            "seated_leg_raise"
+            "seated_leg_raise",
+            "archer_squat"
         ]
     },
     {
@@ -1294,6 +1295,67 @@
             }
         },
         "prerequisites": []
+    },
+    {
+        "id": "archer_squat",
+        "name": "Archer Squat",
+        "level": "beginner",
+        "videoURL": "https://www.youtube.com/watch?v=OHty2T5wY4Y",
+        "equipment": ["floor"],
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        },
+        "prerequisites": [
+            "squat"
+        ]
+    },
+    {
+        "id": "shrimp_squat",
+        "name": "Shrimp Squat",
+        "level": "intermediate",
+        "videoURL": "https://www.youtube.com/watch?v=FcQ77QxcotE",
+        "equipment": ["floor"],
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        },
+        "prerequisites": [
+            "squat"
+        ]
+    },
+    {
+        "id": "dragon_squat",
+        "name": "Dragon Squat",
+        "level": "intermediate",
+        "videoURL": "https://www.youtube.com/watch?v=PRrb64GjqZ0",
+        "equipment": ["floor"],
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        },
+        "prerequisites": [
+            "pistol_squat",
+            "archer_squat"
+        ]
+    },
+    {
+        "id": "horse_stance",
+        "name": "Horse Stance",
+        "level": "intermediate",
+        "videoURL": "https://www.youtube.com/shorts/mjdMjaYXIcI",
+        "equipment": ["floor"],
+        "mastery": {
+            "time": {
+                "_0": 30
+            }
+        },
+        "prerequisites": [
+            "squat"
+        ]
     }
 
 ]
