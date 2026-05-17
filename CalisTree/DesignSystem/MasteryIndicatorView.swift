@@ -12,7 +12,7 @@ struct MasteryIndicatorView: View {
         case let .ring(fraction):
             ring(fraction: fraction)
         case .star:
-            Image(systemName: "star.fill")
+            Image(systemName: "checkmark.circle.fill")
                 .font(.title3)
                 .foregroundStyle(Color(red: 1, green: 0.78, blue: 0))
                 .accessibilityLabel("Mastered")

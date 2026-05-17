@@ -125,7 +125,9 @@
         "prerequisites": [
             "reverse_leg_raises",
             "l_sit",
-            "planche_lean"
+            "planche_lean",
+            "tuck_planche",
+            "pseudo_planche_push_ups"
         ]
     },
     {
@@ -158,8 +160,19 @@
         },
         "progression": [
             {
+                "id": "l_sit_leg_raises",
+                "name": "L-Sit Leg Raises",
+                "description": "Hold your body weight on your hands with your legs extended and feet on the ground. Raise each foot individually",
+                "mastery": {
+                    "reps": {
+                        "_0": 10
+                    }
+                }
+            },
+            {
                 "id": "tuck_l_sit",
                 "name": "Tuck L-Sit",
+                "description": "Bring your knees as close as you can to your body and elevate from the ground",
                 "mastery": {
                     "time": {
                         "_0": 10
@@ -168,7 +181,10 @@
             }
         ],
         "prerequisites": [
-            "l_sit_kicks"
+            "l_sit_kicks",
+            "plank",
+            "boat_hold",
+            "seated_leg_raise"
         ]
     },
     {
@@ -185,6 +201,19 @@
             }
         },
         "prerequisites": []
+    },
+    {
+        "id": "decline_push_up",
+        "name": "Decline Push Up",
+        "level": "beginner",
+        "videoURL": "https://www.youtube.com/shorts/dcV-ATSeryA",
+        "equipment": ["floor", "raisedSurface"],
+        "mastery": {
+            "reps": {
+                "_0": 25
+            }
+        },
+        "prerequisites": ["push_up"]
     },
     {
         "id": "reverse_leg_raises",
@@ -205,6 +234,7 @@
     {
         "id": "planche_lean",
         "name": "Planche Lean",
+        "alternateNames": ["Pseudo Planche"],
         "description": "Make sure your hands up at your waist position",
         "steps": [
             "Start in a high push-up position with your hands shoulder-width apart and arms fully straight",
@@ -216,9 +246,7 @@
         ],
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/shorts/ca0yGW8071Y",
-        "equipment": [
-            "floor"
-        ],
+        "equipment": ["floor"],
         "mastery": {
             "time": {
                 "_0": 10
@@ -226,7 +254,20 @@
         },
         "prerequisites": [
             "push_up",
+            "decline_push_up",
             "reverse_leg_raises"
+        ],
+        "progression": [
+            {
+                "id": "planche_lean_chest",
+                "name": "Chest Level",
+                "description": "Instead of moving forwards until your hands are at your waist position, only move forwards until your hands are at chest position",
+                "mastery": {
+                    "time": {
+                        "_0": 10
+                    }
+                }
+            }
         ]
     },
     {
@@ -244,7 +285,8 @@
         },
         "prerequisites": [
             "planche_lean",
-            "l_sit"
+            "l_sit",
+            "pseudo_planche_push_up"
         ]
     },
     {
@@ -585,5 +627,72 @@
         "prerequisites": [
             "push_up"
         ]
-    }
+    },
+    {
+        "id": "pseudo_planche_push_up",
+        "name": "Pseudo Planche Push Up",
+        "level": "intermediate",
+        "videoURL": "https://www.youtube.com/watch?v=i-gSmqe9tNw",
+        "equipment": ["floor"],
+        "progression": [
+            {
+                "id": "pseudo_planche_push_up_negative",
+                "name": "Negative",
+                "description": "From a planche lean position, perform the downards portion of the exercise without pushing back up",
+                "mastery": {
+                    "reps": {
+                        "_0": 10
+                    }
+                }
+            }
+        ],
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        },
+        "prerequisites": [
+            "push_up",
+            "planche_lean"
+        ]
+    },
+    {
+        "id": "boat_hold",
+        "name": "Boat Hold",
+        "level": "beginner",
+        "videoURL": "https://www.youtube.com/shorts/vnT3wyBP4UA",
+        "equipment": ["floor"],
+        "mastery": {
+            "time": {
+                "_0": 30
+            }
+        },
+        "prerequisites": []
+    },
+    {
+        "id": "seated_leg_raise",
+        "name": "Seated Leg Raise",
+        "level": "beginner",
+        "videoURL": "https://www.youtube.com/shorts/8xbG2kir7Bo",
+        "equipment": ["floor"],
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        },
+        "prerequisites": []
+    },
+    {
+        "id": "straddle_l_sit",
+        "name": "Straddle L-Sit Training",
+        "level": "intermediate",
+        "videoURL": "https://www.youtube.com/shorts/MQ_qgV__NR8",
+        "equipment": ["floor"],
+        "mastery": {
+            "time": {
+                "_0": 10
+            }
+        },
+        "prerequisites": []
+    }    
 ]

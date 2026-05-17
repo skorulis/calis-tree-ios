@@ -77,9 +77,15 @@ struct ExerciseDetailView: View {
                 Button {
                     coordinator?.push(MainPath.exerciseProgression(viewModel.exercise))
                 } label: {
-                    Text("Prerequisites")
-                        .font(.headline)
-                        .foregroundStyle(.primary)
+                    HStack {
+                        Text("Progression")
+                        Spacer()
+                        Image(systemName: "chevron.right")
+                    }
+                    .font(.headline)
+                    .foregroundStyle(.primary)
+                    .contentShape(Rectangle())
+                    
                 }
                 .buttonStyle(.plain)
                 HStack(spacing: 12) {
