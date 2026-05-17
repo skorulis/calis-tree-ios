@@ -12,7 +12,14 @@ struct Exercise: Codable {
     let videoURL: String
     let equipment: [Equipment]
     let mastery: SetType?
+    let progression: [ExerciseVariation]?
     
     // Exercises that should be mastered before this one
     let prerequisites: [String]
+}
+
+struct ExerciseVariation: Codable {
+    let name: String
+    let description: String?
+    let mastery: SetType?
 }

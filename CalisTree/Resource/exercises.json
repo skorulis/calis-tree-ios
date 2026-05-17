@@ -279,6 +279,18 @@
         "level": "advanced",
         "videoURL": "https://www.youtube.com/watch?v=ZNCFXIIB0eQ",
         "equipment": ["floor"],
+        "progression": [
+            {
+                "name": "Bent Knee",
+                "description": "Perform the front lever without extending the legs. This reduces the lever and makes it easier to assume the position",
+                "mastery": {"time": {"_0": 10}}
+            },
+            {
+                "name": "Straddle",
+                "description": "Perform the front lever with legs straddled apart to keep your centre of gravity closer to your hands",
+                "mastery": {"time": {"_0": 10}}
+            }
+        ],
         "mastery": {"time": {"_0": 10}},
         "prerequisites": [
             "Elbow Leaver"

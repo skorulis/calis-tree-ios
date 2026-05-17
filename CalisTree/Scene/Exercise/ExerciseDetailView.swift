@@ -52,25 +52,11 @@ struct ExerciseDetailView: View {
                             .font(.headline)
                     }
                 }
+                masterySection
+                
                 YouTubeEmbedView(videoURL: viewModel.exercise.videoURL)
                     .clipShape(RoundedRectangle(cornerRadius: 12))
-                if viewModel.showsMastery, let target = viewModel.masteryTarget {
-                    VStack(alignment: .leading, spacing: 8) {
-                        Text("Mastery")
-                            .font(.headline)
-                        Slider(
-                            value: Binding(
-                                get: { Double(viewModel.masteryProgress) },
-                                set: { viewModel.masteryProgress = Int($0.rounded()) }
-                            ),
-                            in: 0...Double(target.intValue),
-                            step: 1
-                        )
-                        Text(viewModel.masteryLabel)
-                            .font(.subheadline)
-                            .foregroundStyle(.secondary)
-                    }
-                }
+                
                 VStack(alignment: .leading, spacing: 8) {
                     Text("Equipment")
                         .font(.headline)
@@ -95,6 +81,27 @@ struct ExerciseDetailView: View {
                 .accessibilityLabel(
                     viewModel.isFavorite ? "Remove from favorites" : "Add to favorites"
                 )
+            }
+        }
+    }
+    
+    @ViewBuilder
+    private var masterySection: some View {
+        if viewModel.showsMastery, let target = viewModel.masteryTarget {
+            VStack(alignment: .leading, spacing: 8) {
+                Text("Mastery")
+                    .font(.headline)
+                Slider(
+                    value: Binding(
+                        get: { Double(viewModel.masteryProgress) },
+                        set: { viewModel.masteryProgress = Int($0.rounded()) }
+                    ),
+                    in: 0...Double(target.intValue),
+                    step: 1
+                )
+                Text(viewModel.masteryLabel)
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
             }
         }
     }
