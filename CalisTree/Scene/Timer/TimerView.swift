@@ -1,6 +1,7 @@
 // Created by Alex Skorulis on 16/5/2026.
 
 import SwiftUI
+import UIKit
 
 struct TimerView: View {
     /// When false (e.g. another tab selected), microphone listening is paused so SwiftUI TabView quirks do not leave audio running.
@@ -34,7 +35,11 @@ struct TimerView: View {
                 voice.endListeningSession()
             }
         }
+        .onChange(of: isRunning) { _, running in
+            UIApplication.shared.isIdleTimerDisabled = running
+        }
         .onDisappear {
+            UIApplication.shared.isIdleTimerDisabled = false
             voice.endListeningSession()
         }
     }

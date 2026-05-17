@@ -20,6 +20,16 @@ final class CalisTreeAssembly: AutoInitModuleAssembly {
 
     @MainActor func assemble(container: Container<TargetResolver>) {
         ASKCoreAssembly(purpose: purpose).assemble(container: container)
+        
+        container.register(PKeyValueStore.self) { _ in
+            switch self.purpose {
+            case .normal:
+                return FileSystemKeyValueStore(folderName: "calis")
+            case .testing:
+                return InMemoryDefaults()
+            }
+        }
+        .inObjectScope(.container)
 
         registerServices(container: container)
         registerStores(container: container)

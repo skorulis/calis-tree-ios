@@ -185,5 +185,103 @@
         "equipment": ["floor"],
         "mastery": {"time": {"_0": 60}},
         "prerequisites": []
+    },
+    {
+        "name": "Diamond Push Up",
+        "level": "beginner",
+        "steps": [
+            "Start in a high push-up position with your hands placed close together beneath your chest",
+            "Position your thumbs and index fingers so they touch, forming a diamond shape.",
+            "Extend your legs behind you and balance on your toes.",
+            "Keep your body in a straight line from your head to your heels",
+            "Tighten your core and glutes to maintain stability",
+            "Slowly bend your elbows and lower your chest toward your hands",
+            "Keep your elbows close to your body as you descend",
+            "Lower yourself until your chest is just above your hands or as far as you can comfortably go",
+            "Push through your palms to straighten your arms and return to the starting position",
+            "Keep your neck neutral by looking slightly ahead of your hands"
+        ],
+        "videoURL": "https://www.youtube.com/shorts/PPTj-MW2tcs",
+        "equipment": ["floor"],
+        "mastery": {"reps": {"_0": 25}},
+        "prerequisites": [
+            "Push Up"
+        ]
+    },
+    {
+        "name": "Wide Push Up",
+        "level": "beginner",
+        "steps": [
+            "Start in a standard push-up position with your hands placed wider than shoulder-width apart",
+            "Keep your legs straight and balance on your toes with your body in a straight line.",
+            "Tighten your core and glutes to stabilize your body",
+            "Shift your weight to one side while bending that arm, keeping the opposite arm straight",
+            "Lower your chest toward the bent arm, as if doing a one-sided push-up",
+            "Keep the straight arm fully extended and use it for light support only",
+            "Push through the bent arm to return to the center position",
+            "Repeat the movement on the opposite side, alternating each rep",
+            "Keep your hips level and avoid twisting your torso too much"
+        ],
+        "videoURL": "https://www.youtube.com/shorts/skWcxqxh2qw",
+        "equipment": ["floor"],
+        "mastery": {"reps": {"_0": 25}},
+        "prerequisites": [
+            "Push Up"
+        ]
+    },
+    {
+        "name": "Archer Push Up",
+        "level": "intermediate",
+        "steps": [
+            "Start in a standard push-up position with your hands placed wider than shoulder-width apart with hands pointing outward",
+            "Keep your legs straight and balance on your toes with your body in a straight line.",
+            "Tighten your core and glutes to stabilize your body",
+            "Shift your weight to one side while bending that arm, keeping the opposite arm straight",
+            "Lower your chest toward the bent arm, as if doing a one-sided push-up",
+            "Keep the straight arm fully extended and use it for light support only",
+            "Push through the bent arm to return to the center position",
+            "Repeat the movement on the opposite side, alternating each rep",
+            "Keep your hips level and avoid twisting your torso too much"
+        ],
+        "videoURL": "https://www.youtube.com/watch?v=MxVbNel13Ek",
+        "equipment": ["floor"],
+        "mastery": {"reps": {"_0": 25}},
+        "prerequisites": [
+            "Diamond Push Up",
+            "Wide Push Up"
+        ]
+    },
+    {
+        "name": "Bent Arm Planche",
+        "level": "advanced",
+        "alternateNames": ["90 Degree Hold"],
+        "description": "Planche with elbows at 90 degrees",
+        "videoURL": "https://www.youtube.com/watch?v=zEY-faZ7xI0",
+        "equipment": ["floor"],
+        "mastery": {"time": {"_0": 10}},
+        "prerequisites": [
+            "Elbow Leaver"
+        ]
+    },
+    {
+        "name": "Elbow Leaver",
+        "level": "intermediate",
+        "alternateNames": ["Elbow planche"],
+        "videoURL": "https://www.youtube.com/watch?v=ZNCFXIIB0eQ",
+        "equipment": ["floor"],
+        "mastery": {"time": {"_0": 10}},
+        "prerequisites": [
+            "Push Up"
+        ]
+    },
+    {
+        "name": "One Arm Elbow Leaver",
+        "level": "advanced",
+        "videoURL": "https://www.youtube.com/watch?v=ZNCFXIIB0eQ",
+        "equipment": ["floor"],
+        "mastery": {"time": {"_0": 10}},
+        "prerequisites": [
+            "Elbow Leaver"
+        ]
     }
 ]
