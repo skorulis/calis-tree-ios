@@ -7,7 +7,7 @@ import KnitMacros
 import Observation
 
 struct ExerciseListItem: Identifiable {
-    var id: String { exercise.name }
+    var id: Exercise.ID { exercise.id }
     let exercise: Exercise
     let masteryProgress: ExerciseProgress
 }

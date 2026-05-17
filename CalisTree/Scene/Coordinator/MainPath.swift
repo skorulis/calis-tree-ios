@@ -14,7 +14,7 @@ enum MainPath: CoordinatorPath {
         case .exerciseList:
             "exerciseList"
         case .exerciseDetail(let exercise):
-            "exerciseDetail:\(exercise.name)"
+            "exerciseDetail:\(exercise.id)"
         case .terminologyList:
             "terminologyList"
         case .terminologyDetail(let term):

@@ -1,123 +1,209 @@
 [
     {
+        "id": "l_sit_pull_up",
         "name": "L-Sit Pull-Up",
         "level": "beginner",
         "imageFile": "l-sit",
         "videoURL": "https://www.youtube.com/watch?v=noTa65x96v0",
-        "equipment": ["overheadBar"],
-        "mastery": {"reps": {"_0": 10}},
+        "equipment": [
+            "overheadBar"
+        ],
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        },
         "prerequisites": [
-            "Pull Up"
+            "pull_up"
         ]
     },
     {
+        "id": "hanging_l_sit",
         "name": "Hanging L-Sit",
         "level": "beginner",
         "imageFile": "l-sit",
         "videoURL": "https://www.youtube.com/watch?v=TB4gWro3XaY",
-        "equipment": ["overheadBar"],
-        "mastery": {"time": {"_0": 30}},
+        "equipment": [
+            "overheadBar"
+        ],
+        "mastery": {
+            "time": {
+                "_0": 30
+            }
+        },
         "prerequisites": []
     },
     {
+        "id": "hanging_high_knee_raise",
         "name": "Hanging High Knee Raise",
         "level": "beginner",
         "imageFile": "hanging-high-knee-raise",
         "videoURL": "https://www.youtube.com/watch?v=oDiqwy0Y964",
-        "equipment": ["overheadBar"],
-        "mastery": {"reps": {"_0": 20}},
+        "equipment": [
+            "overheadBar"
+        ],
+        "mastery": {
+            "reps": {
+                "_0": 20
+            }
+        },
         "prerequisites": []
     },
     {
+        "id": "upside_down_deadlift",
         "name": "Upside Down Deadlift",
         "level": "beginner",
         "videoURL": "https://www.youtube.com/watch?v=z0o585M90sU",
-        "equipment": ["overheadBar"],
+        "equipment": [
+            "overheadBar"
+        ],
         "prerequisites": []
     },
     {
+        "id": "pull_up",
         "name": "Pull Up",
         "level": "beginner",
         "imageFile": "pull-up",
         "videoURL": "https://www.youtube.com/watch?v=XeErfmGSwfE",
-        "equipment": ["overheadBar"],
-        "mastery": {"reps": {"_0": 20}},
+        "equipment": [
+            "overheadBar"
+        ],
+        "mastery": {
+            "reps": {
+                "_0": 20
+            }
+        },
         "prerequisites": []
     },
     {
+        "id": "tuck_front_lever_hold",
         "name": "Tuck front lever hold",
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/watch?v=f0MTQWbFsq4",
-        "equipment": ["overheadBar"],
-        "mastery": {"time": {"_0": 20}},
+        "equipment": [
+            "overheadBar"
+        ],
+        "mastery": {
+            "time": {
+                "_0": 20
+            }
+        },
         "prerequisites": [
-            "Upside Down Deadlift"
+            "upside_down_deadlift"
         ]
     },
     {
+        "id": "front_lever_drops",
         "name": "Front Lever Drops",
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-        "equipment": ["overheadBar"],
-        "mastery": {"reps": {"_0": 10}},
+        "equipment": [
+            "overheadBar"
+        ],
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        },
         "prerequisites": [
-            "Tuck front lever hold"
+            "tuck_front_lever_hold"
         ]
     },
     {
+        "id": "planche",
         "name": "Planche",
         "level": "advanced",
         "videoURL": "https://www.youtube.com/watch?v=OmKfROtB45Q&t=372s",
-        "equipment": ["floor"],
-        "mastery": {"time": {"_0": 10}},
+        "equipment": [
+            "floor"
+        ],
+        "mastery": {
+            "time": {
+                "_0": 10
+            }
+        },
         "prerequisites": [
-            "Reverse Leg Raises",
-            "L-Sit",
-            "Planche Lean"
+            "reverse_leg_raises",
+            "l_sit",
+            "planche_lean"
         ]
     },
     {
+        "id": "l_sit_kicks",
         "name": "L-Sit Kicks",
         "level": "beginner",
         "videoURL": "https://www.youtube.com/shorts/z-gbvxX8fHg",
-        "equipment": ["floor"],
-        "mastery": {"reps": {"_0": 10}},
+        "equipment": [
+            "floor"
+        ],
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        },
         "prerequisites": []
     },
     {
+        "id": "l_sit",
         "name": "L-Sit",
         "level": "beginner",
         "videoURL": "https://www.youtube.com/shorts/z-gbvxX8fHg",
-        "equipment": ["floor"],
-        "mastery": {"time": {"_0": 10}},
+        "equipment": [
+            "floor"
+        ],
+        "mastery": {
+            "time": {
+                "_0": 10
+            }
+        },
         "progression": [
             {
+                "id": "tuck_l_sit",
                 "name": "Tuck L-Sit",
-                "mastery": {"time": {"_0": 10}}
+                "mastery": {
+                    "time": {
+                        "_0": 10
+                    }
+                }
             }
         ],
         "prerequisites": [
-            "L-Sit Kicks"
+            "l_sit_kicks"
         ]
     },
     {
+        "id": "push_up",
         "name": "Push Up",
         "level": "beginner",
         "videoURL": "https://www.youtube.com/shorts/04FqT6lC0i4",
-        "equipment": ["floor"],
-        "mastery": {"reps": {"_0": 25}},
+        "equipment": [
+            "floor"
+        ],
+        "mastery": {
+            "reps": {
+                "_0": 25
+            }
+        },
         "prerequisites": []
     },
     {
+        "id": "reverse_leg_raises",
         "name": "Reverse Leg Raises",
         "description": "Lay your stomach on a raised surface and raise your legs into a horizontal position",
         "level": "beginner",
         "videoURL": "https://www.youtube.com/watch?v=p7NWclT2uEM",
-        "equipment": ["raisedSurface"],
-        "mastery": {"reps": {"_0": 10}},
+        "equipment": [
+            "raisedSurface"
+        ],
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        },
         "prerequisites": []
     },
     {
+        "id": "planche_lean",
         "name": "Planche Lean",
         "description": "Make sure your hands up at your waist position",
         "steps": [
@@ -130,29 +216,43 @@
         ],
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/shorts/ca0yGW8071Y",
-        "equipment": ["floor"],
-        "mastery": {"time": {"_0": 10}},
+        "equipment": [
+            "floor"
+        ],
+        "mastery": {
+            "time": {
+                "_0": 10
+            }
+        },
         "prerequisites": [
-            "Push Up",
-            "Reverse Leg Raises"
+            "push_up",
+            "reverse_leg_raises"
         ]
     },
     {
+        "id": "tuck_planche",
         "name": "Tuck Planche",
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/shorts/-cxjiLArpls",
-        "equipment": ["floor"],
-        "mastery": {"time": {"_0": 10}},
+        "equipment": [
+            "floor"
+        ],
+        "mastery": {
+            "time": {
+                "_0": 10
+            }
+        },
         "prerequisites": [
-            "Planche Lean",
-            "L-Sit"
+            "planche_lean",
+            "l_sit"
         ]
     },
     {
+        "id": "wall_sit",
         "name": "Wall Sit",
         "steps": [
             "Start by getting onto the floor on your hands and knees",
-            "Step your feet forward roughly 1–2 feet away from the wall",
+            "Step your feet forward roughly 1\u20132 feet away from the wall",
             "Slowly slide your back down the wall by bending your knees",
             "Lower yourself until your thighs are parallel to the floor and your knees form roughly 90-degree angles",
             "Keep your knees directly above your ankles and avoid letting them move inward",
@@ -162,11 +262,18 @@
         "description": "Sit in an imaginary chair pressing your backing into the wall. Your things should be parallel to the ground.",
         "level": "beginner",
         "videoURL": "https://www.youtube.com/shorts/mDdLC-yKudY",
-        "equipment": ["wall"],
-        "mastery": {"time": {"_0": 60}},
+        "equipment": [
+            "wall"
+        ],
+        "mastery": {
+            "time": {
+                "_0": 60
+            }
+        },
         "prerequisites": []
     },
     {
+        "id": "plank",
         "name": "Plank",
         "steps": [
             "Start by getting onto the floor on your hands and knees",
@@ -178,11 +285,18 @@
         ],
         "level": "beginner",
         "videoURL": "https://www.youtube.com/shorts/xe2MXatLTUw",
-        "equipment": ["floor"],
-        "mastery": {"time": {"_0": 60}},
+        "equipment": [
+            "floor"
+        ],
+        "mastery": {
+            "time": {
+                "_0": 60
+            }
+        },
         "prerequisites": []
     },
     {
+        "id": "diamond_push_up",
         "name": "Diamond Push Up",
         "level": "beginner",
         "steps": [
@@ -198,13 +312,20 @@
             "Keep your neck neutral by looking slightly ahead of your hands"
         ],
         "videoURL": "https://www.youtube.com/shorts/PPTj-MW2tcs",
-        "equipment": ["floor"],
-        "mastery": {"reps": {"_0": 25}},
+        "equipment": [
+            "floor"
+        ],
+        "mastery": {
+            "reps": {
+                "_0": 25
+            }
+        },
         "prerequisites": [
-            "Push Up"
+            "push_up"
         ]
     },
     {
+        "id": "wide_push_up",
         "name": "Wide Push Up",
         "level": "beginner",
         "steps": [
@@ -219,13 +340,20 @@
             "Keep your hips level and avoid twisting your torso too much"
         ],
         "videoURL": "https://www.youtube.com/shorts/skWcxqxh2qw",
-        "equipment": ["floor"],
-        "mastery": {"reps": {"_0": 25}},
+        "equipment": [
+            "floor"
+        ],
+        "mastery": {
+            "reps": {
+                "_0": 25
+            }
+        },
         "prerequisites": [
-            "Push Up"
+            "push_up"
         ]
     },
     {
+        "id": "archer_push_up",
         "name": "Archer Push Up",
         "level": "intermediate",
         "steps": [
@@ -240,110 +368,212 @@
             "Keep your hips level and avoid twisting your torso too much"
         ],
         "videoURL": "https://www.youtube.com/watch?v=MxVbNel13Ek",
-        "equipment": ["floor"],
-        "mastery": {"reps": {"_0": 25}},
+        "equipment": [
+            "floor"
+        ],
+        "mastery": {
+            "reps": {
+                "_0": 25
+            }
+        },
         "prerequisites": [
-            "Diamond Push Up",
-            "Wide Push Up"
+            "diamond_push_up",
+            "wide_push_up"
         ]
     },
     {
+        "id": "bent_arm_planche",
         "name": "Bent Arm Planche",
         "level": "advanced",
-        "alternateNames": ["90 Degree Hold"],
+        "alternateNames": [
+            "90 Degree Hold"
+        ],
         "description": "Planche with elbows at 90 degrees",
         "videoURL": "https://www.youtube.com/watch?v=zEY-faZ7xI0",
-        "equipment": ["floor"],
-        "mastery": {"time": {"_0": 10}},
+        "equipment": [
+            "floor"
+        ],
+        "mastery": {
+            "time": {
+                "_0": 10
+            }
+        },
         "prerequisites": [
-            "Elbow Lever"
+            "elbow_lever"
         ]
     },
     {
+        "id": "elbow_lever",
         "name": "Elbow Lever",
         "level": "intermediate",
-        "alternateNames": ["Elbow planche"],
+        "alternateNames": [
+            "Elbow planche"
+        ],
         "videoURL": "https://www.youtube.com/watch?v=ZNCFXIIB0eQ",
-        "equipment": ["floor"],
-        "mastery": {"time": {"_0": 10}},
+        "equipment": [
+            "floor"
+        ],
+        "mastery": {
+            "time": {
+                "_0": 10
+            }
+        },
         "progression": [
             {
+                "id": "bent_knee",
                 "name": "Bent Knee",
                 "description": "Perform the front lever without extending the legs. This reduces the lever and makes it easier to assume the position",
-                "mastery": {"time": {"_0": 10}}
+                "mastery": {
+                    "time": {
+                        "_0": 10
+                    }
+                }
             },
             {
+                "id": "straddle",
                 "name": "Straddle",
                 "description": "Perform the front lever with legs straddled apart to keep your centre of gravity closer to your hands",
-                "mastery": {"time": {"_0": 10}}
+                "mastery": {
+                    "time": {
+                        "_0": 10
+                    }
+                }
             }
         ],
         "prerequisites": [
-            "Push Up"
+            "push_up"
         ]
     },
     {
+        "id": "one_arm_elbow_lever",
         "name": "One Arm Elbow Lever",
         "level": "advanced",
         "videoURL": "https://www.youtube.com/watch?v=ZNCFXIIB0eQ",
-        "equipment": ["floor"],
-        "mastery": {"time": {"_0": 10}},
+        "equipment": [
+            "floor"
+        ],
+        "mastery": {
+            "time": {
+                "_0": 10
+            }
+        },
         "prerequisites": [
-            "Elbow Lever"
+            "elbow_lever"
         ]
     },
     {
+        "id": "bench_dip",
         "name": "Bench Dip",
-        "alternateNames": ["Box Dip"],
+        "alternateNames": [
+            "Box Dip"
+        ],
         "level": "beginner",
         "videoURL": "https://www.youtube.com/shorts/4ua3MzaU0QU",
-        "equipment": ["raisedSurface"],
-        "mastery": {"reps": {"_0": 10}},
+        "equipment": [
+            "raisedSurface"
+        ],
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        },
         "prerequisites": []
     },
     {
+        "id": "chest_dip",
         "name": "Chest Dip",
         "level": "beginner",
         "videoURL": "https://www.youtube.com/shorts/CrbIq-T-h8I",
-        "equipment": ["parallelBars"],
-        "mastery": {"reps": {"_0": 10}},
+        "equipment": [
+            "parallelBars"
+        ],
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        },
         "prerequisites": [
-            "Bench Dip"
+            "bench_dip"
         ]
     },
     {
+        "id": "hand_stand",
         "name": "Hand Stand",
         "level": "beginner",
         "videoURL": "https://www.youtube.com/watch?v=KNC5lkoE2Fs",
-        "equipment": ["floor"],
-        "mastery": {"time": {"_0": 10}},
+        "equipment": [
+            "floor"
+        ],
+        "mastery": {
+            "time": {
+                "_0": 10
+            }
+        },
         "progression": [
             {
+                "id": "wall_walk_ins",
+                "name": "Wall Walk ins",
+                "description": "Start in a push up position with your feet against the wall and walk your feet up the wall and your hands towards it",
+                "mastery": {
+                    "time": {
+                        "_0": 10
+                    }
+                }
+            },
+            {
+                "id": "wall",
                 "name": "Wall",
                 "description": "Perform a handstand with your feet against the wall",
-                "mastery": {"time": {"_0": 10}}
+                "mastery": {
+                    "time": {
+                        "_0": 10
+                    }
+                }
             }
         ],
         "prerequisites": [
-            "Push Up",
-            "Pike"
+            "push_up",
+            "pike"
         ]
     },
     {
+        "id": "pike",
         "name": "Pike",
         "level": "beginner",
         "videoURL": "https://www.youtube.com/shorts/4-YsxfnZrT8",
-        "equipment": ["floor"],
+        "equipment": [
+            "floor"
+        ],
         "progression": [
             {
+                "id": "hold",
                 "name": "Hold",
                 "description": "Get into the position and hold",
-                "mastery": {"time": {"_0": 10}}
+                "mastery": {
+                    "time": {
+                        "_0": 10
+                    }
+                }
             },
             {
+                "id": "elevated",
+                "name": "Elevated",
+                "description": "Place your feet on a raised surface which will put more body weight onto the shoulders",
+                "mastery": {
+                    "time": {
+                        "_0": 10
+                    }
+                }
+            },
+            {
+                "id": "push_up",
                 "name": "Push Up",
                 "description": "From the hold position bend your elbows until your head is just above the ground",
-                "mastery": {"reps": {"_0": 10}}
+                "mastery": {
+                    "reps": {
+                        "_0": 10
+                    }
+                }
             }
         ],
         "steps": [
@@ -353,7 +583,7 @@
             "Keep your elbows angled slightly backward rather than flaring straight out"
         ],
         "prerequisites": [
-            "Push Up"
+            "push_up"
         ]
     }
 ]

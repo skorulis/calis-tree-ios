@@ -13,86 +13,86 @@ final class MainStore {
     private static let masteryKey = "calisTree.exerciseMastery.v1"
     private static let favoritesKey = "calisTree.exerciseFavorites.v1"
 
-    private(set) var masteryByExerciseName: [String: Int] = [:]
-    private(set) var favoriteExerciseNames: Set<String> = []
+    private(set) var masteryByExerciseId: [Exercise.ID: Int] = [:]
+    private(set) var favoriteExerciseIds: Set<Exercise.ID> = []
 
     @Resolvable<Resolver>
     init(keyValueStore: PKeyValueStore) {
         self.keyValueStore = keyValueStore
-        masteryByExerciseName =
+        masteryByExerciseId =
             (try? keyValueStore.codable(forKey: Self.masteryKey)) ?? [:]
-        favoriteExerciseNames =
+        favoriteExerciseIds =
             (try? keyValueStore.codable(forKey: Self.favoritesKey)) ?? []
     }
 
-    func masteryProgress(for exerciseName: String) -> Int {
-        masteryByExerciseName[exerciseName] ?? 0
+    func masteryProgress(for exerciseId: Exercise.ID) -> Int {
+        masteryByExerciseId[exerciseId] ?? 0
     }
 
     /// Effective mastery for display and filtering, accounting for progression steps when present.
     func effectiveMasteryProgress(for exercise: Exercise) -> ExerciseProgress {
         let base = exercise.mastery.map { mastery in
             let target = mastery.intValue
-            let value = min(target, masteryProgress(for: exercise.name))
+            let value = min(target, masteryProgress(for: exercise.id))
             return MasteryProgress(current: value, target: target)
         }
 
         let progression = exercise.progression ?? []
-        var progressionMastery: [String: MasteryProgress] = [:]
+        var progressionMastery: [Exercise.ID: MasteryProgress] = [:]
         for variation in progression {
             let stepProgress = progressionMasteryProgress(
-                for: exercise.name,
-                variationName: variation.name
+                for: exercise.id,
+                variationId: variation.id
             )
             let stepClamped = min(stepProgress, variation.mastery.intValue)
-            progressionMastery[variation.name] = .init(current: stepClamped, target: variation.mastery.intValue)
+            progressionMastery[variation.id] = .init(current: stepClamped, target: variation.mastery.intValue)
         }
         
         return .init(main: base, progression: progressionMastery)
     }
 
-    func setMasteryProgress(_ value: Int, for exerciseName: String) {
-        updateMasteryProgress(max(0, value), forKey: exerciseName)
+    func setMasteryProgress(_ value: Int, for exerciseId: Exercise.ID) {
+        updateMasteryProgress(max(0, value), forKey: exerciseId)
     }
 
-    func progressionMasteryProgress(for exerciseName: String, variationName: String) -> Int {
-        masteryByExerciseName[progressionMasteryKey(exerciseName: exerciseName, variationName: variationName)] ?? 0
+    func progressionMasteryProgress(for exerciseId: Exercise.ID, variationId: Exercise.ID) -> Int {
+        masteryByExerciseId[progressionMasteryKey(exerciseId: exerciseId, variationId: variationId)] ?? 0
     }
 
     func setProgressionMasteryProgress(
         _ value: Int,
-        for exerciseName: String,
-        variationName: String
+        for exerciseId: Exercise.ID,
+        variationId: Exercise.ID
     ) {
         updateMasteryProgress(
             max(0, value),
-            forKey: progressionMasteryKey(exerciseName: exerciseName, variationName: variationName)
+            forKey: progressionMasteryKey(exerciseId: exerciseId, variationId: variationId)
         )
     }
 
-    private func progressionMasteryKey(exerciseName: String, variationName: String) -> String {
-        "\(exerciseName)-\(variationName)"
+    private func progressionMasteryKey(exerciseId: Exercise.ID, variationId: Exercise.ID) -> String {
+        "\(exerciseId)-\(variationId)"
     }
 
     private func updateMasteryProgress(_ value: Int, forKey key: String) {
-        var updated = masteryByExerciseName
+        var updated = masteryByExerciseId
         updated[key] = value
-        masteryByExerciseName = updated
-        try? keyValueStore.set(codable: masteryByExerciseName, forKey: Self.masteryKey)
+        masteryByExerciseId = updated
+        try? keyValueStore.set(codable: masteryByExerciseId, forKey: Self.masteryKey)
     }
 
-    func isFavorite(exerciseName: String) -> Bool {
-        favoriteExerciseNames.contains(exerciseName)
+    func isFavorite(exerciseId: Exercise.ID) -> Bool {
+        favoriteExerciseIds.contains(exerciseId)
     }
 
-    func setFavorite(_ isFavorite: Bool, for exerciseName: String) {
-        var updated = favoriteExerciseNames
+    func setFavorite(_ isFavorite: Bool, for exerciseId: Exercise.ID) {
+        var updated = favoriteExerciseIds
         if isFavorite {
-            updated.insert(exerciseName)
+            updated.insert(exerciseId)
         } else {
-            updated.remove(exerciseName)
+            updated.remove(exerciseId)
         }
-        favoriteExerciseNames = updated
-        try? keyValueStore.set(codable: favoriteExerciseNames, forKey: Self.favoritesKey)
+        favoriteExerciseIds = updated
+        try? keyValueStore.set(codable: favoriteExerciseIds, forKey: Self.favoritesKey)
     }
 }

@@ -16,8 +16,8 @@ struct ExerciseListView: View {
 
     var body: some View {
         let allItems = viewModel.items
-        let favoriteItems = allItems.filter { mainStore.isFavorite(exerciseName: $0.exercise.name) }
-        let alphabeticalItems = allItems.filter { !mainStore.isFavorite(exerciseName: $0.exercise.name) }
+        let favoriteItems = allItems.filter { mainStore.isFavorite(exerciseId: $0.exercise.id) }
+        let alphabeticalItems = allItems.filter { !mainStore.isFavorite(exerciseId: $0.exercise.id) }
         List {
             if !favoriteItems.isEmpty {
                 Section {

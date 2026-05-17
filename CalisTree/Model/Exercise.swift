@@ -3,6 +3,7 @@
 import Foundation
 
 struct Exercise: Codable {
+    let id: ID
     let name: String
     let description: String?
     // Steps to perform this exercise 
@@ -14,11 +15,16 @@ struct Exercise: Codable {
     let mastery: SetType?
     let progression: [ExerciseVariation]?
     
-    // Exercises that should be mastered before this one
-    let prerequisites: [String]
+    // Exercise IDs that should be mastered before this one
+    let prerequisites: [ID]
+}
+
+extension Exercise {
+    typealias ID = String
 }
 
 struct ExerciseVariation: Codable {
+    let id: Exercise.ID
     let name: String
     let description: String?
     let mastery: SetType

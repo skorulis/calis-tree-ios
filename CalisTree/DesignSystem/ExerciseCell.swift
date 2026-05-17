@@ -44,6 +44,7 @@ struct ExerciseCell: View {
 #Preview("In progress") {
     ExerciseCell(
         exercise: Exercise(
+            id: "hanging_l_sit",
             name: "Hanging L-Sit",
             description: nil,
             steps: nil,
@@ -63,6 +64,7 @@ struct ExerciseCell: View {
 #Preview("Mastered") {
     ExerciseCell(
         exercise: Exercise(
+            id: "pull_up",
             name: "Pull up",
             description: nil,
             steps: nil,
@@ -82,6 +84,7 @@ struct ExerciseCell: View {
 #Preview("No mastery") {
     ExerciseCell(
         exercise: Exercise(
+            id: "hanging_high_knee_raise",
             name: "Hanging High Knee Raise",
             description: nil,
             steps: nil,

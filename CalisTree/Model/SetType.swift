@@ -38,7 +38,7 @@ nonisolated struct MasteryProgress: Equatable {
 
 nonisolated struct ExerciseProgress: Equatable {
     var main: MasteryProgress?
-    var progression: [String: MasteryProgress]
+    var progression: [Exercise.ID: MasteryProgress]
     
     static var none: ExerciseProgress {
         return .init(main: nil, progression: [:])

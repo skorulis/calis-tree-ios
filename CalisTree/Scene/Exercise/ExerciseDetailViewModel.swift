@@ -6,13 +6,13 @@ import KnitMacros
 import Observation
 
 struct PrerequisiteItem: Identifiable {
-    var id: String { exercise.name }
+    var id: Exercise.ID { exercise.id }
     let exercise: Exercise
     let masteryProgress: ExerciseProgress
 }
 
 struct ProgressionStepItem: Identifiable {
-    var id: String { variation.name }
+    var id: Exercise.ID { variation.id }
     let variation: ExerciseVariation
     let index: Int
 }
@@ -43,12 +43,12 @@ final class ExerciseDetailViewModel {
     var masteryProgress: Int {
         get {
             guard let target = exercise.mastery else { return 0 }
-            return min(target.intValue, mainStore.masteryProgress(for: exercise.name))
+            return min(target.intValue, mainStore.masteryProgress(for: exercise.id))
         }
         set {
             guard let target = exercise.mastery else { return }
             let clamped = min(max(0, newValue), target.intValue)
-            mainStore.setMasteryProgress(clamped, for: exercise.name)
+            mainStore.setMasteryProgress(clamped, for: exercise.id)
         }
     }
 
@@ -64,35 +64,35 @@ final class ExerciseDetailViewModel {
         }
     }
 
-    func progressionMasteryProgress(for variationName: String) -> Int {
-        guard let variation = exercise.progression?.first(where: { $0.name == variationName })
+    func progressionMasteryProgress(for variationId: Exercise.ID) -> Int {
+        guard let variation = exercise.progression?.first(where: { $0.id == variationId })
         else { return 0 }
         return min(
             variation.mastery.intValue,
-            mainStore.progressionMasteryProgress(for: exercise.name, variationName: variationName)
+            mainStore.progressionMasteryProgress(for: exercise.id, variationId: variationId)
         )
     }
 
-    func setProgressionMasteryProgress(_ value: Int, for variationName: String) {
-        guard let variation = exercise.progression?.first(where: { $0.name == variationName })
+    func setProgressionMasteryProgress(_ value: Int, for variationId: Exercise.ID) {
+        guard let variation = exercise.progression?.first(where: { $0.id == variationId })
         else { return }
         let clamped = min(max(0, value), variation.mastery.intValue)
         mainStore.setProgressionMasteryProgress(
             clamped,
-            for: exercise.name,
-            variationName: variationName
+            for: exercise.id,
+            variationId: variationId
         )
     }
 
     func progressionMasteryLabel(for variation: ExerciseVariation) -> String {
         let target = variation.mastery
-        let current = progressionMasteryProgress(for: variation.name)
+        let current = progressionMasteryProgress(for: variation.id)
         return "\(current) / \(target.intValue) \(target.unitLabel)"
     }
 
     var prerequisiteItems: [PrerequisiteItem] {
-        exercise.prerequisites.compactMap { name in
-            guard let prerequisite = repository.exerciseByName[name] else { return nil }
+        exercise.prerequisites.compactMap { id in
+            guard let prerequisite = repository.exerciseById[id] else { return nil }
             return PrerequisiteItem(
                 exercise: prerequisite,
                 masteryProgress: mainStore.effectiveMasteryProgress(for: prerequisite)
@@ -103,10 +103,10 @@ final class ExerciseDetailViewModel {
     var isFavorite: Bool {
         get {
             _ = favoriteChangeToken
-            return mainStore.isFavorite(exerciseName: exercise.name)
+            return mainStore.isFavorite(exerciseId: exercise.id)
         }
         set {
-            mainStore.setFavorite(newValue, for: exercise.name)
+            mainStore.setFavorite(newValue, for: exercise.id)
             favoriteChangeToken += 1
         }
     }

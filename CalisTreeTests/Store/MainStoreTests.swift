@@ -11,25 +11,26 @@ struct MainStoreTests {
     @Test func masteryProgressPersistsAcrossInstances() {
         let keyValueStore = InMemoryDefaults()
         let first = MainStore(keyValueStore: keyValueStore)
-        first.setMasteryProgress(12, for: "Hanging L-Sit")
+        first.setMasteryProgress(12, for: "hanging_l_sit")
 
         let second = MainStore(keyValueStore: keyValueStore)
-        #expect(second.masteryProgress(for: "Hanging L-Sit") == 12)
+        #expect(second.masteryProgress(for: "hanging_l_sit") == 12)
     }
 
     @Test func progressionMasteryProgressPersistsAcrossInstances() {
         let keyValueStore = InMemoryDefaults()
         let first = MainStore(keyValueStore: keyValueStore)
-        first.setProgressionMasteryProgress(8, for: "One Arm Elbow Lever", variationName: "Bent Knee")
+        first.setProgressionMasteryProgress(8, for: "one_arm_elbow_lever", variationId: "bent_knee")
 
         let second = MainStore(keyValueStore: keyValueStore)
-        #expect(second.progressionMasteryProgress(for: "One Arm Elbow Lever", variationName: "Bent Knee") == 8)
-        #expect(second.masteryProgress(for: "One Arm Elbow Lever") == 0)
+        #expect(second.progressionMasteryProgress(for: "one_arm_elbow_lever", variationId: "bent_knee") == 8)
+        #expect(second.masteryProgress(for: "one_arm_elbow_lever") == 0)
     }
 
     @Test func effectiveMasteryWithoutProgressionUsesBaseValue() {
         let store = MainStore(keyValueStore: InMemoryDefaults())
         let exercise = Exercise(
+            id: "pull_up",
             name: "Pull Up",
             description: nil,
             steps: nil,
@@ -41,13 +42,14 @@ struct MainStoreTests {
             progression: nil,
             prerequisites: []
         )
-        store.setMasteryProgress(12, for: exercise.name)
+        store.setMasteryProgress(12, for: exercise.id)
         #expect(store.effectiveMasteryProgress(for: exercise).fraction == 0.6)
     }
 
     @Test func effectiveMasteryAveragesProgressionSteps() {
         let store = MainStore(keyValueStore: InMemoryDefaults())
         let exercise = Exercise(
+            id: "one_arm_elbow_lever",
             name: "One Arm Elbow Lever",
             description: nil,
             steps: nil,
@@ -57,13 +59,13 @@ struct MainStoreTests {
             equipment: [.floor],
             mastery: .time(10),
             progression: [
-                ExerciseVariation(name: "Bent Knee", description: nil, mastery: .time(10)),
-                ExerciseVariation(name: "Straddle", description: nil, mastery: .time(10)),
+                ExerciseVariation(id: "bent_knee", name: "Bent Knee", description: nil, mastery: .time(10)),
+                ExerciseVariation(id: "straddle", name: "Straddle", description: nil, mastery: .time(10)),
             ],
             prerequisites: []
         )
-        store.setProgressionMasteryProgress(5, for: exercise.name, variationName: "Bent Knee")
-        store.setProgressionMasteryProgress(10, for: exercise.name, variationName: "Straddle")
+        store.setProgressionMasteryProgress(5, for: exercise.id, variationId: "bent_knee")
+        store.setProgressionMasteryProgress(10, for: exercise.id, variationId: "straddle")
 
         #expect(store.effectiveMasteryProgress(for: exercise).fraction == 0.5)
     }
@@ -71,6 +73,7 @@ struct MainStoreTests {
     @Test func effectiveMasteryUsesBaseWhenHigherThanProgressionAverage() {
         let store = MainStore(keyValueStore: InMemoryDefaults())
         let exercise = Exercise(
+            id: "one_arm_elbow_lever",
             name: "One Arm Elbow Lever",
             description: nil,
             steps: nil,
@@ -80,25 +83,25 @@ struct MainStoreTests {
             equipment: [.floor],
             mastery: .time(10),
             progression: [
-                ExerciseVariation(name: "Bent Knee", description: nil, mastery: .time(10)),
+                ExerciseVariation(id: "bent_knee", name: "Bent Knee", description: nil, mastery: .time(10)),
             ],
             prerequisites: []
         )
-        store.setMasteryProgress(10, for: exercise.name)
-        store.setProgressionMasteryProgress(0, for: exercise.name, variationName: "Bent Knee")
+        store.setMasteryProgress(10, for: exercise.id)
+        store.setProgressionMasteryProgress(0, for: exercise.id, variationId: "bent_knee")
         #expect(store.effectiveMasteryProgress(for: exercise).fraction == 1)
     }
 
     @Test func favoritesPersistAcrossInstances() {
         let keyValueStore = InMemoryDefaults()
         let first = MainStore(keyValueStore: keyValueStore)
-        first.setFavorite(true, for: "Pull up")
-        first.setFavorite(true, for: "Hanging L-Sit")
-        first.setFavorite(false, for: "Pull up")
+        first.setFavorite(true, for: "pull_up")
+        first.setFavorite(true, for: "hanging_l_sit")
+        first.setFavorite(false, for: "pull_up")
 
         let second = MainStore(keyValueStore: keyValueStore)
-        #expect(second.isFavorite(exerciseName: "Hanging L-Sit"))
-        #expect(!second.isFavorite(exerciseName: "Pull up"))
+        #expect(second.isFavorite(exerciseId: "hanging_l_sit"))
+        #expect(!second.isFavorite(exerciseId: "pull_up"))
     }
 
 }

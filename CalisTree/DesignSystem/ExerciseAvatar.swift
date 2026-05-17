@@ -93,6 +93,7 @@ struct ExerciseAvatar: View {
 #Preview("Not started") {
     ExerciseAvatar(
         exercise: Exercise(
+            id: "pull_up",
             name: "Pull Up",
             description: nil,
             steps: nil,
@@ -111,6 +112,7 @@ struct ExerciseAvatar: View {
 #Preview("In progress") {
     ExerciseAvatar(
         exercise: Exercise(
+            id: "pull_up",
             name: "Pull Up",
             description: nil,
             steps: nil,
@@ -122,13 +124,14 @@ struct ExerciseAvatar: View {
             progression: nil,
             prerequisites: []
         ),
-        masteryProgress: .init(progression: ["Hold": .init(current: 5, target: 10)])
+        masteryProgress: .init(progression: ["hold": .init(current: 5, target: 10)])
     )
 }
 
 #Preview("Mastered") {
     ExerciseAvatar(
         exercise: Exercise(
+            id: "pull_up",
             name: "Pull Up",
             description: nil,
             steps: nil,
@@ -140,6 +143,6 @@ struct ExerciseAvatar: View {
             progression: nil,
             prerequisites: []
         ),
-        masteryProgress: .init(progression: ["Hold": .init(current: 10, target: 10)])
+        masteryProgress: .init(progression: ["hold": .init(current: 10, target: 10)])
     )
 }

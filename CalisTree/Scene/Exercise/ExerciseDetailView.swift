@@ -110,12 +110,12 @@ struct ExerciseDetailView: View {
                         Slider(
                             value: Binding(
                                 get: {
-                                    Double(viewModel.progressionMasteryProgress(for: item.variation.name))
+                                    Double(viewModel.progressionMasteryProgress(for: item.variation.id))
                                 },
                                 set: {
                                     viewModel.setProgressionMasteryProgress(
                                         Int($0.rounded()),
-                                        for: item.variation.name
+                                        for: item.variation.id
                                     )
                                 }
                             ),
@@ -184,7 +184,7 @@ struct ExerciseDetailView: View {
 
 #Preview {
     let assembler = CalisTreeAssembly.testing()
-    let exercise = assembler.resolver.exerciseRepository().exerciseByName["Elbow Lever"]!
+    let exercise = assembler.resolver.exerciseRepository().exerciseById["elbow_lever"]!
     NavigationStack {
         ExerciseDetailView(
             viewModel: assembler.resolver.exerciseDetailViewModel(exercise: exercise)
