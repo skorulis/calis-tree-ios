@@ -260,25 +260,16 @@
         "equipment": ["floor"],
         "mastery": {"time": {"_0": 10}},
         "prerequisites": [
-            "Elbow Leaver"
+            "Elbow Lever"
         ]
     },
     {
-        "name": "Elbow Leaver",
+        "name": "Elbow Lever",
         "level": "intermediate",
         "alternateNames": ["Elbow planche"],
         "videoURL": "https://www.youtube.com/watch?v=ZNCFXIIB0eQ",
         "equipment": ["floor"],
         "mastery": {"time": {"_0": 10}},
-        "prerequisites": [
-            "Push Up"
-        ]
-    },
-    {
-        "name": "One Arm Elbow Leaver",
-        "level": "advanced",
-        "videoURL": "https://www.youtube.com/watch?v=ZNCFXIIB0eQ",
-        "equipment": ["floor"],
         "progression": [
             {
                 "name": "Bent Knee",
@@ -291,9 +282,18 @@
                 "mastery": {"time": {"_0": 10}}
             }
         ],
+        "prerequisites": [
+            "Push Up"
+        ]
+    },
+    {
+        "name": "One Arm Elbow Lever",
+        "level": "advanced",
+        "videoURL": "https://www.youtube.com/watch?v=ZNCFXIIB0eQ",
+        "equipment": ["floor"],
         "mastery": {"time": {"_0": 10}},
         "prerequisites": [
-            "Elbow Leaver"
+            "Elbow Lever"
         ]
     }
 ]

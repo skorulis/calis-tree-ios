@@ -21,5 +21,5 @@ struct Exercise: Codable {
 struct ExerciseVariation: Codable {
     let name: String
     let description: String?
-    let mastery: SetType?
+    let mastery: SetType
 }

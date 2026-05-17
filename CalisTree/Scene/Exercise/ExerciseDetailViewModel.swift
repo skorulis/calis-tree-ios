@@ -11,6 +11,12 @@ struct PrerequisiteItem: Identifiable {
     let masteryProgress: Int
 }
 
+struct ProgressionStepItem: Identifiable {
+    var id: String { variation.name }
+    let variation: ExerciseVariation
+    let index: Int
+}
+
 @MainActor
 @Observable
 final class ExerciseDetailViewModel {
@@ -49,6 +55,38 @@ final class ExerciseDetailViewModel {
     var masteryLabel: String {
         guard let target = exercise.mastery else { return "" }
         let current = masteryProgress
+        return "\(current) / \(target.intValue) \(target.unitLabel)"
+    }
+
+    var progressionItems: [ProgressionStepItem] {
+        (exercise.progression ?? []).enumerated().map { index, variation in
+            ProgressionStepItem(variation: variation, index: index)
+        }
+    }
+
+    func progressionMasteryProgress(for variationName: String) -> Int {
+        guard let variation = exercise.progression?.first(where: { $0.name == variationName })
+        else { return 0 }
+        return min(
+            variation.mastery.intValue,
+            mainStore.progressionMasteryProgress(for: exercise.name, variationName: variationName)
+        )
+    }
+
+    func setProgressionMasteryProgress(_ value: Int, for variationName: String) {
+        guard let variation = exercise.progression?.first(where: { $0.name == variationName })
+        else { return }
+        let clamped = min(max(0, value), variation.mastery.intValue)
+        mainStore.setProgressionMasteryProgress(
+            clamped,
+            for: exercise.name,
+            variationName: variationName
+        )
+    }
+
+    func progressionMasteryLabel(for variation: ExerciseVariation) -> String {
+        let target = variation.mastery
+        let current = progressionMasteryProgress(for: variation.name)
         return "\(current) / \(target.intValue) \(target.unitLabel)"
     }
 

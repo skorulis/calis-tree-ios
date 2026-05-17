@@ -30,8 +30,31 @@ final class MainStore {
     }
 
     func setMasteryProgress(_ value: Int, for exerciseName: String) {
+        updateMasteryProgress(max(0, value), forKey: exerciseName)
+    }
+
+    func progressionMasteryProgress(for exerciseName: String, variationName: String) -> Int {
+        masteryByExerciseName[progressionMasteryKey(exerciseName: exerciseName, variationName: variationName)] ?? 0
+    }
+
+    func setProgressionMasteryProgress(
+        _ value: Int,
+        for exerciseName: String,
+        variationName: String
+    ) {
+        updateMasteryProgress(
+            max(0, value),
+            forKey: progressionMasteryKey(exerciseName: exerciseName, variationName: variationName)
+        )
+    }
+
+    private func progressionMasteryKey(exerciseName: String, variationName: String) -> String {
+        "\(exerciseName)-\(variationName)"
+    }
+
+    private func updateMasteryProgress(_ value: Int, forKey key: String) {
         var updated = masteryByExerciseName
-        updated[exerciseName] = max(0, value)
+        updated[key] = value
         masteryByExerciseName = updated
         try? keyValueStore.set(codable: masteryByExerciseName, forKey: Self.masteryKey)
     }

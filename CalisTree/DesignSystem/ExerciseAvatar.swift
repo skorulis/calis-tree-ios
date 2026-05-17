@@ -102,6 +102,7 @@ struct ExerciseAvatar: View {
             videoURL: "https://www.youtube.com/watch?v=XeErfmGSwfE",
             equipment: [.overheadBar],
             mastery: .reps(20),
+            progression: nil,
             prerequisites: []
         ),
         masteryProgress: 0
@@ -119,6 +120,7 @@ struct ExerciseAvatar: View {
             videoURL: "https://www.youtube.com/watch?v=XeErfmGSwfE",
             equipment: [.overheadBar],
             mastery: .reps(20),
+            progression: nil,
             prerequisites: []
         ),
         masteryProgress: 10
@@ -136,6 +138,7 @@ struct ExerciseAvatar: View {
             videoURL: "https://www.youtube.com/watch?v=XeErfmGSwfE",
             equipment: [.overheadBar],
             mastery: .reps(20),
+            progression: nil,
             prerequisites: []
         ),
         masteryProgress: 20

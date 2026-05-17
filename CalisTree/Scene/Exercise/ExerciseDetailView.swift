@@ -52,6 +52,7 @@ struct ExerciseDetailView: View {
                             .font(.headline)
                     }
                 }
+                progressionSection
                 masterySection
                 
                 YouTubeEmbedView(videoURL: viewModel.exercise.videoURL)
@@ -85,6 +86,58 @@ struct ExerciseDetailView: View {
         }
     }
     
+    @ViewBuilder
+    private var progressionSection: some View {
+        if !viewModel.progressionItems.isEmpty {
+            VStack(alignment: .leading, spacing: 12) {
+                ForEach(viewModel.progressionItems) { item in
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("\(item.variation.name)")
+                            .font(.headline)
+                        if let description = item.variation.description {
+                            Text(description)
+                                .font(.subheadline)
+                                .foregroundStyle(.secondary)
+                        }
+                        
+                        Slider(
+                            value: Binding(
+                                get: {
+                                    Double(viewModel.progressionMasteryProgress(for: item.variation.name))
+                                },
+                                set: {
+                                    viewModel.setProgressionMasteryProgress(
+                                        Int($0.rounded()),
+                                        for: item.variation.name
+                                    )
+                                }
+                            ),
+                            in: 0...Double(item.variation.mastery.intValue),
+                            step: 1
+                        )
+                        Text(viewModel.progressionMasteryLabel(for: item.variation))
+                            .font(.subheadline)
+                            .foregroundStyle(.secondary)
+                        
+                        stepArrow
+                    }
+                }
+            }
+        }
+    }
+    
+    private var stepArrow: some View {
+        HStack {
+            Spacer()
+            Image(systemName: "arrowshape.down")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 32, height: 32)
+                .foregroundStyle(.gray)
+            Spacer()
+        }
+    }
+
     @ViewBuilder
     private var masterySection: some View {
         if viewModel.showsMastery, let target = viewModel.masteryTarget {
@@ -126,7 +179,7 @@ struct ExerciseDetailView: View {
 
 #Preview {
     let assembler = CalisTreeAssembly.testing()
-    let exercise = assembler.resolver.exerciseRepository().exerciseByName["Tuck front lever hold"]!
+    let exercise = assembler.resolver.exerciseRepository().exerciseByName["Elbow Lever"]!
     NavigationStack {
         ExerciseDetailView(
             viewModel: assembler.resolver.exerciseDetailViewModel(exercise: exercise)

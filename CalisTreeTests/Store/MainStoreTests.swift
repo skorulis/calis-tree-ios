@@ -17,6 +17,16 @@ struct MainStoreTests {
         #expect(second.masteryProgress(for: "Hanging L-Sit") == 12)
     }
 
+    @Test func progressionMasteryProgressPersistsAcrossInstances() {
+        let keyValueStore = InMemoryDefaults()
+        let first = MainStore(keyValueStore: keyValueStore)
+        first.setProgressionMasteryProgress(8, for: "One Arm Elbow Lever", variationName: "Bent Knee")
+
+        let second = MainStore(keyValueStore: keyValueStore)
+        #expect(second.progressionMasteryProgress(for: "One Arm Elbow Lever", variationName: "Bent Knee") == 8)
+        #expect(second.masteryProgress(for: "One Arm Elbow Lever") == 0)
+    }
+
     @Test func favoritesPersistAcrossInstances() {
         let keyValueStore = InMemoryDefaults()
         let first = MainStore(keyValueStore: keyValueStore)

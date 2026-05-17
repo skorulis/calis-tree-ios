@@ -53,6 +53,7 @@ struct ExerciseCell: View {
             videoURL: "https://www.youtube.com/watch?v=TB4gWro3XaY",
             equipment: [.overheadBar],
             mastery: .time(30),
+            progression: nil,
             prerequisites: []
         ),
         masteryProgress: 15
@@ -71,6 +72,7 @@ struct ExerciseCell: View {
             videoURL: "https://www.youtube.com/watch?v=XeErfmGSwfE",
             equipment: [.overheadBar],
             mastery: .reps(20),
+            progression: nil,
             prerequisites: []
         ),
         masteryProgress: 20
@@ -89,6 +91,7 @@ struct ExerciseCell: View {
             videoURL: "https://www.youtube.com/watch?v=oDiqwy0Y964",
             equipment: [.overheadBar],
             mastery: nil,
+            progression: nil,
             prerequisites: []
         ),
         masteryProgress: 0
