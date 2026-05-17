@@ -95,7 +95,7 @@ final class ExerciseDetailViewModel {
             guard let prerequisite = repository.exerciseByName[name] else { return nil }
             return PrerequisiteItem(
                 exercise: prerequisite,
-                masteryProgress: mainStore.masteryProgress(for: name)
+                masteryProgress: mainStore.effectiveMasteryProgress(for: prerequisite)
             )
         }
     }

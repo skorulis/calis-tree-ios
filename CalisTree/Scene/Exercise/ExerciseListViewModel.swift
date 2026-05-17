@@ -55,7 +55,7 @@ final class ExerciseListViewModel: CoordinatorViewModel {
     var items: [ExerciseListItem] {
         let tokens = Self.searchTokens(from: searchText)
         return repository.exercises.compactMap { exercise in
-            let progress = mainStore.masteryProgress(for: exercise.name)
+            let progress = mainStore.effectiveMasteryProgress(for: exercise)
             guard matchesProgress(exercise: exercise, progress: progress, filter: filterProgress)
             else { return nil }
             if let filterLevel, exercise.level != filterLevel { return nil }

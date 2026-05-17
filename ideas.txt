@@ -1,6 +1,5 @@
-It might be better to make exercises more complicated.
-Planche lean for instance could have a step for chest level holds and one for waist level hold
-It could also have one for doing reps where you move back and forwards.
+* Add variations to planche lean
+* Should I give everything an ID to help with renames?
 
 I need to be writing better tips for each exercise both for me and others.
 

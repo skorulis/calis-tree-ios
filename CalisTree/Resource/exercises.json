@@ -72,17 +72,9 @@
         "mastery": {"time": {"_0": 10}},
         "prerequisites": [
             "Reverse Leg Raises",
-            "Floor L-Sit",
+            "L-Sit",
             "Planche Lean"
         ]
-    },
-    {
-        "name": "Tuck L-Sit",
-        "level": "beginner",
-        "videoURL": "https://www.youtube.com/shorts/PLffPwepgiY",
-        "equipment": ["floor"],
-        "mastery": {"time": {"_0": 10}},
-        "prerequisites": []
     },
     {
         "name": "L-Sit Kicks",
@@ -90,16 +82,20 @@
         "videoURL": "https://www.youtube.com/shorts/z-gbvxX8fHg",
         "equipment": ["floor"],
         "mastery": {"reps": {"_0": 10}},
-        "prerequisites": [
-            "Tuck L-Sit"
-        ]
+        "prerequisites": []
     },
     {
-        "name": "Floor L-Sit",
+        "name": "L-Sit",
         "level": "beginner",
         "videoURL": "https://www.youtube.com/shorts/z-gbvxX8fHg",
         "equipment": ["floor"],
         "mastery": {"time": {"_0": 10}},
+        "progression": [
+            {
+                "name": "Tuck L-Sit",
+                "mastery": {"time": {"_0": 10}}
+            }
+        ],
         "prerequisites": [
             "L-Sit Kicks"
         ]
@@ -149,7 +145,7 @@
         "mastery": {"time": {"_0": 10}},
         "prerequisites": [
             "Planche Lean",
-            "Tuck L-Sit"
+            "L-Sit"
         ]
     },
     {
@@ -294,6 +290,70 @@
         "mastery": {"time": {"_0": 10}},
         "prerequisites": [
             "Elbow Lever"
+        ]
+    },
+    {
+        "name": "Bench Dip",
+        "alternateNames": ["Box Dip"],
+        "level": "beginner",
+        "videoURL": "https://www.youtube.com/shorts/4ua3MzaU0QU",
+        "equipment": ["raisedSurface"],
+        "mastery": {"reps": {"_0": 10}},
+        "prerequisites": []
+    },
+    {
+        "name": "Chest Dip",
+        "level": "beginner",
+        "videoURL": "https://www.youtube.com/shorts/CrbIq-T-h8I",
+        "equipment": ["parallelBars"],
+        "mastery": {"reps": {"_0": 10}},
+        "prerequisites": [
+            "Bench Dip"
+        ]
+    },
+    {
+        "name": "Hand Stand",
+        "level": "beginner",
+        "videoURL": "https://www.youtube.com/watch?v=KNC5lkoE2Fs",
+        "equipment": ["floor"],
+        "mastery": {"time": {"_0": 10}},
+        "progression": [
+            {
+                "name": "Wall",
+                "description": "Perform a handstand with your feet against the wall",
+                "mastery": {"time": {"_0": 10}}
+            }
+        ],
+        "prerequisites": [
+            "Push Up",
+            "Pike"
+        ]
+    },
+    {
+        "name": "Pike",
+        "level": "beginner",
+        "videoURL": "https://www.youtube.com/shorts/4-YsxfnZrT8",
+        "equipment": ["floor"],
+        "progression": [
+            {
+                "name": "Hold",
+                "description": "Get into the position and hold",
+                "mastery": {"time": {"_0": 10}}
+            },
+            {
+                "name": "Push Up",
+                "description": "From the hold position bend your elbows until your head is just above the ground",
+                "mastery": {"reps": {"_0": 10}}
+            }
+        ],
+        "steps": [
+            "Start in a standard push-up position with your hands shoulder-width apart",
+            "Walk your hands backwards until your upper body is straight",
+            "Lean forwards so your weight is resting on your hands an not your feet",
+            "Keep your elbows angled slightly backward rather than flaring straight out"
+        ],
+        "prerequisites": [
+            "Push Up"
         ]
     }
 ]

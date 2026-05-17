@@ -14,25 +14,9 @@ struct ExerciseDetailView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 16) {
                 Chip(level: viewModel.exercise.level)
-                if !viewModel.prerequisiteItems.isEmpty {
-                    VStack(alignment: .leading, spacing: 8) {
-                        Text("Prerequisites")
-                            .font(.headline)
-                        HStack(spacing: 12) {
-                            ForEach(sortedPrerequisiteItems) { item in
-                                Button {
-                                    coordinator?.push(MainPath.exerciseDetail(item.exercise))
-                                } label: {
-                                    ExerciseAvatar(
-                                        exercise: item.exercise,
-                                        masteryProgress: item.masteryProgress
-                                    )
-                                }
-                                .buttonStyle(.plain)
-                            }
-                        }
-                    }
-                }
+                
+                prerequisiteSection
+                
                 if let steps = viewModel.exercise.steps, !steps.isEmpty {
                     DisclosureGroup(isExpanded: $isStepsExpanded) {
                         VStack(alignment: .leading, spacing: 8) {
@@ -82,6 +66,29 @@ struct ExerciseDetailView: View {
                 .accessibilityLabel(
                     viewModel.isFavorite ? "Remove from favorites" : "Add to favorites"
                 )
+            }
+        }
+    }
+    
+    @ViewBuilder
+    private var prerequisiteSection: some View {
+        if !viewModel.prerequisiteItems.isEmpty {
+            VStack(alignment: .leading, spacing: 8) {
+                Text("Prerequisites")
+                    .font(.headline)
+                HStack(spacing: 12) {
+                    ForEach(sortedPrerequisiteItems) { item in
+                        Button {
+                            coordinator?.push(MainPath.exerciseDetail(item.exercise))
+                        } label: {
+                            ExerciseAvatar(
+                                exercise: item.exercise,
+                                masteryProgress: item.masteryProgress
+                            )
+                        }
+                        .buttonStyle(.plain)
+                    }
+                }
             }
         }
     }
