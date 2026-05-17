@@ -74,8 +74,14 @@ struct ExerciseDetailView: View {
     private var prerequisiteSection: some View {
         if !viewModel.prerequisiteItems.isEmpty {
             VStack(alignment: .leading, spacing: 8) {
-                Text("Prerequisites")
-                    .font(.headline)
+                Button {
+                    coordinator?.push(MainPath.exerciseProgression(viewModel.exercise))
+                } label: {
+                    Text("Prerequisites")
+                        .font(.headline)
+                        .foregroundStyle(.primary)
+                }
+                .buttonStyle(.plain)
                 HStack(spacing: 12) {
                     ForEach(sortedPrerequisiteItems) { item in
                         Button {

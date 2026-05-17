@@ -20,4 +20,42 @@ struct ExerciseRepositoryTests {
         }
     }
 
+    @Test func progressionChain_linearPrerequisites() {
+        let repository = ExerciseRepository()
+        let chain = repository.progressionChain(to: "one_arm_elbow_lever")
+        #expect(chain.map(\.id) == ["push_up", "elbow_lever", "one_arm_elbow_lever"])
+    }
+
+    @Test func progressionChain_deduplicatesSharedAncestors() {
+        let repository = ExerciseRepository()
+        let chain = repository.progressionChain(to: "archer_push_up")
+        #expect(chain.map(\.id) == ["push_up", "diamond_push_up", "wide_push_up", "archer_push_up"])
+    }
+
+    @Test func progressionChain_multiBranchPrerequisites() {
+        let repository = ExerciseRepository()
+        let chain = repository.progressionChain(to: "planche")
+        #expect(
+            chain.map(\.id) == [
+                "reverse_leg_raises",
+                "l_sit_kicks",
+                "l_sit",
+                "push_up",
+                "planche_lean",
+                "planche",
+            ]
+        )
+    }
+
+    @Test func progressionChain_unknownExerciseReturnsEmpty() {
+        let repository = ExerciseRepository()
+        #expect(repository.progressionChain(to: "nonexistent").isEmpty)
+    }
+
+    @Test func progressionChain_noPrerequisitesReturnsTargetOnly() {
+        let repository = ExerciseRepository()
+        let chain = repository.progressionChain(to: "push_up")
+        #expect(chain.map(\.id) == ["push_up"])
+    }
+
 }

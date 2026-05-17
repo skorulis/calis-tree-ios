@@ -27,4 +27,30 @@ final class ExerciseRepository {
             self.exerciseById = [:]
         }
     }
+
+    /// Ordered path from foundational prerequisites to `exerciseId`, earliest first.
+    func progressionChain(to exerciseId: Exercise.ID) -> [Exercise] {
+        guard let target = exerciseById[exerciseId] else { return [] }
+
+        var visited = Set<Exercise.ID>()
+        var result: [Exercise] = []
+
+        func appendAncestors(of id: Exercise.ID) {
+            guard let exercise = exerciseById[id] else { return }
+            for prerequisiteId in exercise.prerequisites {
+                appendAncestors(of: prerequisiteId)
+            }
+            guard !visited.contains(id) else { return }
+            visited.insert(id)
+            result.append(exercise)
+        }
+
+        for prerequisiteId in target.prerequisites {
+            appendAncestors(of: prerequisiteId)
+        }
+        if !visited.contains(target.id) {
+            result.append(target)
+        }
+        return result
+    }
 }
