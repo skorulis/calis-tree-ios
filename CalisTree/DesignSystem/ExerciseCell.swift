@@ -8,7 +8,7 @@ struct ExerciseCell: View {
 
     var body: some View {
         HStack(spacing: 12) {
-            image
+            ExerciseAvatar(exercise: exercise, masteryProgress: masteryProgress)
             VStack(alignment: .leading, spacing: 4) {
                 Text(exercise.name)
                     .font(.headline)
@@ -21,23 +21,6 @@ struct ExerciseCell: View {
             )
         }
         .contentShape(Rectangle())
-    }
-
-    @ViewBuilder
-    private var image: some View {
-        if let imageFile = exercise.imageFile {
-            Image(imageFile)
-                .resizable()
-                .scaledToFill()
-                .frame(width: 56, height: 56)
-                .clipShape(RoundedRectangle(cornerRadius: 8))
-        } else {
-            Image(systemName: "photo")
-                .resizable()
-                .scaledToFill()
-                .frame(width: 32, height: 32)
-                .padding(12)
-        }
     }
 }
 

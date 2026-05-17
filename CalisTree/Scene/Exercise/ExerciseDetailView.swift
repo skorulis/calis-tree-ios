@@ -105,14 +105,15 @@ struct ExerciseDetailView: View {
                     
                 }
                 .buttonStyle(.plain)
-                HStack(spacing: 12) {
+                HStack(alignment: .top, spacing: 12) {
                     ForEach(sortedPrerequisiteItems) { item in
                         Button {
                             coordinator?.push(MainPath.exerciseDetail(item.exercise))
                         } label: {
                             ExerciseAvatar(
                                 exercise: item.exercise,
-                                masteryProgress: item.masteryProgress
+                                masteryProgress: item.masteryProgress,
+                                showName: true
                             )
                         }
                         .buttonStyle(.plain)

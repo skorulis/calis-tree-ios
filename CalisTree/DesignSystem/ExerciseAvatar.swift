@@ -5,12 +5,30 @@ import SwiftUI
 struct ExerciseAvatar: View {
     let exercise: Exercise
     let masteryProgress: ExerciseProgress
+    var showName: Bool = false
 
     private static let size: CGFloat = 60
     private static let lineWidth: CGFloat = 3
     private static let gold = Color(red: 1, green: 0.78, blue: 0)
 
     var body: some View {
+        VStack(spacing: 4) {
+            circle
+            if showName {
+                Text(exercise.name)
+                    .font(.caption2)
+                    .foregroundStyle(.secondary)
+                    .multilineTextAlignment(.center)
+                    .lineLimit(2)
+                    .minimumScaleFactor(0.8)
+                    .frame(width: Self.size)
+            }
+        }
+        .frame(width: Self.size)
+        .accessibilityLabel(accessibilityLabel)
+    }
+
+    private var circle: some View {
         ZStack {
             image
                 .frame(width: Self.size - Self.lineWidth * 2, height: Self.size - Self.lineWidth * 2)
@@ -18,7 +36,6 @@ struct ExerciseAvatar: View {
             ringOverlay
         }
         .frame(width: Self.size, height: Self.size)
-        .accessibilityLabel(accessibilityLabel)
     }
 
     @ViewBuilder
@@ -144,5 +161,25 @@ struct ExerciseAvatar: View {
             prerequisites: []
         ),
         masteryProgress: .init(progression: ["hold": .init(current: 10, target: 10)])
+    )
+}
+
+#Preview("With name") {
+    ExerciseAvatar(
+        exercise: Exercise(
+            id: "pull_up",
+            name: "Pull Up",
+            description: nil,
+            steps: nil,
+            level: .beginner,
+            imageFile: nil,
+            videoURL: "https://www.youtube.com/watch?v=XeErfmGSwfE",
+            equipment: [.overheadBar],
+            mastery: .reps(20),
+            progression: nil,
+            prerequisites: []
+        ),
+        masteryProgress: .none,
+        showName: true
     )
 }
