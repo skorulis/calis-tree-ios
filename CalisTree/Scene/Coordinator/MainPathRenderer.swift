@@ -21,6 +21,8 @@ struct MainPathRenderer: CoordinatorPathRenderer {
             ExerciseDetailView(
                 viewModel: resolver.exerciseDetailViewModel(exercise: exercise)
             )
+        case .exerciseVideo(let exercise):
+            ExerciseVideoView(exercise: exercise)
         case .exerciseProgression(let exercise):
             ExerciseProgressionView(
                 viewModel: coordinator.apply(

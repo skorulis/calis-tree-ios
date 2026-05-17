@@ -1,16 +1,11 @@
-* What about if for any exercise I could show a progression tree which would be an exercise list ordered from easiest to hardest.
 
-* Add variations to planche lean
-* Should I give everything an ID to help with renames?
+
 
 I need to be writing better tips for each exercise both for me and others.
 
-I want a timer in the app that is voice controlled. 
-I want to be able to say "start timer" which will start the timer and then "stop timer" which will stop it.
-
 This is a nice opportunity to fix up issues I ran into last time with development
 1. The way my colors were managed was pretty bad, I should build a helper into ASKCore since I think all my apps could benefit from it
-
+2. I should probably write a cursor rule for how the palette should be managed
 
 Things I will need:
 1. Videos of all the exercises (should be ok to just use Youtube)

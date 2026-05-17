@@ -6,6 +6,7 @@ import Foundation
 enum MainPath: CoordinatorPath {
     case exerciseList
     case exerciseDetail(Exercise)
+    case exerciseVideo(Exercise)
     case exerciseProgression(Exercise)
     case terminologyList
     case terminologyDetail(Terminology)
@@ -16,6 +17,8 @@ enum MainPath: CoordinatorPath {
             "exerciseList"
         case .exerciseDetail(let exercise):
             "exerciseDetail:\(exercise.id)"
+        case .exerciseVideo(let exercise):
+            "exerciseVideo:\(exercise.id)"
         case .exerciseProgression(let exercise):
             "exerciseProgression:\(exercise.id)"
         case .terminologyList:

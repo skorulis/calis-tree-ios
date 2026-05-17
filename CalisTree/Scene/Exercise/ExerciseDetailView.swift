@@ -39,8 +39,7 @@ struct ExerciseDetailView: View {
                 progressionSection
                 masterySection
                 
-                YouTubeEmbedView(videoURL: viewModel.exercise.videoURL)
-                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                videoPlayButton
                 
                 VStack(alignment: .leading, spacing: 8) {
                     Text("Equipment")
@@ -70,6 +69,24 @@ struct ExerciseDetailView: View {
         }
     }
     
+    private var videoPlayButton: some View {
+        Button {
+            coordinator?.push(MainPath.exerciseVideo(viewModel.exercise))
+        } label: {
+            ZStack {
+                RoundedRectangle(cornerRadius: 12)
+                    .fill(Color(.secondarySystemBackground))
+                    .aspectRatio(16 / 9, contentMode: .fit)
+                Image(systemName: "play.circle.fill")
+                    .font(.system(size: 72))
+                    .symbolRenderingMode(.hierarchical)
+                    .foregroundStyle(.primary)
+            }
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel("Play video")
+    }
+
     @ViewBuilder
     private var prerequisiteSection: some View {
         if !viewModel.prerequisiteItems.isEmpty {

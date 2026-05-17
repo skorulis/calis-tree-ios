@@ -10,7 +10,7 @@ struct YouTubeEmbedView: View {
         Group {
             if let videoID = Self.videoID(from: videoURL) {
                 YouTubeWebView(videoID: videoID)
-                    .aspectRatio(16 / 9, contentMode: .fit)
+                    
             } else if let url = URL(string: videoURL) {
                 Link(destination: url) {
                     Label("Watch video", systemImage: "play.rectangle")

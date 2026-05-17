@@ -18,6 +18,22 @@
         ]
     },
     {
+        "id": "hanging_leg_raises",
+        "name": "Hanging Leg Raises",
+        "level": "beginner",
+        "imageFile": "l-sit",
+        "videoURL": "https://www.youtube.com/shorts/GBl1lHh98qw",
+        "equipment": [
+            "overheadBar"
+        ],
+        "mastery": {
+            "time": {
+                "_0": 30
+            }
+        },
+        "prerequisites": []
+    },
+    {
         "id": "hanging_l_sit",
         "name": "Hanging L-Sit",
         "level": "beginner",
@@ -31,7 +47,27 @@
                 "_0": 30
             }
         },
-        "prerequisites": []
+        "prerequisites": [
+            "hanging_leg_raises"
+        ]
+    },
+    {
+        "id": "hanging_knee_raise",
+        "name": "Hanging Knee Raise",
+        "level": "beginner",
+        "imageFile": "hanging-high-knee-raise",
+        "videoURL": "https://www.youtube.com/shorts/Fl8rJJ7mZJM",
+        "equipment": [
+            "overheadBar"
+        ],
+        "mastery": {
+            "reps": {
+                "_0": 20
+            }
+        },
+        "prerequisites": [
+            "dead_hang"
+        ]
     },
     {
         "id": "hanging_high_knee_raise",
@@ -47,17 +83,24 @@
                 "_0": 20
             }
         },
-        "prerequisites": []
+        "prerequisites": [
+            "dead_hang",
+            "hanging_knee_raise"
+        ]
     },
     {
         "id": "upside_down_deadlift",
         "name": "Upside Down Deadlift",
         "level": "beginner",
-        "videoURL": "https://www.youtube.com/watch?v=z0o585M90sU",
+        "videoURL": "https://www.youtube.com/shorts/IBInedCmsO4",
         "equipment": [
             "overheadBar"
         ],
-        "prerequisites": []
+        "prerequisites": [
+            "hanging_high_knee_raise",
+            "toes_to_bar",
+            "pull_up"
+        ]
     },
     {
         "id": "pull_up",
@@ -73,11 +116,13 @@
                 "_0": 20
             }
         },
-        "prerequisites": []
+        "prerequisites": [
+            "dead_hang"
+        ]
     },
     {
         "id": "tuck_front_lever_hold",
-        "name": "Tuck front lever hold",
+        "name": "Tuck Front Lever Hold",
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/watch?v=f0MTQWbFsq4",
         "equipment": [
@@ -90,6 +135,25 @@
         },
         "prerequisites": [
             "upside_down_deadlift"
+        ]
+    },
+    {
+        "id": "front_lever",
+        "name": "Front Lever",
+        "level": "advanced",
+        "videoURL": "https://www.youtube.com/shorts/Iuau9zhTM-Q",
+        "equipment": [
+            "overheadBar"
+        ],
+        "mastery": {
+            "time": {
+                "_0": 10
+            }
+        },
+        "prerequisites": [
+            "front_lever_drops",
+            "tuck_front_lever_hold",
+            "dragon_flag"
         ]
     },
     {
@@ -464,7 +528,7 @@
             {
                 "id": "bent_knee",
                 "name": "Bent Knee",
-                "description": "Perform the front lever without extending the legs. This reduces the lever and makes it easier to assume the position",
+                "description": "Start from a kneeling position and keep your knees bent as you lift. This reduces the lever and makes it easier to assume the position",
                 "mastery": {
                     "time": {
                         "_0": 10
@@ -474,7 +538,7 @@
             {
                 "id": "straddle",
                 "name": "Straddle",
-                "description": "Perform the front lever with legs straddled apart to keep your centre of gravity closer to your hands",
+                "description": "Perform the lever with legs straddled apart to keep your centre of gravity closer to your hands",
                 "mastery": {
                     "time": {
                         "_0": 10
@@ -670,6 +734,19 @@
         "prerequisites": []
     },
     {
+        "id": "hollow_hold",
+        "name": "Hollow Hold",
+        "level": "beginner",
+        "videoURL": "https://www.youtube.com/shorts/Mjeur54Z0wI",
+        "equipment": ["floor"],
+        "mastery": {
+            "time": {
+                "_0": 30
+            }
+        },
+        "prerequisites": []
+    },
+    {
         "id": "seated_leg_raise",
         "name": "Seated Leg Raise",
         "level": "beginner",
@@ -694,5 +771,115 @@
             }
         },
         "prerequisites": []
-    }    
+    },
+    {
+        "id": "parallel_leg_raises",
+        "name": "parallel_leg_raises",
+        "level": "beginner",
+        "videoURL": "https://www.youtube.com/shorts/Wfl-dA2plUg",
+        "equipment": ["parallelBars"],
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        },
+        "prerequisites": [
+            "push_up"
+        ]
+    },
+    {
+        "id": "toes_to_bar",
+        "name": "Toes to Bar",
+        "level": "beginner",
+        "videoURL": "https://www.youtube.com/watch?v=S2QVHl6DoNo",
+        "equipment": ["overheadBar"],
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        },
+        "prerequisites": [
+            "dead_hang"
+        ]
+    },
+    {
+        "id": "dead_hang",
+        "name": "Dead Hang",
+        "level": "beginner",
+        "videoURL": "https://www.youtube.com/shorts/9eY15prKcUY",
+        "equipment": ["overheadBar"],
+        "mastery": {
+            "time": {
+                "_0": 30
+            }
+        },
+        "prerequisites": []
+    },
+    {
+        "id": "ice_cream_maker",
+        "name": "Ice Cream Maker",
+        "level": "intermediate",
+        "videoURL": "https://www.youtube.com/watch?v=30SeE_9jDjg",
+        "equipment": ["overheadBar"],
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        },
+        "prerequisites": [
+            "dead_hang",
+            "pull_up",
+            "tuck_front_lever_hold"
+        ]
+    },
+    {
+        "id": "dragon_flag",
+        "name": "Dragon Flag",
+        "level": "intermediate",
+        "videoURL": "https://www.youtube.com/shorts/yFiNw9EsJfI",
+        "equipment": ["floor"],
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        },
+        "prerequisites": [
+            "boat_hold",
+            "hanging_leg_raises"
+        ]
+    },
+    {
+        "id": "back_lever",
+        "name": "Back Lever",
+        "level": "advanced",
+        "videoURL": "https://www.youtube.com/shorts/3hrN5Wz5HDw",
+        "equipment": ["overheadBar"],
+        "mastery": {
+            "time": {
+                "_0": 10
+            }
+        },
+        "prerequisites": [
+            "pull_up",
+            "skin_the_cat"
+        ]
+    },
+    {
+        "id": "skin_the_cat",
+        "name": "Skin the Cat",
+        "level": "intermediate",
+        "videoURL": "https://www.youtube.com/watch?v=QHnpUcVwZOk",
+        "equipment": ["floor"],
+        "mastery": {
+            "reps": {
+                "_0": 5
+            }
+        },
+        "prerequisites": [
+            "pull_up",
+            "hanging_knee_raise",
+            "hanging_high_knee_raise"
+        ]
+    }
+
 ]
