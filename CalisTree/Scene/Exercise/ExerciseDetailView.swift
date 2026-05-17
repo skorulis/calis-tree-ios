@@ -169,9 +169,7 @@ struct ExerciseDetailView: View {
     /// Fraction toward mastery (`0…1`). Exercises without a mastery goal count as complete (`1`).
     private func prerequisiteCompletenessFraction(_ item: PrerequisiteItem) -> Double {
         guard let mastery = item.exercise.mastery else { return 1 }
-        let target = Double(mastery.intValue)
-        guard target > 0 else { return 1 }
-        return min(1, Double(item.masteryProgress) / target)
+        return item.masteryProgress.fraction
     }
 
     private var sortedPrerequisiteItems: [PrerequisiteItem] {

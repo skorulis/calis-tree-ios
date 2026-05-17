@@ -3,8 +3,7 @@
 import SwiftUI
 
 struct MasteryIndicatorView: View {
-    let mastery: SetType?
-    let masteryProgress: Int
+    let masteryProgress: ExerciseProgress
 
     var body: some View {
         switch display {
@@ -21,12 +20,11 @@ struct MasteryIndicatorView: View {
     }
 
     private var display: Display {
-        guard let target = mastery else { return .hidden }
-        guard masteryProgress > 0 else { return .hidden }
-        if masteryProgress >= target.intValue {
+        guard masteryProgress.fraction > 0 else { return .hidden }
+        if masteryProgress.fraction >= 1 {
             return .star
         }
-        return .ring(progress: Double(masteryProgress) / Double(target.intValue))
+        return .ring(progress: masteryProgress.fraction)
     }
 
     private func ring(fraction: Double) -> some View {
@@ -50,17 +48,11 @@ struct MasteryIndicatorView: View {
     }
 }
 
-#Preview("In progress") {
-    MasteryIndicatorView(mastery: .time(30), masteryProgress: 15)
-}
-
-#Preview("Mastered") {
-    MasteryIndicatorView(mastery: .reps(20), masteryProgress: 20)
-}
-
-#Preview("Hidden") {
-    HStack(spacing: 24) {
-        MasteryIndicatorView(mastery: nil, masteryProgress: 10)
-        MasteryIndicatorView(mastery: .time(30), masteryProgress: 0)
+#Preview {
+    VStack {
+        MasteryIndicatorView(masteryProgress: .init(main: .init(current: 5, target: 10), progression: [:]))
+        MasteryIndicatorView(masteryProgress: .init(main: .init(current: 10, target: 10), progression: [:]))
+        MasteryIndicatorView(masteryProgress: .none)
     }
+    
 }

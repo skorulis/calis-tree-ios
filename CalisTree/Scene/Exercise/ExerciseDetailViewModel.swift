@@ -8,7 +8,7 @@ import Observation
 struct PrerequisiteItem: Identifiable {
     var id: String { exercise.name }
     let exercise: Exercise
-    let masteryProgress: Int
+    let masteryProgress: ExerciseProgress
 }
 
 struct ProgressionStepItem: Identifiable {

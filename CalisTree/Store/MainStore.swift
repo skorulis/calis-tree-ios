@@ -30,27 +30,25 @@ final class MainStore {
     }
 
     /// Effective mastery for display and filtering, accounting for progression steps when present.
-    func effectiveMasteryProgress(for exercise: Exercise) -> Int {
-        guard let target = exercise.mastery else { return 0 }
-        let targetValue = target.intValue
-        let base = min(targetValue, masteryProgress(for: exercise.name))
-
-        guard let progression = exercise.progression, !progression.isEmpty else {
-            return base
+    func effectiveMasteryProgress(for exercise: Exercise) -> ExerciseProgress {
+        let base = exercise.mastery.map { mastery in
+            let target = mastery.intValue
+            let value = min(target, masteryProgress(for: exercise.name))
+            return MasteryProgress(current: value, target: target)
         }
 
-        let stepCount = Double(progression.count + 1)
-        let totalFraction = progression.reduce(0.0) { sum, variation in
-            let stepTarget = variation.mastery.intValue
-            guard stepTarget > 0 else { return sum + 1 }
+        let progression = exercise.progression ?? []
+        var progressionMastery: [String: MasteryProgress] = [:]
+        for variation in progression {
             let stepProgress = progressionMasteryProgress(
                 for: exercise.name,
                 variationName: variation.name
             )
-            return sum + min(1, Double(stepProgress) / Double(stepTarget))
+            let stepClamped = min(stepProgress, variation.mastery.intValue)
+            progressionMastery[variation.name] = .init(current: stepClamped, target: variation.mastery.intValue)
         }
-        let fromSteps = Int((totalFraction / stepCount * Double(targetValue)).rounded())
-        return min(targetValue, max(base, fromSteps))
+        
+        return .init(main: base, progression: progressionMastery)
     }
 
     func setMasteryProgress(_ value: Int, for exerciseName: String) {

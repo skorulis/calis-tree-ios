@@ -1,3 +1,5 @@
+* What about if for any exercise I could show a progression tree which would be an exercise list ordered from easiest to hardest.
+
 * Add variations to planche lean
 * Should I give everything an ID to help with renames?
 

@@ -4,7 +4,7 @@ import SwiftUI
 
 struct ExerciseAvatar: View {
     let exercise: Exercise
-    let masteryProgress: Int
+    let masteryProgress: ExerciseProgress
 
     private static let size: CGFloat = 60
     private static let lineWidth: CGFloat = 3
@@ -61,12 +61,11 @@ struct ExerciseAvatar: View {
     }
 
     private var borderState: BorderState {
-        guard let target = exercise.mastery else { return .mastered }
-        if masteryProgress >= target.intValue {
+        if masteryProgress.fraction >= 1 {
             return .mastered
         }
-        if masteryProgress > 0 {
-            return .inProgress(Double(masteryProgress) / Double(target.intValue))
+        if masteryProgress.fraction > 0 {
+            return .inProgress(masteryProgress.fraction)
         }
         return .notStarted
     }
@@ -105,7 +104,7 @@ struct ExerciseAvatar: View {
             progression: nil,
             prerequisites: []
         ),
-        masteryProgress: 0
+        masteryProgress: .none
     )
 }
 
@@ -123,7 +122,7 @@ struct ExerciseAvatar: View {
             progression: nil,
             prerequisites: []
         ),
-        masteryProgress: 10
+        masteryProgress: .init(progression: ["Hold": .init(current: 5, target: 10)])
     )
 }
 
@@ -141,6 +140,6 @@ struct ExerciseAvatar: View {
             progression: nil,
             prerequisites: []
         ),
-        masteryProgress: 20
+        masteryProgress: .init(progression: ["Hold": .init(current: 10, target: 10)])
     )
 }

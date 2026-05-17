@@ -9,7 +9,7 @@ import Observation
 struct ExerciseListItem: Identifiable {
     var id: String { exercise.name }
     let exercise: Exercise
-    let masteryProgress: Int
+    let masteryProgress: ExerciseProgress
 }
 
 enum ExerciseProgressFilter: String, CaseIterable, Hashable {
@@ -87,20 +87,17 @@ final class ExerciseListViewModel: CoordinatorViewModel {
 
     private func matchesProgress(
         exercise: Exercise,
-        progress: Int,
+        progress: ExerciseProgress,
         filter: ExerciseProgressFilter?
     ) -> Bool {
         guard let filter else { return true }
         switch filter {
         case .mastered:
-            guard let target = exercise.mastery?.intValue else { return false }
-            return progress >= target
+            return progress.fraction >= 1
         case .inProgress:
-            guard let target = exercise.mastery?.intValue else { return false }
-            return progress > 0 && progress < target
+            return progress.fraction > 0 && progress.fraction < 1
         case .notStarted:
-            guard let target = exercise.mastery?.intValue else { return true }
-            return progress == 0
+            return progress.fraction == 0
         }
     }
 }

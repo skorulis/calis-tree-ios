@@ -4,7 +4,7 @@ import SwiftUI
 
 struct ExerciseCell: View {
     let exercise: Exercise
-    let masteryProgress: Int
+    let masteryProgress: ExerciseProgress
 
     var body: some View {
         HStack(spacing: 12) {
@@ -17,7 +17,6 @@ struct ExerciseCell: View {
             }
             Spacer(minLength: 0)
             MasteryIndicatorView(
-                mastery: exercise.mastery,
                 masteryProgress: masteryProgress
             )
         }
@@ -56,7 +55,7 @@ struct ExerciseCell: View {
             progression: nil,
             prerequisites: []
         ),
-        masteryProgress: 15
+        masteryProgress: .none
     )
     .padding()
 }
@@ -75,7 +74,7 @@ struct ExerciseCell: View {
             progression: nil,
             prerequisites: []
         ),
-        masteryProgress: 20
+        masteryProgress: .none
     )
     .padding()
 }
@@ -94,7 +93,7 @@ struct ExerciseCell: View {
             progression: nil,
             prerequisites: []
         ),
-        masteryProgress: 0
+        masteryProgress: .none
     )
     .padding()
 }

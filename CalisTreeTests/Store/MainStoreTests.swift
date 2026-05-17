@@ -42,7 +42,7 @@ struct MainStoreTests {
             prerequisites: []
         )
         store.setMasteryProgress(12, for: exercise.name)
-        #expect(store.effectiveMasteryProgress(for: exercise) == 12)
+        #expect(store.effectiveMasteryProgress(for: exercise).fraction == 0.6)
     }
 
     @Test func effectiveMasteryAveragesProgressionSteps() {
@@ -65,7 +65,7 @@ struct MainStoreTests {
         store.setProgressionMasteryProgress(5, for: exercise.name, variationName: "Bent Knee")
         store.setProgressionMasteryProgress(10, for: exercise.name, variationName: "Straddle")
 
-        #expect(store.effectiveMasteryProgress(for: exercise) == 5)
+        #expect(store.effectiveMasteryProgress(for: exercise).fraction == 0.5)
     }
 
     @Test func effectiveMasteryUsesBaseWhenHigherThanProgressionAverage() {
@@ -86,7 +86,7 @@ struct MainStoreTests {
         )
         store.setMasteryProgress(10, for: exercise.name)
         store.setProgressionMasteryProgress(0, for: exercise.name, variationName: "Bent Knee")
-        #expect(store.effectiveMasteryProgress(for: exercise) == 10)
+        #expect(store.effectiveMasteryProgress(for: exercise).fraction == 1)
     }
 
     @Test func favoritesPersistAcrossInstances() {
