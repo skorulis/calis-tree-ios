@@ -9,24 +9,44 @@ struct ProgressionTreeView: View {
 
     var body: some View {
         let model = viewModel.treeModel
-        let metrics = ProgressionTreeLayoutMetrics(model: model)
 
-        ScrollView {
-            ScrollView(.horizontal, showsIndicators: false) {
+        GeometryReader { geometry in
+            let metrics = ProgressionTreeLayoutMetrics(
+                model: model,
+                containerWidth: geometry.size.width
+            )
+
+            ScrollView {
                 ZStack(alignment: .topLeading) {
                     ForEach(Array(model.bands.enumerated()), id: \.element.level) { bandIndex, band in
-                        bandBackground(band: band, bandIndex: bandIndex, metrics: metrics)
+                        bandBackground(
+                            band: band,
+                            bandIndex: bandIndex,
+                            metrics: metrics
+                        )
                     }
 
-                    edgeCanvas(model: model, metrics: metrics)
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        ZStack(alignment: .topLeading) {
+                            edgeCanvas(model: model, metrics: metrics)
 
-                    ForEach(nodePlacements(in: model, metrics: metrics)) { placement in
-                        nodeButton(placement: placement)
+                            ForEach(nodePlacements(in: model, metrics: metrics)) { placement in
+                                nodeButton(placement: placement)
+                            }
+                        }
+                        .frame(
+                            width: metrics.scrollContentWidth,
+                            height: metrics.contentHeight,
+                            alignment: .topLeading
+                        )
                     }
+                    .frame(height: metrics.contentHeight)
                 }
-                .frame(width: metrics.contentWidth, height: metrics.contentHeight, alignment: .topLeading)
+                .frame(width: geometry.size.width, height: metrics.contentHeight, alignment: .topLeading)
             }
+            .scrollContentBackground(.hidden)
         }
+        .ignoresSafeArea(edges: .horizontal)
         .navigationTitle(viewModel.navigationTitle)
         .navigationBarTitleDisplayMode(.inline)
     }
@@ -48,7 +68,7 @@ struct ProgressionTreeView: View {
                 )
             }
         }
-        .frame(width: metrics.contentWidth, height: metrics.contentHeight)
+        .frame(width: metrics.scrollContentWidth, height: metrics.contentHeight)
         .allowsHitTesting(false)
     }
 
@@ -58,15 +78,10 @@ struct ProgressionTreeView: View {
         metrics: ProgressionTreeLayoutMetrics
     ) -> some View {
         let frame = metrics.bandFrame(bandIndex: bandIndex)
-        return ZStack(alignment: .topLeading) {
-            RoundedRectangle(cornerRadius: 12)
-                .fill(band.level.subtleBackgroundColor)
-                .frame(width: frame.width, height: frame.height)
-            Chip(level: band.level)
-                .padding(12)
-        }
-        .frame(width: frame.width, height: frame.height, alignment: .topLeading)
-        .offset(x: frame.minX, y: frame.minY)
+        return Rectangle()
+            .fill(band.level.subtleBackgroundColor)
+            .frame(width: frame.width, height: frame.height)
+            .offset(x: frame.minX, y: frame.minY)
     }
 
     private func nodeButton(placement: ProgressionTreeNodePlacement) -> some View {
@@ -119,12 +134,11 @@ private struct ProgressionTreeLayoutMetrics {
     static let nameAreaHeight: CGFloat = 28
     static let columnSpacing: CGFloat = 24
     static let rowSpacing: CGFloat = 16
-    static let bandSpacing: CGFloat = 16
-    static let bandHeaderHeight: CGFloat = 28
     static let bandInnerPadding: CGFloat = 12
-    static let contentPadding: CGFloat = 16
+    static let horizontalContentPadding: CGFloat = 16
 
     private let model: ProgressionTreeModel
+    private let containerWidth: CGFloat
     private let bandFrames: [CGRect]
     private let nodeFrames: [Exercise.ID: CGRect]
 
@@ -132,40 +146,41 @@ private struct ProgressionTreeLayoutMetrics {
         avatarSize + 4 + nameAreaHeight
     }
 
-    var contentWidth: CGFloat {
-        Self.totalContentWidth(for: model)
+    /// Width of the horizontally scrollable node/edge layer.
+    var scrollContentWidth: CGFloat {
+        max(containerWidth, Self.nodesContentWidth(for: model))
     }
 
     var contentHeight: CGFloat {
         guard let last = bandFrames.last else { return 120 }
-        return last.maxY + Self.contentPadding
+        return last.maxY
     }
 
-    init(model: ProgressionTreeModel) {
+    init(model: ProgressionTreeModel, containerWidth: CGFloat) {
         self.model = model
-        let layoutWidth = Self.totalContentWidth(for: model)
+        self.containerWidth = containerWidth
         var bands: [CGRect] = []
         var nodes: [Exercise.ID: CGRect] = [:]
-        var y = Self.contentPadding
+        var y: CGFloat = 0
 
-        for (bandIndex, band) in model.bands.enumerated() {
+        for band in model.bands {
             let rowCount = band.rows.count
             let rowsHeight = CGFloat(rowCount) * Self.rowHeight
                 + CGFloat(max(0, rowCount - 1)) * Self.rowSpacing
-            let bandHeight = Self.bandHeaderHeight + Self.bandInnerPadding * 2 + rowsHeight + 8
+            let bandHeight = Self.bandInnerPadding * 2 + rowsHeight
             let bandFrame = CGRect(
-                x: Self.contentPadding,
+                x: 0,
                 y: y,
-                width: layoutWidth - Self.contentPadding * 2,
+                width: containerWidth,
                 height: bandHeight
             )
             bands.append(bandFrame)
 
-            let rowsTop = y + Self.bandHeaderHeight + 8 + Self.bandInnerPadding
+            let rowsTop = y + Self.bandInnerPadding
             for (rowIndex, row) in band.rows.enumerated() {
                 let rowY = rowsTop + CGFloat(rowIndex) * (Self.rowHeight + Self.rowSpacing)
                 for node in row.nodes {
-                    let x = bandFrame.minX + Self.bandInnerPadding
+                    let x = Self.horizontalContentPadding
                         + CGFloat(node.columnIndex) * (Self.avatarSize + Self.columnSpacing)
                     nodes[node.id] = CGRect(
                         x: x,
@@ -176,7 +191,7 @@ private struct ProgressionTreeLayoutMetrics {
                 }
             }
 
-            y += bandHeight + Self.bandSpacing
+            y += bandHeight
         }
 
         bandFrames = bands
@@ -204,13 +219,12 @@ private struct ProgressionTreeLayoutMetrics {
         )
     }
 
-    private static func totalContentWidth(for model: ProgressionTreeModel) -> CGFloat {
+    private static func nodesContentWidth(for model: ProgressionTreeModel) -> CGFloat {
         let maxColumns = model.bands.flatMap(\.rows).map(\.nodes.count).max() ?? 1
         let columns = CGFloat(maxColumns)
-        return contentPadding * 2
+        return horizontalContentPadding * 2
             + columns * avatarSize
             + max(0, columns - 1) * columnSpacing
-            + bandInnerPadding * 2
     }
 }
 
