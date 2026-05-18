@@ -2,6 +2,13 @@
 
 import Foundation
 
+struct FullExercise: Identifiable {
+    let exercise: Exercise
+    let progression: [ExerciseVariation]
+    
+    var id: Exercise.ID { exercise.id }
+}
+
 struct Exercise: Codable {
     let id: ID
     let name: String?
@@ -79,5 +86,6 @@ struct ExerciseVariation: Codable {
     let id: Exercise.ID
     let name: String
     let description: String?
+    let level: Level?
     let mastery: SetType
 }

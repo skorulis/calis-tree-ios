@@ -663,7 +663,7 @@
         ],
         "progression": [
             {
-                "id": "hold",
+                "id": "pike_floor_hold",
                 "name": "Hold",
                 "description": "Get into the position and hold",
                 "mastery": {
@@ -673,7 +673,7 @@
                 }
             },
             {
-                "id": "elevated",
+                "id": "elevated_pike_hold",
                 "name": "Elevated",
                 "description": "Place your feet on a raised surface which will put more body weight onto the shoulders",
                 "mastery": {
@@ -1399,6 +1399,21 @@
             }
         },
         "prerequisites": []
+    },
+    {
+        "id": "muscle_up",
+        "level": "advanced",
+        "videoURL": "https://www.youtube.com/watch?v=_eQ2gw_Gg5Y",
+        "equipment": ["overheadBar"],
+        "mastery": {
+            "reps": {
+                "_0": 15
+            }
+        },
+        "prerequisites": [
+            "pull_up",
+            "dip"
+        ]
     }
 
 ]

@@ -3,10 +3,6 @@
 
 Add a test to make sure all prequisites are unique.
 
-
-My progression view is more useful, but what would look cooler is a progression tree
-Show exercises from each level and then draw lines between them
-
 I definitely need better low level progression, right now the app focuses on my level but that's ok for now 
 
 
@@ -22,6 +18,15 @@ Things I will need:
 3. Copy for each exercise.
 
 
+The muscle up guide is interesting. The main progression is in making pull ups go further.
+Chin -> Chest -> Upper stomach -> Waist
+
+It might be better to change my data structure so that everything is an exercise.
+Then create a new file "sub-exercises" which effectively will just get grouped under a primary exercise.
+The main sticking point is that my levels are the same. And when I do something like a pull up from chin to waist that moves the difficulty.
+I think this is ok, I can just have the exercises cross difficulty bounds
+
+Onboarding:
 
 This app is designed to show you general progression schemes for moving from beginner to advanced exercises. 
 It does not give you an exact workout plan but rather the exercises that you may want to incorporate to reach your goals.
@@ -32,3 +37,4 @@ https://progresspedia.org/courses/calisthenics/
 https://wedocalisthenics.com/
 https://docs.google.com/spreadsheets/d/1-wS6RlyjlKVvYfA5DJcb89mg7uLBc8LpIhf4oee5B6o/edit?gid=0#gid=0
 https://docs.google.com/spreadsheets/d/1CEY_h-tk1RJMR8eCuKXpX2ACnMPEDQy37j0BVeXQLZg/edit?gid=0#gid=0
+
