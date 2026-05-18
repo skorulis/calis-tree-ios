@@ -213,6 +213,9 @@ struct ExerciseDetailView: View {
             let l = prerequisiteCompletenessFraction(lhs)
             let r = prerequisiteCompletenessFraction(rhs)
             if l != r { return l < r }
+            if lhs.exercise.safeLevel != rhs.exercise.safeLevel {
+                return lhs.exercise.safeLevel < rhs.exercise.safeLevel
+            }
             return lhs.exercise.displayName < rhs.exercise.displayName
         }
     }

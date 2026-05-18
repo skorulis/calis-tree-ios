@@ -86,6 +86,10 @@ final class CalisTreeAssembly: AutoInitModuleAssembly {
         container.register(TerminologyListViewModel.self) { (resolver: Resolver) in
             TerminologyListViewModel.make(resolver: resolver)
         }
+
+        container.register(SettingsViewModel.self) { (resolver: Resolver) in
+            SettingsViewModel.make(resolver: resolver)
+        }
     }
 }
 

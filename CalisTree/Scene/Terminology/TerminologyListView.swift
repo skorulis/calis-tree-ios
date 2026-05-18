@@ -19,6 +19,7 @@ struct TerminologyListView: View {
             } label: {
                 Text(term.name)
                     .frame(maxWidth: .infinity, alignment: .leading)
+                    .contentShape(Rectangle())
             }
             .buttonStyle(.plain)
         }

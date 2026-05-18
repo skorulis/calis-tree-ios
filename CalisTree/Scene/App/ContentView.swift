@@ -13,6 +13,7 @@ private enum RootTab: Hashable {
     case exercises
     case timer
     case terminology
+    case settings
 }
 
 struct ContentView: View {
@@ -27,6 +28,8 @@ struct ContentView: View {
                 .tag(RootTab.timer)
             terminology
                 .tag(RootTab.terminology)
+            settings
+                .tag(RootTab.settings)
         }
     }
 
@@ -61,6 +64,18 @@ struct ContentView: View {
         .withRenderers(resolver: resolver)
         .tabItem {
             Label("Terminology", systemImage: "book.closed")
+        }
+    }
+
+    private var settings: some View {
+        CoordinatorView(
+            coordinator: Coordinator(root: MainPath.settings),
+            renderers: [],
+            useNavigationStack: true,
+        )
+        .withRenderers(resolver: resolver)
+        .tabItem {
+            Label("Settings", systemImage: "gearshape")
         }
     }
 }

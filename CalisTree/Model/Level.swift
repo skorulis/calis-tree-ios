@@ -3,7 +3,7 @@
 import Foundation
 import SwiftUI
 
-enum Level: String, Codable, CaseIterable {
+enum Level: String, Codable, CaseIterable, Comparable {
     case foundation
     case beginner
     case intermediate
@@ -31,5 +31,12 @@ enum Level: String, Codable, CaseIterable {
 
     var subtleBackgroundColor: Color {
         chipColor.opacity(0.18)
+    }
+
+    static func < (lhs: Level, rhs: Level) -> Bool {
+        guard let lhsIndex = allCases.firstIndex(of: lhs),
+              let rhsIndex = allCases.firstIndex(of: rhs)
+        else { return false }
+        return lhsIndex < rhsIndex
     }
 }

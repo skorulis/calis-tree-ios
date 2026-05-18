@@ -9,7 +9,7 @@ struct FullExercise: Identifiable {
     var id: Exercise.ID { exercise.id }
     
     // Full exercises can span multiple levels
-    var levels: [Level] { [exercise.safeLevel] }
+    var levels: Set<Level> { [exercise.safeLevel] }
 }
 
 struct Exercise: Codable {
@@ -30,6 +30,16 @@ struct Exercise: Codable {
     
     var safeLevel: Level { level ?? .beginner }
 }
+
+struct ExerciseVariation: Codable {
+    let id: Exercise.ID
+    let name: String
+    let description: String?
+    let level: Level?
+    let mastery: SetType
+}
+
+// MARK: - Test Data
 
 extension Exercise {
     typealias ID = String
@@ -85,12 +95,4 @@ extension Exercise {
             prerequisites: []
         )
     }
-}
-
-struct ExerciseVariation: Codable {
-    let id: Exercise.ID
-    let name: String
-    let description: String?
-    let level: Level?
-    let mastery: SetType
 }

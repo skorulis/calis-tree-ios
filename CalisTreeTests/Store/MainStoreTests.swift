@@ -101,6 +101,23 @@ struct MainStoreTests {
         #expect(store.effectiveMasteryProgress(for: fullExercise).fraction == 1)
     }
 
+    @Test func availableEquipmentDefaultsToAllCases() {
+        let store = MainStore(keyValueStore: InMemoryDefaults())
+        #expect(store.availableEquipment == Set(Equipment.allCases))
+    }
+
+    @Test func availableEquipmentPersistsAcrossInstances() {
+        let keyValueStore = InMemoryDefaults()
+        let first = MainStore(keyValueStore: keyValueStore)
+        first.setEquipmentAvailable(false, for: .rings)
+        first.setEquipmentAvailable(false, for: .lowBar)
+
+        let second = MainStore(keyValueStore: keyValueStore)
+        #expect(!second.isEquipmentAvailable(.rings))
+        #expect(!second.isEquipmentAvailable(.lowBar))
+        #expect(second.isEquipmentAvailable(.floor))
+    }
+
     @Test func favoritesPersistAcrossInstances() {
         let keyValueStore = InMemoryDefaults()
         let first = MainStore(keyValueStore: keyValueStore)

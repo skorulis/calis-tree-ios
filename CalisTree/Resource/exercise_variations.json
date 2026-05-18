@@ -188,5 +188,55 @@
                 "_0": 10
             }
         }
+    },
+    {
+        "id": "high_pull_up_chest",
+        "name": "Chest",
+        "description": "Continue the pull up until your chest is level with the bar",
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        }
+    },
+    {
+        "id": "high_pull_up_stomach",
+        "name": "Stomach",
+        "description": "Continue the pull up until your stomach is level with the bar",
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        }
+    },
+    {
+        "id": "high_pull_up_hips",
+        "name": "Hips",
+        "description": "Continue the pull up until your hips are level with the bar",
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        }
+    },
+    {
+        "id": "chest_dip",
+        "name": "Chest Dip",
+        "description": "Lean your torso forward at a 30 to 45 degree angle with your knees bent to focus on the chest muscles",
+        "mastery": {
+            "reps": {
+                "_0": 15
+            }
+        }
+    },
+    {
+        "id": "triceps_dip",
+        "name": "Triceps Dip",
+        "description": "Keep your torso completely upright and perpendicular to the floor with your legs straight to focus on the triceps",
+        "mastery": {
+            "reps": {
+                "_0": 15
+            }
+        }
     }
 ]

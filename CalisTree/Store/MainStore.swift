@@ -12,9 +12,11 @@ final class MainStore {
     private let keyValueStore: PKeyValueStore
     private static let masteryKey = "calisTree.exerciseMastery.v1"
     private static let favoritesKey = "calisTree.exerciseFavorites.v1"
+    private static let availableEquipmentKey = "calisTree.availableEquipment.v1"
 
     private(set) var masteryByExerciseId: [Exercise.ID: Int] = [:]
     private(set) var favoriteExerciseIds: Set<Exercise.ID> = []
+    private(set) var availableEquipment: Set<Equipment> = Set(Equipment.allCases)
 
     @Resolvable<Resolver>
     init(keyValueStore: PKeyValueStore) {
@@ -23,6 +25,9 @@ final class MainStore {
             (try? keyValueStore.codable(forKey: Self.masteryKey)) ?? [:]
         favoriteExerciseIds =
             (try? keyValueStore.codable(forKey: Self.favoritesKey)) ?? []
+        if let saved: Set<Equipment> = try? keyValueStore.codable(forKey: Self.availableEquipmentKey) {
+            availableEquipment = saved
+        }
     }
 
     func masteryProgress(for exerciseId: Exercise.ID) -> Int {
@@ -71,5 +76,20 @@ final class MainStore {
         }
         favoriteExerciseIds = updated
         try? keyValueStore.set(codable: favoriteExerciseIds, forKey: Self.favoritesKey)
+    }
+
+    func isEquipmentAvailable(_ equipment: Equipment) -> Bool {
+        availableEquipment.contains(equipment)
+    }
+
+    func setEquipmentAvailable(_ available: Bool, for equipment: Equipment) {
+        var updated = availableEquipment
+        if available {
+            updated.insert(equipment)
+        } else {
+            updated.remove(equipment)
+        }
+        availableEquipment = updated
+        try? keyValueStore.set(codable: availableEquipment, forKey: Self.availableEquipmentKey)
     }
 }

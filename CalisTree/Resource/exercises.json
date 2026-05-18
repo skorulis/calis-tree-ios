@@ -562,18 +562,16 @@
         "prerequisites": []
     },
     {
-        "id": "chest_dip",
-        "name": "Chest Dip",
+        "id": "dip",
         "level": "beginner",
-        "videoURL": "https://www.youtube.com/shorts/CrbIq-T-h8I",
+        "videoURL": "https://www.youtube.com/shorts/dij0l_pL0z8",
         "equipment": [
             "parallelBars"
         ],
-        "mastery": {
-            "reps": {
-                "_0": 10
-            }
-        },
+        "progression": [
+            "chest_dip",
+            "triceps_dip"
+        ],
         "prerequisites": [
             "bench_dip"
         ]
@@ -980,7 +978,7 @@
             "handstand",
             "handstand_press",
             "pike_push_up",
-            "chest_dip",
+            "dip",
             "bent_arm_tuck_planche"
         ]
     },
@@ -998,7 +996,7 @@
             }
         },
         "prerequisites": [
-            "chest_dip",
+            "dip",
             "planche_lean"
         ]
     },
@@ -1015,7 +1013,7 @@
             }
         },
         "prerequisites": [
-            "chest_dip"
+            "dip"
         ]
     },
     {
@@ -1329,8 +1327,26 @@
             }
         },
         "prerequisites": [
-            "pull_up",
-            "chest_dip"
+            "high_pull_up",
+            "dip"
+        ]
+    },
+    {
+        "id": "high_pull_up",
+        "alternateNames": [
+            "Explosive Pull Up"
+        ],
+        "description": "A pull up where you continue past getting your chin above the bar",
+        "level": "intermediate",
+        "videoURL": "https://www.youtube.com/shorts/70n4MbkhEMs",
+        "equipment": [
+            "overheadBar"
+        ],
+        "progression": [
+
+        ],
+        "prerequisites": [
+            "pull_up"
         ]
     }
 ]

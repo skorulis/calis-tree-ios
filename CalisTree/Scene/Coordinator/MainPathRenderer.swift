@@ -54,6 +54,10 @@ struct MainPathRenderer: CoordinatorPathRenderer {
             TerminologyDetailView(
                 viewModel: resolver.terminologyDetailViewModel(terminology: term)
             )
+        case .settings:
+            SettingsView(
+                viewModel: coordinator.apply(resolver.settingsViewModel())
+            )
         }
     }
 }

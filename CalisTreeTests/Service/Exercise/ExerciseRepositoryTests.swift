@@ -75,7 +75,7 @@ struct ExerciseRepositoryTests {
                 "pseudo_planche_push_up",
                 "tuck_planche",
                 "bench_dip",
-                "chest_dip",
+                "dip",
                 "bent_arm_tuck_planche",
                 "planche",
             ]

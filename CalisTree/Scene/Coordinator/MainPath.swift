@@ -12,6 +12,7 @@ enum MainPath: CoordinatorPath {
     case allExercisesProgressionTree
     case terminologyList
     case terminologyDetail(Terminology)
+    case settings
 
     var id: String {
         switch self {
@@ -31,6 +32,8 @@ enum MainPath: CoordinatorPath {
             "terminologyList"
         case .terminologyDetail(let term):
             "terminologyDetail:\(term.name)"
+        case .settings:
+            "settings"
         }
     }
 }
