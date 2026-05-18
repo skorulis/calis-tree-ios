@@ -25,6 +25,14 @@
         "equipment": [
             "overheadBar"
         ],
+        "steps": [
+            "Hang from the bar with your hands shoulder-width apart and your arms fully extended and your body relaxed",
+            "Keep your legs straight and your feet together",
+            "Depress your shoulders, tighten your core and avoid swinging your body",
+            "Slowly raise your legs forward while keeping them as straight as possible",
+            "Lift your legs until they are parallel to the floor or higher if your flexibility and strength allow",
+            "Slowly lower your legs back down to the starting position without swinging"
+        ],
         "mastery": {
             "reps": {
                 "_0": 20
@@ -747,7 +755,8 @@
             }
         },
         "prerequisites": [
-            "push_up"
+            "push_up",
+            "elbow_hanging_leg_raises"
         ]
     },
     {
@@ -1347,7 +1356,7 @@
         ]
     },
     {
-        "id": "elbow_hanging_leg_lifts",
+        "id": "elbow_hanging_leg_raises",
         "level": "beginner",
         "videoURL": "https://www.youtube.com/shorts/jOV9ofRR5ek",
         "equipment": [

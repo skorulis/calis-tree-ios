@@ -38,5 +38,12 @@
     {
         "name": "Push-up Position",
         "details": "Place your hands on the floor, about shoulder-width apart.\nKeep your arms straight (but not locked).\nPosition your feet together or slightly apart.\nYour body should form a straight line from head to heels. Engage your core and glutes to avoid sagging hips"
+    },
+    {
+        "name": "Tighten Your Core",
+        "details": "To \"tighten your core\" (or engage it) means to activate the muscles in your midsection—including your abs, obliques, and lower back—to create a sturdy \"corset\" for your spine. It stabilizes your body during movement, improves posture, and protects your lower back from injury",
+        "linkTerms": [
+            "engage your core"
+        ]
     }
 ]
