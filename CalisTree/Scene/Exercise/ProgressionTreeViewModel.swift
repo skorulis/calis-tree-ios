@@ -63,7 +63,9 @@ final class ProgressionTreeViewModel: CoordinatorViewModel {
     }
 
     func masteryProgress(for exercise: Exercise) -> ExerciseProgress {
-        mainStore.effectiveMasteryProgress(for: exercise)
+        let fullExercise = repository.fullExercise(for: exercise.id)
+            ?? FullExercise(exercise: exercise, progression: [])
+        return mainStore.effectiveMasteryProgress(for: fullExercise)
     }
 }
 

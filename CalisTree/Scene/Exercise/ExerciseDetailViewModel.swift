@@ -21,6 +21,7 @@ struct ProgressionStepItem: Identifiable {
 @Observable
 final class ExerciseDetailViewModel {
     let exercise: Exercise
+    private let fullExercise: FullExercise
     private let mainStore: MainStore
     private let repository: ExerciseRepository
     private var favoriteChangeToken = 0
@@ -30,6 +31,8 @@ final class ExerciseDetailViewModel {
         self.mainStore = mainStore
         self.repository = repository
         self.exercise = exercise
+        self.fullExercise = repository.fullExercise(for: exercise.id)
+            ?? FullExercise(exercise: exercise, progression: [])
     }
 
     var showsMastery: Bool {
@@ -59,13 +62,13 @@ final class ExerciseDetailViewModel {
     }
 
     var progressionItems: [ProgressionStepItem] {
-        (exercise.progression ?? []).enumerated().map { index, variation in
+        fullExercise.progression.enumerated().map { index, variation in
             ProgressionStepItem(variation: variation, index: index)
         }
     }
 
     func progressionMasteryProgress(for variationId: Exercise.ID) -> Int {
-        guard let variation = exercise.progression?.first(where: { $0.id == variationId })
+        guard let variation = fullExercise.progression.first(where: { $0.id == variationId })
         else { return 0 }
         return min(
             variation.mastery.intValue,
@@ -74,7 +77,7 @@ final class ExerciseDetailViewModel {
     }
 
     func setProgressionMasteryProgress(_ value: Int, for variationId: Exercise.ID) {
-        guard let variation = exercise.progression?.first(where: { $0.id == variationId })
+        guard let variation = fullExercise.progression.first(where: { $0.id == variationId })
         else { return }
         let clamped = min(max(0, value), variation.mastery.intValue)
         mainStore.setProgressionMasteryProgress(
@@ -96,7 +99,10 @@ final class ExerciseDetailViewModel {
             .map { prerequisite in
                 PrerequisiteItem(
                     exercise: prerequisite,
-                    masteryProgress: mainStore.effectiveMasteryProgress(for: prerequisite)
+                    masteryProgress: mainStore.effectiveMasteryProgress(
+                        for: repository.fullExercise(for: prerequisite.id)
+                            ?? FullExercise(exercise: prerequisite, progression: [])
+                    )
                 )
             }
     }

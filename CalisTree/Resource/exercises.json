@@ -67,7 +67,7 @@
             "Engage your shoulders by pulling them slightly down and away from your ears",
             "Tighten your core to prepare for the movement",
             "Slowly bend your knees and begin lifting them toward your chest",
-            "Keep your movement controlled—avoid swinging or using momentum",
+            "Keep your movement controlled\u2014avoid swinging or using momentum",
             "Raise your knees as high as you can while maintaining good form, ideally to hip level or higher",
             "Slowly lower your legs back down to the starting hanging position"
         ],
@@ -232,26 +232,8 @@
             }
         },
         "progression": [
-            {
-                "id": "l_sit_leg_raises",
-                "name": "L-Sit Leg Raises",
-                "description": "Hold your body weight on your hands with your legs extended and feet on the ground. Raise each foot individually",
-                "mastery": {
-                    "reps": {
-                        "_0": 10
-                    }
-                }
-            },
-            {
-                "id": "tuck_l_sit",
-                "name": "Tuck L-Sit",
-                "description": "Bring your knees as close as you can to your body and elevate from the ground",
-                "mastery": {
-                    "time": {
-                        "_0": 10
-                    }
-                }
-            }
+            "l_sit_leg_raises",
+            "tuck_l_sit"
         ],
         "prerequisites": [
             "l_sit_kicks",
@@ -281,13 +263,18 @@
         "name": "Decline Push Up",
         "level": "beginner",
         "videoURL": "https://www.youtube.com/shorts/dcV-ATSeryA",
-        "equipment": ["floor", "raisedSurface"],
+        "equipment": [
+            "floor",
+            "raisedSurface"
+        ],
         "mastery": {
             "reps": {
                 "_0": 25
             }
         },
-        "prerequisites": ["push_up"]
+        "prerequisites": [
+            "push_up"
+        ]
     },
     {
         "id": "reverse_leg_raises",
@@ -308,7 +295,9 @@
     {
         "id": "planche_lean",
         "name": "Planche Lean",
-        "alternateNames": ["Pseudo Planche"],
+        "alternateNames": [
+            "Pseudo Planche"
+        ],
         "description": "Make sure your hands up at your waist position",
         "steps": [
             "Start in a high push-up position with your hands shoulder-width apart and arms fully straight",
@@ -320,7 +309,9 @@
         ],
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/shorts/ca0yGW8071Y",
-        "equipment": ["floor"],
+        "equipment": [
+            "floor"
+        ],
         "mastery": {
             "time": {
                 "_0": 10
@@ -332,16 +323,7 @@
             "reverse_leg_raises"
         ],
         "progression": [
-            {
-                "id": "planche_lean_chest",
-                "name": "Chest Level",
-                "description": "Instead of moving forwards until your hands are at your waist position, only move forwards until your hands are at chest position",
-                "mastery": {
-                    "time": {
-                        "_0": 10
-                    }
-                }
-            }
+            "planche_lean_chest"
         ]
     },
     {
@@ -537,26 +519,8 @@
             }
         },
         "progression": [
-            {
-                "id": "bent_knee",
-                "name": "Bent Knee",
-                "description": "Start from a kneeling position and keep your knees bent as you lift. This reduces the lever and makes it easier to assume the position",
-                "mastery": {
-                    "time": {
-                        "_0": 10
-                    }
-                }
-            },
-            {
-                "id": "straddle",
-                "name": "Straddle",
-                "description": "Perform the lever with legs straddled apart to keep your centre of gravity closer to your hands",
-                "mastery": {
-                    "time": {
-                        "_0": 10
-                    }
-                }
-            }
+            "bent_knee",
+            "straddle"
         ],
         "prerequisites": [
             "push_up"
@@ -628,26 +592,8 @@
             }
         },
         "progression": [
-            {
-                "id": "wall_walk_ins",
-                "name": "Wall Walk ins",
-                "description": "Start in a push up position with your feet against the wall and walk your feet up the wall and your hands towards it",
-                "mastery": {
-                    "time": {
-                        "_0": 10
-                    }
-                }
-            },
-            {
-                "id": "wall",
-                "name": "Wall",
-                "description": "Perform a handstand with your feet against the wall",
-                "mastery": {
-                    "time": {
-                        "_0": 10
-                    }
-                }
-            }
+            "wall_walk_ins",
+            "wall"
         ],
         "prerequisites": [
             "push_up",
@@ -662,26 +608,8 @@
             "floor"
         ],
         "progression": [
-            {
-                "id": "pike_floor_hold",
-                "name": "Hold",
-                "description": "Get into the position and hold",
-                "mastery": {
-                    "time": {
-                        "_0": 15
-                    }
-                }
-            },
-            {
-                "id": "elevated_pike_hold",
-                "name": "Elevated",
-                "description": "Place your feet on a raised surface which will put more body weight onto the shoulders",
-                "mastery": {
-                    "time": {
-                        "_0": 15
-                    }
-                }
-            }
+            "pike_floor_hold",
+            "elevated_pike_hold"
         ],
         "steps": [
             "Start in a standard push-up position with your hands shoulder-width apart",
@@ -714,28 +642,12 @@
         "name": "Pike Push Up",
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/shorts/_wYRaVHVr6g",
-        "equipment": ["floor"],
+        "equipment": [
+            "floor"
+        ],
         "progression": [
-            {
-                "id": "pike_floor_push_up",
-                "name": "Push Up",
-                "description": "From the pike position bend your elbows until your head is just above the ground",
-                "mastery": {
-                    "reps": {
-                        "_0": 15
-                    }
-                }
-            },
-            {
-                "id": "elevated_push_up",
-                "name": "Elevated Push Up",
-                "description": "From the elevated pike position bend your elbows until your head is just above the ground",
-                "mastery": {
-                    "reps": {
-                        "_0": 15
-                    }
-                }
-            }
+            "pike_floor_push_up",
+            "elevated_push_up"
         ],
         "mastery": {
             "reps": {
@@ -751,18 +663,11 @@
         "name": "Pseudo Planche Push Up",
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/watch?v=i-gSmqe9tNw",
-        "equipment": ["floor"],
+        "equipment": [
+            "floor"
+        ],
         "progression": [
-            {
-                "id": "pseudo_planche_push_up_negative",
-                "name": "Negative",
-                "description": "From a planche lean position, perform the downards portion of the exercise without pushing back up",
-                "mastery": {
-                    "reps": {
-                        "_0": 10
-                    }
-                }
-            }
+            "pseudo_planche_push_up_negative"
         ],
         "mastery": {
             "reps": {
@@ -779,7 +684,9 @@
         "name": "Boat Hold",
         "level": "beginner",
         "videoURL": "https://www.youtube.com/shorts/vnT3wyBP4UA",
-        "equipment": ["floor"],
+        "equipment": [
+            "floor"
+        ],
         "mastery": {
             "time": {
                 "_0": 30
@@ -792,7 +699,9 @@
         "name": "Hollow Hold",
         "level": "beginner",
         "videoURL": "https://www.youtube.com/shorts/Mjeur54Z0wI",
-        "equipment": ["floor"],
+        "equipment": [
+            "floor"
+        ],
         "mastery": {
             "time": {
                 "_0": 30
@@ -805,7 +714,9 @@
         "name": "Seated Leg Raise",
         "level": "beginner",
         "videoURL": "https://www.youtube.com/shorts/8xbG2kir7Bo",
-        "equipment": ["floor"],
+        "equipment": [
+            "floor"
+        ],
         "mastery": {
             "reps": {
                 "_0": 10
@@ -818,7 +729,9 @@
         "name": "Straddle Leg Raises",
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/shorts/M0ast_A2v8Q",
-        "equipment": ["floor"],
+        "equipment": [
+            "floor"
+        ],
         "mastery": {
             "time": {
                 "_0": 10
@@ -830,7 +743,9 @@
         "id": "parallel_bar_leg_raises",
         "level": "beginner",
         "videoURL": "https://www.youtube.com/shorts/Wfl-dA2plUg",
-        "equipment": ["parallelBars"],
+        "equipment": [
+            "parallelBars"
+        ],
         "mastery": {
             "reps": {
                 "_0": 10
@@ -844,7 +759,9 @@
         "id": "toes_to_bar",
         "level": "beginner",
         "videoURL": "https://www.youtube.com/watch?v=S2QVHl6DoNo",
-        "equipment": ["overheadBar"],
+        "equipment": [
+            "overheadBar"
+        ],
         "mastery": {
             "reps": {
                 "_0": 10
@@ -860,7 +777,9 @@
         "name": "Dead Hang",
         "level": "beginner",
         "videoURL": "https://www.youtube.com/shorts/9eY15prKcUY",
-        "equipment": ["overheadBar"],
+        "equipment": [
+            "overheadBar"
+        ],
         "mastery": {
             "time": {
                 "_0": 30
@@ -873,7 +792,9 @@
         "name": "Ice Cream Maker",
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/watch?v=30SeE_9jDjg",
-        "equipment": ["overheadBar"],
+        "equipment": [
+            "overheadBar"
+        ],
         "mastery": {
             "reps": {
                 "_0": 10
@@ -890,7 +811,9 @@
         "name": "Dragon Flag",
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/shorts/yFiNw9EsJfI",
-        "equipment": ["floor"],
+        "equipment": [
+            "floor"
+        ],
         "mastery": {
             "reps": {
                 "_0": 10
@@ -905,7 +828,9 @@
         "id": "back_lever",
         "level": "advanced",
         "videoURL": "https://www.youtube.com/shorts/3hrN5Wz5HDw",
-        "equipment": ["overheadBar"],
+        "equipment": [
+            "overheadBar"
+        ],
         "mastery": {
             "time": {
                 "_0": 10
@@ -920,7 +845,9 @@
         "id": "skin_the_cat",
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/watch?v=QHnpUcVwZOk",
-        "equipment": ["floor"],
+        "equipment": [
+            "floor"
+        ],
         "mastery": {
             "reps": {
                 "_0": 5
@@ -937,7 +864,9 @@
         "name": "Planche Push Up",
         "level": "expert",
         "videoURL": "https://www.youtube.com/watch?v=TZ63httkob4",
-        "equipment": ["floor"],
+        "equipment": [
+            "floor"
+        ],
         "mastery": {
             "reps": {
                 "_0": 5
@@ -954,7 +883,9 @@
         "name": "Handstand Press",
         "level": "advanced",
         "videoURL": "https://www.youtube.com/shorts/XxFuPQzQb2w",
-        "equipment": ["floor"],
+        "equipment": [
+            "floor"
+        ],
         "mastery": {
             "reps": {
                 "_0": 5
@@ -970,18 +901,11 @@
         "name": "Handstand Push Up",
         "level": "advanced",
         "videoURL": "https://www.youtube.com/watch?v=fMTlYYHSy2A",
-        "equipment": ["floor"],
+        "equipment": [
+            "floor"
+        ],
         "progression": [
-            {
-                "id": "wall_handstand_push_up",
-                "name": "Wall ",
-                "description": "With your stomach against the wall, perform the push up. Using the wall will remove the balance aspect while building the required strength",
-                "mastery": {
-                    "time": {
-                        "_0": 15
-                    }
-                }
-            }
+            "wall_handstand_push_up"
         ],
         "mastery": {
             "reps": {
@@ -999,7 +923,9 @@
         "name": "One Arm Pull Up",
         "level": "expert",
         "videoURL": "https://www.youtube.com/watch?v=mTJHClMQPM8",
-        "equipment": ["overheadBar"],
+        "equipment": [
+            "overheadBar"
+        ],
         "mastery": {
             "reps": {
                 "_0": 5
@@ -1014,38 +940,13 @@
         "name": "Human Flag",
         "level": "advanced",
         "videoURL": "https://www.youtube.com/watch?v=TF9XhvYh_m8",
-        "equipment": ["verticalBar"],
+        "equipment": [
+            "verticalBar"
+        ],
         "progression": [
-            {
-                "id": "human_flag_straddle_leg_raises",
-                "name": "Straddle Leg raises",
-                "description": "Place your hands on the bar in the flag position and hop your legs off the ground into a straddle flag position then return back to the ground. Allow your lower foot to not raise as high",
-                "mastery": {
-                    "reps": {
-                        "_0": 10
-                    }
-                }
-            },
-            {
-                "id": "human_flag_leg_raises",
-                "name": "Leg raises",
-                "description": "Perform like the straddle flag leg raise but bring your feet together at the top to briefly be in the flag position",
-                "mastery": {
-                    "reps": {
-                        "_0": 10
-                    }
-                }
-            },
-            {
-                "id": "straddle_human_flag",
-                "name": "Straddle Flag",
-                "description": "Perform a human flag with your legs apart rather than together",
-                "mastery": {
-                    "time": {
-                        "_0": 10
-                    }
-                }
-            }
+            "human_flag_straddle_leg_raises",
+            "human_flag_leg_raises",
+            "straddle_human_flag"
         ],
         "mastery": {
             "time": {
@@ -1066,7 +967,9 @@
         "name": "L-Sit to Handstand",
         "level": "advanced",
         "videoURL": "https://www.youtube.com/watch?v=J1b9HdHxy5Y",
-        "equipment": ["parallelBars"],
+        "equipment": [
+            "parallelBars"
+        ],
         "mastery": {
             "reps": {
                 "_0": 5
@@ -1086,7 +989,9 @@
         "name": "Bent Arm Tuck Planche",
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/shorts/MwM56OvqLYo",
-        "equipment": ["paralletteBars"],
+        "equipment": [
+            "paralletteBars"
+        ],
         "mastery": {
             "time": {
                 "_0": 5
@@ -1101,7 +1006,9 @@
         "id": "iron_cross",
         "level": "advanced",
         "videoURL": "https://www.youtube.com/shorts/74VlSK0pefA",
-        "equipment": ["rings"],
+        "equipment": [
+            "rings"
+        ],
         "mastery": {
             "time": {
                 "_0": 10
@@ -1115,7 +1022,9 @@
         "id": "scapular_shrugs",
         "level": "beginner",
         "videoURL": "https://www.youtube.com/shorts/9M8ylnbriB0",
-        "equipment": ["overheadBar"],
+        "equipment": [
+            "overheadBar"
+        ],
         "mastery": {
             "reps": {
                 "_0": 10
@@ -1129,7 +1038,9 @@
         "id": "high_side_plank",
         "level": "beginner",
         "videoURL": "https://www.youtube.com/shorts/vChJ24IH9mA",
-        "equipment": ["floor"],
+        "equipment": [
+            "floor"
+        ],
         "mastery": {
             "time": {
                 "_0": 60
@@ -1143,18 +1054,11 @@
         "id": "archer_pull_up",
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/shorts/AeBvpCCYpGI",
-        "equipment": ["overheadBar"],
+        "equipment": [
+            "overheadBar"
+        ],
         "progression": [
-            {
-                "id": "half_archer_pull_up",
-                "name": "Half Archer Pull Up",
-                "description": "Do the archer pull up with your hands at should width and pull to one side.",
-                "mastery": {
-                    "reps": {
-                        "_0": 10
-                    }
-                }
-            }
+            "half_archer_pull_up"
         ],
         "mastery": {
             "reps": {
@@ -1170,7 +1074,9 @@
         "id": "wide_pull_up",
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/shorts/P8s_LRBp9lo",
-        "equipment": ["overheadBar"],
+        "equipment": [
+            "overheadBar"
+        ],
         "mastery": {
             "reps": {
                 "_0": 10
@@ -1184,18 +1090,11 @@
         "id": "hanging_windshield_wiper",
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/shorts/dlRpAOnZhRY",
-        "equipment": ["overheadBar"],
+        "equipment": [
+            "overheadBar"
+        ],
         "progression": [
-            {
-                "id": "tuck_hanging_windshield_wiper",
-                "name": "Tuck",
-                "description": "Perform the windshield wiper with your legs tucked in",
-                "mastery": {
-                    "reps": {
-                        "_0": 10
-                    }
-                }
-            }
+            "tuck_hanging_windshield_wiper"
         ],
         "mastery": {
             "reps": {
@@ -1211,7 +1110,9 @@
         "id": "high_side_plank_raise",
         "level": "beginner",
         "videoURL": "https://www.youtube.com/watch?v=uKPo9UoB_MI",
-        "equipment": ["floor"],
+        "equipment": [
+            "floor"
+        ],
         "mastery": {
             "reps": {
                 "_0": 15
@@ -1225,18 +1126,11 @@
         "id": "side_plank_flag",
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/watch?v=anae6MkAhnY",
-        "equipment": ["floor"],
+        "equipment": [
+            "floor"
+        ],
         "progression": [
-            {
-                "id": "side_plank_flag_leg_raises",
-                "name": "Leg raises",
-                "description": "From the hold position, raise your upper leg",
-                "mastery": {
-                    "reps": {
-                        "_0": 10
-                    }
-                }
-            }
+            "side_plank_flag_leg_raises"
         ],
         "mastery": {
             "time": {
@@ -1251,7 +1145,9 @@
         "id": "knee_plank",
         "level": "foundation",
         "videoURL": "https://www.youtube.com/shorts/cSWXE-RB5wQ",
-        "equipment": ["floor"],
+        "equipment": [
+            "floor"
+        ],
         "mastery": {
             "time": {
                 "_0": 60
@@ -1263,7 +1159,9 @@
         "id": "pull_over",
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/shorts/4UZkFwg2JQM",
-        "equipment": ["overheadBar"],
+        "equipment": [
+            "overheadBar"
+        ],
         "mastery": {
             "reps": {
                 "_0": 10
@@ -1280,7 +1178,9 @@
         "id": "pistol_squat",
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/shorts/2qSwsTYEWuM",
-        "equipment": ["floor"],
+        "equipment": [
+            "floor"
+        ],
         "mastery": {
             "reps": {
                 "_0": 10
@@ -1296,7 +1196,9 @@
         "id": "squat",
         "level": "beginner",
         "videoURL": "https://www.youtube.com/shorts/n_xLyzPEX7A",
-        "equipment": ["floor"],
+        "equipment": [
+            "floor"
+        ],
         "mastery": {
             "reps": {
                 "_0": 20
@@ -1308,7 +1210,9 @@
         "id": "archer_squat",
         "level": "beginner",
         "videoURL": "https://www.youtube.com/watch?v=OHty2T5wY4Y",
-        "equipment": ["floor"],
+        "equipment": [
+            "floor"
+        ],
         "mastery": {
             "reps": {
                 "_0": 10
@@ -1322,7 +1226,9 @@
         "id": "shrimp_squat",
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/watch?v=FcQ77QxcotE",
-        "equipment": ["floor"],
+        "equipment": [
+            "floor"
+        ],
         "mastery": {
             "reps": {
                 "_0": 10
@@ -1336,7 +1242,9 @@
         "id": "dragon_squat",
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/watch?v=PRrb64GjqZ0",
-        "equipment": ["floor"],
+        "equipment": [
+            "floor"
+        ],
         "mastery": {
             "reps": {
                 "_0": 10
@@ -1351,7 +1259,9 @@
         "id": "horse_stance",
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/shorts/mjdMjaYXIcI",
-        "equipment": ["floor"],
+        "equipment": [
+            "floor"
+        ],
         "mastery": {
             "time": {
                 "_0": 30
@@ -1365,7 +1275,9 @@
         "id": "wall_push_up",
         "level": "foundation",
         "videoURL": "https://www.youtube.com/shorts/YWw-3rGaoT0",
-        "equipment": ["wall"],
+        "equipment": [
+            "wall"
+        ],
         "mastery": {
             "reps": {
                 "_0": 25
@@ -1377,7 +1289,9 @@
         "id": "bodyweight_skull_crusher",
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/shorts/DqTm1Cs8y3U",
-        "equipment": ["lowBar"],
+        "equipment": [
+            "lowBar"
+        ],
         "mastery": {
             "reps": {
                 "_0": 15
@@ -1392,7 +1306,9 @@
         ],
         "level": "beginner",
         "videoURL": "https://www.youtube.com/shorts/EfE7JeD8o6Y",
-        "equipment": ["lowBar"],
+        "equipment": [
+            "lowBar"
+        ],
         "mastery": {
             "reps": {
                 "_0": 15
@@ -1404,7 +1320,9 @@
         "id": "muscle_up",
         "level": "advanced",
         "videoURL": "https://www.youtube.com/watch?v=_eQ2gw_Gg5Y",
-        "equipment": ["overheadBar"],
+        "equipment": [
+            "overheadBar"
+        ],
         "mastery": {
             "reps": {
                 "_0": 15
@@ -1412,8 +1330,7 @@
         },
         "prerequisites": [
             "pull_up",
-            "dip"
+            "chest_dip"
         ]
     }
-
 ]

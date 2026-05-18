@@ -43,7 +43,8 @@ struct MainStoreTests {
             prerequisites: []
         )
         store.setMasteryProgress(12, for: exercise.id)
-        #expect(store.effectiveMasteryProgress(for: exercise).fraction == 0.6)
+        let fullExercise = FullExercise(exercise: exercise, progression: [])
+        #expect(store.effectiveMasteryProgress(for: fullExercise).fraction == 0.6)
     }
 
     @Test func effectiveMasteryAveragesProgressionSteps() {
@@ -58,16 +59,20 @@ struct MainStoreTests {
             videoURL: "https://example.com",
             equipment: [.floor],
             mastery: .time(10),
-            progression: [
-                ExerciseVariation(id: "bent_knee", name: "Bent Knee", description: nil, mastery: .time(10)),
-                ExerciseVariation(id: "straddle", name: "Straddle", description: nil, mastery: .time(10)),
-            ],
+            progression: ["bent_knee", "straddle"],
             prerequisites: []
+        )
+        let fullExercise = FullExercise(
+            exercise: exercise,
+            progression: [
+                ExerciseVariation(id: "bent_knee", name: "Bent Knee", description: nil, level: nil, mastery: .time(10)),
+                ExerciseVariation(id: "straddle", name: "Straddle", description: nil, level: nil, mastery: .time(10)),
+            ]
         )
         store.setProgressionMasteryProgress(5, for: exercise.id, variationId: "bent_knee")
         store.setProgressionMasteryProgress(10, for: exercise.id, variationId: "straddle")
 
-        #expect(store.effectiveMasteryProgress(for: exercise).fraction == 0.5)
+        #expect(store.effectiveMasteryProgress(for: fullExercise).fraction == 0.5)
     }
 
     @Test func effectiveMasteryUsesBaseWhenHigherThanProgressionAverage() {
@@ -82,14 +87,18 @@ struct MainStoreTests {
             videoURL: "https://example.com",
             equipment: [.floor],
             mastery: .time(10),
-            progression: [
-                ExerciseVariation(id: "bent_knee", name: "Bent Knee", description: nil, mastery: .time(10)),
-            ],
+            progression: ["bent_knee"],
             prerequisites: []
+        )
+        let fullExercise = FullExercise(
+            exercise: exercise,
+            progression: [
+                ExerciseVariation(id: "bent_knee", name: "Bent Knee", description: nil, level: nil, mastery: .time(10)),
+            ]
         )
         store.setMasteryProgress(10, for: exercise.id)
         store.setProgressionMasteryProgress(0, for: exercise.id, variationId: "bent_knee")
-        #expect(store.effectiveMasteryProgress(for: exercise).fraction == 1)
+        #expect(store.effectiveMasteryProgress(for: fullExercise).fraction == 1)
     }
 
     @Test func favoritesPersistAcrossInstances() {

@@ -30,14 +30,15 @@ final class MainStore {
     }
 
     /// Effective mastery for display and filtering, accounting for progression steps when present.
-    func effectiveMasteryProgress(for exercise: Exercise) -> ExerciseProgress {
+    func effectiveMasteryProgress(for fullExercise: FullExercise) -> ExerciseProgress {
+        let exercise = fullExercise.exercise
         let base = exercise.mastery.map { mastery in
             let target = mastery.intValue
             let value = min(target, masteryProgress(for: exercise.id))
             return MasteryProgress(current: value, target: target)
         }
 
-        let progression = exercise.progression ?? []
+        let progression = fullExercise.progression
         var progressionMastery: [Exercise.ID: MasteryProgress] = [:]
         for variation in progression {
             let stepProgress = progressionMasteryProgress(

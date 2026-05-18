@@ -23,10 +23,11 @@ final class ExerciseProgressionViewModel: CoordinatorViewModel {
     }
 
     var items: [ExerciseListItem] {
-        repository.progressionChain(to: exercise.id).map { exercise in
-            ExerciseListItem(
+        repository.progressionChain(to: exercise.id).compactMap { exercise in
+            guard let fullExercise = repository.fullExercise(for: exercise.id) else { return nil }
+            return ExerciseListItem(
                 exercise: exercise,
-                masteryProgress: mainStore.effectiveMasteryProgress(for: exercise)
+                masteryProgress: mainStore.effectiveMasteryProgress(for: fullExercise)
             )
         }
     }

@@ -1,0 +1,192 @@
+[
+    {
+        "id": "l_sit_leg_raises",
+        "name": "L-Sit Leg Raises",
+        "description": "Hold your body weight on your hands with your legs extended and feet on the ground. Raise each foot individually",
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        }
+    },
+    {
+        "id": "tuck_l_sit",
+        "name": "Tuck L-Sit",
+        "description": "Bring your knees as close as you can to your body and elevate from the ground",
+        "mastery": {
+            "time": {
+                "_0": 10
+            }
+        }
+    },
+    {
+        "id": "planche_lean_chest",
+        "name": "Chest Level",
+        "description": "Instead of moving forwards until your hands are at your waist position, only move forwards until your hands are at chest position",
+        "mastery": {
+            "time": {
+                "_0": 10
+            }
+        }
+    },
+    {
+        "id": "bent_knee",
+        "name": "Bent Knee",
+        "description": "Start from a kneeling position and keep your knees bent as you lift. This reduces the lever and makes it easier to assume the position",
+        "mastery": {
+            "time": {
+                "_0": 10
+            }
+        }
+    },
+    {
+        "id": "straddle",
+        "name": "Straddle",
+        "description": "Perform the lever with legs straddled apart to keep your centre of gravity closer to your hands",
+        "mastery": {
+            "time": {
+                "_0": 10
+            }
+        }
+    },
+    {
+        "id": "wall_walk_ins",
+        "name": "Wall Walk ins",
+        "description": "Start in a push up position with your feet against the wall and walk your feet up the wall and your hands towards it",
+        "mastery": {
+            "time": {
+                "_0": 10
+            }
+        }
+    },
+    {
+        "id": "wall",
+        "name": "Wall",
+        "description": "Perform a handstand with your feet against the wall",
+        "mastery": {
+            "time": {
+                "_0": 10
+            }
+        }
+    },
+    {
+        "id": "pike_floor_hold",
+        "name": "Floor",
+        "description": "Get into the position and hold",
+        "mastery": {
+            "time": {
+                "_0": 15
+            }
+        }
+    },
+    {
+        "id": "elevated_pike_hold",
+        "name": "Elevated",
+        "description": "Place your feet on a raised surface which will put more body weight onto the shoulders",
+        "mastery": {
+            "time": {
+                "_0": 15
+            }
+        }
+    },
+    {
+        "id": "pike_floor_push_up",
+        "name": "Floor Push Up",
+        "description": "From the pike position bend your elbows until your head is just above the ground",
+        "mastery": {
+            "reps": {
+                "_0": 15
+            }
+        }
+    },
+    {
+        "id": "elevated_push_up",
+        "name": "Elevated Push Up",
+        "description": "From the elevated pike position bend your elbows until your head is just above the ground",
+        "mastery": {
+            "reps": {
+                "_0": 15
+            }
+        }
+    },
+    {
+        "id": "pseudo_planche_push_up_negative",
+        "name": "Negative",
+        "description": "From a planche lean position, perform the downards portion of the exercise without pushing back up",
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        }
+    },
+    {
+        "id": "wall_handstand_push_up",
+        "name": "Wall ",
+        "description": "With your stomach against the wall, perform the push up. Using the wall will remove the balance aspect while building the required strength",
+        "mastery": {
+            "time": {
+                "_0": 15
+            }
+        }
+    },
+    {
+        "id": "human_flag_straddle_leg_raises",
+        "name": "Straddle Leg raises",
+        "description": "Place your hands on the bar in the flag position and hop your legs off the ground into a straddle flag position then return back to the ground. Allow your lower foot to not raise as high",
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        }
+    },
+    {
+        "id": "human_flag_leg_raises",
+        "name": "Leg raises",
+        "description": "Perform like the straddle flag leg raise but bring your feet together at the top to briefly be in the flag position",
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        }
+    },
+    {
+        "id": "straddle_human_flag",
+        "name": "Straddle Flag",
+        "description": "Perform a human flag with your legs apart rather than together",
+        "mastery": {
+            "time": {
+                "_0": 10
+            }
+        }
+    },
+    {
+        "id": "half_archer_pull_up",
+        "name": "Half Archer Pull Up",
+        "description": "Do the archer pull up with your hands at should width and pull to one side.",
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        }
+    },
+    {
+        "id": "tuck_hanging_windshield_wiper",
+        "name": "Tuck",
+        "description": "Perform the windshield wiper with your legs tucked in",
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        }
+    },
+    {
+        "id": "side_plank_flag_leg_raises",
+        "name": "Leg raises",
+        "description": "From the hold position, raise your upper leg",
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        }
+    }
+]

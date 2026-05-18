@@ -20,7 +20,7 @@ struct Exercise: Codable {
     let videoURL: String
     let equipment: [Equipment]
     let mastery: SetType?
-    let progression: [ExerciseVariation]?
+    let progression: [ID]?
     
     // Exercise IDs that should be mastered before this one
     let prerequisites: [ID]
