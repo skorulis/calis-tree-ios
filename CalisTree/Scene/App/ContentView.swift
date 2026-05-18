@@ -31,6 +31,10 @@ struct ContentView: View {
             settings
                 .tag(RootTab.settings)
         }
+        .environment(
+            \.terminologyLinkIndex,
+            resolver.terminologyRepository().linkIndex
+        )
     }
 
     private var timer: some View {

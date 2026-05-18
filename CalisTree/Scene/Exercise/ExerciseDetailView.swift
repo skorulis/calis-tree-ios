@@ -17,25 +17,7 @@ struct ExerciseDetailView: View {
                 
                 prerequisiteSection
                 
-                if let steps = viewModel.exercise.steps, !steps.isEmpty {
-                    DisclosureGroup(isExpanded: $isStepsExpanded) {
-                        VStack(alignment: .leading, spacing: 8) {
-                            ForEach(Array(steps.enumerated()), id: \.offset) { index, step in
-                                HStack(alignment: .top, spacing: 8) {
-                                    Text("\(index + 1).")
-                                        .font(.subheadline)
-                                        .foregroundStyle(.secondary)
-                                        .frame(minWidth: 20, alignment: .trailing)
-                                    Text(step)
-                                }
-                            }
-                        }
-                        .padding(.top, 4)
-                    } label: {
-                        Text("Steps")
-                            .font(.headline)
-                    }
-                }
+                stepsSection
                 progressionSection
                 masterySection
                 
@@ -65,6 +47,31 @@ struct ExerciseDetailView: View {
                 .accessibilityLabel(
                     viewModel.isFavorite ? "Remove from favorites" : "Add to favorites"
                 )
+            }
+        }
+    }
+    
+    @ViewBuilder
+    private var stepsSection: some View {
+        if let steps = viewModel.exercise.steps, !steps.isEmpty {
+            DisclosureGroup(isExpanded: $isStepsExpanded) {
+                VStack(alignment: .leading, spacing: 8) {
+                    ForEach(Array(steps.enumerated()), id: \.offset) { index, step in
+                        HStack(alignment: .top, spacing: 8) {
+                            Text("\(index + 1).")
+                                .font(.subheadline)
+                                .foregroundStyle(.secondary)
+                                .frame(minWidth: 20, alignment: .trailing)
+                            TerminologyLinkedText(text: step) { term in
+                                coordinator?.push(MainPath.terminologyDetail(term))
+                            }
+                        }
+                    }
+                }
+                .padding(.top, 4)
+            } label: {
+                Text("Steps")
+                    .font(.headline)
             }
         }
     }
@@ -230,4 +237,8 @@ struct ExerciseDetailView: View {
         )
     }
     .environment(\.coordinator, Coordinator(root: MainPath.exerciseList))
+    .environment(
+        \.terminologyLinkIndex,
+        assembler.resolver.terminologyRepository().linkIndex
+    )
 }

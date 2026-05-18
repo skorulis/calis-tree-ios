@@ -23,4 +23,9 @@ struct TerminologyRepositoryTests {
             #expect(repository.termByName[term.name]?.details == term.details)
         }
     }
+
+    @Test func linkIndexIsPopulated() {
+        let repository = TerminologyRepository()
+        #expect(!repository.linkIndex.patterns.isEmpty)
+    }
 }

@@ -145,7 +145,8 @@
             }
         },
         "prerequisites": [
-            "upside_down_deadlift"
+            "upside_down_deadlift",
+            "hanging_l_sit"
         ]
     },
     {
@@ -400,7 +401,7 @@
         "name": "Diamond Push Up",
         "level": "beginner",
         "steps": [
-            "Start in a high push-up position with your hands placed close together beneath your chest",
+            "Start in a push-up position with your hands placed close together beneath your chest",
             "Position your thumbs and index fingers so they touch, forming a diamond shape.",
             "Extend your legs behind you and balance on your toes.",
             "Keep your body in a straight line from your head to your heels",
@@ -429,15 +430,11 @@
         "name": "Wide Push Up",
         "level": "beginner",
         "steps": [
-            "Start in a standard push-up position with your hands placed wider than shoulder-width apart",
-            "Keep your legs straight and balance on your toes with your body in a straight line.",
-            "Tighten your core and glutes to stabilize your body",
-            "Shift your weight to one side while bending that arm, keeping the opposite arm straight",
-            "Lower your chest toward the bent arm, as if doing a one-sided push-up",
-            "Keep the straight arm fully extended and use it for light support only",
-            "Push through the bent arm to return to the center position",
-            "Repeat the movement on the opposite side, alternating each rep",
-            "Keep your hips level and avoid twisting your torso too much"
+            "Start in a push-up position with your hands placed wider than shoulder-width apart",
+            "Slowly bend your elbows and lower your chest toward the floor",
+            "Keep your elbows flaring out slightly more than a standard push-up, but stay controlled",
+            "Lower yourself until your chest is just above the ground or as far as you can comfortably go.",
+            "Push through your palms to straighten your arms and return to the starting position"
         ],
         "videoURL": "https://www.youtube.com/shorts/skWcxqxh2qw",
         "equipment": [
@@ -1025,7 +1022,7 @@
         ],
         "mastery": {
             "reps": {
-                "_0": 10
+                "_0": 15
             }
         },
         "prerequisites": [
@@ -1348,5 +1345,33 @@
         "prerequisites": [
             "pull_up"
         ]
+    },
+    {
+        "id": "elbow_hanging_leg_lifts",
+        "level": "beginner",
+        "videoURL": "https://www.youtube.com/shorts/jOV9ofRR5ek",
+        "equipment": [
+            "captainsChair"
+        ],
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        },
+        "prerequisites": [
+            "crunch"
+        ]
+    },
+    {
+        "id": "crunch",
+        "level": "foundation",
+        "videoURL": "https://www.youtube.com/watch?v=MKmrqcoCZ-M",
+        "equipment": [],
+        "mastery": {
+            "reps": {
+                "_0": 20
+            }
+        },  
+        "prerequisites": []
     }
 ]

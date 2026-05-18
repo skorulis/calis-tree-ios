@@ -3,6 +3,7 @@
 import Foundation
 
 enum Equipment: String, Codable, CaseIterable {
+    case captainsChair
     case overheadBar
     case parallelBars
     case paralletteBars
@@ -15,6 +16,7 @@ enum Equipment: String, Codable, CaseIterable {
     
     var description: String {
         switch self {
+        case .captainsChair: "Captains Chair"
         case .overheadBar: "Overhead Bar"
         case .parallelBars: "Parallel Bars"
         case .paralletteBars: "Parallette Bars"
