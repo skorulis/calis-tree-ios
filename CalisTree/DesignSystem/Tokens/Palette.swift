@@ -3,7 +3,7 @@
 import SwiftUI
 
 enum Palette {
-    enum Mastery {
+    enum Base {
         static let gold = Color(hex: 0xFFC700)
     }
 

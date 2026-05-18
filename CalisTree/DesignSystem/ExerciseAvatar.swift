@@ -16,7 +16,7 @@ struct ExerciseAvatar: View {
             if showName {
                 Text(exercise.displayName)
                     .font(.caption2)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(Palette.Level.foundation)
                     .multilineTextAlignment(.center)
                     .lineLimit(2)
                     .minimumScaleFactor(0.8)
@@ -43,11 +43,11 @@ struct ExerciseAvatar: View {
         switch borderState {
         case .notStarted:
             Circle()
-                .stroke(Color.secondary, lineWidth: Self.lineWidth)
+                .stroke(Palette.Level.foundation, lineWidth: Self.lineWidth)
         case let .inProgress(fraction):
             ZStack {
                 Circle()
-                    .stroke(Color.secondary, lineWidth: Self.lineWidth)
+                    .stroke(Palette.Level.foundation, lineWidth: Self.lineWidth)
                 Circle()
                     .trim(from: 0, to: min(max(fraction, 0), 1))
                     .stroke(
@@ -58,7 +58,7 @@ struct ExerciseAvatar: View {
             }
         case .mastered:
             Circle()
-                .stroke(Palette.Mastery.gold, lineWidth: Self.lineWidth)
+                .stroke(Palette.Base.gold, lineWidth: Self.lineWidth)
         }
     }
 
@@ -73,7 +73,7 @@ struct ExerciseAvatar: View {
                 .resizable()
                 .scaledToFit()
                 .padding(12)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(Palette.Level.foundation)
         }
     }
 
