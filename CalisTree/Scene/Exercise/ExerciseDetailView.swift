@@ -50,7 +50,7 @@ struct ExerciseDetailView: View {
                 }
             }
             .frame(maxWidth: .infinity, alignment: .leading)
-            .padding()
+            .padding(.margin)
         }
         .navigationTitle(viewModel.exercise.displayName)
         .navigationBarTitleDisplayMode(.inline)
@@ -120,7 +120,9 @@ struct ExerciseDetailView: View {
                             .buttonStyle(.plain)
                         }
                     }
+                    .padding(.horizontal, .margin)
                 }
+                .padding(.horizontal, -CGFloat.margin)
             }
         }
     }
