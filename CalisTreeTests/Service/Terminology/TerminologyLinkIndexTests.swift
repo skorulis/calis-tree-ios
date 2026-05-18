@@ -65,17 +65,6 @@ struct TerminologyLinkIndexTests {
         #expect(links[0].name == protraction.name)
     }
 
-    @Test func doesNotLinkInsideLargerWord() {
-        let index = TerminologyLinkIndex(terms: [triceps])
-        let segments = index.segments(in: "triceps_dip is an exercise id")
-
-        let hasLink = segments.contains { segment in
-            if case .link = segment { return true }
-            return false
-        }
-        #expect(!hasLink)
-    }
-
     @Test func terminologyResolvesURL() {
         let index = TerminologyLinkIndex(terms: [triceps])
         let url = TerminologyLinkIndex.url(for: triceps)

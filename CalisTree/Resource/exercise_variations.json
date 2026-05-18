@@ -238,5 +238,45 @@
                 "_0": 15
             }
         }
+    },
+    {
+        "id": "one_leg_l_sit_kicks",
+        "name": "One Leg L-Sit Kicks",
+        "description": "Do the L sit kicks one leg at a time to lower the difficulty",
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        }
+    },
+    {
+        "id": "frog_stand_knees_outside",
+        "name": "Knees Outside",
+        "description": "Rest your knees on the outside of your arms with your elbows bent",
+        "mastery": {
+            "time": {
+                "_0": 20
+            }
+        }
+    },
+    {
+        "id": "frog_stand_crow_pose",
+        "name": "Crow Pose",
+        "description": "Place your knees behind your triceps with your elbows bent",
+        "mastery": {
+            "time": {
+                "_0": 20
+            }
+        }
+    },
+    {
+        "id": "frog_stand_straight_arms",
+        "name": "Straight Arms",
+        "description": "Place your knees behind your triceps and straighten your arms",
+        "mastery": {
+            "time": {
+                "_0": 20
+            }
+        }
     }
 ]

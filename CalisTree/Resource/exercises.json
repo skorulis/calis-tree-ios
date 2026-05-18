@@ -215,10 +215,14 @@
     {
         "id": "l_sit_kicks",
         "name": "L-Sit Kicks",
+        "description": "Start in a tucked L-sit position and move your legs forwards into the L-Sit position",
         "level": "beginner",
         "videoURL": "https://www.youtube.com/shorts/z-gbvxX8fHg",
         "equipment": [
             "floor"
+        ],
+        "progression": [
+            "one_leg_l_sit_kicks"
         ],
         "mastery": {
             "reps": {
@@ -351,7 +355,8 @@
         "prerequisites": [
             "planche_lean",
             "l_sit",
-            "pseudo_planche_push_up"
+            "pseudo_planche_push_up",
+            "frog_stand"
         ]
     },
     {
@@ -600,7 +605,8 @@
         ],
         "prerequisites": [
             "push_up",
-            "pike_hold"
+            "pike_hold",
+            "frog_stand"
         ]
     },
     {
@@ -1349,7 +1355,9 @@
             "overheadBar"
         ],
         "progression": [
-
+            "high_pull_up_chest",
+            "high_pull_up_stomach",
+            "high_pull_up_hips"
         ],
         "prerequisites": [
             "pull_up"
@@ -1382,5 +1390,51 @@
             }
         },  
         "prerequisites": []
+    },
+    {
+        "id": "lunge",
+        "level": "foundation",
+        "videoURL": "https://www.youtube.com/shorts/1cS-6KsJW9g",
+        "equipment": [],
+        "steps": [
+            "Stand upright with your feet hip-width apart and your hands at your sides or on your hips",
+            "Tighten your core and keep your chest lifted",
+            "Step forward with one leg, taking a comfortable stride",
+            "Lower your body by bending both knees until your front thigh is parallel to the floor",
+            "Keep your front knee directly above your ankle and avoid letting it move too far forward",
+            "Lower your back knee toward the floor without touching it",
+            "Keep your torso upright and your balance steady throughout the movement",
+            "Push through the heel of your front foot to return to the starting position"
+        ],
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        },  
+        "prerequisites": []
+    },
+    {
+        "id": "frog_stand",
+        "alternateNames": [
+            "Crow Pose"
+        ],
+        "level": "beginner",
+        "videoURL": "https://www.youtube.com/shorts/KSD6mWsbWhk",
+        "equipment": [
+            "floor"
+        ],
+        "progression": [
+            "frog_stand_knees_outside",
+            "frog_stand_crow_pose",
+            "frog_stand_straight_arms"
+        ],
+        "mastery": {
+            "time": {
+                "_0": 20
+            }
+        },
+        "prerequisites": [
+            "push_up"
+        ]
     }
 ]

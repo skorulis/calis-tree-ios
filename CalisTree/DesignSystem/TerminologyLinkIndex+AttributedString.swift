@@ -12,6 +12,7 @@ extension TerminologyLinkIndex {
             case .link(let substring, let term):
                 var linked = AttributedString(substring)
                 linked.underlineStyle = .single
+                linked.foregroundColor = .primary
                 linked.link = Self.url(for: term)
                 attributed.append(linked)
             }
