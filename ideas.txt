@@ -3,6 +3,8 @@
 * Icon
 * 
 
+Add a test to make sure all prequisites are unique.
+
 
 My progression view is more useful, but what would look cooler is a progression tree
 Show exercises from each level and then draw lines between them

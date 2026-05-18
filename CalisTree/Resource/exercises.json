@@ -648,7 +648,6 @@
     },
     {
         "id": "pike_hold",
-        "name": "Pike Hold",
         "level": "beginner",
         "videoURL": "https://www.youtube.com/shorts/4-YsxfnZrT8",
         "equipment": [
@@ -687,6 +686,22 @@
         ]
     },
     {
+        "id": "pike_shrug",
+        "level": "beginner",
+        "videoURL": "https://www.youtube.com/shorts/qDyo7z8TebA",
+        "equipment": [
+            "floor"
+        ],
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        },
+        "prerequisites": [
+            "pike_hold"
+        ]
+    },
+    {
         "id": "pike_push_up",
         "name": "Pike Push Up",
         "level": "intermediate",
@@ -720,7 +735,7 @@
             }
         },
         "prerequisites": [
-            "pike_hold"
+            "pike_shrug"
         ]
     },
     {
