@@ -52,7 +52,7 @@ struct ExerciseDetailView: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding()
         }
-        .navigationTitle(viewModel.exercise.name)
+        .navigationTitle(viewModel.exercise.displayName)
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
@@ -105,18 +105,20 @@ struct ExerciseDetailView: View {
                     
                 }
                 .buttonStyle(.plain)
-                HStack(alignment: .top, spacing: 12) {
-                    ForEach(sortedPrerequisiteItems) { item in
-                        Button {
-                            coordinator?.push(MainPath.exerciseDetail(item.exercise))
-                        } label: {
-                            ExerciseAvatar(
-                                exercise: item.exercise,
-                                masteryProgress: item.masteryProgress,
-                                showName: true
-                            )
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(alignment: .top, spacing: 12) {
+                        ForEach(sortedPrerequisiteItems) { item in
+                            Button {
+                                coordinator?.push(MainPath.exerciseDetail(item.exercise))
+                            } label: {
+                                ExerciseAvatar(
+                                    exercise: item.exercise,
+                                    masteryProgress: item.masteryProgress,
+                                    showName: true
+                                )
+                            }
+                            .buttonStyle(.plain)
                         }
-                        .buttonStyle(.plain)
                     }
                 }
             }
@@ -207,7 +209,7 @@ struct ExerciseDetailView: View {
             let l = prerequisiteCompletenessFraction(lhs)
             let r = prerequisiteCompletenessFraction(rhs)
             if l != r { return l < r }
-            return lhs.exercise.name < rhs.exercise.name
+            return lhs.exercise.displayName < rhs.exercise.displayName
         }
     }
 }

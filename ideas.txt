@@ -23,7 +23,8 @@ Things I will need:
 
 
 
-
+This app is designed to show you general progression schemes for moving from beginner to advanced exercises. 
+It does not give you an exact workout plan but rather the exercises that you may want to incorporate to reach your goals.
 
 
 Data sources:

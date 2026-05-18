@@ -14,7 +14,7 @@ struct ExerciseRepositoryTests {
             for prerequisite in exercise.prerequisites {
                 #expect(
                     repository.exerciseById[prerequisite] != nil,
-                    "Exercise '\(exercise.name)' has unknown prerequisite '\(prerequisite)'"
+                    "Exercise '\(exercise.displayName)' has unknown prerequisite '\(prerequisite)'"
                 )
             }
         }

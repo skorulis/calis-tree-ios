@@ -1079,7 +1079,6 @@
     },
     {
         "id": "iron_cross",
-        "name": "Iron Cross",
         "level": "expert",
         "videoURL": "https://www.youtube.com/shorts/74VlSK0pefA",
         "equipment": ["rings"],
@@ -1094,7 +1093,6 @@
     },
     {
         "id": "scapular_shrugs",
-        "name": "Scapular Pull Ups",
         "level": "beginner",
         "videoURL": "https://www.youtube.com/shorts/9M8ylnbriB0",
         "equipment": ["overheadBar"],
@@ -1109,7 +1107,6 @@
     },
     {
         "id": "high_side_plank",
-        "name": "High Side Plank",
         "level": "beginner",
         "videoURL": "https://www.youtube.com/shorts/vChJ24IH9mA",
         "equipment": ["floor"],
@@ -1124,7 +1121,6 @@
     },
     {
         "id": "archer_pull_up",
-        "name": "Archer Pull Up",
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/shorts/AeBvpCCYpGI",
         "equipment": ["overheadBar"],
@@ -1152,7 +1148,6 @@
     },
     {
         "id": "wide_pull_up",
-        "name": "Wide Pull Up",
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/shorts/P8s_LRBp9lo",
         "equipment": ["overheadBar"],
@@ -1167,7 +1162,6 @@
     },
     {
         "id": "hanging_windshield_wiper",
-        "name": "Hanging Windshield Wiper",
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/shorts/dlRpAOnZhRY",
         "equipment": ["overheadBar"],
@@ -1195,7 +1189,6 @@
     },
     {
         "id": "high_side_plank_raise",
-        "name": "High Side Plank Raise",
         "level": "beginner",
         "videoURL": "https://www.youtube.com/watch?v=uKPo9UoB_MI",
         "equipment": ["floor"],
@@ -1210,7 +1203,6 @@
     },
     {
         "id": "side_plank_flag",
-        "name": "Side Plank Flag",
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/watch?v=anae6MkAhnY",
         "equipment": ["floor"],
@@ -1237,7 +1229,6 @@
     },
     {
         "id": "knee_plank",
-        "name": "Knee Plank",
         "level": "foundation",
         "videoURL": "https://www.youtube.com/shorts/cSWXE-RB5wQ",
         "equipment": ["floor"],
@@ -1250,7 +1241,6 @@
     },
     {
         "id": "pull_over",
-        "name": "Pull Over",
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/shorts/4UZkFwg2JQM",
         "equipment": ["overheadBar"],
@@ -1268,7 +1258,6 @@
     },
     {
         "id": "pistol_squat",
-        "name": "Pistol Squat",
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/shorts/2qSwsTYEWuM",
         "equipment": ["floor"],
@@ -1285,7 +1274,6 @@
     },
     {
         "id": "squat",
-        "name": "Squat",
         "level": "beginner",
         "videoURL": "https://www.youtube.com/shorts/n_xLyzPEX7A",
         "equipment": ["floor"],
@@ -1298,7 +1286,6 @@
     },
     {
         "id": "archer_squat",
-        "name": "Archer Squat",
         "level": "beginner",
         "videoURL": "https://www.youtube.com/watch?v=OHty2T5wY4Y",
         "equipment": ["floor"],
@@ -1313,7 +1300,6 @@
     },
     {
         "id": "shrimp_squat",
-        "name": "Shrimp Squat",
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/watch?v=FcQ77QxcotE",
         "equipment": ["floor"],
@@ -1328,7 +1314,6 @@
     },
     {
         "id": "dragon_squat",
-        "name": "Dragon Squat",
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/watch?v=PRrb64GjqZ0",
         "equipment": ["floor"],
@@ -1344,7 +1329,6 @@
     },
     {
         "id": "horse_stance",
-        "name": "Horse Stance",
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/shorts/mjdMjaYXIcI",
         "equipment": ["floor"],

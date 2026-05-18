@@ -10,7 +10,7 @@ struct ExerciseCell: View {
         HStack(spacing: 12) {
             ExerciseAvatar(exercise: exercise, masteryProgress: masteryProgress)
             VStack(alignment: .leading, spacing: 4) {
-                Text(exercise.name)
+                Text(exercise.displayName)
                     .font(.headline)
                     .foregroundStyle(.primary)
                 Chip(level: exercise.level)

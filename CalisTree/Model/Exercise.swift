@@ -4,7 +4,7 @@ import Foundation
 
 struct Exercise: Codable {
     let id: ID
-    let name: String
+    let name: String?
     let description: String?
     // Steps to perform this exercise 
     let steps: [String]?
@@ -21,6 +21,14 @@ struct Exercise: Codable {
 
 extension Exercise {
     typealias ID = String
+
+    var displayName: String {
+        if let name { return name }
+        return id
+            .split(separator: "_")
+            .map { $0.capitalized }
+            .joined(separator: " ")
+    }
 }
 
 struct ExerciseVariation: Codable {

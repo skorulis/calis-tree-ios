@@ -14,7 +14,7 @@ struct ExerciseAvatar: View {
         VStack(spacing: 4) {
             circle
             if showName {
-                Text(exercise.name)
+                Text(exercise.displayName)
                     .font(.caption2)
                     .foregroundStyle(.secondary)
                     .multilineTextAlignment(.center)
@@ -35,6 +35,7 @@ struct ExerciseAvatar: View {
             ringOverlay
         }
         .frame(width: Self.size, height: Self.size)
+        .padding(Self.lineWidth / 2)
     }
 
     @ViewBuilder
@@ -96,7 +97,7 @@ struct ExerciseAvatar: View {
         case .mastered:
             state = "mastered"
         }
-        return "\(exercise.name), \(state)"
+        return "\(exercise.displayName), \(state)"
     }
 
     private enum BorderState {

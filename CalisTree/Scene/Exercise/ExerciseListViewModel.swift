@@ -60,14 +60,14 @@ final class ExerciseListViewModel: CoordinatorViewModel {
             else { return nil }
             if let filterLevel, exercise.level != filterLevel { return nil }
             if let filterEquipment, !exercise.equipment.contains(filterEquipment) { return nil }
-            guard Self.matchesSearch(name: exercise.name, tokens: tokens) else { return nil }
+            guard Self.matchesSearch(name: exercise.displayName, tokens: tokens) else { return nil }
             return ExerciseListItem(
                 exercise: exercise,
                 masteryProgress: progress
             )
         }
         .sorted {
-            $0.exercise.name.localizedStandardCompare($1.exercise.name) == .orderedAscending
+            $0.exercise.displayName.localizedStandardCompare($1.exercise.displayName) == .orderedAscending
         }
     }
 
