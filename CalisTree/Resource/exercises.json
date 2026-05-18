@@ -19,7 +19,6 @@
     },
     {
         "id": "hanging_leg_raises",
-        "name": "Hanging Leg Raises",
         "level": "beginner",
         "imageFile": "l-sit",
         "videoURL": "https://www.youtube.com/shorts/GBl1lHh98qw",
@@ -27,8 +26,8 @@
             "overheadBar"
         ],
         "mastery": {
-            "time": {
-                "_0": 30
+            "reps": {
+                "_0": 20
             }
         },
         "prerequisites": []
@@ -123,7 +122,6 @@
     },
     {
         "id": "tuck_front_lever_hold",
-        "name": "Tuck Front Lever Hold",
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/shorts/EkdHh8DYlQ0",
         "equipment": [
@@ -140,7 +138,6 @@
     },
     {
         "id": "front_lever",
-        "name": "Front Lever",
         "level": "advanced",
         "videoURL": "https://www.youtube.com/shorts/Iuau9zhTM-Q",
         "equipment": [
@@ -153,13 +150,11 @@
         },
         "prerequisites": [
             "front_lever_drops",
-            "tuck_front_lever_hold",
-            "dragon_flag"
+            "tuck_front_lever_hold"
         ]
     },
     {
         "id": "front_lever_drops",
-        "name": "Front Lever Drops",
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
         "equipment": [
@@ -845,7 +840,8 @@
             }
         },
         "prerequisites": [
-            "dead_hang"
+            "dead_hang",
+            "hanging_leg_raises"
         ]
     },
     {
@@ -896,7 +892,6 @@
     },
     {
         "id": "back_lever",
-        "name": "Back Lever",
         "level": "advanced",
         "videoURL": "https://www.youtube.com/shorts/3hrN5Wz5HDw",
         "equipment": ["overheadBar"],
@@ -912,7 +907,6 @@
     },
     {
         "id": "skin_the_cat",
-        "name": "Skin the Cat",
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/watch?v=QHnpUcVwZOk",
         "equipment": ["floor"],

@@ -31,6 +31,7 @@ struct ExerciseAvatar: View {
         ZStack {
             image
                 .frame(width: Self.size - Self.lineWidth * 2, height: Self.size - Self.lineWidth * 2)
+                .background(Color.white)
                 .clipShape(Circle())
             ringOverlay
         }
@@ -43,11 +44,11 @@ struct ExerciseAvatar: View {
         switch borderState {
         case .notStarted:
             Circle()
-                .stroke(Color.secondary.opacity(0.35), lineWidth: Self.lineWidth)
+                .stroke(Color.secondary, lineWidth: Self.lineWidth)
         case let .inProgress(fraction):
             ZStack {
                 Circle()
-                    .stroke(Color.secondary.opacity(0.25), lineWidth: Self.lineWidth)
+                    .stroke(Color.secondary, lineWidth: Self.lineWidth)
                 Circle()
                     .trim(from: 0, to: min(max(fraction, 0), 1))
                     .stroke(

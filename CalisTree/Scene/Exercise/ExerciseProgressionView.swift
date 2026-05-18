@@ -6,6 +6,7 @@ import SwiftUI
 
 struct ExerciseProgressionView: View {
     @State var viewModel: ExerciseProgressionViewModel
+    @Environment(\.coordinator) private var coordinator
 
     var body: some View {
         List {
@@ -14,6 +15,16 @@ struct ExerciseProgressionView: View {
             }
         }
         .navigationTitle("Progression")
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    coordinator?.push(MainPath.exerciseProgressionTree(viewModel.exercise))
+                } label: {
+                    Label("Tree", systemImage: "tree")
+                }
+                .accessibilityLabel("Progression tree")
+            }
+        }
     }
 
     @ViewBuilder

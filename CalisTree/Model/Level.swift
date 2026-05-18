@@ -28,4 +28,8 @@ enum Level: String, Codable, CaseIterable {
             Palette.Level.expert
         }
     }
+
+    var subtleBackgroundColor: Color {
+        chipColor.opacity(0.18)
+    }
 }

@@ -47,6 +47,10 @@ final class CalisTreeAssembly: AutoInitModuleAssembly {
             TerminologyRepository()
         }
         .inObjectScope(.container)
+
+        container.register(ProgressionTreeLayoutService.self) { _ in
+            ProgressionTreeLayoutService()
+        }
     }
 
     @MainActor
@@ -65,6 +69,10 @@ final class CalisTreeAssembly: AutoInitModuleAssembly {
 
         container.register(ExerciseProgressionViewModel.self) { (resolver: Resolver, exercise: Exercise) in
             ExerciseProgressionViewModel.make(resolver: resolver, exercise: exercise)
+        }
+
+        container.register(ProgressionTreeViewModel.self) { (resolver: Resolver, exercise: Exercise) in
+            ProgressionTreeViewModel.make(resolver: resolver, exercise: exercise)
         }
 
         container.register(ExerciseListViewModel.self) { (resolver: Resolver) in
