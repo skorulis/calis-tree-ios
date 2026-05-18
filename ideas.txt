@@ -1,7 +1,5 @@
 * Onboarding system with explanation
 * Settings with equipment selection
-* Icon
-* 
 
 Add a test to make sure all prequisites are unique.
 

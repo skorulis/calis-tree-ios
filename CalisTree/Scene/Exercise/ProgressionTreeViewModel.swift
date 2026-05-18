@@ -2,6 +2,7 @@
 
 import ASKCoordinator
 import Foundation
+import UIKit
 import Knit
 import KnitMacros
 import Observation
@@ -71,5 +72,14 @@ final class ProgressionTreeViewModel: CoordinatorViewModel {
 extension ProgressionTreeViewModel {
     func showDetails(exercise: Exercise) {
         coordinator?.push(MainPath.exerciseDetail(exercise))
+    }
+
+    func shareImage() -> UIImage? {
+        ProgressionTreeImageExporter.render(
+            model: treeModel,
+            masteryProgress: { [self] exercise in
+                masteryProgress(for: exercise)
+            }
+        )
     }
 }

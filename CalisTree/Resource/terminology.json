@@ -21,5 +21,9 @@
     {
         "name": "Eccentric Phase",
         "details": "The eccentric phase of a movement is the lowering or lengthening portion of an exercise where a muscle contracts while being stretched by an external load or gravity. It acts as a braking mechanism to control the speed of the descent, such as slowly lowering a bicep curl or squatting down"
+    },
+    {
+        "name": "Scapular Depression",
+        "details": "Scapular depression is the downward, or caudal, movement of your shoulder blades (scapulae) away from your ears"
     }
 ]

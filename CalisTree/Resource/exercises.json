@@ -61,6 +61,16 @@
         "equipment": [
             "overheadBar"
         ],
+        "steps": [
+            "Grip the bar with your hands shoulder-width apart",
+            "Hang from the bar with your arms fully extended and your body relaxed",
+            "Engage your shoulders by pulling them slightly down and away from your ears",
+            "Tighten your core to prepare for the movement",
+            "Slowly bend your knees and begin lifting them toward your chest",
+            "Keep your movement controlled—avoid swinging or using momentum",
+            "Raise your knees as high as you can while maintaining good form, ideally to hip level or higher",
+            "Slowly lower your legs back down to the starting hanging position"
+        ],
         "mastery": {
             "reps": {
                 "_0": 20
@@ -118,7 +128,8 @@
             }
         },
         "prerequisites": [
-            "scapular_shrugs"
+            "scapular_shrugs",
+            "inverted_row"
         ]
     },
     {
@@ -251,7 +262,6 @@
     },
     {
         "id": "push_up",
-        "name": "Push Up",
         "level": "beginner",
         "videoURL": "https://www.youtube.com/shorts/04FqT6lC0i4",
         "equipment": [
@@ -262,7 +272,9 @@
                 "_0": 25
             }
         },
-        "prerequisites": []
+        "prerequisites": [
+            "wall_push_up"
+        ]
     },
     {
         "id": "decline_push_up",
@@ -1348,6 +1360,45 @@
         "prerequisites": [
             "squat"
         ]
+    },
+    {
+        "id": "wall_push_up",
+        "level": "foundation",
+        "videoURL": "https://www.youtube.com/shorts/YWw-3rGaoT0",
+        "equipment": ["wall"],
+        "mastery": {
+            "reps": {
+                "_0": 25
+            }
+        },
+        "prerequisites": []
+    },
+    {
+        "id": "bodyweight_skull_crusher",
+        "level": "intermediate",
+        "videoURL": "https://www.youtube.com/shorts/DqTm1Cs8y3U",
+        "equipment": ["lowBar"],
+        "mastery": {
+            "reps": {
+                "_0": 15
+            }
+        },
+        "prerequisites": []
+    },
+    {
+        "id": "inverted_row",
+        "alternateNames": [
+            "Australian Pull Up"
+        ],
+        "level": "beginner",
+        "videoURL": "https://www.youtube.com/shorts/EfE7JeD8o6Y",
+        "equipment": ["lowBar"],
+        "mastery": {
+            "reps": {
+                "_0": 15
+            }
+        },
+        "prerequisites": []
     }
 
 ]
