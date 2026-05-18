@@ -26,19 +26,7 @@ struct ExerciseCell: View {
 
 #Preview("In progress") {
     ExerciseCell(
-        exercise: Exercise(
-            id: "hanging_l_sit",
-            name: "Hanging L-Sit",
-            description: nil,
-            steps: nil,
-            level: .beginner,
-            imageFile: "l-sit",
-            videoURL: "https://www.youtube.com/watch?v=TB4gWro3XaY",
-            equipment: [.overheadBar],
-            mastery: .time(30),
-            progression: nil,
-            prerequisites: []
-        ),
+        exercise: .Preview.hangingLSit,
         masteryProgress: .none
     )
     .padding()
@@ -46,19 +34,7 @@ struct ExerciseCell: View {
 
 #Preview("Mastered") {
     ExerciseCell(
-        exercise: Exercise(
-            id: "pull_up",
-            name: "Pull up",
-            description: nil,
-            steps: nil,
-            level: .beginner,
-            imageFile: nil,
-            videoURL: "https://www.youtube.com/watch?v=XeErfmGSwfE",
-            equipment: [.overheadBar],
-            mastery: .reps(20),
-            progression: nil,
-            prerequisites: []
-        ),
+        exercise: .Preview.pullUp,
         masteryProgress: .none
     )
     .padding()
@@ -66,19 +42,7 @@ struct ExerciseCell: View {
 
 #Preview("No mastery") {
     ExerciseCell(
-        exercise: Exercise(
-            id: "hanging_high_knee_raise",
-            name: "Hanging High Knee Raise",
-            description: nil,
-            steps: nil,
-            level: .beginner,
-            imageFile: nil,
-            videoURL: "https://www.youtube.com/watch?v=oDiqwy0Y964",
-            equipment: [.overheadBar],
-            mastery: nil,
-            progression: nil,
-            prerequisites: []
-        ),
+        exercise: .Preview.hangingHighKneeRaiseWithoutMastery,
         masteryProgress: .none
     )
     .padding()

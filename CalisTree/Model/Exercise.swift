@@ -29,6 +29,50 @@ extension Exercise {
             .map { $0.capitalized }
             .joined(separator: " ")
     }
+
+    enum Preview {
+        static let pullUp = Exercise(
+            id: "pull_up",
+            name: "Pull Up",
+            description: nil,
+            steps: nil,
+            level: .beginner,
+            imageFile: nil,
+            videoURL: "https://www.youtube.com/watch?v=XeErfmGSwfE",
+            equipment: [.overheadBar],
+            mastery: .reps(20),
+            progression: nil,
+            prerequisites: []
+        )
+
+        static let hangingLSit = Exercise(
+            id: "hanging_l_sit",
+            name: "Hanging L-Sit",
+            description: nil,
+            steps: nil,
+            level: .beginner,
+            imageFile: "l-sit",
+            videoURL: "https://www.youtube.com/watch?v=TB4gWro3XaY",
+            equipment: [.overheadBar],
+            mastery: .time(30),
+            progression: nil,
+            prerequisites: []
+        )
+
+        static let hangingHighKneeRaiseWithoutMastery = Exercise(
+            id: "hanging_high_knee_raise",
+            name: "Hanging High Knee Raise",
+            description: nil,
+            steps: nil,
+            level: .beginner,
+            imageFile: nil,
+            videoURL: "https://www.youtube.com/watch?v=oDiqwy0Y964",
+            equipment: [.overheadBar],
+            mastery: nil,
+            progression: nil,
+            prerequisites: []
+        )
+    }
 }
 
 struct ExerciseVariation: Codable {

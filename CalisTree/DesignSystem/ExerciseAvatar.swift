@@ -35,7 +35,6 @@ struct ExerciseAvatar: View {
                 .clipShape(Circle())
             ringOverlay
         }
-        .frame(width: Self.size, height: Self.size)
         .padding(Self.lineWidth / 2)
     }
 
@@ -108,78 +107,31 @@ struct ExerciseAvatar: View {
     }
 }
 
-#Preview("Not started") {
-    ExerciseAvatar(
-        exercise: Exercise(
-            id: "pull_up",
-            name: "Pull Up",
-            description: nil,
-            steps: nil,
-            level: .beginner,
-            imageFile: nil,
-            videoURL: "https://www.youtube.com/watch?v=XeErfmGSwfE",
-            equipment: [.overheadBar],
-            mastery: .reps(20),
-            progression: nil,
-            prerequisites: []
-        ),
-        masteryProgress: .none
-    )
-}
-
-#Preview("In progress") {
-    ExerciseAvatar(
-        exercise: Exercise(
-            id: "pull_up",
-            name: "Pull Up",
-            description: nil,
-            steps: nil,
-            level: .beginner,
-            imageFile: nil,
-            videoURL: "https://www.youtube.com/watch?v=XeErfmGSwfE",
-            equipment: [.overheadBar],
-            mastery: .reps(20),
-            progression: nil,
-            prerequisites: []
-        ),
-        masteryProgress: .init(progression: ["hold": .init(current: 5, target: 10)])
-    )
-}
-
-#Preview("Mastered") {
-    ExerciseAvatar(
-        exercise: Exercise(
-            id: "pull_up",
-            name: "Pull Up",
-            description: nil,
-            steps: nil,
-            level: .beginner,
-            imageFile: nil,
-            videoURL: "https://www.youtube.com/watch?v=XeErfmGSwfE",
-            equipment: [.overheadBar],
-            mastery: .reps(20),
-            progression: nil,
-            prerequisites: []
-        ),
-        masteryProgress: .init(progression: ["hold": .init(current: 10, target: 10)])
-    )
+#Preview("Progress") {
+    HStack {
+        ExerciseAvatar(
+            exercise: .Preview.pullUp,
+            masteryProgress: .none
+        )
+        
+        ExerciseAvatar(
+            exercise: .Preview.pullUp,
+            masteryProgress: .init(progression: ["hold": .init(current: 5, target: 10)])
+        )
+        
+        ExerciseAvatar(
+            exercise: .Preview.pullUp,
+            masteryProgress: .init(progression: ["hold": .init(current: 10, target: 10)])
+        )
+    }
+    .padding()
+    .background(Palette.Level.beginner.opacity(0.25))
+    
 }
 
 #Preview("With name") {
     ExerciseAvatar(
-        exercise: Exercise(
-            id: "pull_up",
-            name: "Pull Up",
-            description: nil,
-            steps: nil,
-            level: .beginner,
-            imageFile: nil,
-            videoURL: "https://www.youtube.com/watch?v=XeErfmGSwfE",
-            equipment: [.overheadBar],
-            mastery: .reps(20),
-            progression: nil,
-            prerequisites: []
-        ),
+        exercise: .Preview.pullUp,
         masteryProgress: .none,
         showName: true
     )

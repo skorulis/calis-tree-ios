@@ -30,7 +30,9 @@
                 "_0": 20
             }
         },
-        "prerequisites": []
+        "prerequisites": [
+            "dead_hang"
+        ]
     },
     {
         "id": "hanging_l_sit",
@@ -116,7 +118,6 @@
             }
         },
         "prerequisites": [
-            "dead_hang",
             "scapular_shrugs"
         ]
     },
@@ -814,8 +815,7 @@
         "prerequisites": []
     },
     {
-        "id": "parallel_leg_raises",
-        "name": "parallel_leg_raises",
+        "id": "parallel_bar_leg_raises",
         "level": "beginner",
         "videoURL": "https://www.youtube.com/shorts/Wfl-dA2plUg",
         "equipment": ["parallelBars"],
@@ -830,7 +830,6 @@
     },
     {
         "id": "toes_to_bar",
-        "name": "Toes to Bar",
         "level": "beginner",
         "videoURL": "https://www.youtube.com/watch?v=S2QVHl6DoNo",
         "equipment": ["overheadBar"],
@@ -840,8 +839,8 @@
             }
         },
         "prerequisites": [
-            "dead_hang",
-            "hanging_leg_raises"
+            "hanging_leg_raises",
+            "hanging_knee_raise"
         ]
     },
     {
@@ -941,7 +940,7 @@
     {
         "id": "handstand_press",
         "name": "Handstand Press",
-        "level": "expert",
+        "level": "advanced",
         "videoURL": "https://www.youtube.com/shorts/XxFuPQzQb2w",
         "equipment": ["floor"],
         "mastery": {
@@ -957,7 +956,7 @@
     {
         "id": "handstand_push_up",
         "name": "Handstand Push Up",
-        "level": "expert",
+        "level": "advanced",
         "videoURL": "https://www.youtube.com/watch?v=fMTlYYHSy2A",
         "equipment": ["floor"],
         "progression": [
@@ -1001,7 +1000,7 @@
     {
         "id": "human_flag",
         "name": "Human Flag",
-        "level": "expert",
+        "level": "advanced",
         "videoURL": "https://www.youtube.com/watch?v=TF9XhvYh_m8",
         "equipment": ["verticalBar"],
         "progression": [
@@ -1053,7 +1052,7 @@
     {
         "id": "l_sit_to_handstand",
         "name": "L-Sit to Handstand",
-        "level": "expert",
+        "level": "advanced",
         "videoURL": "https://www.youtube.com/watch?v=J1b9HdHxy5Y",
         "equipment": ["parallelBars"],
         "mastery": {
@@ -1088,7 +1087,7 @@
     },
     {
         "id": "iron_cross",
-        "level": "expert",
+        "level": "advanced",
         "videoURL": "https://www.youtube.com/shorts/74VlSK0pefA",
         "equipment": ["rings"],
         "mastery": {

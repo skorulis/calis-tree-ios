@@ -91,13 +91,14 @@ final class ExerciseDetailViewModel {
     }
 
     var prerequisiteItems: [PrerequisiteItem] {
-        exercise.prerequisites.compactMap { id in
-            guard let prerequisite = repository.exerciseById[id] else { return nil }
-            return PrerequisiteItem(
-                exercise: prerequisite,
-                masteryProgress: mainStore.effectiveMasteryProgress(for: prerequisite)
-            )
-        }
+        repository.progressionChain(to: exercise.id)
+            .filter { $0.id != exercise.id }
+            .map { prerequisite in
+                PrerequisiteItem(
+                    exercise: prerequisite,
+                    masteryProgress: mainStore.effectiveMasteryProgress(for: prerequisite)
+                )
+            }
     }
 
     var isFavorite: Bool {
