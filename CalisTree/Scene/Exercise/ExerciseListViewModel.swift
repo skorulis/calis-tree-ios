@@ -108,4 +108,8 @@ extension ExerciseListViewModel {
     func showDetails(exercise: Exercise) {
         coordinator?.push(MainPath.exerciseDetail(exercise))
     }
+
+    func showAllProgressionTrees() {
+        coordinator?.push(MainPath.allExercisesProgressionTree)
+    }
 }

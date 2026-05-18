@@ -9,6 +9,7 @@ enum MainPath: CoordinatorPath {
     case exerciseVideo(Exercise)
     case exerciseProgression(Exercise)
     case exerciseProgressionTree(Exercise)
+    case allExercisesProgressionTree
     case terminologyList
     case terminologyDetail(Terminology)
 
@@ -24,6 +25,8 @@ enum MainPath: CoordinatorPath {
             "exerciseProgression:\(exercise.id)"
         case .exerciseProgressionTree(let exercise):
             "exerciseProgressionTree:\(exercise.id)"
+        case .allExercisesProgressionTree:
+            "allExercisesProgressionTree"
         case .terminologyList:
             "terminologyList"
         case .terminologyDetail(let term):

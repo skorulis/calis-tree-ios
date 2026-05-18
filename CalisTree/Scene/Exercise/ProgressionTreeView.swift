@@ -27,7 +27,7 @@ struct ProgressionTreeView: View {
                 .frame(width: metrics.contentWidth, height: metrics.contentHeight, alignment: .topLeading)
             }
         }
-        .navigationTitle("Progression Tree")
+        .navigationTitle(viewModel.navigationTitle)
         .navigationBarTitleDisplayMode(.inline)
     }
 

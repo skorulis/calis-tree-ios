@@ -37,6 +37,14 @@ struct ExerciseListView: View {
         .navigationTitle("Exercises")
         .searchable(text: $viewModel.searchText, prompt: Text("Search exercises"))
         .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                Button {
+                    viewModel.showAllProgressionTrees()
+                } label: {
+                    Label("Progression trees", systemImage: "tree")
+                }
+                .accessibilityLabel("All progression trees")
+            }
             ToolbarItem(placement: .primaryAction) {
                 Menu {
                     Picker("Level", selection: $viewModel.filterLevel) {

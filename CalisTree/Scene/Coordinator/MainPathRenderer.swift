@@ -35,6 +35,17 @@ struct MainPathRenderer: CoordinatorPathRenderer {
                     resolver.progressionTreeViewModel(exercise: exercise)
                 )
             )
+        case .allExercisesProgressionTree:
+            ProgressionTreeView(
+                viewModel: coordinator.apply(
+                    ProgressionTreeViewModel(
+                        scope: .allExercises,
+                        mainStore: resolver.mainStore(),
+                        repository: resolver.exerciseRepository(),
+                        layoutService: resolver.progressionTreeLayoutService()
+                    )
+                )
+            )
         case .terminologyList:
             TerminologyListView(
                 viewModel: coordinator.apply(resolver.terminologyListViewModel())
