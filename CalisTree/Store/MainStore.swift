@@ -41,9 +41,8 @@ final class MainStore {
         let progression = fullExercise.progression
         var progressionMastery: [Exercise.ID: MasteryProgress] = [:]
         for variation in progression {
-            let stepProgress = progressionMasteryProgress(
-                for: exercise.id,
-                variationId: variation.id
+            let stepProgress = masteryProgress(
+                for: variation.id
             )
             let stepClamped = min(stepProgress, variation.mastery.intValue)
             progressionMastery[variation.id] = .init(current: stepClamped, target: variation.mastery.intValue)
@@ -53,31 +52,8 @@ final class MainStore {
     }
 
     func setMasteryProgress(_ value: Int, for exerciseId: Exercise.ID) {
-        updateMasteryProgress(max(0, value), forKey: exerciseId)
-    }
-
-    func progressionMasteryProgress(for exerciseId: Exercise.ID, variationId: Exercise.ID) -> Int {
-        masteryByExerciseId[progressionMasteryKey(exerciseId: exerciseId, variationId: variationId)] ?? 0
-    }
-
-    func setProgressionMasteryProgress(
-        _ value: Int,
-        for exerciseId: Exercise.ID,
-        variationId: Exercise.ID
-    ) {
-        updateMasteryProgress(
-            max(0, value),
-            forKey: progressionMasteryKey(exerciseId: exerciseId, variationId: variationId)
-        )
-    }
-
-    private func progressionMasteryKey(exerciseId: Exercise.ID, variationId: Exercise.ID) -> String {
-        "\(exerciseId)-\(variationId)"
-    }
-
-    private func updateMasteryProgress(_ value: Int, forKey key: String) {
         var updated = masteryByExerciseId
-        updated[key] = value
+        updated[exerciseId] = value
         masteryByExerciseId = updated
         try? keyValueStore.set(codable: masteryByExerciseId, forKey: Self.masteryKey)
     }

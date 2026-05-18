@@ -7,6 +7,9 @@ struct FullExercise: Identifiable {
     let progression: [ExerciseVariation]
     
     var id: Exercise.ID { exercise.id }
+    
+    // Full exercises can span multiple levels
+    var levels: [Level] { [exercise.safeLevel] }
 }
 
 struct Exercise: Codable {
@@ -15,7 +18,7 @@ struct Exercise: Codable {
     let description: String?
     // Steps to perform this exercise 
     let steps: [String]?
-    let level: Level
+    let level: Level?
     let imageFile: String?
     let videoURL: String
     let equipment: [Equipment]
@@ -24,6 +27,8 @@ struct Exercise: Codable {
     
     // Exercise IDs that should be mastered before this one
     let prerequisites: [ID]
+    
+    var safeLevel: Level { level ?? .beginner }
 }
 
 extension Exercise {

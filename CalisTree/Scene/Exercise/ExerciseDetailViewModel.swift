@@ -72,7 +72,7 @@ final class ExerciseDetailViewModel {
         else { return 0 }
         return min(
             variation.mastery.intValue,
-            mainStore.progressionMasteryProgress(for: exercise.id, variationId: variationId)
+            mainStore.masteryProgress(for: variationId)
         )
     }
 
@@ -80,10 +80,9 @@ final class ExerciseDetailViewModel {
         guard let variation = fullExercise.progression.first(where: { $0.id == variationId })
         else { return }
         let clamped = min(max(0, value), variation.mastery.intValue)
-        mainStore.setProgressionMasteryProgress(
+        mainStore.setMasteryProgress(
             clamped,
-            for: exercise.id,
-            variationId: variationId
+            for: variationId
         )
     }
 

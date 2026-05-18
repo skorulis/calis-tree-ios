@@ -13,7 +13,7 @@ struct ExerciseDetailView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 16) {
-                Chip(level: viewModel.exercise.level)
+                Chip(level: viewModel.exercise.safeLevel)
                 
                 prerequisiteSection
                 
@@ -132,38 +132,41 @@ struct ExerciseDetailView: View {
         if !viewModel.progressionItems.isEmpty {
             VStack(alignment: .leading, spacing: 12) {
                 ForEach(viewModel.progressionItems) { item in
-                    VStack(alignment: .leading, spacing: 8) {
-                        Text("\(item.variation.name)")
-                            .font(.headline)
-                        if let description = item.variation.description {
-                            Text(description)
-                                .font(.subheadline)
-                                .foregroundStyle(.secondary)
-                        }
-                        
-                        Slider(
-                            value: Binding(
-                                get: {
-                                    Double(viewModel.progressionMasteryProgress(for: item.variation.id))
-                                },
-                                set: {
-                                    viewModel.setProgressionMasteryProgress(
-                                        Int($0.rounded()),
-                                        for: item.variation.id
-                                    )
-                                }
-                            ),
-                            in: 0...Double(item.variation.mastery.intValue),
-                            step: 1
-                        )
-                        Text(viewModel.progressionMasteryLabel(for: item.variation))
-                            .font(.subheadline)
-                            .foregroundStyle(.secondary)
-                        
-                        stepArrow
-                    }
+                    progressionItem(for: item)
                 }
             }
+        }
+    }
+    
+    private func progressionItem(for item: ProgressionStepItem) -> some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text("\(item.variation.name)")
+                .font(.headline)
+            if let description = item.variation.description {
+                Text(description)
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
+            }
+            
+            Slider(
+                value: Binding(
+                    get: {
+                        Double(viewModel.progressionMasteryProgress(for: item.variation.id))
+                    },
+                    set: {
+                        viewModel.setProgressionMasteryProgress(
+                            Int($0.rounded()),
+                            for: item.variation.id
+                        )
+                    }
+                ),
+                in: 0...Double(item.variation.mastery.intValue),
+                step: 1
+            )
+            Text(viewModel.progressionMasteryLabel(for: item.variation))
+                .font(.subheadline)
+                .foregroundStyle(.secondary)
+            stepArrow
         }
     }
     

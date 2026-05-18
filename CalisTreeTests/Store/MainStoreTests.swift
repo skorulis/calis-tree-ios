@@ -20,10 +20,10 @@ struct MainStoreTests {
     @Test func progressionMasteryProgressPersistsAcrossInstances() {
         let keyValueStore = InMemoryDefaults()
         let first = MainStore(keyValueStore: keyValueStore)
-        first.setProgressionMasteryProgress(8, for: "one_arm_elbow_lever", variationId: "bent_knee")
+        first.setMasteryProgress(8, for: "bent_knee")
 
         let second = MainStore(keyValueStore: keyValueStore)
-        #expect(second.progressionMasteryProgress(for: "one_arm_elbow_lever", variationId: "bent_knee") == 8)
+        #expect(second.masteryProgress(for: "bent_knee") == 8)
         #expect(second.masteryProgress(for: "one_arm_elbow_lever") == 0)
     }
 
@@ -69,8 +69,8 @@ struct MainStoreTests {
                 ExerciseVariation(id: "straddle", name: "Straddle", description: nil, level: nil, mastery: .time(10)),
             ]
         )
-        store.setProgressionMasteryProgress(5, for: exercise.id, variationId: "bent_knee")
-        store.setProgressionMasteryProgress(10, for: exercise.id, variationId: "straddle")
+        store.setMasteryProgress(5, for: "bent_knee")
+        store.setMasteryProgress(10, for: "straddle")
 
         #expect(store.effectiveMasteryProgress(for: fullExercise).fraction == 0.5)
     }
@@ -97,7 +97,7 @@ struct MainStoreTests {
             ]
         )
         store.setMasteryProgress(10, for: exercise.id)
-        store.setProgressionMasteryProgress(0, for: exercise.id, variationId: "bent_knee")
+        store.setMasteryProgress(0, for: "bent_knee")
         #expect(store.effectiveMasteryProgress(for: fullExercise).fraction == 1)
     }
 
