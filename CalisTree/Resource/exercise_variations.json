@@ -30,6 +30,16 @@
         }
     },
     {
+        "id": "planche_lean_waist",
+        "name": "Chest Level",
+        "description": "Move your hands all the way down to your waist",
+        "mastery": {
+            "time": {
+                "_0": 10
+            }
+        }
+    },
+    {
         "id": "bent_knee",
         "name": "Bent Knee",
         "description": "Start from a kneeling position and keep your knees bent as you lift. This reduces the lever and makes it easier to assume the position",
@@ -115,6 +125,16 @@
         "description": "From a planche lean position, perform the downards portion of the exercise without pushing back up",
         "mastery": {
             "reps": {
+                "_0": 10
+            }
+        }
+    },
+    {
+        "id": "pseudo_planche_push_up_chest",
+        "name": "Chest Level",
+        "description": "Move forwards until your hands are at chest position and perform the the push up",
+        "mastery": {
+            "time": {
                 "_0": 10
             }
         }
@@ -300,12 +320,31 @@
         }
     },
     {
+        "id": "standard_tuck_planche",
+        "name": "Standard",
+        "mastery": {
+            "time": {
+                "_0": 10
+            }
+        }
+    },
+    {
         "id": "advanced_tuck_planche",
         "name": "Advanced",
         "description": "Rather than tucking your knees into your chest, move your legs backwards so your thighs are perpendicular to the floor",
         "mastery": {
-            "reps": {
+            "time": {
                 "_0": 10
+            }
+        }
+    },
+    {
+        "id": "kneeling_push_up",
+        "name": "Kneeling",
+        "description": "Perform the push up from a kneeling position rather than on your toes. This will reduce the amount of body weight you need to lift",
+        "mastery": {
+            "reps": {
+                "_0": 15
             }
         }
     }

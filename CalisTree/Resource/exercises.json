@@ -260,6 +260,7 @@
                 "_0": 25
             }
         },
+        "progression": ["kneeling_push_up"],
         "prerequisites": [
             "wall_push_up"
         ]
@@ -315,18 +316,15 @@
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/shorts/ca0yGW8071Y",
         "equipment": [],
-        "mastery": {
-            "time": {
-                "_0": 10
-            }
-        },
         "prerequisites": [
             "push_up",
             "decline_push_up",
-            "reverse_leg_raises"
+            "reverse_leg_raises",
+            "push_up_shoulder_protractions"
         ],
         "progression": [
-            "planche_lean_chest"
+            "planche_lean_chest",
+            "planche_lean_waist"
         ]
     },
     {
@@ -335,12 +333,8 @@
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/shorts/-cxjiLArpls",
         "equipment": [],
-        "mastery": {
-            "time": {
-                "_0": 10
-            }
-        },
         "progression": [
+            "standard_tuck_planche",
             "advanced_tuck_planche"
         ],
         "prerequisites": [
@@ -1413,6 +1407,30 @@
             "handstand",
             "handstand_push_up",
             "handstand_press"
+        ]
+    },
+    {
+        "id": "scapular_protraction_push_up",
+        "level": "beginner",
+        "videoURL": "https://www.youtube.com/shorts/3TsOKiUDzw0",
+        "equipment": [],
+        "steps": [
+            "Start in push-up position with your hands directly under your shoulders and your arms fully straight",
+            "Point your fingers outward with your thumbs facing forward",
+            "Tighten your core and glutes to prevent your hips from sagging",
+            "Without bending your elbows, slowly allow your chest to sink slightly toward the floor by retracting your shoulder blades",
+            "Keep the movement small and controlled—only your shoulder blades should move",
+            "Push through your palms and spread your shoulder blades apart by rounding your upper back slightly",
+            "Fully protract your shoulder blades at the top of the movement while keeping your arms locked straight",
+            "Pause briefly, then slowly return to the starting position"
+        ],
+        "mastery": {
+            "reps": {
+                "_0": 15
+            }
+        },
+        "prerequisites": [
+            "wall_push_up"
         ]
     }
 ]

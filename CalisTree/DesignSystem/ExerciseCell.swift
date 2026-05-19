@@ -13,7 +13,12 @@ struct ExerciseCell: View {
                 Text(exercise.displayName)
                     .font(.headline)
                     .foregroundStyle(.primary)
-                Chip(level: exercise.safeLevel)
+                HStack(spacing: 4) {
+                    Chip(level: exercise.safeLevel)
+                    ForEach(exercise.equipment, id: \.self) { equipment in
+                        Chip(equipment: equipment)
+                    }
+                }
             }
             Spacer(minLength: 0)
             MasteryIndicatorView(
@@ -43,6 +48,26 @@ struct ExerciseCell: View {
 #Preview("No mastery") {
     ExerciseCell(
         exercise: .Preview.hangingHighKneeRaiseWithoutMastery,
+        masteryProgress: .none
+    )
+    .padding()
+}
+
+#Preview("Multiple equipment") {
+    ExerciseCell(
+        exercise: Exercise(
+            id: "dip",
+            name: "Dip",
+            description: nil,
+            steps: nil,
+            level: .intermediate,
+            imageFile: nil,
+            videoURL: "",
+            equipment: [.parallelBars, .rings],
+            mastery: nil,
+            progression: nil,
+            prerequisites: []
+        ),
         masteryProgress: .none
     )
     .padding()

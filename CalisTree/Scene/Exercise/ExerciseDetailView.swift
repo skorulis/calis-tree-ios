@@ -13,8 +13,13 @@ struct ExerciseDetailView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 16) {
-                Chip(level: viewModel.exercise.safeLevel)
-                
+                HStack(spacing: 4) {
+                    Chip(level: viewModel.exercise.safeLevel)
+                    ForEach(viewModel.exercise.equipment, id: \.self) { equipment in
+                        Chip(equipment: equipment)
+                    }
+                }
+
                 prerequisiteSection
                 
                 stepsSection
@@ -22,14 +27,6 @@ struct ExerciseDetailView: View {
                 masterySection
                 
                 videoPlayButton
-                
-                VStack(alignment: .leading, spacing: 8) {
-                    Text("Equipment")
-                        .font(.headline)
-                    ForEach(viewModel.exercise.equipment, id: \.self) { item in
-                        Text(item.description)
-                    }
-                }
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.margin)

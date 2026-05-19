@@ -1,6 +1,7 @@
 // Created by Alex Skorulis on 15/5/2026.
 
 import Foundation
+import SwiftUI
 
 enum Equipment: String, Codable, CaseIterable {
     case captainsChair
@@ -23,5 +24,9 @@ enum Equipment: String, Codable, CaseIterable {
         case .verticalBar: "Vertical Bar"
         case .lowBar: "Low Bar"
         }
+    }
+
+    var chipColor: Color {
+        .secondary
     }
 }

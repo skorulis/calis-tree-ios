@@ -16,6 +16,11 @@ struct Chip: View {
         self.color = level.chipColor
     }
 
+    init(equipment: Equipment) {
+        self.text = equipment.description
+        self.color = equipment.chipColor
+    }
+
     var body: some View {
         Text(text)
             .font(.caption.weight(.semibold))
@@ -30,6 +35,15 @@ struct Chip: View {
     VStack(alignment: .leading, spacing: 8) {
         ForEach(Level.allCases, id: \.self) { level in
             Chip(level: level)
+        }
+    }
+    .padding()
+}
+
+#Preview("Equipment") {
+    HStack(spacing: 4) {
+        ForEach(Equipment.allCases, id: \.self) { equipment in
+            Chip(equipment: equipment)
         }
     }
     .padding()

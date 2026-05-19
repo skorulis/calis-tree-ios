@@ -4,7 +4,7 @@ import SwiftUI
 import UIKit
 
 struct TimerView: View {
-    /// When false (e.g. another tab selected), microphone listening is paused so SwiftUI TabView quirks do not leave audio running.
+    /// When false (e.g. another tab selected), an active microphone session is ended so SwiftUI TabView quirks do not leave audio running.
     var voiceListeningShouldBeActive: Bool = true
 
     @State private var accumulatedElapsed: TimeInterval = 0
@@ -27,11 +27,11 @@ struct TimerView: View {
             Spacer()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .task(id: voiceListeningShouldBeActive) {
+        .onAppear {
             voice.setActions(start: startIfPaused, stop: pauseIfRunning)
-            if voiceListeningShouldBeActive {
-                await voice.beginListeningSession()
-            } else {
+        }
+        .onChange(of: voiceListeningShouldBeActive) { _, shouldAllowVoice in
+            if !shouldAllowVoice {
                 voice.endListeningSession()
             }
         }
@@ -44,20 +44,20 @@ struct TimerView: View {
         }
     }
 
+    @ViewBuilder
     private var voiceStatus: some View {
-        Group {
-            if voice.isListening {
-                Label("Listening for “start timer” or “stop timer”", systemImage: "mic.fill")
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
-                    .accessibilityHint("Speak clearly to control the timer")
-            } else if voice.voiceUnavailable {
-                Text("Voice commands need microphone and speech recognition access in Settings.")
-                    .font(.caption2)
-                    .foregroundStyle(.tertiary)
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal, 8)
-            }
+        if voice.voiceUnavailable {
+            Text("Voice commands need microphone and speech recognition access in Settings.")
+                .font(.caption2)
+                .foregroundStyle(.tertiary)
+                .multilineTextAlignment(.center)
+                .padding(.horizontal, 8)
+        } else {
+            Label("Listening for “start timer” or “stop timer”", systemImage: "mic.fill")
+                .font(.caption)
+                .foregroundStyle(.secondary)
+                .accessibilityHint("Speak clearly to control the timer")
+                .opacity(voice.isListening ? 1 : 0)
         }
     }
 
@@ -73,10 +73,23 @@ struct TimerView: View {
     }
     
     private var buttons: some View {
-        VStack {
+        VStack(spacing: 16) {
+            microphoneButton
             toggleButton
             resetButton
         }
+    }
+
+    private var microphoneButton: some View {
+        Button(action: toggleVoiceListening) {
+            Image(systemName: voice.isListening ? "mic.circle.fill" : "mic.circle")
+                .font(.system(size: 56))
+                .symbolRenderingMode(.hierarchical)
+                .foregroundStyle(voice.isListening ? Color.green : Color.secondary)
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel(voice.isListening ? "Stop voice control" : "Start voice control")
+        .accessibilityHint("Say “start timer” or “stop timer” to control the timer")
     }
 
     private var toggleButton: some View {
@@ -120,6 +133,16 @@ struct TimerView: View {
             pauseIfRunning()
         } else {
             startIfPaused()
+        }
+    }
+
+    private func toggleVoiceListening() {
+        if voice.isListening {
+            voice.endListeningSession()
+        } else {
+            Task {
+                await voice.beginListeningSession()
+            }
         }
     }
 
