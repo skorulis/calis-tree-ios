@@ -57,7 +57,7 @@ struct MainStoreTests {
             level: .advanced,
             imageFile: nil,
             videoURL: "https://example.com",
-            equipment: [.floor],
+            equipment: [],
             mastery: .time(10),
             progression: ["bent_knee", "straddle"],
             prerequisites: []
@@ -85,7 +85,7 @@ struct MainStoreTests {
             level: .advanced,
             imageFile: nil,
             videoURL: "https://example.com",
-            equipment: [.floor],
+            equipment: [],
             mastery: .time(10),
             progression: ["bent_knee"],
             prerequisites: []
@@ -115,7 +115,7 @@ struct MainStoreTests {
         let second = MainStore(keyValueStore: keyValueStore)
         #expect(!second.isEquipmentAvailable(.rings))
         #expect(!second.isEquipmentAvailable(.lowBar))
-        #expect(second.isEquipmentAvailable(.floor))
+        #expect(second.isEquipmentAvailable(.overheadBar))
     }
 
     @Test func favoritesPersistAcrossInstances() {

@@ -7,8 +7,6 @@ enum Equipment: String, Codable, CaseIterable {
     case overheadBar
     case parallelBars
     case paralletteBars
-    case floor
-    case wall
     case rings
     case raisedSurface
     case verticalBar
@@ -20,9 +18,7 @@ enum Equipment: String, Codable, CaseIterable {
         case .overheadBar: "Overhead Bar"
         case .parallelBars: "Parallel Bars"
         case .paralletteBars: "Parallette Bars"
-        case .floor: "Floor"
         case .rings: "Rings"
-        case .wall: "Wall"
         case .raisedSurface: "Raised Surface"
         case .verticalBar: "Vertical Bar"
         case .lowBar: "Low Bar"

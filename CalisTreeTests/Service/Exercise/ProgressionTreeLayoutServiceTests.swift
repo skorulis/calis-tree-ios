@@ -104,7 +104,7 @@ struct ProgressionTreeLayoutServiceTests {
             level: level,
             imageFile: nil,
             videoURL: "https://example.com",
-            equipment: [.floor],
+            equipment: [],
             mastery: .reps(10),
             progression: nil,
             prerequisites: prerequisites

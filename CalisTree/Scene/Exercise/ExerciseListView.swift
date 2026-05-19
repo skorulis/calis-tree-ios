@@ -34,6 +34,7 @@ struct ExerciseListView: View {
                 }
             }
         }
+        .scrollDismissesKeyboard(.immediately)
         .navigationTitle("Exercises")
         .searchable(text: $viewModel.searchText, prompt: Text("Search exercises"))
         .toolbar {

@@ -278,5 +278,35 @@
                 "_0": 20
             }
         }
+    },
+    {
+        "id": "elevated_one_arm_push_up",
+        "name": "Elevated",
+        "description": "Place your hand on an elevated surface to get used to the movement with lower resistance",
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        }
+    },
+    {
+        "id": "assisted_one_arm_push_up",
+        "name": "Assisted",
+        "description": "Place your other hand on a raised surface to provide balance and support while training the strength of the other arm",
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        }
+    },
+    {
+        "id": "advanced_tuck_planche",
+        "name": "Advanced",
+        "description": "Rather than tucking your knees into your chest, move your legs backwards so your thighs are perpendicular to the floor",
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        }
     }
 ]
