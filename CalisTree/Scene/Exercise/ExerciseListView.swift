@@ -63,7 +63,7 @@ struct ExerciseListView: View {
         .sheet(isPresented: $isFilterPresented) {
             ExerciseListFilterView(
                 filterLevel: $viewModel.filterLevel,
-                filterEquipment: $viewModel.filterEquipment,
+                filterEquipmentAvailability: $viewModel.filterEquipmentAvailability,
                 filterProgress: $viewModel.filterProgress,
                 hasActiveFilters: viewModel.hasActiveFilters,
                 onClear: viewModel.resetFilters

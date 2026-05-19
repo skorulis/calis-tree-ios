@@ -29,6 +29,20 @@ enum ExerciseProgressFilter: String, CaseIterable, Hashable {
     }
 }
 
+enum EquipmentAvailabilityFilter: CaseIterable, Hashable {
+    case all
+    case available
+
+    var menuTitle: String {
+        switch self {
+        case .all:
+            "All"
+        case .available:
+            "Available"
+        }
+    }
+}
+
 @MainActor
 @Observable
 final class ExerciseListViewModel: CoordinatorViewModel {
@@ -39,7 +53,7 @@ final class ExerciseListViewModel: CoordinatorViewModel {
 
     var searchText: String = ""
     var filterLevel: Level?
-    var filterEquipment: Equipment?
+    var filterEquipmentAvailability: EquipmentAvailabilityFilter = .all
     var filterProgress: ExerciseProgressFilter?
 
     @Resolvable<Resolver>
@@ -49,7 +63,9 @@ final class ExerciseListViewModel: CoordinatorViewModel {
     }
 
     var hasActiveFilters: Bool {
-        filterLevel != nil || filterEquipment != nil || filterProgress != nil
+        filterLevel != nil
+            || filterEquipmentAvailability != .all
+            || filterProgress != nil
     }
 
     var items: [ExerciseListItem] {
@@ -60,7 +76,11 @@ final class ExerciseListViewModel: CoordinatorViewModel {
             guard matchesProgress(exercise: exercise, progress: progress, filter: filterProgress)
             else { return nil }
             if let filterLevel, exercise.level != filterLevel { return nil }
-            if let filterEquipment, !exercise.equipment.contains(filterEquipment) { return nil }
+            if filterEquipmentAvailability == .available,
+               !exercise.equipment.allSatisfy(mainStore.isEquipmentAvailable)
+            {
+                return nil
+            }
             guard Self.matchesSearch(name: exercise.displayName, tokens: tokens) else { return nil }
             return ExerciseListItem(
                 exercise: exercise,
@@ -74,7 +94,7 @@ final class ExerciseListViewModel: CoordinatorViewModel {
 
     func resetFilters() {
         filterLevel = nil
-        filterEquipment = nil
+        filterEquipmentAvailability = .all
         filterProgress = nil
     }
 

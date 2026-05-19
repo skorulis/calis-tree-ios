@@ -4,7 +4,7 @@ import SwiftUI
 
 struct ExerciseListFilterView: View {
     @Binding var filterLevel: Level?
-    @Binding var filterEquipment: Equipment?
+    @Binding var filterEquipmentAvailability: EquipmentAvailabilityFilter
     @Binding var filterProgress: ExerciseProgressFilter?
     let hasActiveFilters: Bool
     let onClear: () -> Void
@@ -29,15 +29,12 @@ struct ExerciseListFilterView: View {
                 }
 
                 Section("Equipment") {
-                    filterRow(title: "All equipment", isSelected: filterEquipment == nil) {
-                        filterEquipment = nil
-                    }
-                    ForEach(Equipment.allCases, id: \.self) { equipment in
+                    ForEach(EquipmentAvailabilityFilter.allCases, id: \.self) { option in
                         filterRow(
-                            title: equipment.description,
-                            isSelected: filterEquipment == equipment
+                            title: option.menuTitle,
+                            isSelected: filterEquipmentAvailability == option
                         ) {
-                            filterEquipment = equipment
+                            filterEquipmentAvailability = option
                         }
                     }
                 }
@@ -96,17 +93,19 @@ struct ExerciseListFilterView: View {
 
 #Preview {
     @Previewable @State var filterLevel: Level? = .beginner
-    @Previewable @State var filterEquipment: Equipment?
+    @Previewable @State var filterEquipmentAvailability: EquipmentAvailabilityFilter = .available
     @Previewable @State var filterProgress: ExerciseProgressFilter? = .inProgress
 
     ExerciseListFilterView(
         filterLevel: $filterLevel,
-        filterEquipment: $filterEquipment,
+        filterEquipmentAvailability: $filterEquipmentAvailability,
         filterProgress: $filterProgress,
-        hasActiveFilters: filterLevel != nil || filterEquipment != nil || filterProgress != nil,
+        hasActiveFilters: filterLevel != nil
+            || filterEquipmentAvailability != .all
+            || filterProgress != nil,
         onClear: {
             filterLevel = nil
-            filterEquipment = nil
+            filterEquipmentAvailability = .all
             filterProgress = nil
         }
     )
