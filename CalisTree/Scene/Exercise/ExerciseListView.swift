@@ -8,6 +8,7 @@ import SwiftUI
 struct ExerciseListView: View {
     @State var viewModel: ExerciseListViewModel
     @Bindable private var mainStore: MainStore
+    @State private var isFilterPresented = false
 
     init(viewModel: ExerciseListViewModel, mainStore: MainStore) {
         self._viewModel = State(initialValue: viewModel)
@@ -47,37 +48,27 @@ struct ExerciseListView: View {
                 .accessibilityLabel("All progression trees")
             }
             ToolbarItem(placement: .primaryAction) {
-                Menu {
-                    Picker("Level", selection: $viewModel.filterLevel) {
-                        Text("All levels").tag(Optional<Level>.none)
-                        ForEach(Level.allCases, id: \.self) { level in
-                            Text(level.displayTitle).tag(Optional(level))
-                        }
-                    }
-
-                    Picker("Equipment", selection: $viewModel.filterEquipment) {
-                        Text("All equipment").tag(Optional<Equipment>.none)
-                        ForEach(Equipment.allCases, id: \.self) { equipment in
-                            Text(equipment.description).tag(Optional(equipment))
-                        }
-                    }
-
-                    Picker("Status", selection: $viewModel.filterProgress) {
-                        Text("All statuses").tag(Optional<ExerciseProgressFilter>.none)
-                        ForEach(ExerciseProgressFilter.allCases, id: \.self) { status in
-                            Text(status.menuTitle).tag(Optional(status))
-                        }
-                    }
-
-                    if viewModel.hasActiveFilters {
-                        Button("Clear filters") {
-                            viewModel.resetFilters()
-                        }
-                    }
+                Button {
+                    isFilterPresented = true
                 } label: {
-                    Label("Filter", systemImage: "line.3.horizontal.decrease.circle")
+                    Label(
+                        "Filter",
+                        systemImage: viewModel.hasActiveFilters
+                            ? "line.3.horizontal.decrease.circle.fill"
+                            : "line.3.horizontal.decrease.circle"
+                    )
                 }
             }
+        }
+        .sheet(isPresented: $isFilterPresented) {
+            ExerciseListFilterView(
+                filterLevel: $viewModel.filterLevel,
+                filterEquipment: $viewModel.filterEquipment,
+                filterProgress: $viewModel.filterProgress,
+                hasActiveFilters: viewModel.hasActiveFilters,
+                onClear: viewModel.resetFilters
+            )
+            .presentationDetents([.medium, .large])
         }
     }
 
