@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "hollow_hold.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

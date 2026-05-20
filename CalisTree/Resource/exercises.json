@@ -160,6 +160,7 @@
     {
         "id": "front_lever",
         "level": "advanced",
+        "imageFile": "front_lever",
         "videoURL": "https://www.youtube.com/shorts/Iuau9zhTM-Q",
         "equipment": [
             "overheadBar"
@@ -194,6 +195,7 @@
         "id": "planche",
         "name": "Planche",
         "level": "advanced",
+        "imageFile": "planche",
         "videoURL": "https://www.youtube.com/watch?v=OmKfROtB45Q&t=372s",
         "equipment": [],
         "mastery": {
@@ -379,6 +381,7 @@
             "Keep your neck neutral by looking down at the floor slightly ahead of your hands"
         ],
         "level": "beginner",
+        "imageFile": "plank",
         "videoURL": "https://www.youtube.com/shorts/xe2MXatLTUw",
         "equipment": [],
         "mastery": {
@@ -526,6 +529,7 @@
     {
         "id": "bench_dip",
         "name": "Bench Dip",
+        "imageFile": "bench_dip",
         "alternateNames": [
             "Box Dip"
         ],
@@ -555,6 +559,7 @@
     {
         "id": "dip",
         "level": "beginner",
+        "imageFile": "chest_dip",
         "videoURL": "https://www.youtube.com/shorts/dij0l_pL0z8",
         "equipment": [
             "parallelBars"
@@ -591,6 +596,7 @@
     {
         "id": "pike_hold",
         "level": "beginner",
+        "imageFile": "pike",
         "videoURL": "https://www.youtube.com/shorts/4-YsxfnZrT8",
         "equipment": [],
         "progression": [
@@ -610,6 +616,7 @@
     {
         "id": "pike_shrug",
         "level": "beginner",
+        "imageFile": "pike",
         "videoURL": "https://www.youtube.com/shorts/qDyo7z8TebA",
         "equipment": [],
         "mastery": {
@@ -625,6 +632,7 @@
         "id": "pike_push_up",
         "name": "Pike Push Up",
         "level": "intermediate",
+        "imageFile": "pike",
         "videoURL": "https://www.youtube.com/shorts/_wYRaVHVr6g",
         "equipment": [],
         "progression": [
@@ -676,6 +684,7 @@
         "id": "hollow_hold",
         "name": "Hollow Hold",
         "level": "beginner",
+        "imageFile": "hollow_hold",
         "videoURL": "https://www.youtube.com/shorts/Mjeur54Z0wI",
         "equipment": [],
         "mastery": {
@@ -749,6 +758,7 @@
         "id": "dead_hang",
         "name": "Dead Hang",
         "level": "beginner",
+        "imageFile": "pull-up",
         "videoURL": "https://www.youtube.com/shorts/9eY15prKcUY",
         "equipment": [
             "overheadBar"
@@ -783,6 +793,7 @@
         "id": "dragon_flag",
         "name": "Dragon Flag",
         "level": "intermediate",
+        "imageFile": "dragon_flag",
         "videoURL": "https://www.youtube.com/shorts/yFiNw9EsJfI",
         "equipment": [],
         "mastery": {
@@ -798,6 +809,7 @@
     {
         "id": "back_lever",
         "level": "advanced",
+        "imageFile": "back_lever",
         "videoURL": "https://www.youtube.com/shorts/3hrN5Wz5HDw",
         "equipment": [
             "overheadBar"
@@ -1148,6 +1160,7 @@
     {
         "id": "squat",
         "level": "beginner",
+        "imageFile": "squat",
         "videoURL": "https://www.youtube.com/shorts/n_xLyzPEX7A",
         "equipment": [],
         "mastery": {
@@ -1203,6 +1216,7 @@
     {
         "id": "horse_stance",
         "level": "intermediate",
+        "imageFile": "squat",
         "videoURL": "https://www.youtube.com/shorts/mjdMjaYXIcI",
         "equipment": [],
         "mastery": {
@@ -1346,6 +1360,20 @@
         "prerequisites": []
     },
     {
+        "id": "reverse_lunge",
+        "level": "beginner",
+        "videoURL": "https://www.youtube.com/shorts/b_2qgdXT_QQ",
+        "equipment": [],
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        },
+        "prerequisites": [
+            "lunge"
+        ]
+    },
+    {
         "id": "frog_stand",
         "alternateNames": [
             "Crow Pose"
@@ -1432,5 +1460,100 @@
         "prerequisites": [
             "wall_push_up"
         ]
+    },
+    {
+        "id": "straight_bar_dip",
+        "level": "intermediate",
+        "videoURL": "https://www.youtube.com/shorts/ZE3jWrfR2TA",
+        "equipment": [
+            "overheadBar"
+        ],
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        },
+        "prerequisites": [
+            "dip"
+        ]
+    },
+    {
+        "id": "standing_calf_raise",
+        "level": "foundation",
+        "videoURL": "https://www.youtube.com/shorts/wdOkFomQNp8",
+        "equipment": [],
+        "mastery": {
+            "reps": {
+                "_0": 20
+            }
+        },
+        "prerequisites": []
+    },
+    {
+        "id": "arch_hold",
+        "alternateNames": [
+            "Superman"
+        ],
+        "level": "beginner",
+        "videoURL": "https://www.youtube.com/watch?v=zD2MQNR6QeY",
+        "equipment": [],
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        },
+        "prerequisites": []
+    },
+    {
+        "id": "butchers_block",
+        "level": "foundation",
+        "videoURL": "https://www.youtube.com/watch?v=oDnP3sPkdO0",
+        "equipment": ["raisedSurface"],
+        "mastery": {
+            "time": {
+                "_0": 10
+            }
+        },
+        "prerequisites": []
+    },
+    {
+        "id": "reverse_nordic",
+        "level": "intermediate",
+        "videoURL": "https://www.youtube.com/shorts/Jf9KojDHN7E",
+        "equipment": [],
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        },
+        "prerequisites": [
+            "reverse_lunge",
+            "bulgarian_split_squat",
+            "deadbug"
+        ]
+    },
+    {
+        "id": "bulgarian_split_squat",
+        "level": "beginner",
+        "videoURL": "https://www.youtube.com/shorts/or1frhkjBDc",
+        "equipment": [],
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        },
+        "prerequisites": []
+    },
+    {
+        "id": "deadbug",
+        "level": "beginner",
+        "videoURL": "https://www.youtube.com/shorts/Aoipu_fl3HA",
+        "equipment": [],
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        },
+        "prerequisites": []
     }
 ]
