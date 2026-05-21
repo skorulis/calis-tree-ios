@@ -10,16 +10,6 @@
         }
     },
     {
-        "id": "tuck_l_sit",
-        "name": "Tuck L-Sit",
-        "description": "Bring your knees as close as you can to your body and elevate from the ground",
-        "mastery": {
-            "time": {
-                "_0": 10
-            }
-        }
-    },
-    {
         "id": "planche_lean_chest",
         "name": "Chest Level",
         "description": "Instead of moving forwards until your hands are at your waist position, only move forwards until your hands are at chest position",

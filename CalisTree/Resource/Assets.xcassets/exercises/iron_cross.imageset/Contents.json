@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "iron_cross.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "high_side_plank.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

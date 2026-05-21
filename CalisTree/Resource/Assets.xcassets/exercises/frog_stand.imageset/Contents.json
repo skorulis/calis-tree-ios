@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "frog_stand.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -230,9 +230,28 @@
         "prerequisites": []
     },
     {
+        "id": "tucked_l_sit",
+        "name": "Tucked L-Sit",
+        "level": "beginner",
+        "videoURL": "https://www.youtube.com/shorts/PLffPwepgiY",
+        "equipment": [],
+        "mastery": {
+            "time": {
+                "_0": 10
+            }
+        },
+        "progression": [],
+        "prerequisites": [
+            "plank",
+            "boat_hold",
+            "seated_leg_raise"
+        ]
+    },
+    {
         "id": "l_sit",
         "name": "L-Sit",
         "level": "beginner",
+        "imageFile": "floor_l_sit",
         "videoURL": "https://www.youtube.com/shorts/z-gbvxX8fHg",
         "equipment": [],
         "mastery": {
@@ -241,14 +260,11 @@
             }
         },
         "progression": [
-            "l_sit_leg_raises",
-            "tuck_l_sit"
+            "l_sit_leg_raises"
         ],
         "prerequisites": [
             "l_sit_kicks",
-            "plank",
-            "boat_hold",
-            "seated_leg_raise"
+            "tucked_l_sit"
         ]
     },
     {
@@ -956,6 +972,7 @@
         "id": "human_flag",
         "name": "Human Flag",
         "level": "advanced",
+        "imageFile": "human_flag",
         "videoURL": "https://www.youtube.com/watch?v=TF9XhvYh_m8",
         "equipment": [
             "verticalBar"
@@ -1022,6 +1039,7 @@
     {
         "id": "iron_cross",
         "level": "advanced",
+        "imageFile": "iron_cross",
         "videoURL": "https://www.youtube.com/shorts/74VlSK0pefA",
         "equipment": [
             "rings"
@@ -1055,6 +1073,7 @@
     {
         "id": "high_side_plank",
         "level": "beginner",
+        "imageFile": "high_side_plank",
         "videoURL": "https://www.youtube.com/shorts/vChJ24IH9mA",
         "equipment": [],
         "mastery": {
@@ -1305,6 +1324,7 @@
             "Australian Pull Up"
         ],
         "level": "beginner",
+        "imageFile": "inverted_row",
         "videoURL": "https://www.youtube.com/shorts/EfE7JeD8o6Y",
         "equipment": [
             "lowBar"
@@ -1340,6 +1360,7 @@
         ],
         "description": "A pull up where you continue past getting your chin above the bar",
         "level": "intermediate",
+        "imageFile": "pull-up",
         "videoURL": "https://www.youtube.com/shorts/70n4MbkhEMs",
         "equipment": [
             "overheadBar"
@@ -1372,6 +1393,7 @@
     {
         "id": "crunch",
         "level": "foundation",
+        "imageFile": "crunch",
         "videoURL": "https://www.youtube.com/watch?v=MKmrqcoCZ-M",
         "equipment": [],
         "mastery": {
@@ -1424,6 +1446,7 @@
             "Crow Pose"
         ],
         "level": "beginner",
+        "imageFile": "frog_stand",
         "videoURL": "https://www.youtube.com/shorts/KSD6mWsbWhk",
         "equipment": [],
         "progression": [
@@ -1443,6 +1466,7 @@
     {
         "id": "one_arm_push_up",
         "level": "advanced",
+        "imageFile": "one_arm_push_up",
         "steps": [
             "Start in a push-up position with your feet set slightly wider than shoulder-width for stability",
             "Place one hand behind your back or out to the side and keep the other hand planted under your chest.",
@@ -1567,6 +1591,7 @@
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/shorts/Jf9KojDHN7E",
         "equipment": [],
+        "imageFile": "reverse_nordic",
         "mastery": {
             "reps": {
                 "_0": 10
