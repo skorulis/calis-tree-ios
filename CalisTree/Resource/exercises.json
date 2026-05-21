@@ -713,6 +713,7 @@
         "id": "boat_hold",
         "name": "Boat Hold",
         "level": "beginner",
+        "imageFile": "boat_hold",
         "videoURL": "https://www.youtube.com/shorts/vnT3wyBP4UA",
         "equipment": [],
         "mastery": {
@@ -1037,6 +1038,7 @@
     {
         "id": "scapular_shrugs",
         "level": "beginner",
+        "imageFile": "pull-up",
         "videoURL": "https://www.youtube.com/shorts/9M8ylnbriB0",
         "equipment": [
             "overheadBar"

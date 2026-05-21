@@ -75,23 +75,18 @@ struct ProgressionTreeContentView: View {
 
     @ViewBuilder
     private func nodeView(placement: ProgressionTreeNodePlacement) -> some View {
-        let avatar = ExerciseAvatar(
-            exercise: placement.node.exercise,
-            masteryProgress: masteryProgress(placement.node.exercise),
-            showName: true
-        )
-        .frame(width: placement.frame.width, height: placement.frame.height, alignment: .topLeading)
-        .offset(x: placement.frame.minX, y: placement.frame.minY)
-
-        if let onSelectExercise {
-            Button {
-                onSelectExercise(placement.node.exercise)
-            } label: {
-                avatar
-            }
-            .buttonStyle(.plain)
-        } else {
-            avatar
+        Button {
+            onSelectExercise?(placement.node.exercise)
+        } label: {
+            ExerciseAvatar(
+                exercise: placement.node.exercise,
+                masteryProgress: masteryProgress(placement.node.exercise),
+                showName: true
+            )
+            .frame(width: placement.frame.width, height: placement.frame.height, alignment: .topLeading)
         }
+        .buttonStyle(.plain)
+        .offset(x: placement.frame.minX, y: placement.frame.minY)
+        
     }
 }
