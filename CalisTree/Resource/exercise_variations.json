@@ -60,26 +60,6 @@
         }
     },
     {
-        "id": "wall_walk_ins",
-        "name": "Wall Walk ins",
-        "description": "Start in a push up position with your feet against the wall and walk your feet up the wall and your hands towards it",
-        "mastery": {
-            "time": {
-                "_0": 10
-            }
-        }
-    },
-    {
-        "id": "wall",
-        "name": "Wall",
-        "description": "Perform a handstand with your feet against the wall",
-        "mastery": {
-            "time": {
-                "_0": 10
-            }
-        }
-    },
-    {
         "id": "pike_floor_hold",
         "name": "Floor",
         "description": "Get into the position and hold",
@@ -335,16 +315,6 @@
         "mastery": {
             "time": {
                 "_0": 10
-            }
-        }
-    },
-    {
-        "id": "kneeling_push_up",
-        "name": "Kneeling",
-        "description": "Perform the push up from a kneeling position rather than on your toes. This will reduce the amount of body weight you need to lift",
-        "mastery": {
-            "reps": {
-                "_0": 15
             }
         }
     }

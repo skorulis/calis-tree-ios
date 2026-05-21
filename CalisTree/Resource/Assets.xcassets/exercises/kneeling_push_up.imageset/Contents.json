@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "kneeling_push_up.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

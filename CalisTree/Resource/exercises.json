@@ -252,6 +252,20 @@
         ]
     },
     {
+        "id": "kneeling_push_up",
+        "level": "foundation",
+        "imageFile": "kneeling_push_up",
+        "videoURL": "https://www.youtube.com/shorts/W0GFFzyYUWI",
+        "description": "Perform the push up from a kneeling position rather than on your toes. This will reduce the amount of body weight you need to lift",
+        "equipment": [],
+        "mastery": {
+            "reps": {
+                "_0": 15
+            }
+        },
+        "prerequisites": []
+    },
+    {
         "id": "push_up",
         "level": "beginner",
         "imageFile": "push_up",
@@ -262,15 +276,16 @@
                 "_0": 25
             }
         },
-        "progression": ["kneeling_push_up"],
         "prerequisites": [
-            "wall_push_up"
+            "wall_push_up",
+            "kneeling_push_up"
         ]
     },
     {
         "id": "decline_push_up",
         "name": "Decline Push Up",
         "level": "beginner",
+        "imageFile": "decline_push_up",
         "videoURL": "https://www.youtube.com/shorts/dcV-ATSeryA",
         "equipment": [
             "raisedSurface"
@@ -573,24 +588,51 @@
         ]
     },
     {
-        "id": "handstand",
-        "name": "Handstand",
+        "id": "handstand_wall_walk_ins",
+        "name": "Wall Walk ins",
         "level": "beginner",
-        "videoURL": "https://www.youtube.com/watch?v=KNC5lkoE2Fs",
+        "description": "Start in a push up position with your feet against the wall and walk your feet up the wall and your hands towards it",
+        "videoURL": "https://www.youtube.com/shorts/kAZkLII49fk",
+        "equipment": [],
+        "mastery": {
+            "reps": {
+                "_0": 5
+            }
+        },
+        "prerequisites": [
+            "push_up",
+            "pike_hold"
+        ]
+    },
+    {
+        "id": "wall_handstand",
+        "level": "beginner",
+        "description": "Perform a handstand with your feet against the wall",
+        "videoURL": "https://www.youtube.com/shorts/2XMj3cVh-Hw",
         "equipment": [],
         "mastery": {
             "time": {
                 "_0": 10
             }
         },
-        "progression": [
-            "wall_walk_ins",
-            "wall"
-        ],
         "prerequisites": [
-            "push_up",
-            "pike_hold",
-            "frog_stand"
+            "handstand_wall_walk_ins"
+        ]
+    },
+    {
+        "id": "handstand",
+        "level": "intermediate",
+        "videoURL": "https://www.youtube.com/watch?v=KNC5lkoE2Fs",
+        "imageFile": "handstand",
+        "equipment": [],
+        "mastery": {
+            "time": {
+                "_0": 10
+            }
+        },
+        "prerequisites": [
+            "frog_stand",
+            "wall_handstand"
         ]
     },
     {
@@ -1340,6 +1382,7 @@
     {
         "id": "lunge",
         "level": "foundation",
+        "imageFile":"lunge",
         "videoURL": "https://www.youtube.com/shorts/1cS-6KsJW9g",
         "equipment": [],
         "steps": [
@@ -1495,6 +1538,7 @@
             "Superman"
         ],
         "level": "beginner",
+        "imageFile":"arch_hold",
         "videoURL": "https://www.youtube.com/watch?v=zD2MQNR6QeY",
         "equipment": [],
         "mastery": {
