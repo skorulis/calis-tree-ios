@@ -489,6 +489,7 @@
             "Repeat the movement on the opposite side, alternating each rep",
             "Keep your hips level and avoid twisting your torso too much"
         ],
+        "imageFile": "archer_push_up",
         "videoURL": "https://www.youtube.com/watch?v=MxVbNel13Ek",
         "equipment": [],
         "mastery": {
@@ -1002,6 +1003,7 @@
         "id": "l_sit_to_handstand",
         "name": "L-Sit to Handstand",
         "level": "advanced",
+        "imageFile": "floor_l_sit",
         "videoURL": "https://www.youtube.com/watch?v=J1b9HdHxy5Y",
         "equipment": [
             "parallelBars"
