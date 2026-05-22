@@ -212,10 +212,15 @@ struct ExerciseDetailView: View {
         return item.masteryProgress.fraction
     }
 
+    /// Incomplete (not started and in progress) sort before complete; partial progress does not affect order.
+    private func prerequisiteSortRank(_ item: PrerequisiteItem) -> Int {
+        prerequisiteCompletenessFraction(item) >= 1 ? 1 : 0
+    }
+
     private var sortedPrerequisiteItems: [PrerequisiteItem] {
         viewModel.prerequisiteItems.sorted { lhs, rhs in
-            let l = prerequisiteCompletenessFraction(lhs)
-            let r = prerequisiteCompletenessFraction(rhs)
+            let l = prerequisiteSortRank(lhs)
+            let r = prerequisiteSortRank(rhs)
             if l != r { return l < r }
             if lhs.exercise.safeLevel != rhs.exercise.safeLevel {
                 return lhs.exercise.safeLevel < rhs.exercise.safeLevel

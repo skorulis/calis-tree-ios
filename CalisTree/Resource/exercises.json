@@ -1729,6 +1729,7 @@
     {
         "id": "knee_plank",
         "level": "foundation",
+        "imageFile": "knee_plank",
         "videoURL": "https://www.youtube.com/shorts/cSWXE-RB5wQ",
         "equipment": [],
         "steps": [
