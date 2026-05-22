@@ -7,6 +7,7 @@ import SwiftUI
 extension CoordinatorView {
     func withRenderers(resolver: Resolver) -> Self {
         self.with(renderer: resolver.mainPathRenderer())
+            .with(renderer: OnboardingPathRenderer(resolver: resolver))
     }
 }
 

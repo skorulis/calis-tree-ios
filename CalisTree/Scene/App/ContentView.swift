@@ -18,7 +18,14 @@ private enum RootTab: Hashable {
 
 struct ContentView: View {
     let resolver: Resolver
+    @Bindable private var mainStore: MainStore
     @State private var selectedTab: RootTab = .exercises
+    @State private var showOnboarding = false
+
+    init(resolver: Resolver) {
+        self.resolver = resolver
+        self._mainStore = Bindable(resolver.mainStore())
+    }
 
     var body: some View {
         TabView(selection: $selectedTab) {
@@ -35,6 +42,15 @@ struct ContentView: View {
             \.terminologyLinkIndex,
             resolver.terminologyRepository().linkIndex
         )
+        .onAppear {
+            showOnboarding = !mainStore.hasCompletedOnboarding
+        }
+        .fullScreenCover(isPresented: $showOnboarding) {
+            OnboardingFlowView(resolver: resolver) {
+                mainStore.completeOnboarding()
+                showOnboarding = false
+            }
+        }
     }
 
     private var timer: some View {
@@ -85,5 +101,6 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView(resolver: CalisTreeAssembly.testing().resolver)
+    let assembler = CalisTreeAssembly.testing()
+    ContentView(resolver: assembler.resolver)
 }

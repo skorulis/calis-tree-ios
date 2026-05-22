@@ -130,4 +130,18 @@ struct MainStoreTests {
         #expect(!second.isFavorite(exerciseId: "pull_up"))
     }
 
+    @Test func onboardingCompletionDefaultsToFalse() {
+        let store = MainStore(keyValueStore: InMemoryDefaults())
+        #expect(!store.hasCompletedOnboarding)
+    }
+
+    @Test func onboardingCompletionPersistsAcrossInstances() {
+        let keyValueStore = InMemoryDefaults()
+        let first = MainStore(keyValueStore: keyValueStore)
+        first.completeOnboarding()
+
+        let second = MainStore(keyValueStore: keyValueStore)
+        #expect(second.hasCompletedOnboarding)
+    }
+
 }

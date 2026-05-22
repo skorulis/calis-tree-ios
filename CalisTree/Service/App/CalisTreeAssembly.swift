@@ -90,6 +90,18 @@ final class CalisTreeAssembly: AutoInitModuleAssembly {
         container.register(SettingsViewModel.self) { (resolver: Resolver) in
             SettingsViewModel.make(resolver: resolver)
         }
+
+        container.register(OnboardingWelcomeViewModel.self) { (resolver: Resolver) in
+            OnboardingWelcomeViewModel.make(resolver: resolver)
+        }
+
+        container.register(OnboardingHowToUseViewModel.self) { (resolver: Resolver) in
+            OnboardingHowToUseViewModel.make(resolver: resolver)
+        }
+
+        container.register(OnboardingEquipmentViewModel.self) { (resolver: Resolver) in
+            OnboardingEquipmentViewModel.make(resolver: resolver)
+        }
     }
 }
 

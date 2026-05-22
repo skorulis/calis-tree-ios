@@ -13,10 +13,12 @@ final class MainStore {
     private static let masteryKey = "calisTree.exerciseMastery.v1"
     private static let favoritesKey = "calisTree.exerciseFavorites.v1"
     private static let availableEquipmentKey = "calisTree.availableEquipment.v1"
+    private static let onboardingCompletedKey = "calisTree.onboardingCompleted.v1"
 
     private(set) var masteryByExerciseId: [Exercise.ID: Int] = [:]
     private(set) var favoriteExerciseIds: Set<Exercise.ID> = []
     private(set) var availableEquipment: Set<Equipment> = Set(Equipment.allCases)
+    private(set) var hasCompletedOnboarding: Bool = false
 
     @Resolvable<Resolver>
     init(keyValueStore: PKeyValueStore) {
@@ -28,6 +30,8 @@ final class MainStore {
         if let saved: Set<Equipment> = try? keyValueStore.codable(forKey: Self.availableEquipmentKey) {
             availableEquipment = saved
         }
+        hasCompletedOnboarding =
+            (try? keyValueStore.codable(forKey: Self.onboardingCompletedKey)) ?? false
     }
 
     func masteryProgress(for exerciseId: Exercise.ID) -> Int {
@@ -91,5 +95,11 @@ final class MainStore {
         }
         availableEquipment = updated
         try? keyValueStore.set(codable: availableEquipment, forKey: Self.availableEquipmentKey)
+    }
+
+    func completeOnboarding() {
+        guard !hasCompletedOnboarding else { return }
+        hasCompletedOnboarding = true
+        try? keyValueStore.set(codable: true, forKey: Self.onboardingCompletedKey)
     }
 }

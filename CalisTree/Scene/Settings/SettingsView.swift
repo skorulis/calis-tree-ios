@@ -13,16 +13,7 @@ struct SettingsView: View {
 
     var body: some View {
         List {
-            Section {
-                ForEach(viewModel.equipmentItems, id: \.self) { equipment in
-                    Toggle(
-                        equipment.description,
-                        isOn: viewModel.availabilityBinding(for: equipment)
-                    )
-                }
-            } header: {
-                Text("Available equipment")
-            }
+            AvailableEquipmentSection(viewModel: viewModel)
         }
         .navigationTitle("Settings")
     }
