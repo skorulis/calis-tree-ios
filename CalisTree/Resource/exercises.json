@@ -110,14 +110,13 @@
         "name": "Hanging High Knee Raise",
         "level": "beginner",
         "imageFile": "hanging-high-knee-raise",
-        "videoURL": "https://www.youtube.com/watch?v=oDiqwy0Y964",
+        "videoURL": "https://www.youtube.com/shorts/MxsRi8dtzmU",
         "equipment": [
             "overheadBar"
         ],
         "steps": [
             "Grip the bar with your hands shoulder-width apart and hang with your arms fully extended",
             "Depress your shoulders, tighten your core, and keep your body still to avoid swinging",
-            "Tighten your core and keep your body still to avoid swinging",
             "Bend your knees and drive them up toward your chest as high as you can using your core",
             "Aim to raise your knees above your hips while keeping the movement slow and controlled",
             "Pause briefly at the top without using momentum",
@@ -1600,6 +1599,7 @@
         "id": "archer_pull_up",
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/shorts/AeBvpCCYpGI",
+        "imageFile": "wide_pull_up",
         "equipment": [
             "overheadBar"
         ],
@@ -1628,6 +1628,7 @@
     {
         "id": "wide_pull_up",
         "level": "intermediate",
+        "imageFile": "wide_pull_up",
         "videoURL": "https://www.youtube.com/shorts/P8s_LRBp9lo",
         "equipment": [
             "overheadBar"
@@ -2443,7 +2444,6 @@
     },
     {
         "id": "burpee",
-        "name": "Burpees",
         "level": "beginner",
         "imageFile": "burpee",
         "videoURL": "https://www.youtube.com/shorts/gYiE_2BtSTg",
@@ -2465,6 +2465,32 @@
         "prerequisites": [
             "push_up",
             "squat"
+        ]
+    },
+    {
+        "id": "shoulder_tap",
+        "name": "Shoulder Taps",
+        "level": "beginner",
+        "imageFile": "shoulder_taps",
+        "videoURL": "https://www.youtube.com/shorts/Ki-H6D3gvco",
+        "equipment": [],
+        "steps": [
+            "Start in a high push-up position with your hands shoulder-width apart directly under your shoulders",
+            "Extend your legs behind you and balance on your toes with your body in a straight line from head to heels",
+            "Tighten your core, glutes, and legs to prevent your hips from sagging, piking up, or rotating",
+            "Shift your weight slightly onto one hand while keeping both feet grounded",
+            "Lift your opposite hand off the floor and tap the shoulder of your supporting arm",
+            "Place your hand back under your shoulder and repeat the tap on the other side",
+            "Alternate sides each rep while keeping your hips as level and still as possible"
+        ],
+        "mastery": {
+            "reps": {
+                "_0": 20
+            }
+        },
+        "prerequisites": [
+            "plank",
+            "kneeling_push_up"
         ]
     }
 ]
