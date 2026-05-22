@@ -158,7 +158,6 @@
     },
     {
         "id": "pull_up",
-        "name": "Pull Up",
         "level": "beginner",
         "imageFile": "pull-up",
         "videoURL": "https://www.youtube.com/watch?v=XeErfmGSwfE",
@@ -182,6 +181,22 @@
         "prerequisites": [
             "scapular_shrugs",
             "inverted_row"
+        ]
+    },
+    {
+        "id": "chin_up",
+        "level": "beginner",
+        "videoURL": "https://www.youtube.com/shorts/Oi3bW9nQmGI",
+        "equipment": [
+            "overheadBar"
+        ],
+        "mastery": {
+            "reps": {
+                "_0": 20
+            }
+        },
+        "prerequisites": [
+            "scapular_shrugs"
         ]
     },
     {
@@ -1390,6 +1405,16 @@
         "equipment": [
             "verticalBar"
         ],
+        "steps": [
+            "Grip a vertical pole or bar with your top hand in an overhand grip and your bottom hand in an underhand grip",
+            "Place your top hand at roughly head height and your bottom hand lower on the pole, about hip height",
+            "Engage your core and press your bottom arm while pulling with your top arm to lift your body sideways",
+            "Keep your arms straight and stack your shoulders so your body forms a horizontal line parallel to the ground",
+            "Squeeze your glutes and legs together to maintain a rigid body line",
+            "Keep your hips level and avoid letting your lower back arch or your legs drop",
+            "Hold the position with steady breathing and full-body tension",
+            "When you finish the hold, lower yourself back down with control"
+        ],
         "progression": [
             "human_flag_straddle_leg_raises",
             "human_flag_leg_raises",
@@ -1416,6 +1441,16 @@
         "equipment": [
             "parallelBars"
         ],
+        "steps": [
+            "Grip the parallel bars and press up to a support hold with your arms straight",
+            "Lift into an L-sit with your legs straight and parallel to the floor",
+            "Lean your shoulders forward and compress your body by bringing your hips over your hands",
+            "Press through your palms and lift your hips upward while keeping your arms straight",
+            "Continue pressing until your body stacks vertically in a handstand on the bars",
+            "Control the descent by reversing the motion back through the L-sit",
+            "Keep your core tight throughout so you do not swing or collapse through your lower back",
+            "Complete the rep when you return to a stable L-sit or support hold"
+        ],
         "mastery": {
             "reps": {
                 "_0": 5
@@ -1435,6 +1470,16 @@
         "equipment": [
             "paralletteBars"
         ],
+        "steps": [
+            "Place your hands on the parallettes shoulder-width apart and start in a support hold with straight arms",
+            "Lean your shoulders forward past your wrists while keeping your core tight",
+            "Bend your elbows to about 90 degrees and tuck your knees toward your chest",
+            "Lift your feet off the floor and balance with your hips level and your back slightly rounded",
+            "Keep pressing the bars away to maintain shoulder protraction and stability",
+            "Hold the bent-arm tuck position without letting your hips drop or your elbows drift backward",
+            "Breathe steadily while maintaining full-body tension",
+            "When you finish the hold, lower your feet back to the floor with control"
+        ],
         "mastery": {
             "time": {
                 "_0": 5
@@ -1453,6 +1498,16 @@
         "equipment": [
             "rings"
         ],
+        "steps": [
+            "Grip the rings and lift yourself to a support hold with your arms straight at your sides",
+            "Turn the rings out and depress your shoulders away from your ears",
+            "Slowly lower your body by allowing your arms to open out to the sides until they are roughly parallel to the floor",
+            "Keep your elbows straight and your core tight throughout the descent",
+            "Hold the iron cross position with your shoulders down and your body stable",
+            "Avoid shrugging your shoulders up or bending your elbows",
+            "Press back up through your arms to return to the support hold with control",
+            "When you finish the hold, lower yourself down from the rings safely"
+        ],
         "mastery": {
             "time": {
                 "_0": 10
@@ -1470,6 +1525,15 @@
         "equipment": [
             "overheadBar"
         ],
+        "steps": [
+            "Grip the bar with your hands shoulder-width apart and hang with your arms fully extended",
+            "Keep your arms straight throughout the entire movement",
+            "Without bending your elbows, pull your shoulder blades down and back by engaging your upper back",
+            "Hold the depressed position briefly at the bottom of the movement",
+            "Allow your shoulders to rise slightly toward your ears in a controlled shrug",
+            "Repeat the up-and-down motion using only your shoulder blades",
+            "Keep your core engaged and avoid swinging your body"
+        ],
         "mastery": {
             "reps": {
                 "_0": 15
@@ -1485,6 +1549,16 @@
         "imageFile": "high_side_plank",
         "videoURL": "https://www.youtube.com/shorts/vChJ24IH9mA",
         "equipment": [],
+        "steps": [
+            "Start in a side plank on one hand with your arm straight and your hand directly under your shoulder",
+            "Stack your feet or place your top foot in front of your bottom foot for stability",
+            "Lift your hips high so your body forms a straight line from your head to your feet",
+            "Reach your top arm toward the ceiling or place it on your hip",
+            "Press the floor away through your bottom hand and keep your shoulder away from your ear",
+            "Tighten your core and glutes to prevent your hips from sagging",
+            "Hold the position with steady breathing",
+            "When you finish the hold, lower your hips with control and switch sides"
+        ],
         "mastery": {
             "time": {
                 "_0": 60
@@ -1504,6 +1578,16 @@
         "progression": [
             "half_archer_pull_up"
         ],
+        "steps": [
+            "Grip the bar with your hands wider than shoulder-width apart using an overhand grip",
+            "Hang with your arms fully extended and engage your core to minimize swinging",
+            "Pull yourself up while shifting your weight toward one side and bending that arm",
+            "Keep the opposite arm straighter, using it for light support only",
+            "Pull until your working-side shoulder rises near the bar or your chin passes beside your working hand",
+            "Lower yourself with control back to center before switching sides",
+            "Keep your shoulders down and avoid twisting your torso excessively",
+            "Alternate sides each rep or complete all reps on one side before switching"
+        ],
         "mastery": {
             "reps": {
                 "_0": 10
@@ -1519,6 +1603,14 @@
         "videoURL": "https://www.youtube.com/shorts/P8s_LRBp9lo",
         "equipment": [
             "overheadBar"
+        ],
+        "steps": [
+            "Grip the bar with your hands placed wider than shoulder-width apart using an overhand grip",
+            "Hang with your arms fully extended and engage your shoulders by pulling them slightly down from your ears",
+            "Tighten your core and keep your legs still to avoid swinging",
+            "Pull yourself up by driving your elbows down and back",
+            "Continue pulling until your chin clears the bar",
+            "Lower yourself slowly back to a full hang with control"
         ],
         "mastery": {
             "reps": {
@@ -1539,6 +1631,15 @@
         "progression": [
             "tuck_hanging_windshield_wiper"
         ],
+        "steps": [
+            "Grip the bar with your hands shoulder-width apart and hang with your arms fully extended",
+            "Engage your core and raise your straight legs until they are parallel to the floor",
+            "Keep your legs together and your lower back stable",
+            "Rotate your legs to one side while keeping your shoulders square and your arms straight",
+            "Move through the center and continue to the opposite side in a controlled arc",
+            "Keep the movement slow and avoid using momentum from your hips or shoulders",
+            "Return to the center position to complete one rep"
+        ],
         "mastery": {
             "reps": {
                 "_0": 10
@@ -1554,6 +1655,15 @@
         "level": "beginner",
         "videoURL": "https://www.youtube.com/watch?v=uKPo9UoB_MI",
         "equipment": [],
+        "steps": [
+            "Start in a high side plank on one hand with your arm straight and your hips lifted",
+            "Stack your feet or place your top foot in front of your bottom foot for stability",
+            "Keep your bottom shoulder pressed down and away from your ear",
+            "Slowly lower your hips toward the floor without bending your supporting arm",
+            "Stop before your form breaks down, then drive your hips back up to the high side plank position",
+            "Keep your core tight and your body in a straight line throughout the movement",
+            "Complete all reps on one side before switching to the other"
+        ],
         "mastery": {
             "reps": {
                 "_0": 15
