@@ -61,6 +61,15 @@
         "equipment": [
             "overheadBar"
         ],
+        "steps": [
+            "Grip the bar with your hands shoulder-width apart and hang with your arms fully extended",
+            "Depress your shoulders, tighten your core, and keep your body still to avoid swinging",
+            "Keep your legs straight and your feet together",
+            "Slowly raise your legs forward while keeping them as straight as possible",
+            "Lift your legs until they are parallel to the floor, forming an L-sit",
+            "Hold the position with your hips level and your legs active\u2014avoid letting your feet drop or your back arch",
+            "When you finish the hold, lower your legs back down with control without swinging"
+        ],
         "mastery": {
             "time": {
                 "_0": 30
