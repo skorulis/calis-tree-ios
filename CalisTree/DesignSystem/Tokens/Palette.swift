@@ -5,13 +5,18 @@ import SwiftUI
 enum Palette {
     enum Base {
         static let gold = Color(hex: 0xFFC700)
+        static let slate = Color(hex: 0x737A85)
+        static let green = Color(hex: 0x33A673)
+        static let blue = Color(hex: 0x4073D9)
+        static let orange = Color(hex: 0xE68026)
+        static let red = Color(hex: 0xD9404D)
     }
 
     enum Level {
-        static let foundation = Color(hex: 0x737A85)
-        static let beginner = Color(hex: 0x33A673)
-        static let intermediate = Color(hex: 0x4073D9)
-        static let advanced = Color(hex: 0xE68026)
-        static let expert = Color(hex: 0xD9404D)
+        static let foundation = Base.slate
+        static let beginner = Base.green
+        static let intermediate = Base.blue
+        static let advanced = Base.orange
+        static let expert = Base.red
     }
 }
