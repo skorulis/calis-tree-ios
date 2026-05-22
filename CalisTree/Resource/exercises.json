@@ -841,6 +841,17 @@
         "description": "Perform a handstand with your feet against the wall",
         "videoURL": "https://www.youtube.com/shorts/2XMj3cVh-Hw",
         "equipment": [],
+        "steps": [
+            "Stand facing the wall and lean forward to assume a pike position",
+            "Place your hands shoulder-width apart with your fingers spread and your arms fully straight",
+            "Kick your legs up towards the wall so that so that they land against the wall",
+            "Stack your shoulders over your wrists and push the floor away to keep your shoulders active",
+            "Squeeze your core, glutes, and legs together to maintain a straight body line",
+            "Point your toes and keep only light contact with the wall for balance",
+            "Look at the space between your hands and avoid arching your lower back",
+            "Hold the position with steady breathing and full-body tension",
+            "When you finish the hold, walk your feet down the wall with control"
+        ],
         "mastery": {
             "time": {
                 "_0": 10
@@ -856,6 +867,16 @@
         "videoURL": "https://www.youtube.com/watch?v=KNC5lkoE2Fs",
         "imageFile": "handstand",
         "equipment": [],
+        "steps": [
+            "Start in a standing straddle and place your hands on the floor shoulder-width apart about a foot in front of your feet",
+            "Kick up with control or tuck and press into a handstand, bringing your legs together overhead",
+            "Stack your shoulders over your wrists and keep your arms fully straight",
+            "Squeeze your core, glutes, and legs together to maintain a straight, hollow body line",
+            "Push the floor away and keep your fingers active for balance",
+            "Look at the space between your hands and avoid arching your lower back",
+            "Make small adjustments with your fingers and shoulders to stay balanced",
+            "When you finish the hold, come down with control into a tuck or straddle landing"
+        ],
         "mastery": {
             "time": {
                 "_0": 10
@@ -892,6 +913,15 @@
         "imageFile": "pike",
         "videoURL": "https://www.youtube.com/shorts/qDyo7z8TebA",
         "equipment": [],
+        "steps": [
+            "Start in a pike position with your hands shoulder-width apart and your hips high",
+            "Keep your arms straight and your legs as straight as your flexibility allows",
+            "Press the floor away and set your shoulders in a strong, active position",
+            "Without bending your elbows, let your shoulder blades rise slightly toward your ears",
+            "Push the floor away and depress your shoulders back down as far as you can control",
+            "Keep your core tight so your hips do not drop during each rep",
+            "Complete the rep with your arms still straight and your body stable"
+        ],
         "mastery": {
             "reps": {
                 "_0": 10
@@ -912,6 +942,15 @@
             "pike_floor_push_up",
             "elevated_push_up"
         ],
+        "steps": [
+            "Start in a pike position with your hands shoulder-width apart and your hips high above your shoulders",
+            "Keep your legs straight and your weight shifted forward onto your hands",
+            "Tighten your core and look at the space between your feet or slightly back toward your feet",
+            "Bend your elbows and lower the top of your head toward the floor between your hands",
+            "Keep your elbows angled slightly backward rather than flaring straight out",
+            "Lower as far as you can while maintaining a pike shape through your hips",
+            "Press through your palms to straighten your arms and return to the starting pike position"
+        ],
         "mastery": {
             "reps": {
                 "_0": 10
@@ -930,6 +969,16 @@
         "progression": [
             "pseudo_planche_push_up_negative"
         ],
+        "steps": [
+            "Start in a push-up position and walk your feet forwards until your hands are beside your hips or waist",
+            "Turn your fingers outward and lean your shoulders forward past your wrists",
+            "Protract your shoulders by pushing the floor away and rounding your upper back slightly",
+            "Keep your core tight and your legs straight behind you",
+            "Bend your elbows and lower your chest forward and down while maintaining the forward lean",
+            "Keep your elbows close to your body and avoid letting your hips sag",
+            "Press through your palms to straighten your arms and return to the top position",
+            "Finish each rep with your shoulders still leaning forward and your body in one straight line"
+        ],
         "mastery": {
             "reps": {
                 "_0": 10
@@ -946,6 +995,16 @@
         "imageFile": "boat_hold",
         "videoURL": "https://www.youtube.com/shorts/vnT3wyBP4UA",
         "equipment": [],
+        "steps": [
+            "Sit on the floor with your knees bent and your feet flat",
+            "Lean back slightly and lift your feet off the floor while keeping your chest lifted",
+            "Straighten your legs and raise them until they form a V shape with your torso",
+            "Reach your arms forward parallel to the floor or alongside your legs",
+            "Balance on your sit bones and keep your lower back long, not rounded",
+            "Engage your core and quads to hold your legs at roughly eye level or higher",
+            "Breathe steadily while keeping your shoulders relaxed and away from your ears",
+            "When you finish the hold, lower your feet back to the floor with control"
+        ],
         "mastery": {
             "time": {
                 "_0": 30
@@ -960,6 +1019,16 @@
         "imageFile": "hollow_hold",
         "videoURL": "https://www.youtube.com/shorts/Mjeur54Z0wI",
         "equipment": [],
+        "steps": [
+            "Lie on your back with your arms extended overhead and your legs straight and together",
+            "Press your lower back firmly into the floor by tucking your pelvis slightly",
+            "Lift your shoulder blades slightly off the floor while keeping your arms by your ears",
+            "Raise your straight legs a few inches off the floor without letting your lower back arch",
+            "Hold your body in a banana shape with your ribs and hips drawing toward each other",
+            "Keep your core tight and your legs active with pointed toes",
+            "Breathe steadily while maintaining tension through your entire body",
+            "When you finish the hold, lower your shoulders and legs back to the floor with control"
+        ],
         "mastery": {
             "time": {
                 "_0": 30
@@ -973,6 +1042,15 @@
         "level": "beginner",
         "videoURL": "https://www.youtube.com/shorts/8xbG2kir7Bo",
         "equipment": [],
+        "steps": [
+            "Sit on the floor with your legs extended and your hands placed beside your hips for support",
+            "Lean back slightly and engage your core while keeping your chest lifted",
+            "Keep your knees straight and your feet together",
+            "Slowly raise your straight legs as high as you can control",
+            "Avoid rocking backward or using momentum from your arms",
+            "Hold briefly at the top without letting your lower back round excessively",
+            "Lower your legs back down with control to complete one rep"
+        ],
         "mastery": {
             "reps": {
                 "_0": 10
@@ -986,12 +1064,24 @@
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/shorts/M0ast_A2v8Q",
         "equipment": [],
+        "steps": [
+            "Sit on the floor in a wide straddle with your legs as straight as your flexibility allows",
+            "Place your hands on the floor in front of you for support",
+            "Lean back slightly and engage your core while keeping your chest lifted",
+            "Slowly raise both straight legs off the floor while keeping them in a straddle position",
+            "Lift until your legs are roughly parallel to the floor or as high as you can hold with good form",
+            "Keep your knees pointing upward and avoid collapsing inward at the hips",
+            "Hold the position with steady breathing and active tension through your legs and core",
+            "When you finish the hold, lower your legs back to the floor with control"
+        ],
         "mastery": {
             "time": {
                 "_0": 10
             }
         },
-        "prerequisites": []
+        "prerequisites": [
+            "seated_leg_raise"
+        ]
     },
     {
         "id": "parallel_bar_leg_raises",
@@ -999,6 +1089,15 @@
         "videoURL": "https://www.youtube.com/shorts/Wfl-dA2plUg",
         "equipment": [
             "parallelBars"
+        ],
+        "steps": [
+            "Grip the parallel bars and press up to a straight-arm support position with your shoulders depressed",
+            "Keep your arms straight and your body still before you begin the movement",
+            "Tighten your core and avoid swinging your torso",
+            "Slowly raise your straight legs forward in front of you while keeping your feet together",
+            "Lift your legs until they are parallel to the floor or as high as your strength and flexibility allow",
+            "Pause briefly at the top without losing tension in your shoulders or core",
+            "Lower your legs back down with control to the starting support position"
         ],
         "mastery": {
             "reps": {
