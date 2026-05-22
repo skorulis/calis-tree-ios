@@ -51,14 +51,14 @@ struct ExerciseAvatar: View {
                 Circle()
                     .trim(from: 0, to: min(max(fraction, 0), 1))
                     .stroke(
-                        Color.accentColor,
+                        Palette.Progress.inProgress,
                         style: StrokeStyle(lineWidth: Self.lineWidth, lineCap: .round)
                     )
                     .rotationEffect(.degrees(-90))
             }
         case .mastered:
             Circle()
-                .stroke(Palette.Base.gold, lineWidth: Self.lineWidth)
+                .stroke(Palette.Progress.complete, lineWidth: Self.lineWidth)
         }
     }
 

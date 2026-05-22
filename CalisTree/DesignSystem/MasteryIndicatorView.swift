@@ -14,7 +14,7 @@ struct MasteryIndicatorView: View {
         case .star:
             Image(systemName: "checkmark.circle.fill")
                 .font(.title3)
-                .foregroundStyle(Palette.Base.gold)
+                .foregroundStyle(Palette.Progress.complete)
                 .accessibilityLabel("Mastered")
         }
     }
@@ -33,7 +33,7 @@ struct MasteryIndicatorView: View {
                 .stroke(Color.secondary.opacity(0.25), lineWidth: 3)
             Circle()
                 .trim(from: 0, to: min(max(fraction, 0), 1))
-                .stroke(Color.accentColor, style: StrokeStyle(lineWidth: 3, lineCap: .round))
+                .stroke(Palette.Progress.inProgress, style: StrokeStyle(lineWidth: 3, lineCap: .round))
                 .rotationEffect(.degrees(-90))
         }
         .frame(width: 28, height: 28)
