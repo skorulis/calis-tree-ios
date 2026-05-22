@@ -208,7 +208,7 @@
         },
         "prerequisites": [
             "upside_down_deadlift",
-            "hanging_l_sit"
+            "tuck_ice_cream_maker"
         ]
     },
     {
@@ -1112,9 +1112,19 @@
     {
         "id": "toes_to_bar",
         "level": "beginner",
+        "imageFile": "toe_to_bar",
         "videoURL": "https://www.youtube.com/watch?v=S2QVHl6DoNo",
         "equipment": [
             "overheadBar"
+        ],
+        "steps": [
+            "Grip the bar with your hands shoulder-width apart and hang with your arms fully extended",
+            "Engage your shoulders by pulling them slightly down and away from your ears",
+            "Tighten your core and avoid swinging before you begin the movement",
+            "Raise your legs by flexing at the hips, keeping them as straight as your flexibility allows",
+            "Continue lifting until your toes touch or pass the bar",
+            "Use controlled momentum only if needed, but prioritize a smooth leg raise over kipping",
+            "Lower your legs back down with control to a full hang to complete one rep"
         ],
         "mastery": {
             "reps": {
@@ -1135,6 +1145,14 @@
         "equipment": [
             "overheadBar"
         ],
+        "steps": [
+            "Grip the bar with your hands shoulder-width apart using an overhand grip",
+            "Hang with your arms fully extended and let your body relax into the stretch",
+            "Allow your shoulders to rise slightly toward your ears in a passive hang",
+            "Keep your legs together and avoid swinging",
+            "Breathe steadily and hold the position without gripping excessively hard",
+            "When you finish the hold, step down or drop off with control rather than jumping down abruptly"
+        ],
         "mastery": {
             "time": {
                 "_0": 30
@@ -1143,11 +1161,36 @@
         "prerequisites": []
     },
     {
-        "id": "ice_cream_maker",
+        "id": "tuck_ice_cream_maker",
         "level": "intermediate",
-        "videoURL": "https://www.youtube.com/watch?v=30SeE_9jDjg",
+        "videoURL": "https://www.youtube.com/watch?v=KYH2rcYN-aw",
         "equipment": [
             "overheadBar"
+        ],
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        },
+        "prerequisites": [
+            "hanging_l_sit"
+        ]
+    },
+    {
+        "id": "ice_cream_maker",
+        "level": "intermediate",
+        "videoURL": "https://www.youtube.com/watch?v=KYH2rcYN-aw",
+        "equipment": [
+            "overheadBar"
+        ],
+        "steps": [
+            "Grip the bar with your hands shoulder-width apart and hang with your arms fully extended",
+            "Engage your core and depress your shoulders",
+            "Pull your body up until your chin is above the bar keeping your body straight",
+            "Straighten your arms while moving your shoulders back so that your body moves to a horizontal position",
+            "Pull your body up and back while tucking your knees to move toward a tuck front lever",
+            "Extend your hips and open into a horizontal position with your face toward the ceiling",
+            "Return to a full hang without swinging between reps"
         ],
         "mastery": {
             "reps": {
@@ -1165,6 +1208,15 @@
         "imageFile": "dragon_flag",
         "videoURL": "https://www.youtube.com/shorts/yFiNw9EsJfI",
         "equipment": [],
+        "steps": [
+            "Lie on the ground and grip something behind you to give leverage",
+            "Press your upper back into the ground and lift your hips and legs off the surface",
+            "Raise your body until you form a straight line from your shoulders through your hips to your feet",
+            "Keep your core tight and your lower back flat so your body moves as one rigid unit",
+            "Slowly lower your body toward the ground while maintaining the straight line",
+            "Stop before your hips touch down if your form begins to break, then pull back up to the top position",
+            "Complete the rep with control and reset your grip and tension before the next rep"
+        ],
         "mastery": {
             "reps": {
                 "_0": 10
@@ -1183,6 +1235,16 @@
         "equipment": [
             "overheadBar"
         ],
+        "steps": [
+            "Grip the bar with your hands shoulder-width apart and hang with your arms fully extended",
+            "Engage your core and pull your shoulder blades down and back",
+            "Tuck your knees and rotate backward through an inverted hang, keeping your arms straight",
+            "Continue rotating until your body is horizontal with your face toward the ceiling",
+            "Keep your hips open and your body in one straight line from shoulders to feet",
+            "Maintain tension through your core and lats throughout the hold",
+            "Avoid piking or arching excessively at the lower back",
+            "When you finish the hold, reverse the rotation with control back to a hang"
+        ],
         "mastery": {
             "time": {
                 "_0": 10
@@ -1197,6 +1259,15 @@
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/watch?v=QHnpUcVwZOk",
         "equipment": [],
+        "steps": [
+            "Hang from the bar with your arms fully extended and your core engaged",
+            "Tuck your knees and lift your hips to begin rotating backward through an inverted position",
+            "Continue the rotation with straight arms until you pass through a full invert",
+            "Lower your feet toward the ground behind you as far as you can control with tension",
+            "Reverse the movement by pulling your legs back up and rotating forward to return to a hang",
+            "Keep the entire motion slow and controlled, using your core and lats rather than momentum",
+            "Finish each rep in a stable hang before starting the next rotation"
+        ],
         "mastery": {
             "reps": {
                 "_0": 5
@@ -1213,6 +1284,15 @@
         "level": "expert",
         "videoURL": "https://www.youtube.com/watch?v=TZ63httkob4",
         "equipment": [],
+        "steps": [
+            "Place your hands on the floor shoulder-width apart and lean your shoulders well forward past your wrists",
+            "Lift your feet off the floor into a planche or advanced tuck planche position with your arms straight",
+            "Keep your core, glutes, and legs tight so your body stays parallel to the ground",
+            "Bend your elbows and lower your body forward and down while maintaining the forward lean",
+            "Keep your elbows close to your body and avoid letting your hips drop",
+            "Press through your palms to straighten your arms and return to the top planche position",
+            "Finish each rep with your shoulders still leaning forward and your body in one straight line"
+        ],
         "mastery": {
             "reps": {
                 "_0": 5
@@ -1229,6 +1309,15 @@
         "level": "advanced",
         "videoURL": "https://www.youtube.com/shorts/XxFuPQzQb2w",
         "equipment": [],
+        "steps": [
+            "Start in a deep pike or straddle stand with your hands on the floor shoulder-width apart in front of your feet",
+            "Lean forward and shift your weight onto your hands while keeping your arms straight",
+            "Press through your shoulders and lift your hips high as your feet leave the ground",
+            "Continue pressing until your body stacks vertically in a handstand",
+            "Control the descent by reversing the motion, lowering your feet back toward the floor with a pike shape",
+            "Keep your core tight throughout so you do not collapse through your lower back",
+            "Complete the rep when both feet return to the floor with control"
+        ],
         "mastery": {
             "reps": {
                 "_0": 5
@@ -1248,6 +1337,15 @@
         "progression": [
             "wall_handstand_push_up"
         ],
+        "steps": [
+            "Kick up or press into a handstand with your arms straight and your body in a straight line",
+            "Stack your shoulders over your wrists and push the floor away to keep your shoulders active",
+            "Tighten your core and glutes to maintain a hollow body position",
+            "Bend your elbows and lower your head toward the floor between your hands",
+            "Keep your elbows angled slightly forward rather than flaring straight out to the sides",
+            "Lower as far as you can while staying balanced and keeping your hips stacked over your hands",
+            "Press through your palms to straighten your arms and return to a full handstand"
+        ],
         "mastery": {
             "reps": {
                 "_0": 5
@@ -1265,13 +1363,22 @@
         "equipment": [
             "overheadBar"
         ],
+        "steps": [
+            "Grip the bar with one hand using an overhand grip",
+            "Hang with your arms fully extended and engage your core to minimize swinging",
+            "Pull with your working arm by driving your elbow down and back while the assist arm stays nearly straight",
+            "Shift your weight toward your working side and keep your shoulders level",
+            "Continue pulling until your working-side shoulder rises near the bar or your chin passes beside your working hand",
+            "Lower yourself slowly back to a full hang with control",
+            "Alternate sides each rep or complete all reps on one side before switching"
+        ],
         "mastery": {
             "reps": {
                 "_0": 5
             }
         },
         "prerequisites": [
-            "pull_up"
+            "archer_pull_up"
         ]
     },
     {
