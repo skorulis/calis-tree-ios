@@ -12,7 +12,8 @@
         "details": "Shoulder (scapular) protraction is the movement where your shoulder blades slide forward and away from your spine, spreading them apart. Think of it as reaching, punching, or rounding your shoulders forward",
         "linkTerms": [
             "protract your shoulders",
-            "shoulder blades protracted"
+            "shoulder blades protracted",
+            "round your upper back"
         ]
     },
     {
@@ -55,13 +56,21 @@
     },
     {
         "name": "Anterior Pelvic Tilt",
-        "details": "An anterior pelvic tilt is when your pelvis rotates forward, causing your tailbone to stick out and round the natural curve of your lower back",
+        "details": "An anterior pelvic tilt is when your pelvis rotates forward, causing your tailbone to stick out and round the natural curve of your lower back"
     },
     {
         "name": "Keeping Tension",
-        "details": "\"keeping tension\" means continuously flexing and engaging the target muscle throughout the entire movement. It prevents the muscle from "resting" at the top or bottom of a repetition, forcing it to work harder and increasing the overall mechanical stress (Time Under Tension) needed to stimulate growth",
+        "details": "\"keeping tension\" means continuously flexing and engaging the target muscle throughout the entire movement. It prevents the muscle from \"resting\" at the top or bottom of a repetition, forcing it to work harder and increasing the overall mechanical stress (Time Under Tension) needed to stimulate growth",
         "linkTerms": [
             "keeping tension"
+        ]
+    },
+    {
+        "name": "Straddle",
+        "details": "Keeping your legs apart rather than together",
+        "linkTerms": [
+            "straddle your legs",
+            "legs straddled"
         ]
     }
 ]

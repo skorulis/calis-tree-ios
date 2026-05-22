@@ -381,6 +381,16 @@
         "videoURL": "https://www.youtube.com/shorts/W0GFFzyYUWI",
         "description": "Perform the push up from a kneeling position rather than on your toes. This will reduce the amount of body weight you need to lift",
         "equipment": [],
+        "steps": [
+            "Start on your hands and knees with your hands shoulder-width apart and directly under your shoulders",
+            "Walk your knees back slightly so your body forms a straight line from your head to your knees",
+            "Tighten your core and glutes to keep your hips from sagging",
+            "Slowly bend your elbows and lower your chest toward the floor",
+            "Keep your elbows at roughly a 45-degree angle to your body rather than flaring straight out",
+            "Lower yourself until your chest is just above the floor or as far as you can with good form",
+            "Push through your palms to straighten your arms and return to the starting position",
+            "Keep your neck neutral by looking slightly ahead of your hands"
+        ],
         "mastery": {
             "reps": {
                 "_0": 15
@@ -394,6 +404,16 @@
         "imageFile": "push_up",
         "videoURL": "https://www.youtube.com/shorts/04FqT6lC0i4",
         "equipment": [],
+        "steps": [
+            "Start in a high push-up position with your hands shoulder-width apart directly under your shoulders",
+            "Extend your legs behind you and balance on your toes with your body in a straight line from head to heels",
+            "Tighten your core and glutes to keep your hips from sagging or piking up",
+            "Slowly bend your elbows and lower your chest toward the floor",
+            "Keep your elbows at roughly a 45-degree angle to your body rather than flaring straight out",
+            "Lower yourself until your chest is just above the floor or as far as you can with good form",
+            "Push through your palms to straighten your arms and return to the starting position",
+            "Keep your neck neutral by looking slightly ahead of your hands"
+        ],
         "mastery": {
             "reps": {
                 "_0": 25
@@ -413,6 +433,16 @@
         "equipment": [
             "raisedSurface"
         ],
+        "steps": [
+            "Place your hands on the floor shoulder-width apart and set your feet on a sturdy raised surface behind you",
+            "Walk your hands back until your upper body is angled down and your shoulders are stacked over your wrists",
+            "Keep your body in a straight line from your head through your hips to your feet",
+            "Tighten your core and glutes before you begin the movement",
+            "Slowly bend your elbows and lower your upper chest toward the floor",
+            "Keep your elbows at roughly a 45-degree angle to your body and avoid flaring them straight out",
+            "Lower yourself until your chest is just above the floor or as far as you can with good form",
+            "Push through your palms to straighten your arms and return to the starting position"
+        ],
         "mastery": {
             "reps": {
                 "_0": 25
@@ -430,6 +460,14 @@
         "videoURL": "https://www.youtube.com/watch?v=p7NWclT2uEM",
         "equipment": [
             "raisedSurface"
+        ],
+        "steps": [
+            "Lie face down on a bench or raised surface with your hips at the edge and your legs hanging off",
+            "Grip the sides of the bench for stability and keep your upper body relaxed on the surface",
+            "Engage your glutes and lower back and keep your legs straight with your feet together",
+            "Slowly raise your legs until they are parallel to the floor or as high as you can control",
+            "Hold briefly at the top without arching your lower back excessively",
+            "Lower your legs back down with control to complete one rep"
         ],
         "mastery": {
             "reps": {
@@ -473,6 +511,16 @@
         "imageFile": "tuck_planche",
         "videoURL": "https://www.youtube.com/shorts/-cxjiLArpls",
         "equipment": [],
+        "steps": [
+            "Place your hands on the floor shoulder-width apart with your fingers spread for stability pointing outwaards",
+            "Start in a push-up position and protract your shoulders by pushing the floor away",
+            "Lean your shoulders forward past your wrists while keeping your arms straight",
+            "Tuck your knees toward your chest and protract your shoulders slightly",
+            "Lift your feet off the floor and balance on your hands with your hips level",
+            "Keep your core tight and your knees tucked close to your body",
+            "Maintain forward lean and steady breathing throughout the hold",
+            "When you finish the hold, lower your feet back to the floor with control"
+        ],
         "progression": [
             "standard_tuck_planche",
             "advanced_tuck_planche"
@@ -619,6 +667,16 @@
         "imageFile": "bent_arm_planche",
         "videoURL": "https://www.youtube.com/watch?v=zEY-faZ7xI0",
         "equipment": [],
+        "steps": [
+            "Place your hands on the floor shoulder-width apart and lean your shoulders well forward past your wrists",
+            "Bend your elbows to about 90 degrees while keeping your forearms vertical",
+            "Tuck your pelvis, engage your core and glutes, and lift your feet off the floor",
+            "Hold your body roughly parallel to the ground with your legs together",
+            "Keep pressing the floor away to maintain shoulder protraction and stability",
+            "Avoid letting your hips sag or your elbows drift backward",
+            "Breathe steadily while maintaining full-body tension",
+            "When you finish the hold, lower your feet back to the floor with control"
+        ],
         "mastery": {
             "time": {
                 "_0": 10
@@ -638,6 +696,16 @@
         "imageFile": "bent_arm_planche",
         "videoURL": "https://www.youtube.com/watch?v=ZNCFXIIB0eQ",
         "equipment": [],
+        "steps": [
+            "Start in a push up position with your legs straddled with your hands beside your hips with your fingers pointing outward",
+            "Place your elbows against your lower abdomen or hips and lean your torso forward",
+            "Press down through your hands and straighten your arms to lift your hips and legs off the floor",
+            "Keep your legs together and extend them forward until your body is roughly horizontal",
+            "Balance on your hands with your face toward the floor and your core fully engaged",
+            "Keep your shoulders protracted and avoid collapsing through your lower back",
+            "Hold the position with steady breathing and active tension through your entire body",
+            "When you finish the hold, lower your hips and legs back to the floor with control"
+        ],
         "mastery": {
             "time": {
                 "_0": 10
@@ -657,6 +725,16 @@
         "level": "advanced",
         "videoURL": "https://www.youtube.com/watch?v=ZNCFXIIB0eQ",
         "equipment": [],
+        "steps": [
+            "Start in a push up position with your legs straddled with your hands beside your hips with your fingers pointing outward",
+            "Place your working elbow against your lower abdomen or hip and lean your torso forward",
+            "Extend your free arm out to the side or behind your back for balance",
+            "Press down through your working hand and straighten your arm to lift your hips and legs off the floor",
+            "Keep your legs together and extend them forward until your body is roughly horizontal",
+            "Hold the position with your core tight and your shoulders stable",
+            "Avoid twisting your hips or collapsing through your lower back",
+            "When you finish the hold, lower yourself back to the floor with control"
+        ],
         "mastery": {
             "time": {
                 "_0": 10
@@ -697,19 +775,39 @@
         "prerequisites": []
     },
     {
-        "id": "dip",
+        "id": "chest_dip",
         "level": "beginner",
         "imageFile": "chest_dip",
         "videoURL": "https://www.youtube.com/shorts/dij0l_pL0z8",
         "equipment": [
             "parallelBars"
         ],
-        "progression": [
-            "chest_dip",
-            "triceps_dip"
+        "steps": [
+            "Grip the parallel bars with your palms facing inward",
+            "Jump or step up to a support hold with your arms straight and your shoulders depressed away from your ears",
+            "Lean your torso slightly forward and cross your ankles behind you if needed for stability",
+            "Slowly bend your elbows and lower your body between the bars",
+            "Lower until your upper arms are roughly parallel to the floor or your shoulders reach a comfortable depth",
+            "Keep your elbows tracking back rather than flaring straight out to the sides",
+            "Press down through your palms to straighten your arms and return to the top position",
+            "Finish each rep with your shoulders down and your body controlled, not swinging"
         ],
+        "progression": [],
         "prerequisites": [
             "bench_dip"
+        ]
+    },
+    {
+        "id": "triceps_dip",
+        "level": "beginner",
+        "imageFile": "chest_dip",
+        "videoURL": "https://www.youtube.com/shorts/dij0l_pL0z8",
+        "equipment": [
+            "parallelBars"
+        ],
+        "progression": [],
+        "prerequisites": [
+            "chest_dip"
         ]
     },
     {
@@ -719,6 +817,15 @@
         "description": "Start in a push up position with your feet against the wall and walk your feet up the wall and your hands towards it",
         "videoURL": "https://www.youtube.com/shorts/kAZkLII49fk",
         "equipment": [],
+        "steps": [
+            "Start in a push-up position facing away from a wall with your feet on the ground",
+            "Place your feet on the wall at hip height and walk your hands slightly closer to the wall",
+            "Keep your arms straight and your core tight as you begin walking your feet up the wall",
+            "Walk your hands in toward the wall at the same pace so your body stays stacked and controlled",
+            "Continue until your torso is nearly vertical with your shoulders over your hands",
+            "Hold briefly at the top if you can maintain tension through your core and shoulders",
+            "Walk your feet back down the wall and your hands away from the wall with control to finish the rep"
+        ],
         "mastery": {
             "reps": {
                 "_0": 5
@@ -1128,7 +1235,7 @@
             }
         },
         "prerequisites": [
-            "dip",
+            "chest_dip",
             "planche_lean"
         ]
     },
@@ -1146,7 +1253,7 @@
             }
         },
         "prerequisites": [
-            "dip"
+            "chest_dip"
         ]
     },
     {
@@ -1441,7 +1548,7 @@
         },
         "prerequisites": [
             "high_pull_up",
-            "dip"
+            "chest_dip"
         ]
     },
     {
@@ -1635,7 +1742,7 @@
             }
         },
         "prerequisites": [
-            "dip"
+            "chest_dip"
         ]
     },
     {

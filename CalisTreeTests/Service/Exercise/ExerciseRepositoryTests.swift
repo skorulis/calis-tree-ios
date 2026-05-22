@@ -79,7 +79,7 @@ struct ExerciseRepositoryTests {
                 "frog_stand",
                 "tuck_planche",
                 "bench_dip",
-                "dip",
+                "chest_dip",
                 "bent_arm_tuck_planche",
                 "planche",
             ]
