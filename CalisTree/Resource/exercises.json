@@ -509,6 +509,7 @@
             "90 Degree Hold"
         ],
         "description": "Planche with elbows at 90 degrees",
+        "imageFile": "bent_arm_planche",
         "videoURL": "https://www.youtube.com/watch?v=zEY-faZ7xI0",
         "equipment": [],
         "mastery": {
@@ -527,6 +528,7 @@
         "alternateNames": [
             "Elbow planche"
         ],
+        "imageFile": "bent_arm_planche",
         "videoURL": "https://www.youtube.com/watch?v=ZNCFXIIB0eQ",
         "equipment": [],
         "mastery": {
@@ -1587,7 +1589,7 @@
         "prerequisites": []
     },
     {
-        "id": "reverse_nordic",
+        "id": "reverse_nordic_curl",
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/shorts/Jf9KojDHN7E",
         "equipment": [],
@@ -1606,7 +1608,23 @@
     {
         "id": "bulgarian_split_squat",
         "level": "beginner",
+        "imageFile": "bulgarian_split_squat",
         "videoURL": "https://www.youtube.com/shorts/or1frhkjBDc",
+        "equipment": [],
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        },
+        "prerequisites": [
+            "lunge",
+            "squat"
+        ]
+    },
+    {
+        "id": "deadbug",
+        "level": "beginner",
+        "videoURL": "https://www.youtube.com/shorts/Aoipu_fl3HA",
         "equipment": [],
         "mastery": {
             "reps": {
@@ -1616,9 +1634,24 @@
         "prerequisites": []
     },
     {
-        "id": "deadbug",
-        "level": "beginner",
-        "videoURL": "https://www.youtube.com/shorts/Aoipu_fl3HA",
+        "id": "sissy_squat",
+        "level": "advanced",
+        "videoURL": "https://www.youtube.com/shorts/9yBnwyHUADw",
+        "equipment": [],
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        },
+        "prerequisites": [
+            "reverse_nordic_curl",
+            "tibialis_raises"
+        ]
+    },
+    {
+        "id": "tibialis_raises",
+        "level": "intermediate",
+        "videoURL": "https://www.youtube.com/shorts/-rP_9ZVBf9M",
         "equipment": [],
         "mastery": {
             "reps": {
