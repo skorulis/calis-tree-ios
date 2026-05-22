@@ -1912,6 +1912,13 @@
         "equipment": [
             "lowBar"
         ],
+        "steps": [
+            "Stand in front of a low bar at about waist height and grip it with an overhand grip slightly less than shoulder width",
+            "Move your feet back until you are leaning on the bar",
+            "Bend your elbows and lower your head under the bar by hinging at the elbows only",
+            "Keep your upper arms stationary and lower until your forehead nears the bar",
+            "Press through your palms to straighten your arms and return to the starting position"
+        ],
         "mastery": {
             "reps": {
                 "_0": 15
@@ -1930,6 +1937,15 @@
         "equipment": [
             "lowBar"
         ],
+        "steps": [
+            "Set a low bar at about waist height and lie underneath it",
+            "Grip the bar with your hands slightly wider than shoulder-width apart using an overhand grip",
+            "Position your body in a straight line with your heels on the floor and your hips lifted",
+            "Hang with your arms fully extended and your shoulder blades engaged",
+            "Pull your chest toward the bar by driving your elbows down and back",
+            "Squeeze your shoulder blades together at the top of the movement",
+            "Lower yourself back down with control until your arms are fully extended"
+        ],
         "mastery": {
             "reps": {
                 "_0": 15
@@ -1943,6 +1959,15 @@
         "videoURL": "https://www.youtube.com/watch?v=_eQ2gw_Gg5Y",
         "equipment": [
             "overheadBar"
+        ],
+        "steps": [
+            "Grip the bar with your hands slightly wider than shoulder-width apart",
+            "Hang with your arms fully extended and engage your core to minimize swinging",
+            "Pull explosively by driving your elbows down and back while bringing your knees slightly forward if needed",
+            "Pull high enough that your chest rises above the bar at the top of the movement",
+            "Quickly transition by rotating your wrists and shifting your weight over the bar",
+            "Press down to straighten your arms and finish in a support hold on top of the bar",
+            "Lower yourself back to a hang with control or step down safely between reps"
         ],
         "mastery": {
             "reps": {
@@ -1966,6 +1991,14 @@
         "equipment": [
             "overheadBar"
         ],
+        "steps": [
+            "Grip the bar with your hands shoulder-width apart using an overhand grip",
+            "Hang with your arms fully extended and engage your core to minimize swinging",
+            "Pull explosively by driving your elbows down and back",
+            "Continue pulling past chin height toward your chest, stomach, or hips depending on your progression",
+            "Use controlled hip drive only as much as needed to reach the target height",
+            "Lower yourself back to a full hang with control to complete one rep"
+        ],
         "progression": [
             "high_pull_up_chest",
             "high_pull_up_stomach",
@@ -1982,6 +2015,15 @@
         "equipment": [
             "captainsChair"
         ],
+        "steps": [
+            "Position yourself in the captain's chair with your back against the pad and your forearms on the rests",
+            "Grip the handles and depress your shoulders away from your ears",
+            "Keep your legs straight and your feet together",
+            "Tighten your core and avoid swinging your torso",
+            "Slowly raise your straight legs until they are parallel to the floor or higher",
+            "Pause briefly at the top without using momentum",
+            "Lower your legs back down with control to complete one rep"
+        ],
         "mastery": {
             "reps": {
                 "_0": 10
@@ -1997,6 +2039,15 @@
         "imageFile": "crunch",
         "videoURL": "https://www.youtube.com/watch?v=MKmrqcoCZ-M",
         "equipment": [],
+        "steps": [
+            "Lie on your back with your knees bent and your feet flat on the floor hip-width apart",
+            "Place your hands lightly behind your head or across your chest",
+            "Tighten your core and press your lower back gently into the floor",
+            "Lift your shoulder blades off the floor by curling your upper body toward your knees",
+            "Keep your neck neutral and avoid pulling on your head with your hands",
+            "Pause briefly at the top while maintaining tension in your abs",
+            "Lower your shoulders back down with control to complete one rep"
+        ],
         "mastery": {
             "reps": {
                 "_0": 20
@@ -2032,6 +2083,16 @@
         "level": "beginner",
         "videoURL": "https://www.youtube.com/shorts/b_2qgdXT_QQ",
         "equipment": [],
+        "steps": [
+            "Stand upright with your feet hip-width apart and your hands at your sides or on your hips",
+            "Tighten your core and keep your chest lifted",
+            "Step backward with one leg, landing on the ball of your back foot",
+            "Lower your body by bending both knees until your front thigh is parallel to the floor",
+            "Keep your front knee directly above your ankle and avoid letting it move too far forward",
+            "Lower your back knee toward the floor without touching it",
+            "Push through the heel of your front foot to return to the starting position",
+            "Alternate legs each rep or complete all reps on one side before switching"
+        ],
         "mastery": {
             "reps": {
                 "_0": 10
@@ -2050,6 +2111,15 @@
         "imageFile": "frog_stand",
         "videoURL": "https://www.youtube.com/shorts/KSD6mWsbWhk",
         "equipment": [],
+        "steps": [
+            "Start in a deep squat and place your hands on the floor shoulder-width apart in front of you",
+            "Press your knees into the backs of your upper arms near your armpits or triceps",
+            "Lean forward and shift your weight onto your hands while lifting your feet off the floor",
+            "Round your upper back slightly and keep your core tight to maintain balance",
+            "Look slightly ahead of your hands rather than straight down",
+            "Hold the position with steady breathing and active finger pressure into the floor",
+            "When you finish the hold, lower your feet back to the floor with control"
+        ],
         "progression": [
             "frog_stand_knees_outside",
             "frog_stand_crow_pose",
@@ -2099,6 +2169,15 @@
         "level": "expert",
         "videoURL": "https://www.youtube.com/shorts/0stjvNYLRKo",
         "equipment": [],
+        "steps": [
+            "Kick up or press into a handstand with your weight centered over your base hand",
+            "Place your free arm out to the side or behind your back for balance",
+            "Stack your shoulders over your wrist and keep your arm fully straight",
+            "Squeeze your core and glutes to maintain a straight, hollow body line",
+            "Shift your weight slightly over your supporting hand and use finger pressure to balance",
+            "Make small adjustments through your fingers and shoulders to stay stacked",
+            "When you finish the hold, come down with control into a tuck or straddle landing"
+        ],
         "mastery": {
             "reps": {
                 "_0": 5
@@ -2138,6 +2217,15 @@
         "videoURL": "https://www.youtube.com/shorts/ZE3jWrfR2TA",
         "equipment": [
             "overheadBar"
+        ],
+        "steps": [
+            "Grip the bar with your hands shoulder-width apart and jump or step up to a straight-arm support hold",
+            "Lean your torso slightly forward and keep your shoulders depressed away from your ears",
+            "Slowly bend your elbows and lower your body between your hands",
+            "Keep your elbows tracking back rather than flaring straight out to the sides",
+            "Lower until your upper arms are roughly parallel to the floor or your shoulders reach a comfortable depth",
+            "Press down through your palms to straighten your arms and return to the top position",
+            "Finish each rep with your body controlled and your shoulders stable, not swinging"
         ],
         "mastery": {
             "reps": {
