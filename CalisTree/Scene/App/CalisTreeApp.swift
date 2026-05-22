@@ -10,7 +10,7 @@ struct CalisTreeApp: App {
     private let assembler: ScopedModuleAssembler<Resolver> = {
         let assembler = ScopedModuleAssembler<Resolver>(
             [
-                CalisTreeAssembly(purpose: .normal)
+                ExerciseTreeAssembly(purpose: .normal)
             ]
         )
         return assembler

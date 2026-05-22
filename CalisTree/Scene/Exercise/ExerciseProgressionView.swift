@@ -42,7 +42,7 @@ struct ExerciseProgressionView: View {
 }
 
 #Preview {
-    let assembler = CalisTreeAssembly.testing()
+    let assembler = ExerciseTreeAssembly.testing()
     let exercise = assembler.resolver.exerciseRepository().exerciseById["one_arm_elbow_lever"]!
     return NavigationStack {
         ExerciseProgressionView(

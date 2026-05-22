@@ -59,7 +59,7 @@ struct OnboardingWelcomeView: View {
 #Preview {
     NavigationStack {
         OnboardingWelcomeView(
-            viewModel: CalisTreeAssembly.testing().resolver.onboardingWelcomeViewModel()
+            viewModel: ExerciseTreeAssembly.testing().resolver.onboardingWelcomeViewModel()
         )
     }
     .environment(\.coordinator, Coordinator(root: OnboardingPath.welcome))

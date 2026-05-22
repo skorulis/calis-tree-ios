@@ -1,9 +1,4 @@
-//
-//  ContentView.swift
-//  CalisTree
-//
 //  Created by Alex Skorulis on 15/5/2026.
-//
 
 import ASKCoordinator
 import Knit
@@ -101,6 +96,6 @@ struct ContentView: View {
 }
 
 #Preview {
-    let assembler = CalisTreeAssembly.testing()
+    let assembler = ExerciseTreeAssembly.testing()
     ContentView(resolver: assembler.resolver)
 }

@@ -226,7 +226,7 @@ struct ExerciseDetailView: View {
 }
 
 #Preview {
-    let assembler = CalisTreeAssembly.testing()
+    let assembler = ExerciseTreeAssembly.testing()
     let exercise = assembler.resolver.exerciseRepository().exerciseById["elbow_lever"]!
     NavigationStack {
         ExerciseDetailView(

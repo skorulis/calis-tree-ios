@@ -80,7 +80,7 @@ struct ProgressionTreeView: View {
 }
 
 #Preview {
-    let assembler = CalisTreeAssembly.testing()
+    let assembler = ExerciseTreeAssembly.testing()
     let exercise = assembler.resolver.exerciseRepository().exerciseById["planche"]!
     return NavigationStack {
         ProgressionTreeView(

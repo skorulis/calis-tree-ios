@@ -64,7 +64,7 @@ struct OnboardingHowToUseView: View {
 #Preview {
     NavigationStack {
         OnboardingHowToUseView(
-            viewModel: CalisTreeAssembly.testing().resolver.onboardingHowToUseViewModel()
+            viewModel: ExerciseTreeAssembly.testing().resolver.onboardingHowToUseViewModel()
         )
     }
     .environment(\.coordinator, Coordinator(root: OnboardingPath.howToUse))

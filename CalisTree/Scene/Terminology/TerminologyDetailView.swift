@@ -28,7 +28,7 @@ struct TerminologyDetailView: View {
     )
     NavigationStack {
         TerminologyDetailView(
-            viewModel: CalisTreeAssembly.testing().resolver.terminologyDetailViewModel(terminology: term)
+            viewModel: ExerciseTreeAssembly.testing().resolver.terminologyDetailViewModel(terminology: term)
         )
     }
 }

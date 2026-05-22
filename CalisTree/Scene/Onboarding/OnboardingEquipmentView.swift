@@ -52,7 +52,7 @@ struct OnboardingEquipmentView: View {
 
 #Preview {
     NavigationStack {
-        let assembler = CalisTreeAssembly.testing()
+        let assembler = ExerciseTreeAssembly.testing()
         OnboardingEquipmentView(
             viewModel: assembler.resolver.onboardingEquipmentViewModel(),
             settingsViewModel: assembler.resolver.settingsViewModel()

@@ -22,7 +22,7 @@ struct SettingsView: View {
 #Preview {
     NavigationStack {
         SettingsView(
-            viewModel: CalisTreeAssembly.testing().resolver.settingsViewModel()
+            viewModel: ExerciseTreeAssembly.testing().resolver.settingsViewModel()
         )
     }
     .environment(\.coordinator, Coordinator(root: MainPath.settings))

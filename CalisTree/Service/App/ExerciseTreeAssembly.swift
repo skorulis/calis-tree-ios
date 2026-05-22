@@ -4,7 +4,7 @@ import ASKCore
 import Foundation
 import Knit
 
-final class CalisTreeAssembly: AutoInitModuleAssembly {
+final class ExerciseTreeAssembly: AutoInitModuleAssembly {
     static var dependencies: [any Knit.ModuleAssembly.Type] { [] }
     typealias TargetResolver = Resolver
 
@@ -105,9 +105,8 @@ final class CalisTreeAssembly: AutoInitModuleAssembly {
     }
 }
 
-extension CalisTreeAssembly {
+extension ExerciseTreeAssembly {
     @MainActor static func testing() -> ScopedModuleAssembler<Resolver> {
-        ScopedModuleAssembler<Resolver>([CalisTreeAssembly()])
+        ScopedModuleAssembler<Resolver>([ExerciseTreeAssembly()])
     }
 }
-

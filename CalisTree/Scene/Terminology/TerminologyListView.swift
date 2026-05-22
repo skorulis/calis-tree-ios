@@ -30,7 +30,7 @@ struct TerminologyListView: View {
 #Preview {
     NavigationStack {
         TerminologyListView(
-            viewModel: CalisTreeAssembly.testing().resolver.terminologyListViewModel()
+            viewModel: ExerciseTreeAssembly.testing().resolver.terminologyListViewModel()
         )
     }
     .environment(\.coordinator, Coordinator(root: MainPath.terminologyList))

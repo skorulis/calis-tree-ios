@@ -21,7 +21,7 @@ struct AvailableEquipmentSection: View {
 }
 
 #Preview {
-    let assembler = CalisTreeAssembly.testing()
+    let assembler = ExerciseTreeAssembly.testing()
     List {
         AvailableEquipmentSection(
             viewModel: assembler.resolver.settingsViewModel()

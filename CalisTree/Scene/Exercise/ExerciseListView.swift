@@ -87,7 +87,7 @@ struct ExerciseListView: View {
 }
 
 #Preview {
-    let assembler = CalisTreeAssembly.testing()
+    let assembler = ExerciseTreeAssembly.testing()
     assembler.resolver.mainStore().setMasteryProgress(15, for: "Hanging L-Sit")
     return NavigationStack {
         ExerciseListView(

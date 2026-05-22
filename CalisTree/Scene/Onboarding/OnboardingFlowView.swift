@@ -18,7 +18,7 @@ struct OnboardingFlowView: View {
 }
 
 #Preview {
-    let assembler = CalisTreeAssembly.testing()
+    let assembler = ExerciseTreeAssembly.testing()
     OnboardingFlowView(
         resolver: assembler.resolver,
         onComplete: {}
