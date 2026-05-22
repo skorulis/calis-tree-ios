@@ -8,13 +8,23 @@
         "equipment": [
             "overheadBar"
         ],
+        "steps": [
+            "Grip the bar with your hands shoulder-width apart and hang with your arms fully extended",
+            "Depress your shoulders, tighten your core, and keep your body still to avoid swinging",
+            "Raise your straight legs forward until they are parallel to the floor, forming an L-sit",
+            "Hold the L-sit position with your feet together and your legs as straight as your flexibility allows",
+            "Pull yourself up by driving your elbows down and back while keeping your legs in the L-sit",
+            "Continue pulling until your chin clears the bar without tucking your knees or losing the L shape",
+            "Lower yourself back down with control until your arms are fully extended, still holding the L-sit"
+        ],
         "mastery": {
             "reps": {
                 "_0": 10
             }
         },
         "prerequisites": [
-            "pull_up"
+            "pull_up",
+            "hanging_l_sit"
         ]
     },
     {
@@ -170,8 +180,7 @@
             }
         },
         "prerequisites": [
-            "front_lever_drops",
-            "tuck_front_lever_hold"
+            "front_lever_drops"
         ]
     },
     {
@@ -203,11 +212,7 @@
             }
         },
         "prerequisites": [
-            "reverse_leg_raises",
-            "l_sit",
-            "planche_lean",
             "tuck_planche",
-            "pseudo_planche_push_up",
             "bent_arm_tuck_planche"
         ]
     },
@@ -349,10 +354,9 @@
         "videoURL": "https://www.youtube.com/shorts/ca0yGW8071Y",
         "equipment": [],
         "prerequisites": [
-            "push_up",
             "decline_push_up",
             "reverse_leg_raises",
-            "push_up_shoulder_protractions"
+            "scapular_protraction_push_up"
         ],
         "progression": [
             "planche_lean_chest",
@@ -371,7 +375,6 @@
             "advanced_tuck_planche"
         ],
         "prerequisites": [
-            "planche_lean",
             "l_sit",
             "pseudo_planche_push_up",
             "frog_stand"
@@ -619,7 +622,6 @@
             }
         },
         "prerequisites": [
-            "push_up",
             "pike_hold"
         ]
     },
@@ -724,7 +726,6 @@
             }
         },
         "prerequisites": [
-            "push_up",
             "planche_lean"
         ]
     },
@@ -879,7 +880,6 @@
             }
         },
         "prerequisites": [
-            "pull_up",
             "skin_the_cat"
         ]
     },
@@ -895,7 +895,6 @@
         },
         "prerequisites": [
             "pull_up",
-            "hanging_knee_raise",
             "hanging_high_knee_raise"
         ]
     },
@@ -912,8 +911,7 @@
         },
         "prerequisites": [
             "planche",
-            "bent_arm_planche",
-            "pseudo_planche_push_up"
+            "bent_arm_planche"
         ]
     },
     {
@@ -947,13 +945,13 @@
             }
         },
         "prerequisites": [
-            "handstand",
             "handstand_press"
         ]
     },
     {
         "id": "one_arm_pull_up",
         "level": "expert",
+        "imageFile": "one_arm_pull_up",
         "videoURL": "https://www.youtube.com/watch?v=mTJHClMQPM8",
         "equipment": [
             "overheadBar"
@@ -988,10 +986,8 @@
         },
         "prerequisites": [
             "planche_lean",
-            "scapular_shrugs",
             "archer_push_up",
             "hanging_windshield_wiper",
-            "high_side_plank_raise",
             "side_plank_flag"
         ]
     },
@@ -1011,9 +1007,7 @@
         },
         "prerequisites": [
             "l_sit",
-            "handstand",
             "handstand_press",
-            "pike_push_up",
             "bent_arm_tuck_planche"
         ]
     },
@@ -1100,7 +1094,6 @@
             }
         },
         "prerequisites": [
-            "pull_up",
             "wide_pull_up"
         ]
     },
@@ -1196,10 +1189,7 @@
             }
         },
         "prerequisites": [
-            "pull_up",
             "l_sit_pull_up",
-            "upside_down_deadlift",
-            "toes_to_bar",
             "tuck_front_lever_hold"
         ]
     },
@@ -1215,7 +1205,6 @@
             }
         },
         "prerequisites": [
-            "squat",
             "seated_leg_raise",
             "archer_squat"
         ]
@@ -1405,7 +1394,7 @@
     {
         "id": "lunge",
         "level": "foundation",
-        "imageFile":"lunge",
+        "imageFile": "lunge",
         "videoURL": "https://www.youtube.com/shorts/1cS-6KsJW9g",
         "equipment": [],
         "steps": [
@@ -1479,7 +1468,10 @@
         "videoURL": "https://www.youtube.com/shorts/bh9PsSfGZ2o",
         "progressionURL": "https://www.youtube.com/watch?v=xp1tgjT_3k0",
         "equipment": [],
-        "progression": ["elevated_one_arm_push_up", "assisted_one_arm_push_up"],
+        "progression": [
+            "elevated_one_arm_push_up",
+            "assisted_one_arm_push_up"
+        ],
         "mastery": {
             "reps": {
                 "_0": 5
@@ -1500,8 +1492,7 @@
             }
         },
         "prerequisites": [
-            "handstand_push_up",
-            "handstand_press"
+            "handstand_push_up"
         ]
     },
     {
@@ -1514,7 +1505,7 @@
             "Point your fingers outward with your thumbs facing forward",
             "Tighten your core and glutes to prevent your hips from sagging",
             "Without bending your elbows, slowly allow your chest to sink slightly toward the floor by retracting your shoulder blades",
-            "Keep the movement small and controlled—only your shoulder blades should move",
+            "Keep the movement small and controlled\u2014only your shoulder blades should move",
             "Push through your palms and spread your shoulder blades apart by rounding your upper back slightly",
             "Fully protract your shoulder blades at the top of the movement while keeping your arms locked straight",
             "Pause briefly, then slowly return to the starting position"
@@ -1562,7 +1553,7 @@
             "Superman"
         ],
         "level": "beginner",
-        "imageFile":"arch_hold",
+        "imageFile": "arch_hold",
         "videoURL": "https://www.youtube.com/watch?v=zD2MQNR6QeY",
         "equipment": [],
         "mastery": {
@@ -1576,7 +1567,9 @@
         "id": "butchers_block",
         "level": "foundation",
         "videoURL": "https://www.youtube.com/watch?v=oDnP3sPkdO0",
-        "equipment": ["raisedSurface"],
+        "equipment": [
+            "raisedSurface"
+        ],
         "mastery": {
             "time": {
                 "_0": 10

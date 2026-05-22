@@ -61,7 +61,6 @@ struct ExerciseRepositoryTests {
         let chain = repository.progressionChain(to: "planche")
         #expect(
             chain.map(\.id) == [
-                "reverse_leg_raises",
                 "l_sit_kicks",
                 "knee_plank",
                 "plank",
@@ -73,6 +72,8 @@ struct ExerciseRepositoryTests {
                 "kneeling_push_up",
                 "push_up",
                 "decline_push_up",
+                "reverse_leg_raises",
+                "scapular_protraction_push_up",
                 "planche_lean",
                 "pseudo_planche_push_up",
                 "frog_stand",
