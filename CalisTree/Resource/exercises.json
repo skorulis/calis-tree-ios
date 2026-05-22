@@ -103,7 +103,6 @@
             }
         },
         "prerequisites": [
-            "dead_hang",
             "hanging_knee_raise"
         ]
     },
@@ -364,6 +363,7 @@
         "id": "tuck_planche",
         "name": "Tuck Planche",
         "level": "intermediate",
+        "imageFile": "tuck_planche",
         "videoURL": "https://www.youtube.com/shorts/-cxjiLArpls",
         "equipment": [],
         "progression": [
@@ -834,7 +834,6 @@
     },
     {
         "id": "ice_cream_maker",
-        "name": "Ice Cream Maker",
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/watch?v=30SeE_9jDjg",
         "equipment": [
@@ -846,8 +845,6 @@
             }
         },
         "prerequisites": [
-            "dead_hang",
-            "pull_up",
             "tuck_front_lever_hold"
         ]
     },
@@ -951,7 +948,6 @@
         },
         "prerequisites": [
             "handstand",
-            "pike_push_up",
             "handstand_press"
         ]
     },
@@ -1018,7 +1014,6 @@
             "handstand",
             "handstand_press",
             "pike_push_up",
-            "dip",
             "bent_arm_tuck_planche"
         ]
     },
@@ -1211,6 +1206,7 @@
     {
         "id": "pistol_squat",
         "level": "intermediate",
+        "imageFile": "pistol_squat",
         "videoURL": "https://www.youtube.com/shorts/2qSwsTYEWuM",
         "equipment": [],
         "mastery": {
@@ -1276,8 +1272,7 @@
             }
         },
         "prerequisites": [
-            "pistol_squat",
-            "archer_squat"
+            "pistol_squat"
         ]
     },
     {
@@ -1505,7 +1500,6 @@
             }
         },
         "prerequisites": [
-            "handstand",
             "handstand_push_up",
             "handstand_press"
         ]

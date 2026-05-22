@@ -47,13 +47,13 @@ struct ExerciseRepositoryTests {
     @Test func progressionChain_linearPrerequisites() {
         let repository = ExerciseRepository()
         let chain = repository.progressionChain(to: "one_arm_elbow_lever")
-        #expect(chain.map(\.id) == ["wall_push_up", "push_up", "elbow_lever", "one_arm_elbow_lever"])
+        #expect(chain.map(\.id) == ["wall_push_up", "kneeling_push_up", "push_up", "elbow_lever", "one_arm_elbow_lever"])
     }
 
     @Test func progressionChain_deduplicatesSharedAncestors() {
         let repository = ExerciseRepository()
         let chain = repository.progressionChain(to: "archer_push_up")
-        #expect(chain.map(\.id) == ["wall_push_up", "push_up", "diamond_push_up", "wide_push_up", "archer_push_up"])
+        #expect(chain.map(\.id) == ["wall_push_up", "kneeling_push_up", "push_up", "diamond_push_up", "wide_push_up", "archer_push_up"])
     }
 
     @Test func progressionChain_multiBranchPrerequisites() {
@@ -67,12 +67,15 @@ struct ExerciseRepositoryTests {
                 "plank",
                 "boat_hold",
                 "seated_leg_raise",
+                "tucked_l_sit",
                 "l_sit",
                 "wall_push_up",
+                "kneeling_push_up",
                 "push_up",
                 "decline_push_up",
                 "planche_lean",
                 "pseudo_planche_push_up",
+                "frog_stand",
                 "tuck_planche",
                 "bench_dip",
                 "dip",
@@ -91,6 +94,49 @@ struct ExerciseRepositoryTests {
         let repository = ExerciseRepository()
         let chain = repository.progressionChain(to: "wall_push_up")
         #expect(chain.map(\.id) == ["wall_push_up"])
+    }
+
+    /// Each exercise's direct prerequisites should be minimal: none may already appear
+    /// in another direct prerequisite's prerequisite chain.
+    @Test func directPrerequisitesAreNotRedundantWithEachOther() {
+        let repository = ExerciseRepository()
+
+        for exercise in repository.exercises {
+            let direct = exercise.prerequisites
+            guard direct.count > 1 else { continue }
+
+            for prerequisiteId in direct {
+                let implied = transitivePrerequisiteIds(
+                    of: prerequisiteId,
+                    repository: repository
+                )
+                let redundant = direct.filter { $0 != prerequisiteId && implied.contains($0) }
+                #expect(
+                    redundant.isEmpty,
+                    """
+                    Exercise '\(exercise.displayName)' (\(exercise.id)) lists '\(prerequisiteId)' \
+                    and also '\(redundant.joined(separator: "', '"))', which is already required \
+                    via '\(prerequisiteId)'
+                    """
+                )
+            }
+        }
+    }
+
+    private func transitivePrerequisiteIds(
+        of exerciseId: Exercise.ID,
+        repository: ExerciseRepository
+    ) -> Set<Exercise.ID> {
+        var result = Set<Exercise.ID>()
+        func visit(_ id: Exercise.ID) {
+            guard let exercise = repository.exerciseById[id] else { return }
+            for prerequisiteId in exercise.prerequisites {
+                guard result.insert(prerequisiteId).inserted else { continue }
+                visit(prerequisiteId)
+            }
+        }
+        visit(exerciseId)
+        return result
     }
 
 }
