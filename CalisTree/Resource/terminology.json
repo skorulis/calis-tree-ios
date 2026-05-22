@@ -11,7 +11,8 @@
         "name": "Shoulder (scapular) Protraction",
         "details": "Shoulder (scapular) protraction is the movement where your shoulder blades slide forward and away from your spine, spreading them apart. Think of it as reaching, punching, or rounding your shoulders forward",
         "linkTerms": [
-            "protract your shoulders"
+            "protract your shoulders",
+            "shoulder blades protracted"
         ]
     },
     {
@@ -45,6 +46,22 @@
         "details": "To \"tighten your core\" (or engage it) means to activate the muscles in your midsection—including your abs, obliques, and lower back—to create a sturdy \"corset\" for your spine. It stabilizes your body during movement, improves posture, and protects your lower back from injury",
         "linkTerms": [
             "engage your core"
+        ]
+    },
+    {
+        "name": "Posterior Pelvic Tilt",
+        "details": "A posterior pelvic tilt is when your pelvis rotates backward, causing your tailbone to tuck underneath you and flattening the natural curve of your lower back",
+        "linkTerms": []
+    },
+    {
+        "name": "Anterior Pelvic Tilt",
+        "details": "An anterior pelvic tilt is when your pelvis rotates forward, causing your tailbone to stick out and round the natural curve of your lower back",
+    },
+    {
+        "name": "Keeping Tension",
+        "details": "\"keeping tension\" means continuously flexing and engaging the target muscle throughout the entire movement. It prevents the muscle from "resting" at the top or bottom of a repetition, forcing it to work harder and increasing the overall mechanical stress (Time Under Tension) needed to stimulate growth",
+        "linkTerms": [
+            "keeping tension"
         ]
     }
 ]
