@@ -1869,15 +1869,6 @@
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/watch?v=PRrb64GjqZ0",
         "equipment": [],
-        "steps": [
-            "Start in a kneeling position with your knees together and your torso upright",
-            "Cross one ankle behind the other and sit back onto your heels if needed for stability",
-            "Lean your torso back slowly while keeping your core tight and your hips forward",
-            "Lower as far as you can while maintaining control through your quads and core",
-            "Keep your arms forward for balance and avoid collapsing through your lower back",
-            "Pull yourself back up to the starting kneeling position using your quads",
-            "Switch the cross of your ankles or lead leg between sets as needed"
-        ],
         "mastery": {
             "reps": {
                 "_0": 10
@@ -2449,5 +2440,31 @@
             }
         },
         "prerequisites": []
+    },
+    {
+        "id": "burpee",
+        "name": "Burpees",
+        "level": "beginner",
+        "imageFile": "burpee",
+        "videoURL": "https://www.youtube.com/shorts/gYiE_2BtSTg",
+        "equipment": [],
+        "steps": [
+            "Stand with your feet shoulder-width apart and your arms at your sides",
+            "Sit your hips back and squat down, placing your hands on the floor shoulder-width apart in front of your feet",
+            "Jump or step your feet back into a straight-arm push-up position with your body in a straight line from head to heels",
+            "Tighten your core and perform one push-up, lowering your chest toward the floor and pressing back up with control",
+            "Jump or step your feet forward to land outside your hands",
+            "Drive through your feet and explosively jump upward, reaching your arms overhead",
+            "Land softly with your knees slightly bent and immediately flow into the next rep"
+        ],
+        "mastery": {
+            "reps": {
+                "_0": 20
+            }
+        },
+        "prerequisites": [
+            "push_up",
+            "squat"
+        ]
     }
 ]
