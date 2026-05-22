@@ -1681,6 +1681,13 @@
         "progression": [
             "side_plank_flag_leg_raises"
         ],
+        "steps": [
+            "Start in a high side plank on one hand with your other arm holding onto a vertical pole",
+            "Shift your weight onto your bottom arm and begin lifting both feet off the floor",
+            "Keep your legs together and extend your body into a straight horizontal line",
+            "Squeeze your core and glutes to hold your hips level with your shoulders",
+            "Keep tension and pull on the pole with your top hand without lifting your legs"
+        ],
         "mastery": {
             "time": {
                 "_0": 20
@@ -1695,6 +1702,16 @@
         "level": "foundation",
         "videoURL": "https://www.youtube.com/shorts/cSWXE-RB5wQ",
         "equipment": [],
+        "steps": [
+            "Start on your hands and knees with your hands shoulder-width apart directly under your shoulders",
+            "Lower yourself onto your forearms with your elbows directly beneath your shoulders",
+            "Walk your knees back so your body forms a straight line from your head to your knees",
+            "Tighten your core, glutes, and legs to keep your hips from sagging or lifting too high",
+            "Hold your body in a rigid plank position through your knees and torso",
+            "Keep your neck neutral by looking down at the floor slightly ahead of your hands",
+            "Breathe steadily while maintaining tension",
+            "When you finish the hold, lower yourself to the floor with control"
+        ],
         "mastery": {
             "time": {
                 "_0": 60
@@ -1708,6 +1725,16 @@
         "videoURL": "https://www.youtube.com/shorts/4UZkFwg2JQM",
         "equipment": [
             "overheadBar"
+        ],
+        "steps": [
+            "Grip the bar with your hands shoulder-width apart and hang with your arms fully extended",
+            "Engage your core and pull your knees toward your chest to begin the movement",
+            "Pull your hips up toward the bar while leaning your torso back slightly",
+            "Continue pulling until your hips rise above the bar and your torso spins aroundthe bar",
+            "Shift your weight forward and press down to arrive in a support hold on top of the bar",
+            "Lower yourself back over the bar with control by leaning forward and reversing the path",
+            "Return to a hang with straight arms to complete one rep",
+            "Avoid using excessive kipping; prioritize a smooth pull with your lats and core"
         ],
         "mastery": {
             "reps": {
@@ -1725,6 +1752,15 @@
         "imageFile": "pistol_squat",
         "videoURL": "https://www.youtube.com/shorts/2qSwsTYEWuM",
         "equipment": [],
+        "steps": [
+            "Stand on one leg with your other leg extended straight in front of you",
+            "Extend your arms forward for balance and keep your chest lifted",
+            "Sit your hips back and down on your standing leg while keeping your extended leg off the floor",
+            "Lower as far as you can while keeping your standing knee tracking over your foot",
+            "Keep your extended leg straight and your standing foot flat on the floor",
+            "Drive through your standing heel to stand back up to the starting position",
+            "Complete all reps on one leg before switching sides"
+        ],
         "mastery": {
             "reps": {
                 "_0": 10
@@ -1741,6 +1777,15 @@
         "imageFile": "squat",
         "videoURL": "https://www.youtube.com/shorts/n_xLyzPEX7A",
         "equipment": [],
+        "steps": [
+            "Stand with your feet shoulder-width apart and your toes pointed slightly outward",
+            "Keep your chest lifted and engage your core",
+            "Sit your hips back and bend your knees to lower into a squat",
+            "Lower until your thighs are parallel to the floor or as deep as you can with good form",
+            "Keep your knees tracking in line with your toes and avoid collapsing inward",
+            "Keep your weight distributed through your midfoot and heels",
+            "Drive through your feet to stand back up to the starting position"
+        ],
         "mastery": {
             "reps": {
                 "_0": 20
@@ -1753,6 +1798,15 @@
         "level": "beginner",
         "videoURL": "https://www.youtube.com/watch?v=OHty2T5wY4Y",
         "equipment": [],
+        "steps": [
+            "Stand with your feet wider than shoulder-width apart",
+            "Keep your chest lifted and engage your core for balance",
+            "Shift your weight onto one leg and straighten the opposite leg out to the side",
+            "Sit your hips back and down on your bent leg while keeping your straight leg extended",
+            "Lower as far as you can while keeping your bent knee tracking over your foot",
+            "Drive through the heel of your bent leg to stand back up to center",
+            "Alternate sides each rep or complete all reps on one side before switching"
+        ],
         "mastery": {
             "reps": {
                 "_0": 10
@@ -1767,6 +1821,12 @@
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/watch?v=FcQ77QxcotE",
         "equipment": [],
+        "steps": [
+            "Stand on one leg with your other knee bent and resting on the floor",
+            "Shift all of your weight to your front leg and stand up without using your back leg",
+            "Return back to the starting position",
+            "Complete all reps on one leg before switching sides"
+        ],
         "mastery": {
             "reps": {
                 "_0": 10
@@ -1781,6 +1841,15 @@
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/watch?v=PRrb64GjqZ0",
         "equipment": [],
+        "steps": [
+            "Start in a kneeling position with your knees together and your torso upright",
+            "Cross one ankle behind the other and sit back onto your heels if needed for stability",
+            "Lean your torso back slowly while keeping your core tight and your hips forward",
+            "Lower as far as you can while maintaining control through your quads and core",
+            "Keep your arms forward for balance and avoid collapsing through your lower back",
+            "Pull yourself back up to the starting kneeling position using your quads",
+            "Switch the cross of your ankles or lead leg between sets as needed"
+        ],
         "mastery": {
             "reps": {
                 "_0": 10
@@ -1796,6 +1865,15 @@
         "imageFile": "squat",
         "videoURL": "https://www.youtube.com/shorts/mjdMjaYXIcI",
         "equipment": [],
+        "steps": [
+            "Stand with your feet wider than shoulder-width apart and your toes pointed forward",
+            "Turn your feet outward slightly and sit your hips down into a wide squat",
+            "Lower until your thighs are parallel to the floor",
+            "Keep your torso upright and your chest lifted",
+            "Press your knees outward slightly to maintain tension through your hips",
+            "Hold the stance with steady breathing and active tension through your legs and core",
+            "When you finish the hold, stand back up with control"
+        ],
         "mastery": {
             "time": {
                 "_0": 30
@@ -1811,6 +1889,15 @@
         "imageFile": "wall_push_up",
         "videoURL": "https://www.youtube.com/shorts/YWw-3rGaoT0",
         "equipment": [],
+        "steps": [
+            "Stand facing a wall at arm's length and place your hands on the wall at shoulder height",
+            "Position your hands shoulder-width apart with your fingers spread for stability",
+            "Walk your feet back until your body forms a straight line angled toward the wall",
+            "Tighten your core and glutes to keep your body rigid",
+            "Bend your elbows and lower your chest toward the wall",
+            "Keep your elbows at roughly a 45-degree angle to your body",
+            "Press through your palms to straighten your arms and return to the starting position"
+        ],
         "mastery": {
             "reps": {
                 "_0": 25
