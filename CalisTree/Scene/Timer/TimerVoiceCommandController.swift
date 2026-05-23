@@ -31,10 +31,10 @@ final class TimerVoiceCommandController {
 
     private var shouldRun = false
 
-    private var startAction: () -> Void = {}
-    private var stopAction: () -> Void = {}
+    private var startAction: () -> Bool = {true}
+    private var stopAction: () -> Bool = {true}
 
-    func setActions(start: @escaping () -> Void, stop: @escaping () -> Void) {
+    func setActions(start: @escaping () -> Bool, stop: @escaping () -> Bool) {
         startAction = start
         stopAction = stop
     }
@@ -152,11 +152,13 @@ final class TimerVoiceCommandController {
         lastCommandTime = now
         switch command {
         case .startTimer:
-            TimerVoiceCommandFeedback.play(.start)
-            startAction()
+            if startAction() {
+                TimerVoiceCommandFeedback.play(.start)
+            }
         case .stopTimer:
-            TimerVoiceCommandFeedback.play(.stop)
-            stopAction()
+            if stopAction() {
+                TimerVoiceCommandFeedback.play(.stop)
+            }
         }
     }
 

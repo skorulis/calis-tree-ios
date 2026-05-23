@@ -61,15 +61,17 @@ struct TimerView: View {
         }
     }
 
-    private func startIfPaused() {
-        guard runningSince == nil else { return }
+    private func startIfPaused() -> Bool {
+        guard runningSince == nil else { return false }
         runningSince = Date()
+        return true
     }
 
-    private func pauseIfRunning() {
-        guard let start = runningSince else { return }
+    private func pauseIfRunning() -> Bool {
+        guard let start = runningSince else { return false }
         accumulatedElapsed += Date().timeIntervalSince(start)
         runningSince = nil
+        return true
     }
     
     private var buttons: some View {
@@ -130,9 +132,9 @@ struct TimerView: View {
 
     private func toggleRunning() {
         if runningSince != nil {
-            pauseIfRunning()
+            _ = pauseIfRunning()
         } else {
-            startIfPaused()
+            _ = startIfPaused()
         }
     }
 
