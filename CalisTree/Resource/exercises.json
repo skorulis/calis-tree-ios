@@ -517,6 +517,7 @@
             "Keep your head neutral and look slightly ahead of your hands"
         ],
         "level": "intermediate",
+        "imageFile": "pseudo_planche",
         "videoURL": "https://www.youtube.com/shorts/ca0yGW8071Y",
         "equipment": [],
         "prerequisites": [
@@ -847,10 +848,11 @@
         ]
     },
     {
-        "id": "handstand_wall_walk_ins",
+        "id": "handstand_wall_walk_in",
         "name": "Wall Walk ins",
         "level": "beginner",
         "description": "Start in a push up position with your feet against the wall and walk your feet up the wall and your hands towards it",
+        "imageFile": "wall_walk_in",
         "videoURL": "https://www.youtube.com/shorts/kAZkLII49fk",
         "equipment": [],
         "steps": [
@@ -895,7 +897,7 @@
             }
         },
         "prerequisites": [
-            "handstand_wall_walk_ins"
+            "handstand_wall_walk_in"
         ]
     },
     {
