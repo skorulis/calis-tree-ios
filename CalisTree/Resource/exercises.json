@@ -418,7 +418,7 @@
         ],
         "mastery": {
             "reps": {
-                "_0": 15
+                "_0": 20
             }
         },
         "prerequisites": []
@@ -570,6 +570,7 @@
         ],
         "description": "Sit in an imaginary chair pressing your backing into the wall. Your things should be parallel to the ground.",
         "level": "beginner",
+        "imageFile": "wall_sit",
         "videoURL": "https://www.youtube.com/shorts/mDdLC-yKudY",
         "equipment": [],
         "mastery": {
@@ -1122,6 +1123,7 @@
     {
         "id": "parallel_bar_leg_raises",
         "level": "beginner",
+        "imageFile": "parallel_bar_leg_raises",
         "videoURL": "https://www.youtube.com/shorts/Wfl-dA2plUg",
         "equipment": [
             "parallelBars"
@@ -1657,6 +1659,7 @@
     {
         "id": "hanging_windshield_wiper",
         "level": "intermediate",
+        "imageFile": "hanging_windshield_wiper",
         "videoURL": "https://www.youtube.com/shorts/dlRpAOnZhRY",
         "equipment": [
             "overheadBar"
@@ -1926,7 +1929,7 @@
         ],
         "mastery": {
             "reps": {
-                "_0": 25
+                "_0": 20
             }
         },
         "prerequisites": []
@@ -2151,13 +2154,11 @@
             "frog_stand_crow_pose",
             "frog_stand_straight_arms"
         ],
-        "mastery": {
-            "time": {
-                "_0": 20
-            }
-        },
         "prerequisites": [
-            "push_up"
+            "push_up",
+            "plank",
+            "tuck_l_sit",
+            "hollow_hold"
         ]
     },
     {
@@ -2193,6 +2194,7 @@
     {
         "id": "one_arm_hand_stand",
         "level": "expert",
+        "imageFile": "one_arm_handstand",
         "videoURL": "https://www.youtube.com/shorts/0stjvNYLRKo",
         "equipment": [],
         "steps": [
@@ -2312,6 +2314,7 @@
     {
         "id": "butchers_block",
         "level": "foundation",
+        "imageFile": "butchers_block",
         "videoURL": "https://www.youtube.com/watch?v=oDnP3sPkdO0",
         "equipment": [
             "raisedSurface"
@@ -2499,6 +2502,35 @@
         "prerequisites": [
             "plank",
             "kneeling_push_up"
+        ]
+    },
+    {
+        "id": "candle_pose",
+        "level": "intermediate",
+        "imageFile": "candle_pose",
+        "alternateNames": [
+            "Shoulder Stand Pose"
+        ],
+        "videoURL": "https://www.youtube.com/shorts/v1pcMaUOtOk",
+        "equipment": [],
+        "steps": [
+            "Lie on your back with your arms beside you and your legs extended",
+            "Press your palms into the floor and lift your hips, bringing your legs overhead toward the floor behind you",
+            "Bend your elbows and place your hands on your lower back for support with your upper arms on the floor",
+            "Walk your hands up your back toward your shoulder blades to lift your torso higher onto your shoulders",
+            "Straighten your legs toward the ceiling, keeping them together with your toes pointed",
+            "Press your elbows and upper arms firmly into the floor and keep your neck relaxed with your gaze toward your chest",
+            "Engage your core and hold your weight on your shoulders and upper back, not on your neck",
+            "To exit, bend your knees toward your forehead and roll down through your spine with control"
+        ],
+        "mastery": {
+            "time": {
+                "_0": 30
+            }
+        },
+        "prerequisites": [
+            "hollow_hold",
+            "boat_hold"
         ]
     }
 ]

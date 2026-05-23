@@ -72,6 +72,7 @@ final class TimerVoiceCommandController {
 
         do {
             try configureAudioSession()
+            TimerVoiceCommandFeedback.prepare()
             try ensureEngineRunning()
             try swapRecognitionPipeline()
             isListening = true
@@ -151,8 +152,10 @@ final class TimerVoiceCommandController {
         lastCommandTime = now
         switch command {
         case .startTimer:
+            TimerVoiceCommandFeedback.play(.start)
             startAction()
         case .stopTimer:
+            TimerVoiceCommandFeedback.play(.stop)
             stopAction()
         }
     }
@@ -212,7 +215,11 @@ final class TimerVoiceCommandController {
 
     private func configureAudioSession() throws {
         let session = AVAudioSession.sharedInstance()
-        try session.setCategory(.record, mode: .measurement, options: .duckOthers)
+        try session.setCategory(
+            .playAndRecord,
+            mode: .measurement,
+            options: [.duckOthers, .defaultToSpeaker]
+        )
         try session.setActive(true, options: .notifyOthersOnDeactivation)
     }
 
