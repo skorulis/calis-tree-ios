@@ -114,8 +114,8 @@ struct ProgressionTreeLayoutMetrics {
     }
 
     private static func nodesContentWidth(for model: ProgressionTreeModel) -> CGFloat {
-        let maxColumns = model.bands.flatMap(\.rows).map(\.nodes.count).max() ?? 1
-        let columns = CGFloat(maxColumns)
+        let maxColumnIndex = model.bands.flatMap(\.rows).flatMap(\.nodes).map(\.columnIndex).max() ?? 0
+        let columns = CGFloat(maxColumnIndex + 1)
         return horizontalContentPadding * 2
             + columns * avatarSize
             + max(0, columns - 1) * columnSpacing

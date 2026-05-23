@@ -871,6 +871,7 @@
     {
         "id": "wall_handstand",
         "level": "beginner",
+        "imageFile": "handstand",
         "description": "Perform a handstand with your feet against the wall",
         "videoURL": "https://www.youtube.com/shorts/2XMj3cVh-Hw",
         "equipment": [],
@@ -1145,7 +1146,7 @@
     {
         "id": "toes_to_bar",
         "level": "beginner",
-        "imageFile": "toe_to_bar",
+        "imageFile": "toes_to_bar",
         "videoURL": "https://www.youtube.com/watch?v=S2QVHl6DoNo",
         "equipment": [
             "overheadBar"
@@ -1826,6 +1827,7 @@
     {
         "id": "archer_squat",
         "level": "beginner",
+        "imageFile": "archer_squat",
         "videoURL": "https://www.youtube.com/watch?v=OHty2T5wY4Y",
         "equipment": [],
         "steps": [
@@ -2211,6 +2213,7 @@
     {
         "id": "scapular_protraction_push_up",
         "level": "beginner",
+        "imageFile": "push_up",
         "videoURL": "https://www.youtube.com/shorts/3TsOKiUDzw0",
         "equipment": [],
         "steps": [
@@ -2260,6 +2263,7 @@
     {
         "id": "standing_calf_raise",
         "level": "foundation",
+        "imageFile": "calf_raise",
         "videoURL": "https://www.youtube.com/shorts/wdOkFomQNp8",
         "equipment": [],
         "steps": [
