@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "tuck_l_sit.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -318,6 +318,7 @@
         "name": "L-Sit Kicks",
         "description": "Start in a tucked L-sit position and move your legs forwards into the L-Sit position",
         "level": "beginner",
+        "imageFile": "tuck_l_sit",
         "videoURL": "https://www.youtube.com/shorts/z-gbvxX8fHg",
         "equipment": [],
         "steps": [
@@ -343,6 +344,7 @@
         "id": "tucked_l_sit",
         "name": "Tucked L-Sit",
         "level": "beginner",
+        "imageFile": "tuck_l_sit",
         "videoURL": "https://www.youtube.com/shorts/PLffPwepgiY",
         "equipment": [],
         "steps": [
@@ -1375,6 +1377,7 @@
         "id": "handstand_push_up",
         "name": "Handstand Push Up",
         "level": "advanced",
+        "imageFile": "handstand_push_up",
         "videoURL": "https://www.youtube.com/watch?v=fMTlYYHSy2A",
         "equipment": [],
         "progression": [
