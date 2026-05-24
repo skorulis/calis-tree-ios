@@ -19,7 +19,8 @@ struct MainPathRenderer: CoordinatorPathRenderer {
             )
         case .exerciseDetail(let exercise):
             ExerciseDetailView(
-                viewModel: resolver.exerciseDetailViewModel(exercise: exercise)
+                viewModel: resolver.exerciseDetailViewModel(exercise: exercise),
+                mainStore: resolver.mainStore()
             )
         case .exerciseVideo(let exercise):
             ExerciseVideoView(exercise: exercise)
@@ -27,13 +28,15 @@ struct MainPathRenderer: CoordinatorPathRenderer {
             ExerciseProgressionView(
                 viewModel: coordinator.apply(
                     resolver.exerciseProgressionViewModel(exercise: exercise)
-                )
+                ),
+                mainStore: resolver.mainStore()
             )
         case .exerciseProgressionTree(let exercise):
             ProgressionTreeView(
                 viewModel: coordinator.apply(
                     resolver.progressionTreeViewModel(exercise: exercise)
-                )
+                ),
+                mainStore: resolver.mainStore()
             )
         case .allExercisesProgressionTree:
             ProgressionTreeView(
@@ -44,7 +47,8 @@ struct MainPathRenderer: CoordinatorPathRenderer {
                         repository: resolver.exerciseRepository(),
                         layoutService: resolver.progressionTreeLayoutService()
                     )
-                )
+                ),
+                mainStore: resolver.mainStore()
             )
         case .terminologyList:
             TerminologyListView(

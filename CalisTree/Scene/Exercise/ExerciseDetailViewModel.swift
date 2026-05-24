@@ -92,6 +92,10 @@ final class ExerciseDetailViewModel {
         return "\(current) / \(target.intValue) \(target.unitLabel)"
     }
 
+    var showsPrerequisiteSection: Bool {
+        repository.progressionChain(to: exercise.id).contains { $0.id != exercise.id }
+    }
+
     var prerequisiteItems: [PrerequisiteItem] {
         repository.progressionChain(to: exercise.id)
             .filter { $0.id != exercise.id }
@@ -104,6 +108,7 @@ final class ExerciseDetailViewModel {
                     )
                 )
             }
+            .filter { mainStore.hasAvailableEquipment(for: $0.exercise) }
     }
 
     var isFavorite: Bool {

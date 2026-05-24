@@ -86,6 +86,10 @@ final class MainStore {
         availableEquipment.contains(equipment)
     }
 
+    func hasAvailableEquipment(for exercise: Exercise) -> Bool {
+        exercise.equipment.allSatisfy(isEquipmentAvailable)
+    }
+
     func setEquipmentAvailable(_ available: Bool, for equipment: Equipment) {
         var updated = availableEquipment
         if available {

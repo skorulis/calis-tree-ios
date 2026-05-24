@@ -106,6 +106,27 @@ struct MainStoreTests {
         #expect(store.availableEquipment == Set(Equipment.allCases))
     }
 
+    @Test func hasAvailableEquipmentRequiresAllExerciseEquipment() {
+        let store = MainStore(keyValueStore: InMemoryDefaults())
+        let exercise = Exercise(
+            id: "muscle_up",
+            name: "Muscle Up",
+            description: nil,
+            steps: nil,
+            level: .intermediate,
+            imageFile: nil,
+            videoURL: "https://example.com",
+            equipment: [.overheadBar, .rings],
+            mastery: nil,
+            progression: nil,
+            prerequisites: []
+        )
+        store.setEquipmentAvailable(false, for: .rings)
+        #expect(!store.hasAvailableEquipment(for: exercise))
+        store.setEquipmentAvailable(true, for: .rings)
+        #expect(store.hasAvailableEquipment(for: exercise))
+    }
+
     @Test func availableEquipmentPersistsAcrossInstances() {
         let keyValueStore = InMemoryDefaults()
         let first = MainStore(keyValueStore: keyValueStore)

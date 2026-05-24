@@ -6,10 +6,17 @@ import SwiftUI
 
 struct ProgressionTreeView: View {
     @State var viewModel: ProgressionTreeViewModel
+    @Bindable private var mainStore: MainStore
     @State private var shareImage: UIImage?
     @State private var isShareSheetPresented = false
 
+    init(viewModel: ProgressionTreeViewModel, mainStore: MainStore) {
+        self._viewModel = State(initialValue: viewModel)
+        self._mainStore = Bindable(mainStore)
+    }
+
     var body: some View {
+        let _ = mainStore.availableEquipment
         let model = viewModel.treeModel
 
         GeometryReader { geometry in
@@ -84,7 +91,8 @@ struct ProgressionTreeView: View {
     let exercise = assembler.resolver.exerciseRepository().exerciseById["planche"]!
     return NavigationStack {
         ProgressionTreeView(
-            viewModel: assembler.resolver.progressionTreeViewModel(exercise: exercise)
+            viewModel: assembler.resolver.progressionTreeViewModel(exercise: exercise),
+            mainStore: assembler.resolver.mainStore()
         )
     }
     .environment(\.coordinator, Coordinator(root: MainPath.exerciseList))

@@ -59,7 +59,8 @@ final class ProgressionTreeViewModel: CoordinatorViewModel {
         case .allExercises:
             exercises = repository.exercises
         }
-        return layoutService.build(from: exercises)
+        let availableExercises = exercises.filter { mainStore.hasAvailableEquipment(for: $0) }
+        return layoutService.build(from: availableExercises)
     }
 
     func masteryProgress(for exercise: Exercise) -> ExerciseProgress {

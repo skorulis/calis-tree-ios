@@ -1333,6 +1333,7 @@
         "id": "planche_push_up",
         "name": "Planche Push Up",
         "level": "expert",
+        "imageFile": "bent_arm_planche",
         "videoURL": "https://www.youtube.com/watch?v=TZ63httkob4",
         "equipment": [],
         "steps": [

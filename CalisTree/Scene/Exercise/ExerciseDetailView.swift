@@ -7,8 +7,14 @@ import SwiftUI
 
 struct ExerciseDetailView: View {
     @State var viewModel: ExerciseDetailViewModel
+    @Bindable private var mainStore: MainStore
     @State private var isStepsExpanded = false
     @Environment(\.coordinator) private var coordinator
+
+    init(viewModel: ExerciseDetailViewModel, mainStore: MainStore) {
+        self._viewModel = State(initialValue: viewModel)
+        self._mainStore = Bindable(mainStore)
+    }
 
     var body: some View {
         ScrollView {
@@ -93,7 +99,8 @@ struct ExerciseDetailView: View {
 
     @ViewBuilder
     private var prerequisiteSection: some View {
-        if !viewModel.prerequisiteItems.isEmpty {
+        let _ = mainStore.availableEquipment
+        if viewModel.showsPrerequisiteSection {
             VStack(alignment: .leading, spacing: 8) {
                 Button {
                     coordinator?.push(MainPath.exerciseProgression(viewModel.exercise))
@@ -235,7 +242,8 @@ struct ExerciseDetailView: View {
     let exercise = assembler.resolver.exerciseRepository().exerciseById["elbow_lever"]!
     NavigationStack {
         ExerciseDetailView(
-            viewModel: assembler.resolver.exerciseDetailViewModel(exercise: exercise)
+            viewModel: assembler.resolver.exerciseDetailViewModel(exercise: exercise),
+            mainStore: assembler.resolver.mainStore()
         )
     }
     .environment(\.coordinator, Coordinator(root: MainPath.exerciseList))
