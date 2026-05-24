@@ -1356,7 +1356,8 @@
         "id": "handstand_press",
         "name": "Handstand Press",
         "level": "advanced",
-        "videoURL": "https://www.youtube.com/shorts/XxFuPQzQb2w",
+        "videoURL": "https://www.youtube.com/watch?v=2K5PhFSMi6I",
+        "imageFile": "handstand",
         "equipment": [],
         "steps": [
             "Start in a deep pike or straddle stand with your hands on the floor shoulder-width apart in front of your feet",
@@ -1499,8 +1500,8 @@
     },
     {
         "id": "bent_arm_tuck_planche",
-        "name": "Bent Arm Tuck Planche",
         "level": "intermediate",
+        "imageFile": "bent_arm_tuck_planche",
         "videoURL": "https://www.youtube.com/shorts/MwM56OvqLYo",
         "equipment": [
             "paralletteBars"
@@ -1691,6 +1692,7 @@
     {
         "id": "high_side_plank_raise",
         "level": "beginner",
+        "imageFile": "high_side_plank",
         "videoURL": "https://www.youtube.com/watch?v=uKPo9UoB_MI",
         "equipment": [],
         "steps": [
@@ -1761,6 +1763,7 @@
     {
         "id": "pull_over",
         "level": "intermediate",
+        "imageFile": "muscle_up",
         "videoURL": "https://www.youtube.com/shorts/4UZkFwg2JQM",
         "equipment": [
             "overheadBar"
@@ -1987,6 +1990,7 @@
     {
         "id": "muscle_up",
         "level": "advanced",
+        "imageFile": "muscle_up",
         "videoURL": "https://www.youtube.com/watch?v=_eQ2gw_Gg5Y",
         "equipment": [
             "overheadBar"
@@ -2112,6 +2116,7 @@
     {
         "id": "reverse_lunge",
         "level": "beginner",
+        "imageFile": "lunge",
         "videoURL": "https://www.youtube.com/shorts/b_2qgdXT_QQ",
         "equipment": [],
         "steps": [
@@ -2245,6 +2250,7 @@
     {
         "id": "straight_bar_dip",
         "level": "intermediate",
+        "imageFile": "straight_bar_dip",
         "videoURL": "https://www.youtube.com/shorts/ZE3jWrfR2TA",
         "equipment": [
             "overheadBar"
@@ -2392,6 +2398,7 @@
     {
         "id": "deadbug",
         "level": "beginner",
+        "imageFile": "deadbug",
         "videoURL": "https://www.youtube.com/shorts/Aoipu_fl3HA",
         "equipment": [],
         "steps": [
@@ -2533,6 +2540,32 @@
         "prerequisites": [
             "hollow_hold",
             "boat_hold"
+        ]
+    },
+    {
+        "id": "scorpion_handstand",
+        "level": "advanced",
+        "imageFile": "scorpion_handstand",
+        "videoURL": "https://www.youtube.com/watch?v=g85vr2gLa_E",
+        "equipment": [],
+        "steps": [
+            "Kick up or press into a handstand with your arms straight and your shoulders stacked over your wrists",
+            "Push the floor away and engage your core while establishing balance in a straight line",
+            "Begin to arch your upper back and draw your shoulder blades together slightly",
+            "Bend your knees and lower your feet toward your head in a controlled arc",
+            "Keep your arms straight and continue pressing through your palms for stability",
+            "Bring your feet as close to your head as your spinal flexibility allows without losing balance",
+            "Hold the scorpion shape with steady breathing and active legs",
+            "Reverse the movement by extending your legs back overhead before coming down with control"
+        ],
+        "mastery": {
+            "time": {
+                "_0": 10
+            }
+        },
+        "prerequisites": [
+            "handstand",
+            "arch_hold"
         ]
     }
 ]

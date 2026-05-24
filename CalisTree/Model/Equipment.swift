@@ -12,6 +12,7 @@ enum Equipment: String, Codable, CaseIterable {
     case raisedSurface
     case verticalBar
     case lowBar
+    case dumbbells
     
     var description: String {
         switch self {
@@ -23,6 +24,7 @@ enum Equipment: String, Codable, CaseIterable {
         case .raisedSurface: "Raised Surface"
         case .verticalBar: "Vertical Bar"
         case .lowBar: "Low Bar"
+        case .dumbbells: "Dumbbells"
         }
     }
 
