@@ -18,7 +18,12 @@ struct ExerciseListView: View {
     var body: some View {
         let allItems = viewModel.items
         let favoriteItems = allItems.filter { mainStore.isFavorite(exerciseId: $0.exercise.id) }
-        let alphabeticalItems = allItems.filter { !mainStore.isFavorite(exerciseId: $0.exercise.id) }
+        let availableItems = allItems.filter {
+            hasAvailableEquipment($0.exercise) && !mainStore.isFavorite(exerciseId: $0.exercise.id)
+        }
+        let missingEquipmentItems = allItems.filter {
+            !hasAvailableEquipment($0.exercise) && !mainStore.isFavorite(exerciseId: $0.exercise.id)
+        }
         List {
             if !favoriteItems.isEmpty {
                 Section {
@@ -30,8 +35,17 @@ struct ExerciseListView: View {
                 }
             }
             Section {
-                ForEach(alphabeticalItems) { item in
+                ForEach(availableItems) { item in
                     exerciseRow(item: item)
+                }
+            }
+            if !missingEquipmentItems.isEmpty {
+                Section {
+                    ForEach(missingEquipmentItems) { item in
+                        exerciseRow(item: item)
+                    }
+                } header: {
+                    Text("Missing equipment")
                 }
             }
         }
@@ -63,13 +77,16 @@ struct ExerciseListView: View {
         .sheet(isPresented: $isFilterPresented) {
             ExerciseListFilterView(
                 filterLevel: $viewModel.filterLevel,
-                filterEquipmentAvailability: $viewModel.filterEquipmentAvailability,
                 filterProgress: $viewModel.filterProgress,
                 hasActiveFilters: viewModel.hasActiveFilters,
                 onClear: viewModel.resetFilters
             )
             .presentationDetents([.medium, .large])
         }
+    }
+
+    private func hasAvailableEquipment(_ exercise: Exercise) -> Bool {
+        exercise.equipment.allSatisfy(mainStore.isEquipmentAvailable)
     }
 
     @ViewBuilder

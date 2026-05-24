@@ -4,7 +4,6 @@ import SwiftUI
 
 struct ExerciseListFilterView: View {
     @Binding var filterLevel: Level?
-    @Binding var filterEquipmentAvailability: EquipmentAvailabilityFilter
     @Binding var filterProgress: ExerciseProgressFilter?
     let hasActiveFilters: Bool
     let onClear: () -> Void
@@ -24,17 +23,6 @@ struct ExerciseListFilterView: View {
                             isSelected: filterLevel == level
                         ) {
                             filterLevel = level
-                        }
-                    }
-                }
-
-                Section("Equipment") {
-                    ForEach(EquipmentAvailabilityFilter.allCases, id: \.self) { option in
-                        filterRow(
-                            title: option.menuTitle,
-                            isSelected: filterEquipmentAvailability == option
-                        ) {
-                            filterEquipmentAvailability = option
                         }
                     }
                 }
@@ -93,19 +81,14 @@ struct ExerciseListFilterView: View {
 
 #Preview {
     @Previewable @State var filterLevel: Level? = .beginner
-    @Previewable @State var filterEquipmentAvailability: EquipmentAvailabilityFilter = .available
     @Previewable @State var filterProgress: ExerciseProgressFilter? = .inProgress
 
     ExerciseListFilterView(
         filterLevel: $filterLevel,
-        filterEquipmentAvailability: $filterEquipmentAvailability,
         filterProgress: $filterProgress,
-        hasActiveFilters: filterLevel != nil
-            || filterEquipmentAvailability != .all
-            || filterProgress != nil,
+        hasActiveFilters: filterLevel != nil || filterProgress != nil,
         onClear: {
             filterLevel = nil
-            filterEquipmentAvailability = .all
             filterProgress = nil
         }
     )
