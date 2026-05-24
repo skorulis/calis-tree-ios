@@ -15,6 +15,10 @@ Character: An athletic woman with tan skin, dark hair tied back in a high ponyta
 Environment: Use a clean light blue background behind the main subject
 Style: Clean 2D digital vector illustration, cartoon anime style, thick crisp outlines, solid colors, flat shading. No text, no UI elements, no words, square 1:1 aspect ratio 
 
+Action: Create an image of a dumbbell
+Environment: Use a clean light blue background behind the main subject
+Style: Clean 2D digital vector illustration, cartoon anime style, thick crisp outlines, solid colors, flat shading. No text, no UI elements, no words, square 1:1 aspect ratio 
+
 
 Data sources:
 https://progresspedia.org/courses/calisthenics/

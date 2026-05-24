@@ -74,6 +74,8 @@ struct ExerciseRepositoryTests {
                 "decline_push_up",
                 "reverse_leg_raises",
                 "scapular_protraction_push_up",
+                "hollow_hold",
+                "zanetti_press", 
                 "planche_lean",
                 "pseudo_planche_push_up",
                 "frog_stand",
