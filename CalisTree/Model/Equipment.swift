@@ -14,6 +14,22 @@ enum Equipment: String, Codable, CaseIterable {
     case lowBar
     case dumbbells
     case barbell
+
+    static let fallbackImage = "equipment_fallback"
+
+    var imageName: String {
+        switch self {
+        case .barbell: "barbell"
+        case .bench: "bench"
+        case .dumbbells: "dumbbell"
+        case .overheadBar: "pull_up_bar"
+        default: Self.fallbackImage
+        }
+    }
+    
+    var image: Image {
+        return Image(imageName)
+    }
     
     var name: String {
         switch self {
