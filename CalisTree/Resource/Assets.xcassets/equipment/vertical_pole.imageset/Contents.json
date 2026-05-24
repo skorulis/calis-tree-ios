@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "vertical_pole.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

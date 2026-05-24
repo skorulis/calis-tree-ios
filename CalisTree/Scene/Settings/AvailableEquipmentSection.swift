@@ -10,12 +10,32 @@ struct AvailableEquipmentSection: View {
         Section {
             ForEach(viewModel.equipmentItems, id: \.self) { equipment in
                 Toggle(
-                    equipment.name,
                     isOn: viewModel.availabilityBinding(for: equipment)
-                )
+                ) {
+                    AvailableEquipmentRow(equipment: equipment)
+                }
             }
         } header: {
             Text("Available equipment")
+        }
+    }
+}
+
+private struct AvailableEquipmentRow: View {
+    let equipment: Equipment
+
+    var body: some View {
+        HStack(spacing: 12) {
+            EquipmentAvatar(equipment: equipment)
+            VStack(alignment: .leading, spacing: 4) {
+                Text(equipment.name)
+                    .font(.headline)
+                    .foregroundStyle(.primary)
+                Text(equipment.description)
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
         }
     }
 }
