@@ -264,6 +264,7 @@
     {
         "id": "front_lever_drops",
         "level": "intermediate",
+        "imageFile": "front_lever",
         "videoURL": "https://www.youtube.com/watch?v=qh3WiNRsfQ4",
         "equipment": [
             "overheadBar"
@@ -523,7 +524,8 @@
         "prerequisites": [
             "decline_push_up",
             "reverse_leg_raises",
-            "scapular_protraction_push_up"
+            "scapular_protraction_push_up",
+            "zanetti_press"
         ],
         "progression": [
             "planche_lean_chest",
@@ -1985,7 +1987,9 @@
                 "_0": 15
             }
         },
-        "prerequisites": []
+        "prerequisites": [
+            "single_arm_dumbbell_row"
+        ]
     },
     {
         "id": "muscle_up",
@@ -2250,7 +2254,7 @@
     {
         "id": "straight_bar_dip",
         "level": "intermediate",
-        "imageFile": "straight_bar_dip",
+        "imageFile": "muscle_up",
         "videoURL": "https://www.youtube.com/shorts/ZE3jWrfR2TA",
         "equipment": [
             "overheadBar"
@@ -2570,7 +2574,6 @@
     },
     {
         "id": "goblet_squat",
-        "name": "Goblet Squat",
         "level": "beginner",
         "imageFile": "goblet_squat",
         "videoURL": "https://www.youtube.com/shorts/eLX_dyvooKQ",
@@ -2594,6 +2597,113 @@
         },
         "prerequisites": [
             "squat"
+        ]
+    },
+    {
+        "id": "zanetti_press",
+        "level": "beginner",
+        "videoURL": "https://www.youtube.com/watch?v=GkCiFxYlb_Q",
+        "equipment": [
+            "dumbbells",
+            "raisedSurface"
+        ],
+        "steps": [
+            "Lie on a bench with a dumbbell in each hand and your legs extended in a hollow body shape",
+            "Brace your core and press your lower back lightly into the bench",
+            "Hold the dumbbells out in front of you with your arms fully straight, pushing them away from your head",
+            "Protract your shoulders fully with your elbow pits and palms facing upward at the top",
+            "Slowly lower the dumbbells while keeping your elbows completely straight throughout",
+            "Lower until you feel a strong stretch across your chest, similar to an inverted back lever position",
+            "Maintain shoulder protraction as you return the dumbbells to the starting position",
+            "Use light weight and avoid bending your elbows at any point"
+        ],
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        },
+        "prerequisites": [
+            "hollow_hold"
+        ]
+    },
+    {
+        "id": "dumbbell_pullover",
+        "level": "beginner",
+        "imageFile": "dumbbell_pullover",
+        "videoURL": "https://www.youtube.com/watch?v=ieFKuQAGYIA",
+        "equipment": [
+            "dumbbells"
+        ],
+        "steps": [
+            "Lie on your back on the floor or a bench with your knees bent and your feet flat for stability",
+            "Hold a dumbbell with both hands cupped under the inner plate above your chest",
+            "Press your lower back firmly into the floor and brace your core",
+            "With a slight bend in your elbows, slowly lower the dumbbell in an arc overhead",
+            "Lower until the dumbbell gently touches the floor behind your head or to a comfortable range of motion",
+            "Keep your lower back glued to the floor throughout the movement",
+            "Pull the dumbbell back over your chest along the same arc to complete one rep",
+            "Move slowly and with control, avoiding excessive arch in your lower back"
+        ],
+        "mastery": {
+            "reps": {
+                "_0": 12
+            }
+        },
+        "prerequisites": [
+            "hollow_hold"
+        ]
+    },
+    {
+        "id": "single_arm_dumbbell_row",
+        "level": "beginner",
+        "imageFile": "one_arm_dumbbell_row",
+        "videoURL": "https://www.youtube.com/shorts/yHqqGd0tXcw",
+        "equipment": [
+            "dumbbells",
+            "raisedSurface"
+        ],
+        "steps": [
+            "Place one knee and the same-side hand on a bench for support with your back flat and parallel to the floor",
+            "Hold a dumbbell in your opposite hand with your arm fully extended toward the floor",
+            "Keep your torso stable without twisting as you pull the dumbbell",
+            "Depress your shoulder and keep it down to avoid excessive trap involvement",
+            "Pull the dumbbell in a smooth curved path toward your waist, driving your elbow back",
+            "Row until your upper arm is roughly parallel to the floor with your forearm perpendicular to the ground",
+            "Squeeze your lat at the top, then lower the dumbbell back down with control",
+            "Complete all reps on one side before switching"
+        ],
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        },
+        "prerequisites": []
+    },
+    {
+        "id": "dumbbell_lunge",
+        "level": "beginner",
+        "imageFile": "dumbbell_lunge",
+        "videoURL": "https://www.youtube.com/shorts/TwEH620Pn6A",
+        "equipment": [
+            "dumbbells"
+        ],
+        "steps": [
+            "Stand upright holding a dumbbell in each hand at your sides with your feet hip-width apart",
+            "Brace your core and keep your chest lifted throughout the movement",
+            "Step forward with one leg, taking a comfortable stride",
+            "Lower your body by bending both knees until your front thigh is parallel to the floor",
+            "Keep your front knee tracking over your ankle and avoid letting it move too far forward",
+            "Lower your back knee toward the floor without touching it, keeping your torso upright",
+            "Push through the heel of your front foot to return to the starting position",
+            "Alternate legs each rep or complete all reps on one side before switching"
+        ],
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        },
+        "prerequisites": [
+            "lunge"
         ]
     }
 ]

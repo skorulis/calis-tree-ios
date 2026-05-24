@@ -10,7 +10,7 @@ struct AvailableEquipmentSection: View {
         Section {
             ForEach(viewModel.equipmentItems, id: \.self) { equipment in
                 Toggle(
-                    equipment.description,
+                    equipment.name,
                     isOn: viewModel.availabilityBinding(for: equipment)
                 )
             }

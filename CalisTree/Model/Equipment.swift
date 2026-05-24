@@ -13,9 +13,11 @@ enum Equipment: String, Codable, CaseIterable {
     case verticalBar
     case lowBar
     case dumbbells
+    case barbell
     
-    var description: String {
+    var name: String {
         switch self {
+        case .barbell: "Barbell"
         case .captainsChair: "Captains Chair"
         case .overheadBar: "Overhead Bar"
         case .parallelBars: "Parallel Bars"

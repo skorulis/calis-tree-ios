@@ -18,7 +18,7 @@ final class SettingsViewModel {
 
     var equipmentItems: [Equipment] {
         Equipment.allCases.sorted {
-            $0.description.localizedStandardCompare($1.description) == .orderedAscending
+            $0.name.localizedStandardCompare($1.name) == .orderedAscending
         }
     }
 

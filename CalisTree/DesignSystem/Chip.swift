@@ -17,7 +17,7 @@ struct Chip: View {
     }
 
     init(equipment: Equipment) {
-        self.text = equipment.description
+        self.text = equipment.name
         self.color = equipment.chipColor
     }
 

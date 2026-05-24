@@ -1,35 +1,12 @@
-* Onboarding system with explanation
-* Settings with equipment selection
-
-Add a test to make sure all prequisites are unique.
-
-I definitely need better low level progression, right now the app focuses on my level but that's ok for now 
-
-
-I need to be writing better tips for each exercise both for me and others.
+* Add more easy exercises
+* Move my color helper into ASKCore
 
 This is a nice opportunity to fix up issues I ran into last time with development
 1. The way my colors were managed was pretty bad, I should build a helper into ASKCore since I think all my apps could benefit from it
 2. I should probably write a cursor rule for how the palette should be managed
 
-Things I will need:
-1. Videos of all the exercises (should be ok to just use Youtube)
-2. Images for each exercise.
-3. Copy for each exercise.
 
 
-The muscle up guide is interesting. The main progression is in making pull ups go further.
-Chin -> Chest -> Upper stomach -> Waist
-
-It might be better to change my data structure so that everything is an exercise.
-Then create a new file "sub-exercises" which effectively will just get grouped under a primary exercise.
-The main sticking point is that my levels are the same. And when I do something like a pull up from chin to waist that moves the difficulty.
-I think this is ok, I can just have the exercises cross difficulty bounds
-
-Onboarding:
-
-This app is designed to show you general progression schemes for moving from beginner to advanced exercises. 
-It does not give you an exact workout plan but rather the exercises that you may want to incorporate to reach your goals.
 
 Thumbnail generation
 
