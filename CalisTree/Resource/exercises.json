@@ -264,7 +264,7 @@
     {
         "id": "front_lever_drops",
         "level": "intermediate",
-        "videoURL": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "videoURL": "https://www.youtube.com/watch?v=qh3WiNRsfQ4",
         "equipment": [
             "overheadBar"
         ],
@@ -2566,6 +2566,34 @@
         "prerequisites": [
             "handstand",
             "arch_hold"
+        ]
+    },
+    {
+        "id": "goblet_squat",
+        "name": "Goblet Squat",
+        "level": "beginner",
+        "imageFile": "goblet_squat",
+        "videoURL": "https://www.youtube.com/shorts/eLX_dyvooKQ",
+        "equipment": [
+            "dumbbells"
+        ],
+        "steps": [
+            "Stand with your feet shoulder-width apart and your toes pointed slightly outward",
+            "Hold a dumbbell vertically at chest height with both hands cupped around the top end",
+            "Keep your elbows pointing down and the weight close to your body",
+            "Brace your core and keep your chest lifted",
+            "Sit your hips back and bend your knees to lower into a squat",
+            "Lower until your elbows touch the inside of your knees or your thighs are parallel to the floor",
+            "Keep your knees tracking in line with your toes and your back neutral throughout",
+            "Drive through your feet to stand back up to the starting position"
+        ],
+        "mastery": {
+            "reps": {
+                "_0": 15
+            }
+        },
+        "prerequisites": [
+            "squat"
         ]
     }
 ]
