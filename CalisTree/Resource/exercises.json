@@ -158,7 +158,7 @@
     {
         "id": "pull_up",
         "level": "beginner",
-        "imageFile": "pull-up",
+        "imageFile": "pull_up",
         "videoURL": "https://www.youtube.com/watch?v=XeErfmGSwfE",
         "equipment": [
             "overheadBar"
@@ -2026,7 +2026,7 @@
         ],
         "description": "A pull up where you continue past getting your chin above the bar",
         "level": "intermediate",
-        "imageFile": "pull-up",
+        "imageFile": "pull_up",
         "videoURL": "https://www.youtube.com/shorts/70n4MbkhEMs",
         "equipment": [
             "overheadBar"
@@ -2734,6 +2734,61 @@
             "push_up",
             "pull_up",
             "hanging_leg_raises"
+        ]
+    },
+    {
+        "id": "deadlift",
+        "level": "beginner",
+        "imageFile": "deadlift",
+        "videoURL": "https://www.youtube.com/shorts/ZaTM37cfiDs",
+        "equipment": [
+            "barbell"
+        ],
+        "steps": [
+            "Stand with your feet hip-width apart and your shins about one inch from the barbell with the bar over the middle of your foot",
+            "Point your toes slightly outward and brace your core",
+            "Hinge at your hips with nearly straight knees and grip the bar just outside your shins",
+            "Let your shins contact the bar and pull the slack out of the bar gradually without jerking",
+            "Drive through the floor, thrust your hips forward, and lift your chest as you stand up",
+            "Keep the bar in contact with your legs throughout the pull",
+            "Finish by standing tall with your hips and knees fully extended without shrugging at the top",
+            "Lower the bar by pushing your hips back, bending your knees, and keeping the bar close to your legs"
+        ],
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        },
+        "prerequisites": [
+            "squat"
+        ]
+    },
+    {
+        "id": "dumbbell_fly",
+        "level": "beginner",
+        "imageFile": "dumbbell_fly",
+        "videoURL": "https://www.youtube.com/watch?v=QENKPHhQVi4",
+        "equipment": [
+            "dumbbells",
+            "bench"
+        ],
+        "steps": [
+            "Lie flat on a bench with your feet planted on the floor and your back, glutes, and head in contact with the bench",
+            "Hold a dumbbell in each hand above your chest with your palms facing each other and a slight bend in your elbows",
+            "Keep your shoulder blades retracted and maintain the same elbow angle throughout the movement",
+            "Lower the dumbbells out to the sides in a wide arc until you feel a stretch across your chest",
+            "Stop before your shoulders roll forward or your elbows drop below the level of the bench",
+            "Turn your elbows slightly upward so the dumbbells stay aligned over your chest rather than falling open",
+            "Squeeze your chest to bring the dumbbells back together above your chest along the same arc",
+            "Move with control, breathing in as you lower and breathing out as you close the dumbbells"
+        ],
+        "mastery": {
+            "reps": {
+                "_0": 12
+            }
+        },
+        "prerequisites": [
+            "push_up"
         ]
     }
 ]
