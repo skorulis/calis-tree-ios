@@ -706,13 +706,18 @@
             "Breathe steadily while maintaining full-body tension",
             "When you finish the hold, lower your feet back to the floor with control"
         ],
+        "progression": [
+            "bent_arm_advanced_tuck_planche",
+            "bent_arm_straddle_planche"
+        ],
         "mastery": {
             "time": {
                 "_0": 10
             }
         },
         "prerequisites": [
-            "elbow_lever"
+            "elbow_lever",
+            "bent_arm_tuck_planche"
         ]
     },
     {
@@ -1079,8 +1084,8 @@
     },
     {
         "id": "seated_leg_raise",
-        "name": "Seated Leg Raise",
         "level": "beginner",
+        "imageFile": "seated_leg_raise",
         "videoURL": "https://www.youtube.com/shorts/8xbG2kir7Bo",
         "equipment": [],
         "steps": [
@@ -1101,7 +1106,6 @@
     },
     {
         "id": "straddle_leg raises",
-        "name": "Straddle Leg Raises",
         "level": "intermediate",
         "videoURL": "https://www.youtube.com/shorts/M0ast_A2v8Q",
         "equipment": [],
@@ -1521,7 +1525,7 @@
         ],
         "mastery": {
             "time": {
-                "_0": 5
+                "_0": 10
             }
         },
         "prerequisites": [

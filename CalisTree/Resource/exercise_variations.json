@@ -307,5 +307,25 @@
                 "_0": 10
             }
         }
+    },
+    {
+        "id": "bent_arm_advanced_tuck_planche",
+        "name": "Advanced tuck",
+        "description": "Rather than tucking your knees into your chest, move your legs backwards so your thighs are perpendicular to the floor",
+        "mastery": {
+            "time": {
+                "_0": 10
+            }
+        }
+    },
+    {
+        "id": "bent_arm_straddle_planche",
+        "name": "Straddle",
+        "description": "Perform the planche with your legs straddled apart rather than together",
+        "mastery": {
+            "time": {
+                "_0": 10
+            }
+        }
     }
 ]
