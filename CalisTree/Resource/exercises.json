@@ -81,7 +81,6 @@
     },
     {
         "id": "hanging_knee_raise",
-        "name": "Hanging Knee Raise",
         "level": "beginner",
         "imageFile": "hanging-high-knee-raise",
         "videoURL": "https://www.youtube.com/shorts/Fl8rJJ7mZJM",
@@ -107,7 +106,6 @@
     },
     {
         "id": "hanging_high_knee_raise",
-        "name": "Hanging High Knee Raise",
         "level": "beginner",
         "imageFile": "hanging-high-knee-raise",
         "videoURL": "https://www.youtube.com/shorts/MxsRi8dtzmU",
@@ -133,7 +131,6 @@
     },
     {
         "id": "upside_down_deadlift",
-        "name": "Upside Down Deadlift",
         "level": "beginner",
         "videoURL": "https://www.youtube.com/shorts/IBInedCmsO4",
         "equipment": [
@@ -289,7 +286,6 @@
     },
     {
         "id": "planche",
-        "name": "Planche",
         "level": "advanced",
         "imageFile": "planche",
         "videoURL": "https://www.youtube.com/watch?v=OmKfROtB45Q&t=372s",
@@ -452,7 +448,6 @@
     },
     {
         "id": "decline_push_up",
-        "name": "Decline Push Up",
         "level": "beginner",
         "imageFile": "decline_push_up",
         "videoURL": "https://www.youtube.com/shorts/dcV-ATSeryA",
@@ -480,7 +475,6 @@
     },
     {
         "id": "reverse_leg_raises",
-        "name": "Reverse Leg Raises",
         "description": "Lay your stomach on a raised surface and raise your legs into a horizontal position",
         "level": "beginner",
         "videoURL": "https://www.youtube.com/watch?v=p7NWclT2uEM",
@@ -2762,7 +2756,9 @@
                 "_0": 5
             }
         },
-        "prerequisites": []
+        "prerequisites": [
+            "good_morning"
+        ]
     },
     {
         "id": "dumbbell_fly",
@@ -2794,7 +2790,6 @@
     },
     {
         "id": "dumbbell_curl",
-        "name": "Dumbbell Curl",
         "level": "beginner",
         "imageFile": "dumbbell_curl",
         "videoURL": "https://www.youtube.com/shorts/PuaJzTatIJM",
@@ -2818,7 +2813,6 @@
     },
     {
         "id": "barbell_curl",
-        "name": "Barbell Curl",
         "level": "beginner",
         "imageFile": "barbell_curl",
         "videoURL": "https://www.youtube.com/shorts/54x2WF1_Suc",
@@ -2842,7 +2836,6 @@
     },
     {
         "id": "lying_leg_raise",
-        "name": "Lying Leg Raise",
         "level": "beginner",
         "imageFile": "lying_leg_raise",
         "videoURL": "https://www.youtube.com/shorts/2wUpI98Ix-k",
@@ -2858,6 +2851,50 @@
         "mastery": {
             "reps": {
                 "_0": 15
+            }
+        },
+        "prerequisites": []
+    },
+    {
+        "id": "farmers_walk",
+        "level": "beginner",
+        "imageFile": "farmers_walk",
+        "videoURL": "https://www.youtube.com/shorts/1uOs1hP3u4A",
+        "equipment": [
+            "dumbbells"
+        ],
+        "steps": [
+            "Hold a heavy dumbbell in each hand at your sides with your arms straight and palms facing in",
+            "Stand tall with your chest up, shoulders down and back, and core braced",
+            "Keep your gaze forward and take short, controlled steps",
+            "Walk at a steady pace while keeping your torso upright and avoiding side-to-side leaning",
+            "Maintain a firm grip and even shoulder position throughout the carry",
+            "Set the dumbbells down with control when you finish the distance or time"
+        ],
+        "mastery": {
+            "time": {
+                "_0": 30
+            }
+        },
+        "prerequisites": []
+    },
+    {
+        "id": "good_morning",
+        "level": "beginner",
+        "imageFile": "good_morning",
+        "videoURL": "https://www.youtube.com/shorts/IuLhrAmO2Hs",
+        "equipment": [],
+        "steps": [
+            "Stand with your feet hip-width apart and your hands on the back of your head",
+            "Keep your knees slightly bent, chest up, and core braced",
+            "Hinge at your hips by pushing them backward while keeping your back neutral",
+            "Lower your torso until you feel a strong hamstring stretch or your torso is near parallel to the floor",
+            "Keep the bar over your midfoot and avoid rounding your lower back",
+            "Drive your hips forward to return to standing and repeat with control"
+        ],
+        "mastery": {
+            "reps": {
+                "_0": 10
             }
         },
         "prerequisites": []
