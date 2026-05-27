@@ -72,6 +72,7 @@ struct ExerciseRepositoryTests {
                 "kneeling_push_up",
                 "push_up",
                 "decline_push_up",
+                "arch_hold",
                 "reverse_leg_raises",
                 "scapular_protraction_push_up",
                 "hollow_hold",

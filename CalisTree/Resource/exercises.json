@@ -255,7 +255,8 @@
             }
         },
         "prerequisites": [
-            "front_lever_drops"
+            "front_lever_drops",
+            "ice_cream_maker"
         ]
     },
     {
@@ -494,7 +495,9 @@
                 "_0": 10
             }
         },
-        "prerequisites": []
+        "prerequisites": [
+            "arch_hold"
+        ]
     },
     {
         "id": "planche_lean",
@@ -711,7 +714,8 @@
         },
         "prerequisites": [
             "elbow_lever",
-            "bent_arm_tuck_planche"
+            "bent_arm_tuck_planche",
+            "pseudo_planche_push_up"
         ]
     },
     {
@@ -800,7 +804,9 @@
                 "_0": 15
             }
         },
-        "prerequisites": []
+        "prerequisites": [
+            "push_up"
+        ]
     },
     {
         "id": "chest_dip",
@@ -997,7 +1003,8 @@
             }
         },
         "prerequisites": [
-            "pike_shrug"
+            "pike_shrug",
+            "decline_push_up"
         ]
     },
     {
@@ -1172,8 +1179,8 @@
             }
         },
         "prerequisites": [
-            "hanging_leg_raises",
-            "hanging_knee_raise"
+            "hanging_knee_raise",
+            "hanging_l_sit"
         ]
     },
     {
@@ -1271,7 +1278,8 @@
         },
         "prerequisites": [
             "boat_hold",
-            "hanging_leg_raises"
+            "hanging_leg_raises",
+            "hollow_hold"
         ]
     },
     {
@@ -1463,7 +1471,6 @@
             "planche_lean",
             "archer_push_up",
             "hanging_windshield_wiper",
-            "side_plank_flag",
             "clutch_flag"
         ]
     },
@@ -1549,7 +1556,7 @@
             }
         },
         "prerequisites": [
-            "chest_dip"
+            "straight_bar_dip"
         ]
     },
     {
@@ -1685,7 +1692,7 @@
         },
         "prerequisites": [
             "pull_up",
-            "hanging_leg_raises"
+            "hanging_high_knee_raise"
         ]
     },
     {
@@ -1914,7 +1921,8 @@
             }
         },
         "prerequisites": [
-            "squat"
+            "squat",
+            "wall_sit"
         ]
     },
     {
@@ -2164,8 +2172,7 @@
             "frog_stand_straight_arms"
         ],
         "prerequisites": [
-            "push_up",
-            "plank",
+            "decline_push_up",
             "tucked_l_sit",
             "hollow_hold"
         ]
@@ -2730,7 +2737,8 @@
         "prerequisites": [
             "push_up",
             "pull_up",
-            "hanging_leg_raises"
+            "hanging_leg_raises",
+            "side_plank_flag"
         ]
     },
     {
@@ -2854,7 +2862,9 @@
                 "_0": 15
             }
         },
-        "prerequisites": []
+        "prerequisites": [
+            "crunch"
+        ]
     },
     {
         "id": "farmers_walk",
