@@ -114,6 +114,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				FA871B252FC6833B00AEB763 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				FA9B80E02FB6D0880002AA74 /* CalisTree */,
@@ -232,6 +233,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		FA871B252FC6833B00AEB763 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = FA871B242FC6833B00AEB763 /* KnitBuildPlugin */;
+		};
 		FAE6B0EA2FB6F50B00F2B0F7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FA9B80DD2FB6D0880002AA74 /* CalisTree */;
@@ -554,6 +559,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FA871A6E2FC6808000AEB763 /* XCRemoteSwiftPackageReference "ASKCoordinator" */;
 			productName = ASKCoordinator;
+		};
+		FA871B242FC6833B00AEB763 /* KnitBuildPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA871A662FC6805B00AEB763 /* XCRemoteSwiftPackageReference "knit" */;
+			productName = "plugin:KnitBuildPlugin";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

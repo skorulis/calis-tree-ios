@@ -79,3 +79,22 @@ enum Equipment: String, Codable, CaseIterable {
         .secondary
     }
 }
+
+// MARK: - Category
+
+enum EquipmentCategory: String {
+    case bodyweight, freeweights, gym
+}
+
+extension Equipment {
+    var category: EquipmentCategory {
+        switch self {
+        case .overheadBar, .parallelBars, .paralletteBars, .rings, .bench, .verticalBar, .lowBar:
+            return .bodyweight
+        case .dumbbells, .barbell:
+            return .freeweights
+        case .captainsChair:
+            return .gym
+        }
+    }
+}

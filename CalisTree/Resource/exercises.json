@@ -2791,5 +2791,75 @@
         "prerequisites": [
             "push_up"
         ]
+    },
+    {
+        "id": "dumbbell_curl",
+        "name": "Dumbbell Curl",
+        "level": "beginner",
+        "imageFile": "dumbbell_curl",
+        "videoURL": "https://www.youtube.com/shorts/PuaJzTatIJM",
+        "equipment": [
+            "dumbbells"
+        ],
+        "steps": [
+            "Stand tall with a dumbbell in each hand, arms fully extended and palms facing forward",
+            "Keep your elbows close to your sides and your shoulders relaxed",
+            "Brace your core and avoid swinging your torso or using momentum",
+            "Curl the dumbbells upward by bending at the elbows, keeping your upper arms still",
+            "Squeeze your biceps briefly at the top of the movement",
+            "Lower the dumbbells back down with control until your arms are fully extended again"
+        ],
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        },
+        "prerequisites": []
+    },
+    {
+        "id": "barbell_curl",
+        "name": "Barbell Curl",
+        "level": "beginner",
+        "imageFile": "barbell_curl",
+        "videoURL": "https://www.youtube.com/shorts/54x2WF1_Suc",
+        "equipment": [
+            "barbell"
+        ],
+        "steps": [
+            "Stand tall with your feet about hip-width apart and hold a barbell with an underhand grip just outside shoulder width",
+            "Keep your chest up, core braced, and elbows pinned close to your sides",
+            "Start with your arms fully extended and wrists neutral",
+            "Curl the barbell upward by bending your elbows while keeping your upper arms still",
+            "Lift until the bar reaches about chest height and squeeze your biceps briefly at the top",
+            "Lower the barbell back down under control until your arms are fully extended again"
+        ],
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        },
+        "prerequisites": []
+    },
+    {
+        "id": "lying_leg_raise",
+        "name": "Lying Leg Raise",
+        "level": "beginner",
+        "imageFile": "lying_leg_raise",
+        "videoURL": "https://www.youtube.com/shorts/2wUpI98Ix-k",
+        "equipment": [],
+        "steps": [
+            "Lie flat on your back with your legs straight and together, and place your hands by your sides or under your glutes for support",
+            "Press your lower back gently into the floor and brace your core",
+            "Keep your knees as straight as possible and lift your legs upward in a controlled motion",
+            "Raise your legs until they are roughly perpendicular to the floor or as high as you can without your lower back arching",
+            "Pause briefly at the top while keeping tension in your abs",
+            "Lower your legs slowly back toward the floor without letting your feet touch down between reps"
+        ],
+        "mastery": {
+            "reps": {
+                "_0": 15
+            }
+        },
+        "prerequisites": []
     }
 ]
