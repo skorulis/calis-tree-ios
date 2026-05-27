@@ -1258,9 +1258,7 @@
     },
     {
         "id": "dragon_flag",
-        "name": "Dragon Flag",
         "level": "intermediate",
-        "imageFile": "dragon_flag",
         "videoURL": "https://www.youtube.com/shorts/yFiNw9EsJfI",
         "equipment": [],
         "steps": [
@@ -1723,6 +1721,7 @@
     {
         "id": "side_plank_flag",
         "level": "intermediate",
+        "imageFile": "side_plank_flag",
         "videoURL": "https://www.youtube.com/watch?v=anae6MkAhnY",
         "equipment": [],
         "progression": [
@@ -2760,12 +2759,10 @@
         ],
         "mastery": {
             "reps": {
-                "_0": 10
+                "_0": 5
             }
         },
-        "prerequisites": [
-            "squat"
-        ]
+        "prerequisites": []
     },
     {
         "id": "dumbbell_fly",

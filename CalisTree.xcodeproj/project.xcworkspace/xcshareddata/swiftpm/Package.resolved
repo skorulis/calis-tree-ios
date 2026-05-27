@@ -1,5 +1,5 @@
 {
-  "originHash" : "17087773eaf3cc9f15576f9f95efa57d64ec2f000f7d3cc44da04d4d5537e45b",
+  "originHash" : "773a12c9e5c9fb10d7a0c50e3840e50acd96c8d4a3ac96b45e86a47f68e1395e",
   "pins" : [
     {
       "identity" : "askcoordinator",
@@ -7,7 +7,7 @@
       "location" : "https://github.com/skorulis/ASKCoordinator",
       "state" : {
         "branch" : "main",
-        "revision" : "940fb4e996d7b83374104dcc3ad070efb871feb9"
+        "revision" : "fb245dc0e3149aa7a9a1b025552f4ac4a2f52319"
       }
     },
     {
@@ -16,16 +16,16 @@
       "location" : "https://github.com/skorulis/ASKCore",
       "state" : {
         "branch" : "main",
-        "revision" : "386107e1513529aea40b4b71cad6aa03ad0ed035"
+        "revision" : "0b3ee12a5f9143b93a097cb6b7a3dfe978f3af97"
       }
     },
     {
       "identity" : "knit",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/cashapp/knit.git",
+      "location" : "https://github.com/skorulis/knit/",
       "state" : {
-        "branch" : "main",
-        "revision" : "3d4afea562b95a95725f689be819b10ff93351fc"
+        "branch" : "skorulis/ahead",
+        "revision" : "c1b4234dd22483cc20bd53cb56a41034b85710a3"
       }
     },
     {
@@ -33,8 +33,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-argument-parser",
       "state" : {
-        "revision" : "626b5b7b2f45e1b0b1c6f4a309296d1d21d7311b",
-        "version" : "1.7.1"
+        "revision" : "5e0406d68a4937f21ae5f670b8f89dad1d156a1c",
+        "version" : "1.8.0"
       }
     },
     {
