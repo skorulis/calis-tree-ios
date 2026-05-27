@@ -2757,7 +2757,8 @@
             }
         },
         "prerequisites": [
-            "good_morning"
+            "good_morning",
+            "glute_bridge"
         ]
     },
     {
@@ -2881,7 +2882,6 @@
     {
         "id": "good_morning",
         "level": "beginner",
-        "imageFile": "good_morning",
         "videoURL": "https://www.youtube.com/shorts/IuLhrAmO2Hs",
         "equipment": [],
         "steps": [
@@ -2895,6 +2895,26 @@
         "mastery": {
             "reps": {
                 "_0": 10
+            }
+        },
+        "prerequisites": []
+    },
+    {
+        "id": "glute_bridge",
+        "level": "beginner",
+        "videoURL": "https://www.youtube.com/shorts/X_IGw8U_e38",
+        "equipment": [],
+        "steps": [
+            "Lie on your back with your knees bent and your feet flat on the floor about hip-width apart",
+            "Place your arms at your sides with your palms facing up",
+            "Brace your core and press your lower back gently into the floor",
+            "Drive through your heels and squeeze your glutes to lift your hips off the floor",
+            "Raise your hips until your body forms a straight line from your shoulders to your knees",
+            "Pause briefly at the top, then lower your hips back down with control"
+        ],
+        "mastery": {
+            "reps": {
+                "_0": 15
             }
         },
         "prerequisites": []
