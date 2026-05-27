@@ -21,6 +21,7 @@ Style: Clean 2D digital vector illustration, cartoon anime style, thick crisp ou
 
 
 Data sources:
+https://docs.google.com/spreadsheets/d/1dUMCUSk8rqPoLZ5Xltg7shqgfqyHfALq/edit?gid=1239862327#gid=1239862327
 https://progresspedia.org/courses/calisthenics/
 https://wedocalisthenics.com/
 https://docs.google.com/spreadsheets/d/1-wS6RlyjlKVvYfA5DJcb89mg7uLBc8LpIhf4oee5B6o/edit?gid=0#gid=0

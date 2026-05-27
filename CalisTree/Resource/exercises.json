@@ -2928,5 +2928,31 @@
             }
         },
         "prerequisites": []
+    },
+    {
+        "id": "typewriter_pull_up",
+        "name": "Typewriter Pull-Up",
+        "level": "advanced",
+        "videoURL": "https://www.youtube.com/shorts/tsCZ3yiYM7o",
+        "equipment": [
+            "overheadBar"
+        ],
+        "steps": [
+            "Grip the bar with your hands wider than shoulder-width apart using an overhand grip",
+            "Hang with your arms fully extended and engage your core to minimize swinging",
+            "Pull yourself up until your chin clears the bar",
+            "At the top, shift your body horizontally toward one hand while keeping your chin above the bar",
+            "Slide across to the opposite hand in a controlled motion without dropping below the bar",
+            "Continue moving between each hand",
+            "Lower yourself back to a full hang with control"
+        ],
+        "mastery": {
+            "reps": {
+                "_0": 10
+            }
+        },
+        "prerequisites": [
+            "archer_pull_up"
+        ]
     }
 ]

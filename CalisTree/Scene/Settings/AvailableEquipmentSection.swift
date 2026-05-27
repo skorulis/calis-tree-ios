@@ -7,16 +7,18 @@ struct AvailableEquipmentSection: View {
     @Bindable var viewModel: SettingsViewModel
 
     var body: some View {
-        Section {
-            ForEach(viewModel.equipmentItems, id: \.self) { equipment in
-                Toggle(
-                    isOn: viewModel.availabilityBinding(for: equipment)
-                ) {
-                    AvailableEquipmentRow(equipment: equipment)
+        ForEach(viewModel.equipmentSections) { section in
+            Section {
+                ForEach(section.items, id: \.self) { equipment in
+                    Toggle(
+                        isOn: viewModel.availabilityBinding(for: equipment)
+                    ) {
+                        AvailableEquipmentRow(equipment: equipment)
+                    }
                 }
+            } header: {
+                Text(section.category.name)
             }
-        } header: {
-            Text("Available equipment")
         }
     }
 }

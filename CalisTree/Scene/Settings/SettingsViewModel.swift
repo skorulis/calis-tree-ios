@@ -16,9 +16,16 @@ final class SettingsViewModel {
         self.mainStore = mainStore
     }
 
-    var equipmentItems: [Equipment] {
-        Equipment.allCases.sorted {
-            $0.name.localizedStandardCompare($1.name) == .orderedAscending
+    var equipmentSections: [EquipmentCategorySection] {
+        EquipmentCategory.allCases.map { category in
+            EquipmentCategorySection(
+                category: category,
+                items: Equipment.allCases
+                    .filter { $0.category == category }
+                    .sorted {
+                        $0.name.localizedStandardCompare($1.name) == .orderedAscending
+                    }
+            )
         }
     }
 
@@ -28,4 +35,11 @@ final class SettingsViewModel {
             set: { self.mainStore.setEquipmentAvailable($0, for: equipment) }
         )
     }
+}
+
+struct EquipmentCategorySection: Identifiable {
+    let category: EquipmentCategory
+    let items: [Equipment]
+
+    var id: EquipmentCategory { category }
 }

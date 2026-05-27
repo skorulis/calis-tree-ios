@@ -82,8 +82,16 @@ enum Equipment: String, Codable, CaseIterable {
 
 // MARK: - Category
 
-enum EquipmentCategory: String {
+enum EquipmentCategory: String, CaseIterable {
     case bodyweight, freeweights, gym
+    
+    var name: String {
+        switch self {
+        case .bodyweight: "Body Weight"
+        case .freeweights: "Free Weights"
+        case .gym: "Gym"
+        }
+    }
 }
 
 extension Equipment {
